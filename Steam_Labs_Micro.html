@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Steam Labs - Micro Trailers</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="C:\Users\PC\OneDrive\Desktop\Thực tập_jobs\SteamHtml\Images\steamLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- body -->
+    <style>
+        body{
+            overflow-x: hidden;
+            height: 1900px;
+            width: 1500px;
+            position: relative;
+            /* cursor: url("trỏ\ chuột\ ori.jpg"),auto; */
+            background-color: #181d3a;
+        }
+        .steamMid{
+        width: 1500px;
+        height: 1700px;
+        font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        display: flex;
+
+    }
+    </style>
+
+     <!-- toplogo -->
+    <style>
+        .steamTop{
+            transform: translateY(-8px);
+            margin-left: -8px;
+            width: 1550px;
+            height: 109px;
+            background-color: #171a21;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            z-index: 50;
+        }
+        .sTop_choise{
+            width: 800px;
+
+            margin-left: 50px;
+            display: flex;
+            justify-content: start;
+        }
+        .sTop_avatar_link{}
+        .sTop_avatar_image{
+            margin-top: 25px;
+            width: 160px;
+            height: 50px;
+            margin-left: 80px;
+            margin-right: -10px;
+        }
+        .sTop_choise_choises{
+
+            margin-top: 25px;
+            /* background-color: red; */
+            margin-left: 70px;
+            width: 450px;
+            height: 50px;
+
+        }
+        .st_choises_common{
+            text-decoration: none;
+            height: 30px;
+            width: auto;
+            font-size: 15px;
+            margin: 18px 0 0 0;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: relative;
+        }
+        .st_choises_common:hover{color: #fff;}
+        .st_choises_store{}
+        .st_choises_comunity{}
+        .st_choises_about{margin-left: 6px;}
+        .st_choises_support{margin-left: 6px;}
+
+        .st_pop{
+            /* box-shadow: 1px 1px 0.5px 1px; */
+            position: absolute;
+            z-index: 50;
+            background-color: #171a21;
+            display: none;
+            /* flex-direction: column; */
+            justify-content: start;
+            box-shadow: 3px 3px 5px -3px #000;
+	        text-align: left;
+            columns: 1;
+        }
+        .st_store_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .st_community_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+
+        .st_choises_store:hover .st_store_pop{display: block;}
+        .st_choises_comunity:hover .st_community_pop{display: block;}
+        .st_pop:last-child{margin-bottom: 10px;}
+        .st_store_pop{width: 127px; height: 165px;}
+        .st_community_pop{width: 100px; height: 145px;}
+        .pop_text{
+            color: #b8b6b4;
+            font-size: 11px;
+            padding: 7px 10px 7px 10px;
+
+            text-decoration: none;
+        }
+        .pop_text:first-child{padding-top: 12px;}
+        .pop_text:hover{color: #fff;}
+        .store_pop{}
+        .community_pop{}
+    </style>
+
+    <!-- topinstall -->
+    <style>
+        .sTop_login{
+            width: 200px;
+            margin-left: -100px;
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        .st_login_install{
+            margin-top: 5px;
+            width: 100px;
+            height: 24px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #5c7e10;
+        }
+        .stlogin_install_image{
+            margin: 2px 2px 2px 0;
+            width: 20px;
+            height: 20px;
+        }
+        .stlogin_install_text{
+            margin-top: 6px;
+            color: #e5e4dc;
+            font-size: 10px;
+        }
+        .st_login_install:hover .stlogin_install_text{color: #fff;}
+
+        .st_login_button{
+            font-size: 15px;
+            margin: 8px 5px 0 5px;
+            height: 24px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .st_seperate{
+            margin-top: 10px;
+            height: 14px;
+            width: 0.5px;
+            background-color: #b8b6b4;
+        }
+        .st_languge_button{
+            /* border-left: thick solid #b8b6b4; */
+            margin-top: 8px;
+            height: 18px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        .st_login_button:hover{color: #fff;}
+        .st_languge_button:hover{color: #fff;}
+    </style>
+
+    <!-- bottom 2-->
+    <style>
+        .steamBottom_part2{
+            transform: translateY(20px);
+            transform: translateX(-10px);
+            position: absolute;
+            width: 102%;
+            height: 165px;
+            background-color: #171a21;
+            bottom: 0;
+        }
+        .sbot_part2_common{
+            position: absolute;
+            margin: 0 0 0 250px;
+            height: 60px;
+            width: 1000px;
+        }
+        .sbot_part2_1{
+            top: 20px;
+            /* background-color: red; */
+            display: flex;
+            justify-content: space-around;
+            border-top: #363c44 solid 1px;
+            border-bottom: #363c44 solid 1px;
+        }
+
+
+
+        .sb2_1_valve_link{}
+        .sb2_1_valve_img{
+            margin: 10px 0 10px 0;
+            width: 100px;
+            height: 40px;
+        }
+        .sb2_1_dereption{
+            margin: 10px 0 10px 0;
+            height: 40px;
+            width: 800px;
+            /* background-color: yellow; */
+        }
+        .sb2_1_steamImg{
+            margin: 15px 0 15px 0;
+            width: 100px;
+            height: 30px;
+        }
+        .sb2_1decreption_text{
+            position: absolute;
+            font-family: sans-serif;
+            color: #8f98a0;
+            font-size: 12px;
+            width: 780px;
+            margin: 14px 10px 0 10px;
+            top: 0;
+
+            /* visibility: hidden; */
+        }
+        .sb2_1decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 263px;
+            width: 600px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_1_link{
+            margin-top: 10px;
+            justify-content: end;
+            text-decoration: none;
+            color: #c6d4df;
+            padding: 0 5px 0 5px;
+            font-size: 14px;
+            border-right: #c6d4df solid 1px;
+        }
+        .sb2_1_link:last-child{border: none;}
+        .sb2_1_link:hover{color: #fff;}
+
+
+        .sbot_part2_2{
+            position: relative;
+            top: 80px;
+            /* background-color: blue; */
+        }
+        .sb2_2decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 800px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_2_link{
+            text-decoration: none;
+            color: #c6d4df;
+            font-size: 14px;
+            padding: 0 7px 0 5px;
+            margin-top: 20px;
+            border-right: #c6d4df solid 1px;
+            /* visibility: hidden; */
+        }
+        .sb2_2_link:last-child{margin-left: -4px; border: none;}
+        .sb2_2_link:hover{color: #fff;}
+        .sb2_2_facelink{margin-left: -4px;}
+        .sb2_2_image{
+            /* position: absolute; */
+            width: 15px;
+            height: 15px;
+        }
+        .sb2_2_faceImg{}
+        .sb2_2_twitterImg{
+            margin-left: 5px;
+        }
+    </style>
+
+
+<!-- scrollbar -->
+<style>
+    ::-webkit-scrollbar {
+        height: 12px;
+        width: 14px;
+        background: rgba(0,0,0,0);
+        z-index: 12;
+        overflow: visible;
+    }
+    ::-webkit-scrollbar-corner {
+    background: #202020;
+}
+    ::-webkit-scrollbar-thumb {
+        width: 10px;
+        background-color: #434953;
+        border-radius: 10px;
+        z-index: 12;
+        border: 4px solid rgba(0,0,0,0);
+        background-clip: padding-box;
+        transition: background-color .32s ease-in-out;
+        margin: 4px;
+        min-height: 32px;
+        min-width: 32px;
+    }
+    ::selection {
+        background: #54a5d4;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.6666666667);
+        color: #fff;
+    }
+</style>
+
+<!-- Micro_top -->
+<style>
+    .steamMid{display: flex; flex-direction: column;}
+    .Micro_top_link_base{width: 1010px; height: 30px; margin-top: 110px; margin-left: 220px;}
+    .Micro_top_link{text-decoration: none; margin-right: 60px; color: #276ee0; font-size: 15px;}
+    .Micro_top_link{text-transform: uppercase; letter-spacing: 2px; font-family: "Motiva Sans", Sans-serif; font-weight: 400;}
+    .Micro_top_link:hover{color: hsl(217, 100%, 65%);}
+
+
+    .Micro_top_experiment{width: 1010px; height: 30px; margin-left: 220px;}
+    .Micro_top_experiment_txt{font-family: "Motiva Sans", Sans-serif; font-size: 14px; text-transform: uppercase; color: #00b8c0;}
+    .Micro_top_experiment_txt{font-weight: bold; letter-spacing: 0.03em; user-select: none;}
+
+    .Micro_top_decreption{width: 1010px; height: 100px; margin-left: 220px; user-select: none;}
+    .Micro_top_decreption_title{font-family: "Motiva Sans", Sans-serif; font-size: 28px; color: #c4ccde; font-weight: 200; margin-bottom: 5px;}
+    .Micro_top_decreption_text{font-family: "Motiva Sans", Sans-serif; font-size: 14px; color: #c4ccde; line-height: 1.5em; font-weight: lighter;} 
+
+    .micro_backgr{padding: 10px;}
+    .micro_backgr{background-image: radial-gradient(ellipse at top left, hsla(215, 48%, 19%, 1), hsla(235, 51%, 16%, 1));}
+    .micro_backgr{text-align: center; border-radius: 4px; box-sizing: border-box;margin: 0 0px 20px 0px; box-shadow: 2px 2px 10px rgba(0,0,0,0.5);}
+    .micro_backgr_title{color: hsla(216, 69%, 61%, 1); font-family: "Motiva Sans", Sans-serif; font-weight: normal; font-size: 18px; text-transform: none;}
+
+    .micro_trailer{width: 1000px; height: 530px; margin-left: 220px;}
+    .microVideo_base{width: 1000px; height: 320px; margin-left: 220px;}
+    .classic_base{width: 1000px; height: 320px; margin-left: 220px;}
+    .play_base{width: 1000px; height: 320px; margin-left: 220px;}
+
+    .micro_backgr_img{width: 950px; height: 440px; margin: 10px 0 10px 15px;}
+    .micro_backgr_img{border-radius: 4px; box-shadow: 4px 4px 10px rgba(0,0,0,0.7);}
+    .micro_backgr_decreption{font-family: "Motiva Sans", Sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5em; color: #adb4c4;;}
+    .micro_backgr_link{font-family: "Motiva Sans", Sans-serif; font-weight: normal; font-size: 14px; line-height: 1.5em; text-decoration: none; color: #07d1da;}
+    .micro_backgr_link:hover{color: #fff;}
+
+    .micro_backgr_video{width: 1200px; height: 230px; margin: 10px 0 10px -95px;}
+
+    .micro_Items{background-color: rgb(11, 11, 11);}
+    .microVideo_base_container{width: 650px; height: 250px; align-items: center;}
+    .microVideo_base_container{margin-left: 140px; margin-top: 5px; display: flex; flex-direction: column;}
+    
+    .microVideo_base_container_top{width: 650px; height: 120px; display: flex; justify-content: start;}
+    .microVideo_base_container_bottom{width: 500px; height: 120px; margin-top: 10px; display: flex; justify-content: start;}
+
+    .micro_Items{width: 150px; height: 100px; margin-right: 10px; background-repeat: no-repeat;}
+    .micro_Items{font-family: "Motiva Sans", Sans-serif; color: #FFFFFF; font-size: 17px; font-weight: 600;}
+    .micro_Items{box-shadow: 4px 4px 10px rgba(0,0,0,0.7); text-transform: uppercase; letter-spacing: 0.05em;}
+    .micro_Items{float: left; border-radius: 4px; text-shadow: 2px 2px 6px #000000; background-size: cover;}
+    .micro_Items{display: flex; align-items: center; text-align: center; justify-content: center;}
+    .micro_Items{padding: 5px; margin: 5px; margin-right: 15px;}
+    .micro_Items:hover{transform: scale(1.1); transition: transform 0.2s ease-out;}
+
+    .items_1{background-image: url(Images/microItems_img_1.jpg);}
+    .items_2{background-image: url(Images/microItems_img_2.jpg);}
+    .items_3{background-image: url(Images/microItems_img_3.jpg);}
+    .items_4{background-image: url(Images/microItems_img_4.jpg);}
+
+    .items_5{background-image: url(Images/microItems_img_5.jpg);}
+    .items_6{background-image: url(Images/microItems_img_6.jpg);}
+    .items_7{background-image: url(Images/microItems_img_7.jpg);}
+    .Lastquex_base{width: 1000px; height: 120px; margin-left: 220px;}
+
+    .Lastquex_base_title{font-size: 28px; font-family: "Motiva Sans", Sans-serif; color: #c4ccde; font-weight: 200;}
+    .Lastquex_base_text{color: #adb4c4; font-size: 14px; font-family: "Motiva Sans", Sans-serif; margin-top: 10px;}
+</style>
+</head>
+
+<body id="BigBody">
+    <div id="SteamContainer" class="SteamContainer">
+        <div class="steamPart steamTop">
+
+            <div class="sTop_choise">
+                <a href="Steam_index.html" class="sTop_avatar_link">
+                    <img src="Images/s_avatar.png" alt="" class="sTop_avatar_image">
+                </a>
+
+                <div class="sTop_choise_choises">
+                    <button class="st_choises_common st_choises_store">
+                        STORE
+                        <div class="st_pop st_store_pop">
+                            <div class="st_store_pop_contain">
+                                <a href="" class="pop_text store_pop">HOME</a>
+                                <a href="" class="pop_text store_pop">DISCOVERY QUEUE</a>
+                                <a href="" class="pop_text store_pop">WISHLIST</a>
+                                <a href="" class="pop_text store_pop">POINTS SHOP</a>
+                                <a href="Steam_newAndFeature.html" class="pop_text store_pop">NEWS</a>
+                                <a href="" class="pop_text store_pop">STATS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="st_choises_common st_choises_comunity">
+                        COMMUNITY
+                        <div class="st_pop st_community_pop">
+                            <div class="st_community_pop_contain">
+                                <a href="" class="pop_text community_pop">HOME</a>
+                                <a href="" class="pop_text community_pop">DISCUSSIONS</a>
+                                <a href="" class="pop_text community_pop">WORKSHOP</a>
+                                <a href="" class="pop_text community_pop">MARKET</a>
+                                <a href="" class="pop_text community_pop">BROADCASTS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <a href="" class="st_choises_common st_choises_about">ABOUT</a>
+                    <a href="" class="st_choises_common st_choises_support">SUPPORT</a>
+                    <!-- <button class="st_choises_common st_choises_about">ABOUT</button>
+                    <button class="st_choises_common st_choises_support">SUPPORT</button> -->
+                </div>
+            </div>
+
+            <div class="sTop_login">
+                <div class="st_login_install">
+                    <img src="Images/s_install_image.png" alt="" class="stlogin_install_image">
+                    <h class="stlogin_install_text">Install Steam</h>
+                </div>
+                <a href="Steam_login.html" class="st_login_button">login</a>
+                <!-- <button class="st_login_button">login</button> -->
+                <div class="st_seperate"></div>
+                <button class="st_languge_button">language</button>
+            </div>
+        </div>
+
+        <div class="steamMid">
+            <div class="Micro_top_link_base">
+                <a href="Steam_SteamLab.html" class="Micro_top_link">STEAM LABS</a>
+                <a href="Steam_Labs_Micro.html" class="Micro_top_link">MICRO TRAILERS HOME</a>
+                <a href="Steam_steamLabComunity.html" class="Micro_top_link">DISCUSSIONS</a>
+            </div>
+            <div class="Micro_top_experiment">
+                <span style="margin-right: 10px;" class="Micro_top_experiment_txt">EXPERIMENT 001</span>
+                <span class="Micro_top_experiment_txt">MICRO TRAILERS</span>
+            </div>
+            <div class="Micro_top_decreption">
+                <div class="Micro_top_decreption_title">What if you could absorb every game on Steam in just moments?</div>
+                <div class="Micro_top_decreption_text">Hundreds of new games launch on Steam every month. Are you missing something? What are you missing? This type of anxiety can be maddening! What if you could absorb a couple dozen RPGs or a hundred of the latest titles over your lunch break? Here's our attempt to offer just that, in multiple flavors.</div>
+            </div>
+
+            <div class="micro_trailer micro_backgr">
+                <h class="micro_backgr_title">New for October - The Micro Trailer Feed</h>
+                <img src="Images/Micro_trailer.jpg" alt="" class="micro_backgr_img">
+                <div class="micro_backgr_decreption">Micro Trailers Update #3 introduces a single-column social media style feed with big, fat videos for each game. <a href="" class="micro_backgr_link">Try it out!</a></div>
+                
+            </div>
+
+            <div style="margin-top: 20px;" class="microVideo_base micro_backgr">
+                <h class="micro_backgr_title">New for September - Micro Trailers for All!</h>
+                <video src="Images/micro_video.mp4" class="micro_backgr_video" loop autoplay muted></video>
+                <div class="micro_backgr_decreption">You can now peruse micro trailers for every game on the Steam Store, categorized into nearly 400 tags. <a href="" class="micro_backgr_link">Try it out!</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;" class="classic_base micro_backgr">
+                <h class="micro_backgr_title">Classic Micro Trailers</h>
+                <div class="micro_backgr_decreption">Click a category, then hover your mouse over a game to set its trailer in motion:
+                    <div class="microVideo_base_container">
+                        <div class="microVideo_base_container_top">
+                            <a href="" class="micro_Item_link">
+                                <div class="micro_Items items_1">Popular New Games</div>
+                            </a>
+
+                            <a href="" class="micro_Item_link">
+                                <div class="micro_Items items_2">Roguelikes</div>
+                            </a>
+
+                            <a href="" class="micro_Item_link">
+                                <div class="micro_Items items_3">Adventure games</div>
+                            </a>
+
+                            <a href="" class="micro_Item_link">
+                                <div class="micro_Items items_4">dragons</div>
+                            </a>
+                        </div>
+                        <div class="microVideo_base_container_bottom">
+                            <a href="" class="micro_Item_link">
+                                <div class="micro_Items items_5">physical games</div>
+                            </a>
+
+                            <a href="" class="micro_Item_link">
+                                <div class="micro_Items items_6">god games</div>
+                            </a>
+
+                            <a href="" class="micro_Item_link">
+                                <div class="micro_Items items_7">voxel games</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="Lastquex_base">
+                <div class="Lastquex_base_title">What Else?</div>
+                <div class="Lastquex_base_text">If you haven't seen the other experiments yet: 
+                    <a href="Steam_SteamLab.html" class="micro_backgr_link">check out the rest of Steam Labs here!</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="steamPart steamBottom">
+            <div class="SBottom_common steamBottom_part2">
+                <div class="sbot_part2_common sbot_part2_1">
+                        <a href="https://www.valvesoftware.com/fr/" title="VALV" class="sb2_1_valve_link">
+                            <img src="Images/s_bottom_logo_1.png" alt="" class="sb2_1_valve_img">
+                        </a>
+                        <div class="sb2_1_dereption">
+                            <p class="sb2_1decreption_text">© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+                                VAT included in all prices where applicable.</p>
+                            <div class="sb2_1decreption_link">
+                                <a href="" title="Privacy Policy" class="sb2_1_link">Privacy Policy</a>
+                                <a href="" title="Legal" class="sb2_1_link">Legal</a>
+                                <a href="" title="Steam Subsctiber Agreement" class="sb2_1_link">Steam Subsctiber Agreement</a>
+                                <a href="" title="Refunds" class="sb2_1_link">Refunds</a>
+                                <a href="" title="Cookies" class="sb2_1_link">Cookies</a>
+                            </div>
+                        </div>
+                        <img src="Images/s_bottom_logo_2.png" alt="" class="sb2_1_steamImg">
+                </div>
+                <div class="sbot_part2_common sbot_part2_2">
+                    <div class="sb2_2decreption_link">
+                        <a href="" class="sb2_2_link">About Valve</a>
+                        <a href="" class="sb2_2_link">Jobs</a>
+                        <a href="" class="sb2_2_link">Steamworks</a>
+                        <a href="" class="sb2_2_link">Steam Distribution</a>
+                        <a href="" class="sb2_2_link">Support</a>
+                        <a href="" class="sb2_2_link">Recycling</a>
+                        <a href="" class="sb2_2_link">Gift Cards</a>
+                        <img src="Images/s_faceLogo.png" alt="" class="sb2_2_image sb2_2_faceImg">
+                        <a href="https://www.facebook.com/Steam" class="sb2_2_link sb2_2_facelink">Steam</a>
+                        <img src="Images/s_twitterLogo.png" alt="" class="sb2_2_image sb2_2_twitterImg">
+                        <a href="https://twitter.com/steam" class="sb2_2_link">@steam</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
+

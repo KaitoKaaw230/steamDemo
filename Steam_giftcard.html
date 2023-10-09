@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Gift Cards</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="C:\Users\PC\OneDrive\Desktop\Thực tập_jobs\SteamHtml\Images\steamLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- toplogo -->
+    <style>
+        .steamTop{
+            width: 100%;
+            height: 100px;
+            background-color: #171a21;
+            display: flex;
+            justify-content: space-around;
+        }
+        .sTop_choise{
+            width: 800px;
+            
+            margin-left: 50px;
+            display: flex;
+            justify-content: start;
+        }
+        .sTop_avatar_link{}
+        .sTop_avatar_image{
+            margin-top: 25px;
+            width: 160px;
+            height: 50px;
+            margin-left: 80px;
+            margin-right: -10px;
+        }
+        .sTop_choise_choises{
+            
+            margin-top: 25px;
+            /* background-color: red; */
+            margin-left: 70px;
+            width: 450px;
+            height: 50px;
+            
+        }
+        .st_choises_common{
+            text-decoration: none;
+            height: 30px;
+            width: auto;
+            font-size: 15px;
+            margin: 18px 0 0 0;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: relative;
+        }
+        .st_choises_common:hover{color: #fff;}
+        .st_choises_store{}
+        .st_choises_comunity{}
+        .st_choises_about{margin-left: 6px;}
+        .st_choises_support{margin-left: 6px;}
+
+        .st_pop{
+            /* box-shadow: 1px 1px 0.5px 1px; */
+            position: absolute;
+            background-color: #171a21;
+            display: none;
+            /* flex-direction: column; */
+            justify-content: start;
+            box-shadow: 3px 3px 5px -3px #000;
+	        text-align: left;
+            columns: 1;
+            z-index: 10;
+        }
+        .st_store_pop_contain{
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            width: 127px; 
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .st_community_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px; 
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        
+
+        .st_choises_store:hover .st_store_pop{display: block;}
+        .st_choises_comunity:hover .st_community_pop{display: block;}
+        .st_pop:last-child{margin-bottom: 10px;}
+        .st_store_pop{width: 127px; height: 165px;}
+        .st_community_pop{width: 100px; height: 145px;}
+        .pop_text{
+            color: #b8b6b4;
+            font-size: 11px;
+            padding: 7px 10px 7px 10px;
+            
+            text-decoration: none;
+        }
+        .pop_text:first-child{padding-top: 12px;}
+        .pop_text:hover{color: #fff;}
+        .store_pop{}
+        .community_pop{}
+    </style>
+    <!-- topinstall -->
+    <style>
+        .sTop_login{
+            width: 200px;
+            margin-left: -100px;
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        .st_login_install{
+            margin-top: 5px;
+            width: 100px;
+            height: 24px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #5c7e10;
+        }
+        .stlogin_install_image{
+            margin: 2px 2px 2px 0;
+            width: 20px;
+            height: 20px;
+        }
+        .stlogin_install_text{
+            margin-top: 6px;
+            color: #e5e4dc;
+            font-size: 10px;
+        }
+        .st_login_install:hover .stlogin_install_text{color: #fff;}
+        
+        .st_login_button{
+            font-size: 15px;
+            margin: 8px 5px 0 5px;
+            height: 24px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .st_seperate{
+            margin-top: 10px;
+            height: 14px;
+            width: 0.5px;
+            background-color: #b8b6b4;
+        }
+        .st_languge_button{
+            /* border-left: thick solid #b8b6b4; */
+            margin-top: 8px;
+            height: 18px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        .st_login_button:hover{color: #fff;}
+        .st_languge_button:hover{color: #fff;}
+    </style>
+
+    
+    <!-- Mid -->
+    <style>
+        .steamMid{
+            width: auto;
+            height: 1200px;
+            
+            background: linear-gradient(180deg, #2A475E 0%, #1B2838 80%);
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <!-- steamMid_base -->
+    <style>
+        .steamMid_base{
+            height: 1000px;
+            width: 1000px;
+            /* background-color: yellow; */
+        }
+        .sMid_searching{
+            margin: 40px 0 0 40px;
+            width: 1000px;
+            height: 40px;
+            background: linear-gradient(to left, #205783 0%, #5175a1 80%);
+            display: flex;
+            justify-content: space-between;
+        }
+        .sMid_searching_choise{
+            width: 700px;
+            height: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .sMsearchChoise_common{
+            
+            cursor: pointer;
+            /* text-align: center; */
+            padding: 10px 24px;
+            border-right: none;
+            text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+            color: #e5e5e5;
+            /* line-height: 34px; */
+        }
+        .sMsearchChoise_common:hover{
+            /* border-left: solid 1px; */
+            background: linear-gradient(to left, #205783 0%, #638ec2 80%);
+            
+            /* border-top: solid 1px;
+            border-bottom: solid 1px; */
+        }
+        /* .yourstore_check{background-color: red;} */
+        .midPopBase_common{
+            background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(50, 50, 51, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
+            
+        }
+        .yourstore_pop{
+            user-select: none;
+            width: fit-content;
+            margin: 8px 0 8px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #c6d4df;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .noteworthy_pop{
+            user-select: none;
+            width: fit-content;
+            margin: 8px 0 8px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #c6d4df;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .yourstore_pop:hover{
+            background-color: #212d3d00;
+            color: #fff;
+            border-bottom: 2px solid #ffffffff;
+            transition-property: border, color;
+            transition-duration: 0.15s;
+            transition-timing-function: ease-in-out;
+        }
+        .noteworthy_pop:hover{
+            background-color: #212d3d00;
+            color: #fff;
+            border-bottom: 2px solid #ffffffff;
+            transition-property: border, color;
+            transition-duration: 0.15s;
+            transition-timing-function: ease-in-out;
+        }
+        .yourstore_popBase_containt{
+            display: flex;
+            flex-direction: column;
+        }
+        .noteworthy_popBase_contain{
+            display: flex;
+            flex-direction: column;
+        }
+        .yourstore_check:hover .yourstore_popBase{display: block;}
+        .noteworthy_check:hover .noteworthy_popBase{display: block;}
+        .categories_check:hover .categories_popBase{display: block;}
+        @keyframes headerNotifyGrowth{
+            from{
+        /* scale là độ phóng to thu nhỏ */
+            opacity: 0;
+            transform: scale(0);
+        }
+        to{
+            opacity: 1;
+            transform: scale(1);
+        }
+}
+        .yourstore_popBase{
+            z-index: 10;
+            left: 290px;
+            top: 180px;
+            position: absolute;
+            height: 140px;
+            width: 210px;
+            background-color: red;
+            display: none;
+
+
+            /* transform-origin: calc(100% - 20px) top; */
+            transform-origin: center;
+            will-change: opacity, transform;
+            animation: headerNotifyGrowth ease-in 0.1s;
+        }
+        .noteworthy_popBase{
+            z-index: 10;
+            left: 408px;
+            top: 180px;
+            position: absolute;
+            height: 220px;
+            width: 190px;
+            background-color: blue;
+            display: none;
+
+            transform-origin: center;
+            will-change: opacity, transform;
+            animation: headerNotifyGrowth ease-in 0.1s;
+        }
+        .categories_popBase{
+            z-index: 10;
+            left: 290px;
+            top: 180px;
+            position: absolute;
+            height: 520px;
+            width: 1000px;
+            background-color: yellow;
+            
+            display: none;
+            transform-origin: center;
+            will-change: opacity, transform;
+            animation: headerNotifyGrowth ease-in 0.1s;
+        }
+        .categories_pop_part_1{
+            
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 520px;
+            width: 200px;
+        }
+        .categories_pop_part_2{
+            border-left: solid 1px rgb(61, 61, 61);
+            position: absolute;
+            left: 200px;
+            top: 0;
+            /* background-color: yellow; */
+            height: 520px;
+            width: 600px;
+        }
+        .categories_pop_part_2_1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 520px;
+            width: 200px;
+            
+        }
+        .categories_pop_part_2_2{
+            position: absolute;
+            top: 0;
+            left: 200px;
+            height: 520px;
+            width: 200px;
+        }
+        .categories_pop_part_2_3{
+            position: absolute;
+            top: 0;
+            left: 400px;
+            height: 520px;
+            width: 200px;
+        }
+        .item_saparate{margin-top: 35px !important;}
+        .item_saparate_2{margin-top: 50px !important;}
+        .categories_pop_title{
+            position: absolute;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            margin: 20px 0 0 15px;
+            font-family: "Motiva Sans", Sans-serif;
+            font-size: 11px;
+            color: #2EBFFF;
+            text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+        }
+        .categoriesPop_part1_items{
+            font-variant: none;
+            text-transform: none;
+            font-weight: normal;
+            text-decoration: none;
+            width: fit-content;
+            margin: 15px 0 15px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #c6d4df;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .categoriesPop_part1_items:hover{
+            background-color: #212d3d00;
+            color: #fff;
+            border-bottom: 2px solid #ffffffff;
+            transition-property: border, color;
+            transition-duration: 0.15s;
+            transition-timing-function: ease-in-out;
+        }
+        .categories_pop_part_3{
+            border-left: solid 1px rgb(61, 61, 61);
+            position: absolute;
+            left: 800px;
+            top: 0;
+            height: 520px;
+            width: 200px;
+        }
+        .categories_pop_part_3_1{
+            height: 250px;
+            width: 200px;
+        }
+        .categories_pop_part_3_2{
+            height: 250px;
+            width: 200px;
+        }
+        .categoriesPop_part1_sparated{
+            /* position: absolute; */
+            /* background-color: #c6d4df; */
+            height: 0.5px;
+            width: 65px;
+            background: linear-gradient(to right, #c6d4df 0%, #425666 80%);
+            
+        }
+    </style>
+
+    <!-- searchbar_search button -->
+    <style>
+        .sMid_searching_search{
+            width: 178px;
+            height: 26px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: red;
+            margin: 7px 0 5px 0;
+            border-radius: 3px;
+            
+        }
+        .sMSearch_bar{
+            background-color: #316282;
+            
+            border: 1px solid rgba( 0, 0, 0, 0.3);
+            /* box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2); */
+            height: 22px;
+            width: 150px;
+            padding-left: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            margin: 0 0 0 0;
+            font-style: italic;
+            border-right: none;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            
+        }
+        .sMSearch_button{
+            border: 1px solid rgba( 0, 0, 0, 0.3);
+            border-left: none;
+            margin: 0 0 0 0;
+            width: 30px;
+            height: 26px;
+            outline: none;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            cursor: pointer;
+           
+            background-image: url(Images/s_searcbarIcon.png);
+        }
+        .sMid_searching_search:hover .sMSearch_bar{
+            border-top: solid 1px #67c1f5;
+            border-bottom: solid 1px #67c1f5;
+            border-left: solid 1px #67c1f5;
+        }
+        .sMid_searching_search:hover .sMSearch_button{
+            border-top: solid 1px #67c1f5;
+            border-bottom: solid 1px #67c1f5;
+            border-right: solid 1px #67c1f5;
+        }
+    </style>
+
+
+
+    <!-- bottom 2-->
+    <style>
+        .steamBottom{
+            width: 100%;
+            height: 165px;
+            position: absolute;
+            bottom: 0;
+        }
+        .steamBottom_part2{
+            width: 100%;
+            height: 165px;
+            background-color: #171a21;
+        }
+        .sbot_part2_common{
+            position: absolute;
+            margin: 0 0 0 250px;
+            height: 60px;
+            width: 1000px;
+        }
+        .sbot_part2_1{
+            top: 20px;
+            /* background-color: red; */
+            display: flex;
+            justify-content: space-around;
+            border-top: #363c44 solid 1px;
+            border-bottom: #363c44 solid 1px;
+        }
+        
+        
+
+        .sb2_1_valve_link{}
+        .sb2_1_valve_img{
+            margin: 10px 0 10px 0;
+            width: 100px;
+            height: 40px;
+        }
+        .sb2_1_dereption{
+            margin: 10px 0 10px 0;
+            height: 40px;
+            width: 800px;
+            /* background-color: yellow; */
+        }
+        .sb2_1_steamImg{
+            margin: 15px 0 15px 0;
+            width: 100px;
+            height: 30px;
+        }
+        .sb2_1decreption_text{
+            position: absolute;
+            font-family: sans-serif;
+            color: #8f98a0;
+            font-size: 12px;
+            width: 780px;
+            margin: 14px 10px 0 10px;
+            top: 0;
+
+            /* visibility: hidden; */
+        }
+        .sb2_1decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 263px;
+            width: 600px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_1_link{
+            margin-top: 10px;
+            justify-content: end;
+            text-decoration: none;
+            color: #c6d4df;
+            padding: 0 5px 0 5px;
+            font-size: 14px;
+            border-right: #c6d4df solid 1px;
+        }
+        .sb2_1_link:last-child{border: none;}
+        .sb2_1_link:hover{color: #fff;}
+
+
+        .sbot_part2_2{
+            position: relative;
+            top: 80px;
+            /* background-color: blue; */
+        }
+        .sb2_2decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 800px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_2_link{
+            text-decoration: none;
+            color: #c6d4df;
+            font-size: 14px;
+            padding: 0 7px 0 5px;
+            margin-top: 20px;
+            border-right: #c6d4df solid 1px;
+            /* visibility: hidden; */
+        }
+        .sb2_2_link:last-child{margin-left: -4px; border: none;}
+        .sb2_2_link:hover{color: #fff;}
+        .sb2_2_facelink{margin-left: -4px;}
+        .sb2_2_image{
+            /* position: absolute; */
+            width: 15px;
+            height: 15px;
+        }
+        .sb2_2_faceImg{}
+        .sb2_2_twitterImg{
+            margin-left: 5px;
+        }
+    </style>
+
+
+    <style>
+        body{   
+            height: 1300px;
+            width: auto;
+            position: relative;
+            /* cursor: url("trỏ\ chuột\ ori.jpg"),auto; */
+        }
+        .SteamContainer{
+            display: flex;
+            flex-direction: column;
+        }
+        
+    </style>
+
+<!-- gitcar_text -->
+<style>
+    .gitcard_title{
+        position: absolute;
+        top: 17%;
+        left: 290px;
+        color: #ffffff;
+        font-size: 34px;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: 300;
+        text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.4 );
+    }
+    .gitcard_text{
+        position: absolute;
+        top: 20%;
+        left: 290px;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+</style>
+
+<!-- giftcard_base -->
+<style>
+    .gitcard_container{
+        margin-top: 10px;
+        position: absolute;
+        top: 310px;
+        left: 290px;
+        width: 1000px;
+        height: 750px;
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: row;
+    }
+    .gitcard_base_1{width: 500px; height: 750px;}
+    .gitcard_base_1_img{width: 448px; height: 462px;}
+    .gitcard_base_2{width: 500px; height: 750px; display: flex; flex-direction: column;}
+    .gitcard_base_2_top{width: 500px; height: 500px; display: flex; flex-direction: row;}
+    .gitcard_base_2_bottom{width: 500px; height: 180px;}
+
+    .gitcard_base_2_top_left{width: 250px; height: 500px;}
+    .gitcard_base_2_top_right{width: 250px; height: 500px; display: flex; flex-direction: column;margin-left: 80px;}
+    .gitcard_base_2_top_title{
+        user-select: none;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: 200;
+        font-weight: normal;
+        font-size: 18px;
+        color: #ffffff;
+        padding: 10px 0px 3px 0px;
+    }
+    .gitcard_base_2_top_text{
+        user-select: none;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 21px;
+        color: #c6d4df;
+    }
+    .giftcard_button:hover{color: #fff; background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);}
+    .giftcard_button{
+        padding: 10px 15px 10px 15px;
+        border-radius: 2px;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none !important;
+        color: #67c1f5;
+        background: rgba( 103, 193, 245, 0.2 );
+    }
+    .gitcard_base_2_top_button{}
+    .gitcard_base_2_top_right_button{width: fit-content; margin: 5px 0 5px 0;}
+    .gitcard_base_2_top_right_button_2{width: fit-content;}
+    .gitcard_base_2_bottom_button{}
+    .gitcard_base_2_top_left_show{
+        margin-top: 20px;
+        width: 103px;
+        height: 208px;
+    }
+</style>
+<!-- scrollbar -->
+<style>
+    ::-webkit-scrollbar {
+        height: 12px;
+        width: 14px;
+        background: rgba(0,0,0,0);
+        z-index: 12;
+        overflow: visible;
+    }
+    ::-webkit-scrollbar-corner {
+    background: #202020;
+}
+    ::-webkit-scrollbar-thumb {
+        width: 10px;
+        background-color: #434953;
+        border-radius: 10px;
+        z-index: 12;
+        border: 4px solid rgba(0,0,0,0);
+        background-clip: padding-box;
+        transition: background-color .32s ease-in-out;
+        margin: 4px;
+        min-height: 32px;
+        min-width: 32px;
+    }
+    ::selection {
+        background: #54a5d4;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.6666666667);
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+    <div class="SteamContainer">
+        <div class="steamPart steamTop">
+            
+            <div class="sTop_choise">
+                <a href="Steam_index.html" class="sTop_avatar_link">
+                    <img src="Images/s_avatar.png" alt="" class="sTop_avatar_image">
+                </a>
+
+                <div class="sTop_choise_choises">
+                    <button class="st_choises_common st_choises_store">
+                        STORE
+                        <div class="st_pop st_store_pop">
+                            <div class="st_store_pop_contain">
+                                <a href="" class="pop_text store_pop">HOME</a>
+                                <a href="" class="pop_text store_pop">DISCOVERY QUEUE</a>
+                                <a href="" class="pop_text store_pop">WISHLIST</a>
+                                <a href="" class="pop_text store_pop">POINTS SHOP</a>
+                                <a href="" class="pop_text store_pop">NEWS</a>
+                                <a href="" class="pop_text store_pop">STATS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="st_choises_common st_choises_comunity">
+                        COMMUNITY
+                        <div class="st_pop st_community_pop">
+                            <div class="st_community_pop_contain">
+                                <a href="" class="pop_text community_pop">HOME</a>
+                                <a href="" class="pop_text community_pop">DISCUSSIONS</a>
+                                <a href="" class="pop_text community_pop">WORKSHOP</a>
+                                <a href="" class="pop_text community_pop">MARKET</a>
+                                <a href="" class="pop_text community_pop">BROADCASTS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <a href="" class="st_choises_common st_choises_about">ABOUT</a>
+                    <a href="" class="st_choises_common st_choises_support">SUPPORT</a>
+                    <!-- <button class="st_choises_common st_choises_about">ABOUT</button>
+                    <button class="st_choises_common st_choises_support">SUPPORT</button> -->
+                </div>
+            </div>
+
+            <div class="sTop_login">
+                <div class="st_login_install">
+                    <img src="Images/s_install_image.png" alt="" class="stlogin_install_image">
+                    <h class="stlogin_install_text">Install Steam</h>
+                </div>
+                <a href="Steam_login.html" class="st_login_button">login</a>
+                <!-- <button class="st_login_button">login</button> -->
+                <div class="st_seperate"></div>
+                <button class="st_languge_button">language</button>
+            </div>
+        </div>
+
+        <div class="steamPart steamMid">
+            <div class="steamMid_base">
+                <div class="sMid_searching">
+                    <div class="sMid_searching_choise">
+                        <div class="sMsearchChoise_common yourstore_check">
+                            Your Store
+                            <div class="midPopBase_common yourstore_popBase">
+                                <div class="yourstore_popBase_containt">
+                                    <a href="Steam_index.html" class="yourstore_pop">Home</a>
+                                    <a href="Steam_comunityRecomend.html" class="yourstore_pop">Community Recommendations</a>
+                                    <a href="Steam_RecentViewed.html" class="yourstore_pop">Recently Viewed</a>
+                                    <a href="Steam_Curators.html" class="yourstore_pop">Steam Curators</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sMsearchChoise_common noteworthy_check">
+                            New & Noteworthy
+                            <div class="midPopBase_common noteworthy_popBase">
+                                <div class="noteworthy_popBase_contain">
+                                    <a href="" class="noteworthy_pop">Steam Replay 2022</a>
+                                    <a href="" class="noteworthy_pop">Top Sellers</a>
+                                    <a href="" class="noteworthy_pop">Most Played</a>
+                                    <a href="" class="noteworthy_pop">New & Trending</a>
+                                    <a href="" class="noteworthy_pop">Special Offers</a>
+                                    <a href="" class="noteworthy_pop">Recently Updated</a>
+                                    <a href="" class="noteworthy_pop">Popular Upcoming</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="sMsearchChoise_common categories_check">
+                            Categories
+                            <div class="midPopBase_common categories_popBase">
+                                <div class="categories_pop_part_1">
+                                    <h class="categories_pop_title">SPECIAL SECTIONS
+                                        <p class="categoriesPop_part1_items">Free to play</p>
+                                        <div class="categoriesPop_part1_items">Demos</div>
+                                        <div class="categoriesPop_part1_items">Early Access</div>
+                                        <div class="categoriesPop_part1_sparated"></div>
+                                        <div class="categoriesPop_part1_items">Steam Deck</div>
+                                        <div class="categoriesPop_part1_items">Great on Deck</div>
+                                        <div class="categoriesPop_part1_sparated"></div>
+                                        <div class="categoriesPop_part1_items">Controller-Friendly</div>
+                                        <div class="categoriesPop_part1_items">Remote Play</div>
+                                        <div class="categoriesPop_part1_items">VR Titles</div>
+                                        <div class="categoriesPop_part1_items">VR Hardware</div>
+                                        <div class="categoriesPop_part1_sparated"></div>
+                                        <div class="categoriesPop_part1_items">Software</div>
+                                        <div class="categoriesPop_part1_items">Soundtracks</div>
+                                        <div class="categoriesPop_part1_sparated"></div>
+                                        <div class="categoriesPop_part1_items">macOS</div>
+                                        <div class="categoriesPop_part1_items">SteamOS + Linux</div>
+                                        <div class="categoriesPop_part1_items">For PX Cafés</div>
+                                    </h>
+                                    
+                                </div>
+                                <div class="categories_pop_part_2">
+                                    <div class="categories_pop_part_2_1">
+                                        <h class="categories_pop_title">GENERS
+                                            <div class="categoriesPop_part1_items">ACtion</div>
+                                            <div class="categoriesPop_part1_items">Arcade & Rythm</div>
+                                            <div class="categoriesPop_part1_items">Fighting & Martial Arts</div>
+                                            <div class="categoriesPop_part1_items">First-Person Shooter</div>
+                                            <div class="categoriesPop_part1_items">Hack & Slash</div>
+                                            <div class="categoriesPop_part1_items">Platformer & Runner</div>
+                                            <div class="categoriesPop_part1_items">Third-Person Shooter</div>
+                                            <div class="categoriesPop_part1_items">shmup</div>
+
+                                            <div class="categoriesPop_part1_items item_saparate">Adventure</div>
+                                            <div class="categoriesPop_part1_items">Adventure RPG</div>
+                                            <div class="categoriesPop_part1_items">Casual</div>
+                                            <div class="categoriesPop_part1_items">Hidden Object</div>
+                                            <div class="categoriesPop_part1_items">Metroidvania</div>
+                                            <div class="categoriesPop_part1_items">Puzzle</div>
+                                            <div class="categoriesPop_part1_items">Story-Rich</div>
+                                            <div class="categoriesPop_part1_items">Visual Novel</div>
+                                        </h>
+                                    </div>
+                                    <div class="categories_pop_part_2_2">
+                                        <div class="categoriesPop_part1_items  item_saparate_2">Role-Playing</div>
+                                        <div class="categoriesPop_part1_items">Acion RPG</div>
+                                        <div class="categoriesPop_part1_items">Adventure RPG</div>
+                                        <div class="categoriesPop_part1_items">JRPG</div>
+                                        <div class="categoriesPop_part1_items">Party-Base</div>
+                                        <div class="categoriesPop_part1_items">Rogue-Like</div>
+                                        <div class="categoriesPop_part1_items">Strategy RPG</div>
+                                        <div class="categoriesPop_part1_items">Turn-Based</div>
+
+                                        <div class="categoriesPop_part1_items item_saparate">Simulation</div>
+                                        <div class="categoriesPop_part1_items">Building & automation</div>
+                                        <div class="categoriesPop_part1_items">Dating</div>
+                                        <div class="categoriesPop_part1_items">Farming & Crafting</div>
+                                        <div class="categoriesPop_part1_items">Hobby & Job</div>
+                                        <div class="categoriesPop_part1_items">Life & Immersive</div>
+                                        <div class="categoriesPop_part1_items">Sandbox & Physics</div>
+                                        <div class="categoriesPop_part1_items">Space & Fight</div>
+                                    </div>
+                                    <div class="categories_pop_part_2_3">
+                                        <div class="categoriesPop_part1_items  item_saparate_2">Strategy</div>
+                                        <div class="categoriesPop_part1_items">Card & Board</div>
+                                        <div class="categoriesPop_part1_items">City & Settlement</div>
+                                        <div class="categoriesPop_part1_items">Grand & 4X</div>
+                                        <div class="categoriesPop_part1_items">Military</div>
+                                        <div class="categoriesPop_part1_items">Real-time Strategy</div>
+                                        <div class="categoriesPop_part1_items">Tower Defense</div>
+                                        <div class="categoriesPop_part1_items">Turn-Based Strategy</div>
+                                        
+                                        <div class="categoriesPop_part1_items item_saparate">Sports & Racing</div>
+                                        <div class="categoriesPop_part1_items">All Sports</div>
+                                        <div class="categoriesPop_part1_items">Fishing & Hunting</div>
+                                        <div class="categoriesPop_part1_items">Individual Sports</div>
+                                        <div class="categoriesPop_part1_items">Racing</div>
+                                        <div class="categoriesPop_part1_items">Racing Sim</div>
+                                        <div class="categoriesPop_part1_items">Sports Sim</div>
+                                        <div class="categoriesPop_part1_items">Team Sports</div>
+                                    </div>
+                                </div>
+                                <div class="categories_pop_part_3">
+                                    <div class="categories_pop_part_3_1">
+                                        <h class="categories_pop_title">THEMES
+                                            <div class="categoriesPop_part1_items">Anime</div>
+                                            <div class="categoriesPop_part1_items">Horror</div>
+                                            <div class="categoriesPop_part1_items">Myster & Detective</div>
+                                            <div class="categoriesPop_part1_items">Open World</div>
+                                            <div class="categoriesPop_part1_items">Sci-Fi & Cyberpunk</div>
+                                            <div class="categoriesPop_part1_items">Space</div>
+                                            <div class="categoriesPop_part1_items">Survival</div>
+                                        </h>
+                                        
+                                    </div>
+                                    <div class="categories_pop_part_3_2">
+                                        <h class="categories_pop_title">PLAYER SUPPORT
+                                            <div class="categoriesPop_part1_items">Co-operative</div>
+                                            <div class="categoriesPop_part1_items">LAN</div>
+                                            <div class="categoriesPop_part1_items">Local & Party</div>
+                                            <div class="categoriesPop_part1_items">MMO</div>
+                                            <div class="categoriesPop_part1_items">Multiplayer</div>
+                                            <div class="categoriesPop_part1_items">Oniline Competitive</div>
+                                            <div class="categoriesPop_part1_items">Singleplayer</div>
+                                        </h>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="sMsearchChoise_common">Points Shop</a>
+                        <a href="Steam_newAndFeature.html" class="sMsearchChoise_common">News</a>
+                        <a href="Steam_SteamLab.html" class="sMsearchChoise_common">Labs</a>
+
+                    </div>
+                    <div class="sMid_searching_search">
+                        <input type="text" placeholder="search..." class="sMSearch_bar">
+                        <button class="sMSearch_button"></button>
+                    </div>
+                </div>
+
+                <h class="gitcard_title">STEAM GIFT CARDS</h>
+                <p class="gitcard_text">GIVE THE PERFECT GIFT OF GAMES TO YOUR FRIEND OR FAMILY MEMBER</p>
+                <div class="gitcard_container">
+                    <div class="gitcard_base_1">
+                        <img src="Images/giftcard_img.png" alt="" class="gitcard_base_1_img">
+                    </div>
+                    <div class="gitcard_base_2">
+                        <div class="gitcard_base_2_top">
+                            <div class="gitcard_base_2_top_left">
+                                <h class="gitcard_base_2_top_title">Digital Gift Cards</h>
+                                <p class="gitcard_base_2_top_text">Now you can directly contribute to a friend or family member's Steam wallet online.</p>
+                                <p class="gitcard_base_2_top_text">Simply log into Steam, select a Steam Friend and a gift amount, and we'll do all the rest.</p>
+                                <a href="" class="giftcard_button gitcard_base_2_top_button">Send through Steam</a>
+                                <img src="Images/giftcar_show.png" alt="" class="gitcard_base_2_top_left_show">
+
+                            </div>
+                            <div class="gitcard_base_2_top_right">
+                                <h class="gitcard_base_2_top_title">Redeem a Physical Gift Card</h>
+                                <a href="Steam_giftcard_continue.html" class="giftcard_button gitcard_base_2_top_right_button">Continue</a>
+                                <h class="gitcard_base_2_top_title">Physical Gift Cards</h>
+                                <p class="gitcard_base_2_top_text">For those times when a gift in the hand is the way to go, you'll find Steam Gift Cards at retail stores across the world in a variety of denominations.</p>
+                                <p class="gitcard_base_2_top_text">Physical Gift Cards are also a great option when you have cash in hand and want to spend it on Steam.</p>
+                                <a href="" class="giftcard_button gitcard_base_2_top_right_button_2">Find in your area</a>
+                            </div>
+                        </div>
+                        <div class="gitcard_base_2_bottom">
+                            <h class="gitcard_base_2_top_title">About Steam Gift Cards</h>
+                            <p class="gitcard_base_2_top_text">Steam Gift Cards work just like gift certificates, which can be redeemed on Steam for the purchase of games, software, hardware, and any other item you can purchase on Steam.</p>
+                            <a href="" class="giftcard_button gitcard_base_2_bottom_button">More about Steam Gift Cards</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="steamBottom">
+            <div class="SBottom_common steamBottom_part2">
+                <div class="sbot_part2_common sbot_part2_1">
+                    <!-- <a href="https://tigobiz.com" target="_blank">
+                    <img src="https://tigobiz.com/wp-content/uploads/2020/11/TRUNG-01-logo-ngang-keo-sat-280-87-150x47.png" alt="logo Tigobiz" /></a> -->
+                    <!-- <a href="https://tigobiz.com" target="_blank" title="Click để vào Webstie tigobiz.com">Dịch vụ Marketing Online Tigobiz</a> -->
+                        <a href="https://www.valvesoftware.com/fr/" title="VALV" class="sb2_1_valve_link">
+                            <img src="Images/s_bottom_logo_1.png" alt="" class="sb2_1_valve_img">
+                        </a>
+                        <div class="sb2_1_dereption">
+                            <p class="sb2_1decreption_text">© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+                                VAT included in all prices where applicable.</p>
+                            <div class="sb2_1decreption_link">
+                                <a href="" title="Privacy Policy" class="sb2_1_link">Privacy Policy</a>
+                                <a href="" title="Legal" class="sb2_1_link">Legal</a>
+                                <a href="" title="Steam Subsctiber Agreement" class="sb2_1_link">Steam Subsctiber Agreement</a>
+                                <a href="" title="Refunds" class="sb2_1_link">Refunds</a>
+                                <a href="" title="Cookies" class="sb2_1_link">Cookies</a>
+                            </div>
+                        </div>
+                        <img src="Images/s_bottom_logo_2.png" alt="" class="sb2_1_steamImg">
+                </div>
+                <div class="sbot_part2_common sbot_part2_2">
+                    <div class="sb2_2decreption_link">
+                        <a href="" class="sb2_2_link">About Valve</a>
+                        <a href="" class="sb2_2_link">Jobs</a>
+                        <a href="" class="sb2_2_link">Steamworks</a>
+                        <a href="" class="sb2_2_link">Steam Distribution</a>
+                        <a href="" class="sb2_2_link">Support</a>
+                        <a href="" class="sb2_2_link">Recycling</a>
+                        <a href="" class="sb2_2_link">Gift Cards</a>
+                        <img src="Images/s_faceLogo.png" alt="" class="sb2_2_image sb2_2_faceImg">
+                        <a href="https://www.facebook.com/Steam" class="sb2_2_link sb2_2_facelink">Steam</a>
+                        <img src="Images/s_twitterLogo.png" alt="" class="sb2_2_image sb2_2_twitterImg">
+                        <a href="https://twitter.com/steam" class="sb2_2_link">@steam</a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

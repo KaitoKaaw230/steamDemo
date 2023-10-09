@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Deck :: Deck Verified</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="NewsImage/Steam_deck_iconAvatar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <style>
+        body{overflow-x: hidden; height: 5000px; width: auto; position: relative;}
+        body{font-family: "Motiva Sans", Sans-serif, -apple-system, system, sans-serif;}
+        .SteamContainer{ display: flex; flex-direction: column;align-items: center;}
+    </style>
+
+
+<!-- color_test -->
+<style>
+</style>
+<!-- top -->
+<style>
+    .NewestDeck_Top{position: fixed; top: 0; z-index: 100;}
+    .NewestDeck_Top{transform: translateY(0); padding-left: 20px; display: flex; justify-content: start;}
+    .NewestDeck_Top{width: 1500px; height: 80px; background-color: #1B1B1B;}
+
+    .NewestDeck_Top_left{width: 200px; height: 70px; margin: 5px 0 0 80px;}
+    .NewestDeck_Top_left_link{}
+    .NewestDeck_Top_left_link_img{width: 215px; height: 70px; z-index: 1;}
+    .NewestDeck_Top_left_link_img_decorate{position: absolute; z-index: 2; top: 25px; left: 100px;}
+    .NewestDeck_Top_left_link_img_decorate{width: 32px; height: 32px; border-radius: 50px;}
+    .NewestDeck_Top_left_link_img_decorate{animation: colorBackground 15s infinite reverse;}
+
+
+    .NewestDeck_Top_right{width: 875px; height: 35px; margin: 22px 0 0 235px; display: flex; justify-content: start;}
+    .NewestDeck_Top_right_choiseBase{width: 715px; height: 35px; }
+    .NewestDeck_Top_right_butNow{width: 96px; height: 35px; margin: 0 10px 0 10px;}
+    .NewestDeck_Top_right_language_base{width: 56px; height: 35px; border-radius: 1.4em; cursor: pointer;}
+    .NewestDeck_Top_right_language_base{display: flex; justify-content: center; align-items: center; background: #1B1B1B;}
+    .NewestDeck_Top_right_language_base_img{width: 36px; height: 20px; border-radius: 1.4em;}
+    .NewestDeck_Top_right_language_base:hover{background: #fff; color: #1B1B1B;}
+
+
+    .choiseBase_item{width: fit-content; height: 35px; text-decoration: none; padding: 9px 17px; line-height: 36px;}
+    .choiseBase_item{border-radius: 1.4em; font-size: 0.9em; color: #fff; background: #1B1B1B; font-weight: bold;}
+    .choiseBase_item{margin-right: 5px; transition-property: color; transition-duration: 0.8s;}
+    .choiseBase_item:hover{background: #fff; color: #1B1B1B;}
+    .choisen{background: #5b5463 !important;}
+    .choisen:hover{color: #1B1B1B !important; background: #5b5463 !important;}
+
+
+
+    .buyNow_btn{width: fit-content; height: 35px; text-decoration: none; padding: 9px 17px; line-height: 36px;}
+    .buyNow_btn{border-radius: 1.4em; font-size: 0.9em; color: #fff; font-weight: bold;}
+    .buyNow_btn{animation: colorBackground 15s infinite;}
+    @keyframes colorBackground {
+         0% {background-color: cyan;}
+         30%{background-color: purple;}
+         50%{background-color: lightgreen;}
+         70% {background-color: rgb(255, 71, 71);}
+         90%{background-color: cyan;}
+    }
+    .buyNow_btn:hover{background: #fff; color: #1B1B1B; transition: color 0.8s;}
+
+    
+</style>
+
+
+<!-- mid item_1-->
+<style>
+    .NewestDeck_Mid{transform: translateX(-10px);}
+    .NewestDeck_Mid{display: flex; flex-direction: column; width: 1540px; height: auto; margin-top: 70px;}
+    .NewestDeck_Mid_item_1{width: 100%; height: 560px;}
+
+    .NewestDeck_Mid_item_1_base{display: flex; justify-content: start;}
+    .NewestDeck_Mid_item_1_base{width: 1250px; height: 450px; margin-top: 74px; margin-left: 180px;}
+    .NewestDeck_Mid_item_1_left{width: 300px; height: 450px;}
+    .NewestDeck_Mid_item_1_right{width: 950px; height: 450px; display: flex; flex-direction: column;}
+
+    .NewestDeck_Mid_item_1_left_img{width: 196px; height: 196px; margin: 20px 0 0 0;}
+    .NewestDeck_Mid_item_1_right_title{font-size: 3.294em; font-weight: 900; width: 920px; letter-spacing: -3px;}
+    .NewestDeck_Mid_item_1_right_text_base{margin-top: 25px;}
+    .NewestDeck_Mid_item_1_right_text{font-size: 1em; font-weight: 600; letter-spacing: 1px; line-height: 1.5;}
+    .NewestDeck_Mid_item_1_right_LearnMore_base{width: 470px; height: 73px; display: flex; justify-content: start; margin-top: 40px;}
+    .NewestDeck_Mid_item_1_right_LearnMore_base_img{width: 129px; height: 73px;}
+    .NewestDeck_Mid_item_1_right_LearnMore_base_text{font-weight: 900; font-size: 1.05em; line-height: 1.35em; margin: 10px 0 0 10px;}
+</style>
+
+<!-- mid item_2-->
+<style>
+    .NewestDeck_Mid_item_2{width: 100%; height: 1200px; background-color: #1B1B1B;}
+    .NewestDeck_Mid_item_2{}
+    .NewestDeck_Mid_item_2_base{width: 1250px; height: 500px; margin: 80px 0 0 140px;}
+    .NewestDeck_Mid_item_2_Container{width: 1250px; height: 810px; margin-top: 30px;}
+
+    /* 175*250 */
+    .NewestDeck_Mid_item_2_Container_row{width: 1250px; height: 250px; margin-bottom: 30px; display: flex; justify-content: start;}
+    .NewestDeck_Mid_item_2_items{width: 175px; height: 250px; margin-left: 30px; cursor: pointer; transition: transform 0.2s;}
+    .NewestDeck_Mid_item_2_items:hover{transform: scale(1.1);}
+
+    .NewestDeck_Mid_item_2_link{color: #fff; text-decoration: none; font-size: 1em; line-height: 40px; border-radius: 50px; background-color: cyan;}
+    .NewestDeck_Mid_item_2_link{width: fit-content; height: 40px; padding: 10px 40px; animation: colorBackground 15s infinite reverse;}
+    .NewestDeck_Mid_item_2_link{outline: none; border: none; user-select: none;}
+</style>
+
+<!-- mid item_3 -->
+<style>
+    .NewestDeck_Mid_item_3{width: 100%; height: 500px; background-color: #DCDEDF;}
+    .NewestDeck_Mid_item_3_base{width: 1300px; height: 400px; margin: 50px 0 0 140px; display: flex; justify-content: start;}
+    .NewestDeck_Mid_item_3_base_left{width: 650px; height: 400px;}
+    .NewestDeck_Mid_item_3_base_right{width: 650px; height: 400px;}
+    .NewestDeck_Mid_item_3_base_right_img{width: 650px; height: 300px;}
+</style>
+
+<!-- mid item_4 -->
+<style>
+    .NewestDeck_Mid_item_4{width: 100%; height: 800px; background-color: #1B1B1B;}
+    .NewestDeck_Mid_item_4_base{width: 1250px; height: 700px; margin: 80px 0 0 140px;}
+    .NewestDeck_Mid_item_4_base_container{width: 1250px; height: 500px; display: flex; justify-content: start; margin-top: 20px;}
+
+    .NewestDeck_Mid_item_4_item{width: 226px; height: 500px; margin: 0 44px 0 44px; display: flex; flex-direction: column; color: #fff;}
+    .NewestDeck_Mid_item_4_item_img{width: 226px; height: 339px;}
+    .NewestDeck_Mid_item_4_item_title{width: 226px; height: 70px; text-align: center; font-weight: 900; line-height: 70px; font-size: 18px;}
+    .NewestDeck_Mid_item_4_item_text{margin: 0 20px 0 20px; width: 186px; height: 91px; text-align: center; font-weight: bold; line-height: 25px;}
+
+    .NewestDeck_Mid_item_4_base_finalText{width: 1250px; height: 40px; margin-top: 50px; text-align: center; color: #848484; font-size: 12px;}
+</style>
+
+<!-- mid newestDeck_item_5 -->
+<style>
+    .NewestDeck_Mid_item_5{width: 100%; height: 580px; background-color: #fff;}
+    .NewestDeck_Mid_item_5_base{width: 1300px; height: 470px; margin: 80px 0 0 140px; display: flex; justify-content: start;}
+    .NewestDeck_Mid_item_5_base{display: flex; flex-direction: column;}
+
+    .NewestDeck_Mid_item_5_base_row{width: 1300px; height: 150px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_5_items{width: 600px; height: 150px;}
+    .NewestDeck_Mid_item_5_items_title{display: flex; justify-content: start; width: 500px; height: 50px; color: #1B1B1B;}
+    .NewestDeck_Mid_item_5_items_title_img{width: 25px; height: 25px; margin: 10px 10px 0 0; border-radius: 50px;}
+    .NewestDeck_Mid_item_5_items_title_text{font-size: 22px; font-weight: 800; margin-top: 8px;}
+
+    .NewestDeck_Mid_item_5_items_text{line-height: 25px; font-weight: 500;}
+</style>
+
+<!-- mid item_6 -->
+<style>
+    .NewestDeck_Mid_item_6{width: 100%; height: 400px; background-color: #1B1B1B;}
+    .NewestDeck_Mid_item_6_base{width: 1250px; height: 300px; margin: 50px 0 0 140px;}
+    .NewestDeck_Mid_item_6_base{display: flex; justify-content: space-between;}
+
+    .NewestDeck_Mid_item_6_base_left{width: 580px; height: 300px;}
+    .NewestDeck_Mid_item_6_base_right{width: 580px; height: 300px;}
+
+    .NewestDeck_Mid_item_6_link{text-decoration: none; animation: colorchange 15s infinite reverse; font-weight: 700;}
+
+    @keyframes colorchange {
+         0% {color: cyan;}
+         30%{color: purple;}
+         50%{color: lightgreen;}
+         70% {color: rgb(255, 71, 71);}
+         90%{color: cyan;}
+    }
+</style>
+
+<!-- mid item_7 -->
+<style>
+    .NewestDeck_Mid_item_7{width: 100%; height: 350px; animation: colorBackground 15s infinite reverse; background: cyan;}
+    .NewestDeck_Mid_item_7_base{width: 1250px; height: 250px; margin: 50px 0 0 140px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_7_base_left{width: 800px; height: 100px; margin-top: 50px;}
+    .NewestDeck_Mid_item_7_base_right{width: 400px; height: 250px;}
+    .NewestDeck_Mid_item_7_base_right{display: flex; justify-content: center; align-items: center;}
+    .NewestDeck_Mid_item_7_base_right_link{margin-left: 100px; width: fit-content; height: 50px; text-decoration: none; color: #fff;}
+    .NewestDeck_Mid_item_7_base_right_link{background: #1B1B1B; line-height: 50px; padding: 0 50px; border-radius: 50px; font-weight: 600;}
+    .NewestDeck_Mid_item_7_base_right_link:hover{color: #1B1B1B; background-color: #fff; box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.22);}
+</style>
+
+
+<!-- item_8 -->
+<style>
+    .NewestDeck_Mid_item_8{background-color: #1F2E35;}
+    .NewestDeck_Mid_item_8{width: 100%; height: 550px;}
+
+    .NewestDeck_Mid_item_8_top{width: 1250px; height: 260px; margin-top: 80px; margin-left: 140px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_8_bottom{width: 1250px; height: 100px; margin-top: 30px; margin-left: 140px;}
+
+    .NewestDeck_Mid_item_8_top_left{}
+    .NewestDeck_Mid_item_8_top_left_img{width: 193px; height: 193px;}
+    .NewestDeck_Mid_item_8_top_right{width: 300px; height: 260px; display: flex; align-items: start; flex-direction: column;}
+    .NewestDeck_Mid_item_8_top_right_img{width: 120px; height: 40px; filter: brightness(3); margin-bottom: 20px;}
+
+    .NewestDeck_Mid_item_8_top_right_text_base{width: 250px; height: 200px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_8_top_right_text_base_column{width: 100px; height: 200px;}
+    .NewestDeck_Mid_item_8_link{text-decoration: none; color: #fff;font-size: 0.8em; line-height: 2em;}
+    .NewestDeck_Mid_item_8_link:hover{opacity: 0.7; }
+</style>
+</head>
+<body>
+    <div class="SteamContainer">
+        <div class="NewestDeck_Top">
+            <div class="NewestDeck_Top_left">
+                <a href="" class="NewestDeck_Top_left_link">
+                    <a href="Newest_index.html"><img src="NewsImage/NewLogo.png" alt="" class="NewestDeck_Top_left_link_img"></a>
+                    <a href="Steam_index.html" class="NewestDeck_Top_left_link_img_decorate"></a>
+                    <!-- <div class="NewestDeck_Top_left_link_img_decorate"></div> -->
+                </a>
+            </div>
+            <div class="NewestDeck_Top_right">
+                <div class="NewestDeck_Top_right_choiseBase">
+                    <a href="Newest_hardware.html" class="choiseBase_item">Hardware</a>
+                    <a href="Newest_Softwrae.html" class="choiseBase_item">Software</a>
+                    <a href="" class="choiseBase_item choisen">Deck Vertified</a>
+                    <a href="Newest_dock.html" class="choiseBase_item">Dock</a>
+                    <a href="Newest_FAQ.html" class="choiseBase_item">FAQ</a>
+                    <a href="" class="choiseBase_item">Tech Specs</a>
+                    <a href="Newest_News.html" class="choiseBase_item">News</a>
+                </div>
+                <div class="NewestDeck_Top_right_butNow">
+                    <a href="Steam_steamdeck.html" class="buyNow_btn">Buy now</a>
+                </div>
+                <div class="NewestDeck_Top_right_language_base">
+                    <img src="NewsImage/Laguage_setting_img.png" alt="" class="NewestDeck_Top_right_language_base_img">
+                </div>
+            </div>
+        </div>
+
+        <div class="NewestDeck_Mid">
+            <div class="NewestDeck_Mid_item_1">
+                <div class="NewestDeck_Mid_item_1_base">
+                    <div class="NewestDeck_Mid_item_1_left">
+                        <img src="NewsImage/Newest_Deck_MarkImg.png" alt="" class="NewestDeck_Mid_item_1_left_img">
+                    </div>
+                    <div class="NewestDeck_Mid_item_1_right">
+                        <div style="color: #1b1b1b;" class="NewestDeck_Mid_item_1_right_title">See at a glance how games will play on Steam Deck.</div>
+                        <div class="NewestDeck_Mid_item_1_right_text_base">
+                            <span class="NewestDeck_Mid_item_1_right_text">With Steam Deck, we're bringing your Steam Library to a new form factor—a portable gaming PC. While many games run great on Deck out of the box, this shift means there are some games that, while they may be great on a desktop PC, aren't a great experience on Steam Deck.</span><br><br>
+                            <span class="NewestDeck_Mid_item_1_right_text">We want it to be easy for you to find great gaming experiences on Steam Deck, so we’ve designed a system to do just that.</span>
+                        </div>
+                        <div class="NewestDeck_Mid_item_1_right_LearnMore_base">
+                            <img src="NewsImage/newest_deck_small_img.png" alt="" class="NewestDeck_Mid_item_1_right_LearnMore_base_img">
+                            <div class="NewestDeck_Mid_item_1_right_LearnMore_base_text">Learn more about the Steam Deck Compatibility program.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="NewestDeck_Mid_item_2">
+                <div class="NewestDeck_Mid_item_2_base">
+                    <div style="color: #fff;" class="NewestDeck_Mid_item_1_right_title">Recently Verified</div>
+                    <div class="NewestDeck_Mid_item_2_Container">
+                        <div class="NewestDeck_Mid_item_2_Container_row">
+                            <img src="NewsImage/newestDeck_item_1.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_2.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_3.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_4.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_5.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_6.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                        </div>
+                        <div class="NewestDeck_Mid_item_2_Container_row">
+                            <img src="NewsImage/newestDeck_item_7.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_8.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_9.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_10.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_11.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_12.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                        </div>
+                        <div class="NewestDeck_Mid_item_2_Container_row">
+                            <img src="NewsImage/newestDeck_item_13.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_14.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                            <img src="NewsImage/newestDeck_item_15.jpg" alt="" class="NewestDeck_Mid_item_2_items">
+                        </div>
+                    </div>
+                    <div style="width: 1250px; height: 40px; margin-top: 10px; display: flex; justify-content: end;">
+                        <a href="" class="NewestDeck_Mid_item_2_link">See all verifiled games on Steam</a></div>
+                </div>
+            </div>
+
+            <div class="NewestDeck_Mid_item_3">
+                <div class="NewestDeck_Mid_item_3_base">
+                    <div class="NewestDeck_Mid_item_3_base_left">
+                        <div style="color: #1b1b1b; width: 650px; margin-top: 30px;" class="NewestDeck_Mid_item_1_right_title">Valve is reviewing the entire Steam catalog on Deck.</div>
+                        <div style="margin-top: 20px;" class="NewestDeck_Mid_item_1_right_text">After each game is reviewed, it is categorized for its level of compatibility of Steam Deck. You’ll see these categories on Steam, when you’re browsing your library or shopping for games on Deck.</div>
+                    </div>
+                    <div class="NewestDeck_Mid_item_3_base_right">
+                        <img src="NewsImage/newestDeck_big_controler.png" alt="" class="NewestDeck_Mid_item_3_base_right_img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="NewestDeck_Mid_item_4">
+                <div class="NewestDeck_Mid_item_4_base">
+                    <div style="color: #fff; width: 1250px;" class="NewestDeck_Mid_item_1_right_title">Four categories of Deck compatibility</div>
+                    <div class="NewestDeck_Mid_item_4_base_container">
+                        <div class="NewestDeck_Mid_item_4_item">
+                            <img src="NewsImage/newestDeck_item_categories_1.png" alt="" class="NewestDeck_Mid_item_4_item_img">
+                            <div class="NewestDeck_Mid_item_4_item_title">VERIFIED</div>
+                            <div class="NewestDeck_Mid_item_4_item_text">The game works great on Steam Deck, right out of the box.</div>
+                        </div>
+                        
+                        <div class="NewestDeck_Mid_item_4_item">
+                            <img src="NewsImage/newestDeck_item_categories_2.jpg" alt="" class="NewestDeck_Mid_item_4_item_img">
+                            <div class="NewestDeck_Mid_item_4_item_title">PLAYABLE</div>
+                            <div class="NewestDeck_Mid_item_4_item_text">The game may require some manual tweaking by the user to play.</div>
+                        </div>
+
+                        <div class="NewestDeck_Mid_item_4_item">
+                            <img src="NewsImage/newestDeck_item_categories_4.png" alt="" class="NewestDeck_Mid_item_4_item_img">
+                            <div class="NewestDeck_Mid_item_4_item_title">UNSUPPORTED</div>
+                            <div class="NewestDeck_Mid_item_4_item_text">The game is currently not functional on Steam Deck.</div>
+                        </div>
+
+                        <div class="NewestDeck_Mid_item_4_item">
+                            <img src="NewsImage/newestDeck_item_categories_3.png" alt="" class="NewestDeck_Mid_item_4_item_img">
+                            <div class="NewestDeck_Mid_item_4_item_title">UNKNOW</div>
+                            <div class="NewestDeck_Mid_item_4_item_text">We haven't checked this game for compatibility yet.</div>
+                        </div>
+                    </div>
+                    <div class="NewestDeck_Mid_item_4_base_finalText"><i>*E.g. requiring user to manually select a community controller config, needing to use the touchscreen to navigate a launcher, etc.</i></div>
+                </div>
+            </div>
+
+            <div class="NewestDeck_Mid_item_5">
+                <div class="NewestDeck_Mid_item_5_base">
+                    <div style="color: #1b1b1b; width: 1300px;" class="NewestDeck_Mid_item_1_right_title">Games that check these four boxes are Deck Verified.</div>
+                    <div style="margin-bottom: 10px;" class="NewestDeck_Mid_item_5_base_row">
+                        <div class="NewestDeck_Mid_item_5_items">
+                            <div class="NewestDeck_Mid_item_5_items_title">
+                                <img src="NewsImage/Newest_Deck_MarkImg.png" alt="" class="NewestDeck_Mid_item_5_items_title_img">
+                                <div class="NewestDeck_Mid_item_5_items_title_text">Input</div>
+                            </div>
+                            <div class="NewestDeck_Mid_item_5_items_text">The title should have full controller support, use appropriate controller input icons, and automatically bring up the on-screen keyboard when needed.</div>
+                        </div>
+
+                        <div class="NewestDeck_Mid_item_5_items">
+                            <div class="NewestDeck_Mid_item_5_items_title">
+                                <img src="NewsImage/Newest_Deck_MarkImg.png" alt="" class="NewestDeck_Mid_item_5_items_title_img">
+                                <div class="NewestDeck_Mid_item_5_items_title_text">Display</div>
+                            </div>
+                            <div class="NewestDeck_Mid_item_5_items_text">The game should support the default resolution of Steam Deck (1280x800 or 1280x720), have good default settings, and text should be legible.</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;" class="NewestDeck_Mid_item_5_base_row">
+                        <div class="NewestDeck_Mid_item_5_items">
+                            <div class="NewestDeck_Mid_item_5_items_title">
+                                <img src="NewsImage/Newest_Deck_MarkImg.png" alt="" class="NewestDeck_Mid_item_5_items_title_img">
+                                <div class="NewestDeck_Mid_item_5_items_title_text">Seamlessness</div>
+                            </div>
+                            <div class="NewestDeck_Mid_item_5_items_text">The title shouldn’t display any compatibility warnings, and if there’s a launcher it should be navigable with a controller.</div>
+                        </div>
+
+                        <div class="NewestDeck_Mid_item_5_items">
+                            <div class="NewestDeck_Mid_item_5_items_title">
+                                <img src="NewsImage/Newest_Deck_MarkImg.png" alt="" class="NewestDeck_Mid_item_5_items_title_img">
+                                <div class="NewestDeck_Mid_item_5_items_title_text">System Support</div>
+                            </div>
+                            <div class="NewestDeck_Mid_item_5_items_text">If running through Proton, the game and all its middleware should be supported by Proton. This includes anti-cheat support.</div>
+                        </div></div>
+                </div>
+            </div>
+
+            <div class="NewestDeck_Mid_item_6">
+                <div class="NewestDeck_Mid_item_6_base">
+                    <div class="NewestDeck_Mid_item_6_base_left">
+                        <div style="color: #fff; width: 580px;" class="NewestDeck_Mid_item_1_right_title">Steam Deck compatibility review is ongoing.</div>
+                    </div>
+                    <div class="NewestDeck_Mid_item_6_base_right">
+                        <div style="color: #fff; text-align: start; width: 580px; margin-left: 0;" class="NewestDeck_Mid_item_4_item_text">The Steam Deck compatibility review process is ongoing: there are tens of thousands of titles already released on Steam, and new titles and game updates publish every day. Additionally, we're constantly adding features and improvements to the Deck itself that enable previously-Unsupported games to play, and are working hard to make sure the compatibility ratings you see for your games reflect the most current information.</div><br><br><br><br>
+                        <div style="color: #fff; text-align: start; width: 580px; margin-left: 0;" class="NewestDeck_Mid_item_4_item_text">Are you a game developer? Learn about this program <a href="" class="NewestDeck_Mid_item_6_link">here</a>.</div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="NewestDeck_Mid_item_7">
+                <div class="NewestDeck_Mid_item_7_base">
+                    <div class="NewestDeck_Mid_item_7_base_left">
+                        <div style="width: 800px; color: #fff;" class="NewestDeck_Mid_item_1_right_title">Get your hands on Deck!</div>
+                        <div style="width: 800px; text-align: start; font-size: 22px; margin-left: 0; margin-top: 10px;" class="NewestDeck_Mid_item_4_item_text">Steam Deck is shipping now.</div>
+                    </div>
+                    <div class="NewestDeck_Mid_item_7_base_right">
+                        <a href="Steam_steamdeck.html" class="NewestDeck_Mid_item_7_base_right_link">Get your!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="NewestDeck_Mid_item_8">
+                <div class="NewestDeck_Mid_item_8_top">
+                    <div class="NewestDeck_Mid_item_8_top_left">
+                        <img src="NewsImage/newest_deck_credit_img_1.jpg" alt="" class="NewestDeck_Mid_item_8_top_left_img">
+                    </div>
+                    <div class="NewestDeck_Mid_item_8_top_right">
+                        <img src="Images/s_bottom_logo_1.png" alt="" class="NewestDeck_Mid_item_8_top_right_img">
+                        <div class="NewestDeck_Mid_item_8_top_right_text_base">
+                            <div class="NewestDeck_Mid_item_8_top_right_text_base_column">
+                                <a href="" class="NewestDeck_Mid_item_8_link">About Us</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Jobs</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Steam Partners</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Publication</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Steam</a>
+                            </div>
+                            <div class="NewestDeck_Mid_item_8_top_right_text_base_column">
+                                <a href="" class="NewestDeck_Mid_item_8_link">Term of Use</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Privacy Policy</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Sercurity</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Legal</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Press Kit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="NewestDeck_Mid_item_8_bottom">
+                    <span style="color: #fff; opacity: 0.5; font-size: 0.7em;"><i>Product specifications are subject to change.</i></span><br><br>
+                    <span style="color: #fff; opacity: 0.5; font-size: 0.7em;"><i>© 2022 Valve Corporation. All rights reserved. All trademarks property of their respective owners in the U.S. and other countries. Steam, the Steam logo, Steam Deck, and the Steam Deck logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.</i></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategy</title>
+<link rel="stylesheet" href="./assest/css/base.css">
+<link rel="stylesheet" href="./assest/css/main.css">
+<link rel="shortcut icon" href="C:\Users\PC\OneDrive\Desktop\Thực tập_jobs\SteamHtml\Images\steamLogo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- toplogo -->
+<style>
+    .steamTop {
+        position: fixed;
+        top: 0;
+        font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        margin-left: -8px;
+        width: 1550px;
+        height: 109px;
+        background-color: #171a21;
+        display: flex;
+        justify-content: space-around;
+        z-index: 50;
+    }
+
+    .sTop_choise {
+        width: 800px;
+
+        margin-left: 50px;
+        display: flex;
+        justify-content: start;
+    }
+
+    .sTop_avatar_link {}
+
+    .sTop_avatar_image {
+        margin-top: 25px;
+        width: 160px;
+        height: 50px;
+        margin-left: 80px;
+        margin-right: -10px;
+    }
+
+    .sTop_choise_choises {
+
+        margin-top: 25px;
+        /* background-color: red; */
+        margin-left: 70px;
+        width: 450px;
+        height: 50px;
+
+    }
+
+    .st_choises_common {
+        text-decoration: none;
+        height: 30px;
+        width: auto;
+        font-size: 15px;
+        margin: 18px 0 0 0;
+        border: none;
+        outline: none;
+        background-color: #171a21;
+        color: #b8b6b4;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .st_choises_common:hover {
+        color: #fff;
+    }
+
+    .st_choises_store {}
+
+    .st_choises_comunity {}
+
+    .st_choises_about {
+        margin-left: 6px;
+    }
+
+    .st_choises_support {
+        margin-left: 6px;
+    }
+
+    .st_pop {
+        /* box-shadow: 1px 1px 0.5px 1px; */
+        position: absolute;
+        background-color: #171a21;
+        display: none;
+        /* flex-direction: column; */
+        justify-content: start;
+        box-shadow: 3px 3px 5px -3px #000;
+        text-align: left;
+        columns: 1;
+        z-index: 10;
+    }
+
+    .st_store_pop_contain {
+        position: absolute;
+        top: 0;
+        width: 127px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .st_community_pop_contain {
+        position: absolute;
+        top: 0;
+        width: 127px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+
+    .st_choises_store:hover .st_store_pop {
+        display: block;
+    }
+
+    .st_choises_comunity:hover .st_community_pop {
+        display: block;
+    }
+
+    .st_pop:last-child {
+        margin-bottom: 10px;
+    }
+
+    .st_store_pop {
+        width: 127px;
+        height: 165px;
+    }
+
+    .st_community_pop {
+        width: 100px;
+        height: 145px;
+    }
+
+    .pop_text {
+        color: #b8b6b4;
+        font-size: 11px;
+        padding: 7px 10px 7px 10px;
+
+        text-decoration: none;
+    }
+
+    .pop_text:first-child {
+        padding-top: 12px;
+    }
+
+    .pop_text:hover {
+        color: #fff;
+    }
+
+    .store_pop {}
+
+    .community_pop {}
+</style>
+<!-- topinstall -->
+<style>
+    .sTop_login {
+        width: 200px;
+        margin-left: -100px;
+        display: flex;
+        justify-content: space-evenly;
+        cursor: pointer;
+    }
+
+    .st_login_install {
+        margin-top: 5px;
+        width: 100px;
+        height: 24px;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #5c7e10;
+    }
+
+    .stlogin_install_image {
+        margin: 2px 2px 2px 0;
+        width: 20px;
+        height: 20px;
+    }
+
+    .stlogin_install_text {
+        margin-top: 6px;
+        color: #e5e4dc;
+        font-size: 10px;
+    }
+
+    .st_login_install:hover .stlogin_install_text {
+        color: #fff;
+    }
+
+    .st_login_button {
+        font-size: 15px;
+        margin: 8px 5px 0 5px;
+        height: 24px;
+        border: none;
+        outline: none;
+        background-color: #171a21;
+        color: #b8b6b4;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .st_seperate {
+        margin-top: 10px;
+        height: 14px;
+        width: 0.5px;
+        background-color: #b8b6b4;
+    }
+
+    .st_languge_button {
+        /* border-left: thick solid #b8b6b4; */
+        margin-top: 8px;
+        height: 18px;
+        border: none;
+        outline: none;
+        background-color: #171a21;
+        color: #b8b6b4;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+
+    .st_login_button:hover {
+        color: #fff;
+    }
+
+    .st_languge_button:hover {
+        color: #fff;
+    }
+</style>
+
+
+<!-- bottom 2-->
+<style>
+    .steamBottom_part2 {
+        position: absolute;
+        width: 1560px;
+        height: 165px;
+        transform: translate(-10px, 7px);
+        background-color: #171a21;
+        bottom: 0;
+    }
+
+    .sbot_part2_common {
+        position: absolute;
+        margin: 0 0 0 250px;
+        height: 60px;
+        width: 1000px;
+    }
+
+    .sbot_part2_1 {
+        top: 20px;
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-around;
+        border-top: #363c44 solid 1px;
+        border-bottom: #363c44 solid 1px;
+    }
+
+
+
+    .sb2_1_valve_link {}
+
+    .sb2_1_valve_img {
+        margin: 10px 0 10px 0;
+        width: 100px;
+        height: 40px;
+    }
+
+    .sb2_1_dereption {
+        margin: 10px 0 10px 0;
+        height: 40px;
+        width: 800px;
+        /* background-color: yellow; */
+    }
+
+    .sb2_1_steamImg {
+        margin: 15px 0 15px 0;
+        width: 100px;
+        height: 30px;
+    }
+
+    .sb2_1decreption_text {
+        position: absolute;
+        font-family: sans-serif;
+        color: #8f98a0;
+        font-size: 12px;
+        width: 780px;
+        margin: 14px 10px 0 10px;
+        top: 0;
+
+        /* visibility: hidden; */
+    }
+
+    .sb2_1decreption_link {
+        position: absolute;
+        top: 30px;
+        left: 263px;
+        width: 600px;
+        height: 20px;
+        /* background-color: red; */
+    }
+
+    .sb2_1_link {
+        margin-top: 10px;
+        justify-content: end;
+        text-decoration: none;
+        color: #c6d4df;
+        padding: 0 5px 0 5px;
+        font-size: 14px;
+        border-right: #c6d4df solid 1px;
+    }
+
+    .sb2_1_link:last-child {
+        border: none;
+    }
+
+    .sb2_1_link:hover {
+        color: #fff;
+    }
+
+
+    .sbot_part2_2 {
+        position: relative;
+        top: 80px;
+        /* background-color: blue; */
+    }
+
+    .sb2_2decreption_link {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 800px;
+        height: 20px;
+        /* background-color: red; */
+    }
+
+    .sb2_2_link {
+        text-decoration: none;
+        color: #c6d4df;
+        font-size: 14px;
+        padding: 0 7px 0 5px;
+        margin-top: 20px;
+        border-right: #c6d4df solid 1px;
+        /* visibility: hidden; */
+    }
+
+    .sb2_2_link:last-child {
+        margin-left: -4px;
+        border: none;
+    }
+
+    .sb2_2_link:hover {
+        color: #fff;
+    }
+
+    .sb2_2_facelink {
+        margin-left: -4px;
+    }
+
+    .sb2_2_image {
+        /* position: absolute; */
+        width: 15px;
+        height: 15px;
+    }
+
+    .sb2_2_faceImg {}
+
+    .sb2_2_twitterImg {
+        margin-left: 5px;
+    }
+</style>
+
+<style>
+    body {
+        overflow-x: hidden;
+        height: 1900px;
+        width: auto;
+        position: relative;
+        background: #245b19;
+        /* cursor: url("trỏ\ chuột\ ori.jpg"),auto; */
+    }
+
+    .SteamContainer {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
+<!-- topbg -->
+<style>
+    /* .steamMid_top_container{background-color: #123129;} */
+    .steamMid_top_choiseBase{background-color: #062301;}
+
+    /* .story_base{background-color: green;} */
+    /* .steamMid_topbg{background-color: red;} */
+    
+    .borderRadius{border-bottom-left-radius: 150px; border-bottom-right-radius: 150px;}
+    
+    .steamMid_topbg{width: 100%; height: 600px; margin-top: 100px; position: relative;}
+    .steamMid_topbg_img{position: absolute; top: 0; left: 0; z-index: 0;}
+    .steamMid_topbg_img{width: 1570px; height: 600px; transform: translateX(-50px);}
+
+    .steamMid_topbg_bottomimg{position: absolute; bottom: -30px; right: -10px; z-index: 2;}
+    .steamMid_topbg_bottomimg{width: 1500px; height: 660px;}
+
+    .steamMid_topbg_sideimg{position: absolute; bottom: -20px; left: -10px; z-index: 2;}
+    .steamMid_topbg_sideimg{width: 600px; height: 300px;}
+
+    .steamMid_top_BIGcontainer{display: flex; justify-content: start;}
+    .steamMid_top_BIGcontainer{width: 1000px; height: 850px; margin: 100px 0 0 250px;}
+    .steamMid_top_choiseBase{width: 200px; height: 850px; display: flex; flex-direction: column;}
+    .steamMid_top_container{width: 800px; height: 850px;}
+
+    .steamMid_top_choiseBase_title{color: #fff; width: 195px; padding-left: 5px; height: fit-content; font-size: 19px; margin: 20px 0 4px 0; font-weight: 600; user-select: none;}
+    .steamMid_top_choiseBase_item{color: #bdbdbd; width: 195px; font-size: 16px; cursor: pointer; font-weight: lighter; user-select: none;}
+    .steamMid_top_choiseBase_item{padding: 2px 0 2px 5px;}
+    .steamMid_top_choiseBase_item:hover{background: linear-gradient(rgb(0, 70, 0), rgb(78, 117, 0));}
+
+    .steamMid_top_container{overflow: hidden;}
+    /* .steamMid_top_container:hover .steamMid_top_container_item{transform: translateX(0);} */
+    /* .steamMid_top_container_item{position: absolute; top: 0;} */
+    .steamMid_top_container_item{transition: transform 0.3s ease-in-out; transform: translateX(-800px);}
+    .steamMid_top_container_item{width: 800px; height: 850px;}
+
+    .story_base{user-select: none;}
+    .charac_base{transform: translate(-800px,-850px); user-select: none;}
+    .xbox_base{transform: translate(-800px,-1700px); user-select: none;}
+
+    .title{font-weight: 800; line-height: 50px; text-transform: uppercase;}
+    .title{color: yellowgreen; font-size: 22px; letter-spacing: .2em; margin: 0 0 0 10px;}
+    .text{color: rgb(219, 255, 146); font-size: 16px; margin: 0 0 0 10px; width: 750px;}
+    .text{}
+    .character_base{color: yellow; cursor: pointer; text-decoration: none;}
+    .character_base:hover{color: #fff;}
+    .weight{font-weight: 900;}
+</style>
+
+<!-- character -->
+<style>
+
+    .character_row{width: 800px; height: 250px; margin-bottom: 49px; display: flex; justify-content: space-around;}
+    .charac_items{width: 200px; height: 250px; display: flex; flex-direction: column; cursor: pointer;}
+    .charac_items{background: linear-gradient( -45deg, rgb(64, 153, 77) 5%,rgb(42, 89, 44) 95%);}
+    .charac_items:hover{background: linear-gradient( to right, rgb(59, 135, 56) 5%,rgb(68, 163, 87) 95%); box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.22);}
+
+    .charac_items_img{width: 200px; height: 200px;}
+    .charac_title{width: 200px; height: 50px;}
+
+    .xbox_base{display: flex; flex-direction: column;}
+    .xbox_base_video{width: 800px; height: 450px;}
+
+    
+    .xbox_base_link{width: 500px; height: 300px; margin: 50px 0 0 150px; border-radius: 50px;}
+    .xbox_base_link:hover{box-shadow: 10px 5px 50px black;}
+    .xbox_base_link_img{width: 500px; height: 300px; border-radius: 50px;}
+
+
+    .charac_base_2{background-color: blue;}
+    .xbox_base_2{background-color: yellow;}
+
+    .story_base_2{transform: translate(-800px,-2550px); user-select: none;}
+    .charac_base_2{transform: translate(-800px,-3400px); user-select: none;}
+    .xbox_base_2{transform: translate(-800px,-4250px); user-select: none;}
+</style>
+
+<script>
+    function storyPop(){
+        let storyBtn = document.getElementById('story_btn');
+        let characBtn = document.getElementById('charac_btn');
+        let xboxBtn = document.getElementById('xbox_btn');
+
+        let storyBtn2 = document.getElementById('story_btn_2');
+        let characBtn2 = document.getElementById('charac_btn_2');
+        let xboxBtn2 = document.getElementById('xbox_btn_2');
+
+        let storyBase2 = document.getElementById('story_base_2');
+        let characBase2 = document.getElementById('charac_base_2');
+        let xboxBtBase2 = document.getElementById('xbox_base_2');
+
+        let storyBase = document.getElementById('story_base');
+        let characBase = document.getElementById('charac_base');
+        let xboxBtBase = document.getElementById('xbox_base');
+
+        storyBtn.style.color = "#fff";
+        characBtn.style.color = "#bdbdbd";
+        xboxBtn.style.color = "#bdbdbd";
+        storyBtn2.style.color = "#bdbdbd";
+        characBtn2.style.color = "#bdbdbd";
+        xboxBtn2.style.color = "#bdbdbd";
+
+        storyBase.style.transform = 'translateX(0)';
+        characBase.style.transform = 'translate(-800px,-850px)';
+        xboxBtBase.style.transform = 'translate(-800px,-1700px)';
+        storyBase2.style.transform = 'translate(-800px,-2550px)';
+        characBase2.style.transform = 'translate(-800px,-3400px)';
+        xboxBtBase2.style.transform = 'translate(-800px,-4250px)';
+    }
+
+    function characPop(){
+        let storyBtn = document.getElementById('story_btn');
+        let characBtn = document.getElementById('charac_btn');
+        let xboxBtn = document.getElementById('xbox_btn');
+
+        let storyBase = document.getElementById('story_base');
+        let characBase = document.getElementById('charac_base');
+        let xboxBtBase = document.getElementById('xbox_base');
+
+        let storyBtn2 = document.getElementById('story_btn_2');
+        let characBtn2 = document.getElementById('charac_btn_2');
+        let xboxBtn2 = document.getElementById('xbox_btn_2');
+
+        let storyBase2 = document.getElementById('story_base_2');
+        let characBase2 = document.getElementById('charac_base_2');
+        let xboxBtBase2 = document.getElementById('xbox_base_2');
+
+        characBtn.style.color = "#fff";
+        storyBtn.style.color = "#bdbdbd";
+        xboxBtn.style.color = "#bdbdbd";
+
+        characBase.style.transform = 'translate(0,-850px)';
+        storyBase.style.transform = 'translate(-800px,0)';
+        xboxBtBase.style.transform = 'translate(-800px,-1700px)';
+
+        storyBtn2.style.color = "#bdbdbd";
+        characBtn2.style.color = "#bdbdbd";
+        xboxBtn2.style.color = "#bdbdbd";
+        storyBase2.style.transform = 'translate(-800px,-2550px)';
+        characBase2.style.transform = 'translate(-800px,-3400px)';
+        xboxBtBase2.style.transform = 'translate(-800px,-4250px)';
+    }
+
+    function xboxPop(){
+        let storyBtn = document.getElementById('story_btn');
+        let characBtn = document.getElementById('charac_btn');
+        let xboxBtn = document.getElementById('xbox_btn');
+
+        let storyBase = document.getElementById('story_base');
+        let characBase = document.getElementById('charac_base');
+        let xboxBtBase = document.getElementById('xbox_base');
+
+        let storyBtn2 = document.getElementById('story_btn_2');
+        let characBtn2 = document.getElementById('charac_btn_2');
+        let xboxBtn2 = document.getElementById('xbox_btn_2');
+
+        let storyBase2 = document.getElementById('story_base_2');
+        let characBase2 = document.getElementById('charac_base_2');
+        let xboxBtBase2 = document.getElementById('xbox_base_2');
+
+        xboxBtn.style.color = "#fff";
+        characBtn.style.color = "#bdbdbd";
+        storyBtn.style.color = "#bdbdbd";
+
+        xboxBtBase.style.transform = 'translate(0,-1700px)';
+        characBase.style.transform = 'translate(-800px,-850px)';
+        storyBase.style.transform = 'translate(-800px,0)';
+
+        storyBtn2.style.color = "#bdbdbd";
+        characBtn2.style.color = "#bdbdbd";
+        xboxBtn2.style.color = "#bdbdbd";
+        storyBase2.style.transform = 'translate(-800px,-2550px)';
+        characBase2.style.transform = 'translate(-800px,-3400px)';
+        xboxBtBase2.style.transform = 'translate(-800px,-4250px)';
+    }
+
+
+
+    function story2Pop(){
+        let storyBtn = document.getElementById('story_btn');
+        let characBtn = document.getElementById('charac_btn');
+        let xboxBtn = document.getElementById('xbox_btn');
+
+        let storyBtn2 = document.getElementById('story_btn_2');
+        let characBtn2 = document.getElementById('charac_btn_2');
+        let xboxBtn2 = document.getElementById('xbox_btn_2');
+
+        let storyBase2 = document.getElementById('story_base_2');
+        let characBase2 = document.getElementById('charac_base_2');
+        let xboxBtBase2 = document.getElementById('xbox_base_2');
+
+        let storyBase = document.getElementById('story_base');
+        let characBase = document.getElementById('charac_base');
+        let xboxBtBase = document.getElementById('xbox_base');
+
+        storyBtn2.style.color = "#fff";
+        characBtn.style.color = "#bdbdbd";
+        xboxBtn.style.color = "#bdbdbd";
+
+        storyBase2.style.transform = 'translate(0,-2550px)';
+        characBase.style.transform = 'translate(-800px,-850px)';
+        xboxBtBase.style.transform = 'translate(-800px,-1700px)';
+
+        storyBtn.style.color = "#bdbdbd";
+        characBtn2.style.color = "#bdbdbd";
+        xboxBtn2.style.color = "#bdbdbd";
+        storyBase.style.transform = 'translate(-800px,0)';
+        characBase2.style.transform = 'translate(-800px,-3400px)';
+        xboxBtBase2.style.transform = 'translate(-800px,-4250px)';
+    }
+
+    function charac2Pop(){
+        let storyBtn = document.getElementById('story_btn');
+        let characBtn = document.getElementById('charac_btn');
+        let xboxBtn = document.getElementById('xbox_btn');
+
+        let storyBase = document.getElementById('story_base');
+        let characBase = document.getElementById('charac_base');
+        let xboxBtBase = document.getElementById('xbox_base');
+
+        let storyBtn2 = document.getElementById('story_btn_2');
+        let characBtn2 = document.getElementById('charac_btn_2');
+        let xboxBtn2 = document.getElementById('xbox_btn_2');
+
+        let storyBase2 = document.getElementById('story_base_2');
+        let characBase2 = document.getElementById('charac_base_2');
+        let xboxBtBase2 = document.getElementById('xbox_base_2');
+
+        characBtn2.style.color = "#fff";
+        storyBtn.style.color = "#bdbdbd";
+        xboxBtn.style.color = "#bdbdbd";
+
+        characBase2.style.transform = 'translate(0,-3400px)';
+        storyBase.style.transform = 'translate(-800px,0)';
+        xboxBtBase.style.transform = 'translate(-800px,-1700px)';
+
+        storyBtn2.style.color = "#bdbdbd";
+        characBtn.style.color = "#bdbdbd";
+        xboxBtn2.style.color = "#bdbdbd";
+        storyBase2.style.transform = 'translate(-800px,-2550px)';
+        characBase.style.transform = 'translate(-800px,-850px)';
+        xboxBtBase2.style.transform = 'translate(-800px,-4250px)';
+    }
+
+    function xbox2Pop(){
+        let storyBtn = document.getElementById('story_btn');
+        let characBtn = document.getElementById('charac_btn');
+        let xboxBtn = document.getElementById('xbox_btn');
+
+        let storyBase = document.getElementById('story_base');
+        let characBase = document.getElementById('charac_base');
+        let xboxBtBase = document.getElementById('xbox_base');
+
+        let storyBtn2 = document.getElementById('story_btn_2');
+        let characBtn2 = document.getElementById('charac_btn_2');
+        let xboxBtn2 = document.getElementById('xbox_btn_2');
+
+        let storyBase2 = document.getElementById('story_base_2');
+        let characBase2 = document.getElementById('charac_base_2');
+        let xboxBtBase2 = document.getElementById('xbox_base_2');
+
+        xboxBtn2.style.color = "#fff";
+        characBtn.style.color = "#bdbdbd";
+        storyBtn.style.color = "#bdbdbd";
+
+        xboxBtBase2.style.transform = 'translate(0,-4250px)';
+        characBase.style.transform = 'translate(-800px,-850px)';
+        storyBase.style.transform = 'translate(-800px,0)';
+
+        storyBtn2.style.color = "#bdbdbd";
+        characBtn2.style.color = "#bdbdbd";
+        xboxBtn.style.color = "#bdbdbd";
+        storyBase2.style.transform = 'translate(-800px,-2550px)';
+        characBase2.style.transform = 'translate(-800px,-3400px)';
+        xboxBtBase.style.transform = 'translate(-800px,-1700px)';
+    }
+</script>
+
+
+<body>
+<div class="SteamContainer">
+    <div class="steamTop">
+        <div class="sTop_choise">
+            <a href="Steam_index.html" class="sTop_avatar_link">
+                <img src="Images/s_avatar.png" alt="" class="sTop_avatar_image">
+            </a>
+
+            <div class="sTop_choise_choises">
+                <button class="st_choises_common st_choises_store">
+                    STORE
+                    <div class="st_pop st_store_pop">
+                        <div class="st_store_pop_contain">
+                            <a href="" class="pop_text store_pop">HOME</a>
+                            <a href="" class="pop_text store_pop">DISCOVERY QUEUE</a>
+                            <a href="" class="pop_text store_pop">WISHLIST</a>
+                            <a href="Steam_pointShop.html" class="pop_text store_pop">POINTS SHOP</a>
+                            <a href="Steam_newAndFeature.html" class="pop_text store_pop">NEWS</a>
+                            <a href="" class="pop_text store_pop">STATS</a>
+                        </div>
+                    </div>
+                </button>
+                <button class="st_choises_common st_choises_comunity">
+                    COMMUNITY
+                    <div class="st_pop st_community_pop">
+                        <div class="st_community_pop_contain">
+                            <a href="" class="pop_text community_pop">HOME</a>
+                            <a href="" class="pop_text community_pop">DISCUSSIONS</a>
+                            <a href="" class="pop_text community_pop">WORKSHOP</a>
+                            <a href="" class="pop_text community_pop">MARKET</a>
+                            <a href="" class="pop_text community_pop">BROADCASTS</a>
+                        </div>
+                    </div>
+                </button>
+                <a href="" class="st_choises_common st_choises_about">ABOUT</a>
+                <a href="" class="st_choises_common st_choises_support">SUPPORT</a>
+                <!-- <button class="st_choises_common st_choises_about">ABOUT</button>
+                <button class="st_choises_common st_choises_support">SUPPORT</button> -->
+            </div>
+        </div>
+
+        <div class="sTop_login">
+            <div class="st_login_install">
+                <img src="Images/s_install_image.png" alt="" class="stlogin_install_image">
+                <h class="stlogin_install_text">Install Steam</h>
+            </div>
+            <a href="Steam_login.html" class="st_login_button">login</a>
+            <!-- <button class="st_login_button">login</button> -->
+            <div class="st_seperate"></div>
+            <button class="st_languge_button">language</button>
+        </div>
+    </div>
+
+    <div class="steamMid">
+        <div class="steamMid_topbg">
+            <img src="ORIImages/ori_back ground.jpg" alt="" class="steamMid_topbg_img borderRadius">
+            <img src="ORIImages/Naru_Gumo_removebackgr.png" alt="" class="steamMid_topbg_bottomimg">
+            <img src="ORIImages/ori_Naru_backgourn cut.png" alt="" class="steamMid_topbg_sideimg">
+        </div>
+        <div class="steamMid_top_BIGcontainer">
+            <div class="steamMid_top_choiseBase">
+                <div class="steamMid_top_choiseBase_title">Ori & The blind forest</div>
+                <div id="story_btn" class="steamMid_top_choiseBase_item" onclick="storyPop()">Story</div>
+                <div id="charac_btn" class="steamMid_top_choiseBase_item" onclick="characPop()">Characters</div>
+                <div id="xbox_btn" class="steamMid_top_choiseBase_item" onclick="xboxPop()">Xbox 360</div>
+
+                <div class="steamMid_top_choiseBase_title">Ori & The Will Of The Wisps</div>
+                <div id="story_btn_2" class="steamMid_top_choiseBase_item" onclick="story2Pop()">Story</div>
+                <div id="charac_btn_2" class="steamMid_top_choiseBase_item" onclick="charac2Pop()">Skill</div>
+                <div id="xbox_btn_2" class="steamMid_top_choiseBase_item" onclick="xbox2Pop()">Xbox 360</div>
+            </div>
+            <div class="steamMid_top_container">
+                <div id="story_base" class="steamMid_top_container_item story_base">
+                    <div class="title">Plot</div>
+                    <div class="text">The voice of the Spirit Tree in the forest of Nibel narrates the story of when <a href="#ori" class="character_base">Ori</a>, a guardian spirit, fell from it during a storm as a newborn and was adopted by a creature named <span class="character_base" title="Naru">Naru</span>, who raised Ori as her own. A cataclysmic event soon make the forest wither, and Naru dies of starvation. Newly orphaned, Ori is left to explore the forest on their own. After collapsing near the Spirit Tree and being revived by it, Ori later meets <span class="character_base" title="Sein">Sein</span>, a small orb who guides Ori on a journey to restore the forest. Sein tasks Ori with recovering the light of three main elements supporting the balance of Nibel: Waters, Winds, and Warmth.</div>
+                    <div class="text">Ori and Sein come across two beings in their quest: Gumo, the last survivor of the spider-like <span class="character_base" title="Gumo">Gumo</span> clan, who were wiped out by the forest's cataclysm, and whose home supports the Wind element; and Kuro, a giant, shadowy owl who is hostile toward Ori. Gumo initially steals the key to the Water element, but he returns it after Ori saves him from a rockslide. After the Wind element is rekindled, Ori and Sein find Kuro's nest, empty except for a single egg, and they learn the source of her wrath and the forest's cataclysm: when Ori was lost, the Spirit Tree released a flash of light to look for them, which burned and killed all of Kuro's recently hatched offspring when she was away from her nest looking for food. Determined to prevent this from happening to her yet unborn child, Kuro took away the core on top of the Spirit Tree, which is actually Sein. Without its core, the Spirit Tree could not sustain the three elements, and Nibel lost its balance. Meanwhile, Gumo overhears Ori and Sein's intentions to restore Nibel and uses his clan treasure that stores the light from the Spirit Tree to revive Naru, taking her to where Ori is.</div><br>
+                    <div class="text">After the final element, Warmth, is restored in the volcano Mount Horu, <span class="character_base" title="Kuro">Kuro</span> attacks Ori and Sein as the fire from Horu spreads. Naru, who had been separated from Gumo, arrives to protect Ori from Kuro. Kuro softens, remembering the pain of losing her children. As the fire spreads and is about to reach her remaining egg, Kuro takes Sein back to the Spirit Tree, which emits a flash of bright light that dissipates the fire and restores the forest, but Kuro is destroyed by the light. Time passes as the forest begins to flourish once more, and Ori watches new spirits being born in the field at the foot of the Spirit Tree. Gumo and Naru watch together from afar, before the latter goes home, where Kuro's last egg now rests, just in time to see it begin to hatch.</div>
+                    <div class="title">Game play</div>
+                    <div class="text"><span class="weight">Ori and the Blind Forest</span> is a 2D Metroidvania; a platform game with an emphasis on exploration, collecting items and upgrades, and backtracking to previously inaccessible areas. The player controls Ori, a white guardian spirit, and Sein, who is the light and eyes of the Spirit Tree. As Ori, players must jump, climb, and use various other abilities to navigate the game's world. Sein can shoot Spirit Flames to combat enemies or break obstacles. Ori is required to interact with the environment by jumping from platforms and solving puzzles, and is faced with various enemies. The player helps Ori collect health cells, energy cells, new abilities, and upgrades. The game world unfolds to the player in the fashion of a Metroidvania, with new abilities allowing the player to access previously inaccessible areas.</div>
+                    <div class="text">In addition to save points scattered in the game, players can create "<i>soul links</i>" at any time they choose to serve as checkpoints. However, <i>soul links</i> can only be created using energy cells collected during gameplay; the needed energy is not in abundant supply, forcing players to create them only when necessary. The player can obtain ability points to gain upgrades and benefits, such as increasing the damage of Sein's Spirit Flame. These upgrades can be achieved when the player has enough ability points to learn the skill they desire, anywhere a <i>soul links</i> has been created. An ability point is gained when Ori collects enough experience by killing enemies, destroying various plants, and finding spirit light containers or ability cells <span class="weight">(</span>which instantly awards Ori an ability point<span class="weight">)</span>. Each skill must be learned in sequential order from one of three ability trees to allow the next skill to be accessible.</div>
+                </div>
+                <div id="charac_base" class="steamMid_top_container_item charac_base">
+                    <div class="character_row">
+                        <div id="ori" class="charac_items">
+                            <img src="ORIImages/Ori.jpg" alt="" class="charac_items_img">
+                            <div class="title">Ori</div>
+                        </div>
+                        <div class="charac_items">
+                            <img src="ORIImages/Gumo.jpg" alt="" class="charac_items_img">
+                            <div class="title">Gumo</div>
+                        </div>
+                        <div class="charac_items">
+                            <img src="ORIImages/Ku.jpg" alt="" class="charac_items_img">
+                            <div class="title">Ku</div>
+                        </div>
+                    </div>
+                    <div class="character_row">
+                        <div class="charac_items">
+                            <img src="ORIImages/Naru.jpg" alt="" class="charac_items_img">
+                            <div class="title">Naru</div>
+                        </div>
+                        <div class="charac_items">
+                            <img src="ORIImages/Kuro.jpg" alt="" class="charac_items_img">
+                            <div class="title">Kuro</div>
+                        </div>
+                        <div class="charac_items">
+                            <img src="ORIImages/Moki.jpg" alt="" class="charac_items_img">
+                            <div class="title">Moki</div>
+                        </div>
+                    </div>
+                    <div class="character_row">
+                        <div class="charac_items">
+                            <img src="ORIImages/Mora.jpg" alt="" class="charac_items_img">
+                            <div class="title">Mora</div>
+                        </div>
+                        <div class="charac_items">
+                            <img src="ORIImages/Foul presence.jpg" alt="" class="charac_items_img">
+                            <div class="title">FoulPres</div>
+                        </div>
+                        <div class="charac_items">
+                            <img src="ORIImages/Shriek.jpg" alt="" class="charac_items_img">
+                            <div class="title">Shriek</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="xbox_base" class="steamMid_top_container_item xbox_base">
+                    <video src="https://cdn.cloudflare.steamstatic.com/steam/apps/2037716/movie480.webm?t=1447370570" poster="ORIImages/demo2.jpg" controls autoplay loop class="xbox_base_video" type="video/webm"></video>
+                    <a href="" class="xbox_base_link">
+                        <img src="ORIImages/oriTitle.png" alt="" class="xbox_base_link_img">
+                    </a>
+                </div>
+
+                <div id="story_base_2" class="steamMid_top_container_item story_base_2">
+                    <div class="title">Plot</div>
+                    <div class="text">The game released on March 11, 2020, for Xbox One and PC, and on the Nintendo Switch on September 17th, 2020. It was also optimized for Xbox Series X, released on November 10, 2020. Developed by <span class="character_base">Moon Studios</span> and published by Microsoft Studios. It's the sequel to <sapn class="character_base">Ori and the Blind Forest</sapn>.</div>
+                    <div class="text">The little spirit Ori is no stranger to peril, but when a fateful flight puts the owlet <span class="character_base">Ku</span> in harm’s way, it will take more than bravery to bring a family back together, heal the broken land of Niwen, and discover Ori’s true destiny.</div>
+                </div>
+                <div id="charac_base_2" class="steamMid_top_container_item charac_base_2"></div>
+                <div id="xbox_base_2" class="steamMid_top_container_item xbox_base_2"></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="SBottom_common steamBottom_part2">
+        <div class="sbot_part2_common sbot_part2_1">
+            <!-- <a href="https://tigobiz.com" target="_blank">
+            <img src="https://tigobiz.com/wp-content/uploads/2020/11/TRUNG-01-logo-ngang-keo-sat-280-87-150x47.png" alt="logo Tigobiz" /></a> -->
+            <!-- <a href="https://tigobiz.com" target="_blank" title="Click để vào Webstie tigobiz.com">Dịch vụ Marketing Online Tigobiz</a> -->
+            <a href="https://www.valvesoftware.com/fr/" title="VALV" class="sb2_1_valve_link">
+                <img src="Images/s_bottom_logo_1.png" alt="" class="sb2_1_valve_img">
+            </a>
+            <div class="sb2_1_dereption">
+                <p class="sb2_1decreption_text">© 2023 Valve Corporation. All rights reserved. All trademarks are
+                    property of their respective owners in the US and other countries.
+                    VAT included in all prices where applicable.</p>
+                <div class="sb2_1decreption_link">
+                    <a href="" title="Privacy Policy" class="sb2_1_link">Privacy Policy</a>
+                    <a href="" title="Legal" class="sb2_1_link">Legal</a>
+                    <a href="" title="Steam Subsctiber Agreement" class="sb2_1_link">Steam Subsctiber Agreement</a>
+                    <a href="" title="Refunds" class="sb2_1_link">Refunds</a>
+                    <a href="" title="Cookies" class="sb2_1_link">Cookies</a>
+                </div>
+            </div>
+            <img src="Images/s_bottom_logo_2.png" alt="" class="sb2_1_steamImg">
+        </div>
+        <div class="sbot_part2_common sbot_part2_2">
+            <div class="sb2_2decreption_link">
+                <a href="" class="sb2_2_link">About Valve</a>
+                <a href="" class="sb2_2_link">Jobs</a>
+                <a href="" class="sb2_2_link">Steamworks</a>
+                <a href="" class="sb2_2_link">Steam Distribution</a>
+                <a href="" class="sb2_2_link">Support</a>
+                <a href="" class="sb2_2_link">Recycling</a>
+                <a href="" class="sb2_2_link">Gift Cards</a>
+                <img src="Images/s_faceLogo.png" alt="" class="sb2_2_image sb2_2_faceImg">
+                <a href="https://www.facebook.com/Steam" class="sb2_2_link sb2_2_facelink">Steam</a>
+                <img src="Images/s_twitterLogo.png" alt="" class="sb2_2_image sb2_2_twitterImg">
+                <a href="https://twitter.com/steam" class="sb2_2_link">@steam</a>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>

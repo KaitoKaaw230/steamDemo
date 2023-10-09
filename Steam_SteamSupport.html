@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Support - Help I can't sign in</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="C:\Users\PC\OneDrive\Desktop\Thực tập_jobs\SteamHtml\Images\steamLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <!-- body -->
+    <style>
+        body{   
+            width: auto;
+            position: relative;
+            /* cursor: url("trỏ\ chuột\ ori.jpg"),auto; */
+            
+        }
+    </style>
+    <!-- scrollbar -->
+<style>
+    ::-webkit-scrollbar {
+        height: 12px;
+        width: 14px;
+        background: rgba(0,0,0,0);
+        z-index: 12;
+        overflow: visible;
+    }
+    ::-webkit-scrollbar-corner {
+    background: #202020;
+}
+    ::-webkit-scrollbar-thumb {
+        width: 10px;
+        background-color: #434953;
+        border-radius: 10px;
+        z-index: 12;
+        border: 4px solid rgba(0,0,0,0);
+        background-clip: padding-box;
+        transition: background-color .32s ease-in-out;
+        margin: 4px;
+        min-height: 32px;
+        min-width: 32px;
+    }
+    ::selection {
+        background: #54a5d4;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.6666666667);
+        color: #fff;
+    }
+</style>
+     <!-- toplogo -->
+    <style>
+        .steamTop{
+            width: 100%;
+            height: 100px;
+            background-color: #171a21;
+            display: flex;
+            justify-content: space-around;
+        }
+        .sTop_choise{
+            width: 800px;
+            
+            margin-left: 50px;
+            display: flex;
+            justify-content: start;
+        }
+        .sTop_avatar_link{}
+        .sTop_avatar_image{
+            margin-top: 25px;
+            width: 160px;
+            height: 50px;
+            margin-left: 80px;
+            margin-right: -10px;
+        }
+        .sTop_choise_choises{
+            
+            margin-top: 25px;
+            /* background-color: red; */
+            margin-left: 70px;
+            width: 450px;
+            height: 50px;
+            
+        }
+        .st_choises_common{
+            text-decoration: none;
+            height: 30px;
+            width: auto;
+            font-size: 15px;
+            margin: 18px 0 0 0;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: relative;
+        }
+        .st_choises_common:hover{color: #fff;}
+        .st_choises_store{}
+        .st_choises_comunity{}
+        .st_choises_about{margin-left: 6px;}
+        .st_choises_support{margin-left: 6px;}
+
+        .st_pop{
+            /* box-shadow: 1px 1px 0.5px 1px; */
+            position: absolute;
+            background-color: #171a21;
+            display: none;
+            /* flex-direction: column; */
+            justify-content: start;
+            box-shadow: 3px 3px 5px -3px #000;
+	        text-align: left;
+            columns: 1;
+        }
+        .st_store_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px; 
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .st_community_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px; 
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        
+
+        .st_choises_store:hover .st_store_pop{display: block;}
+        .st_choises_comunity:hover .st_community_pop{display: block;}
+        .st_pop:last-child{margin-bottom: 10px;}
+        .st_store_pop{width: 127px; height: 165px;}
+        .st_community_pop{width: 100px; height: 145px;}
+        .pop_text{
+            color: #b8b6b4;
+            font-size: 11px;
+            padding: 7px 10px 7px 10px;
+            
+            text-decoration: none;
+        }
+        .pop_text:first-child{padding-top: 12px;}
+        .pop_text:hover{color: #fff;}
+        .store_pop{}
+        .community_pop{}
+    </style>
+    <!-- topinstall -->
+    <style>
+        .sTop_login{
+            width: 200px;
+            margin-left: -100px;
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        .st_login_install{
+            margin-top: 5px;
+            width: 100px;
+            height: 24px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #5c7e10;
+        }
+        .stlogin_install_image{
+            margin: 2px 2px 2px 0;
+            width: 20px;
+            height: 20px;
+        }
+        .stlogin_install_text{
+            margin-top: 6px;
+            color: #e5e4dc;
+            font-size: 10px;
+        }
+        .st_login_install:hover .stlogin_install_text{color: #fff;}
+        
+        .st_login_button{
+            font-size: 15px;
+            margin: 8px 5px 0 5px;
+            height: 24px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .st_seperate{
+            margin-top: 10px;
+            height: 14px;
+            width: 0.5px;
+            background-color: #b8b6b4;
+        }
+        .st_languge_button{
+            /* border-left: thick solid #b8b6b4; */
+            margin-top: 8px;
+            height: 18px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        .st_login_button:hover{color: #fff;}
+        .st_languge_button:hover{color: #fff;}
+    </style>
+
+
+<!-- steaBAse -->
+<style>
+    .steam_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .steaBAse{
+        width: 100%;
+        height: 629px;
+        background-image: radial-gradient(#203145, #1b2b3b, #0e121b);
+        /* background-color: rgb(159, 159, 233); */
+    }
+    .steaBAse_title{
+        position: absolute;
+        top: 240px;
+        left: 280px;
+        text-decoration: none;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        color: #FFFFFF;
+    }
+    .steaBAse_help{
+        position: absolute;
+        top: 290px;
+        left: 280px;
+        height: 190px;
+        width: 660px;
+        /* background-color: red; */
+    }
+    .steaBAse_help_common:hover{background-color: #5bacdb;}
+    .steaBAse_help_common:first-child{margin-top: 0 !important;}
+    .steaBAse_help_common{
+        background-color: blue;
+        margin: 10px 0 10px 0;
+        height: 40px;
+        width: 660px;
+        background-color: #445468;
+        border: solid 1px;
+        border-color: #445468;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .steaBAse_help_link{
+        text-decoration: none;
+        color: #ffffff;
+       margin-left: 20px;
+    }
+    .steaBAse_help_img{
+        /* background-color: red; */
+        width: 13px;
+        height: 16px;
+        margin: 12px 12px 12px 0;
+    }
+</style>
+</head>
+<body>
+    <div class="steam_container">
+        <div class="steamPart steamTop">
+            
+            <div class="sTop_choise">
+                <a href="Steam_index.html" class="sTop_avatar_link">
+                    <img src="Images/s_avatar.png" alt="" class="sTop_avatar_image">
+                </a>
+
+                <div class="sTop_choise_choises">
+                    <button class="st_choises_common st_choises_store">
+                        STORE
+                        <div class="st_pop st_store_pop">
+                            <div class="st_store_pop_contain">
+                                <a href="" class="pop_text store_pop">HOME</a>
+                                <a href="" class="pop_text store_pop">DISCOVERY QUEUE</a>
+                                <a href="" class="pop_text store_pop">WISHLIST</a>
+                                <a href="" class="pop_text store_pop">POINTS SHOP</a>
+                                <a href="Steam_newAndFeature.html" class="pop_text store_pop">NEWS</a>
+                                <a href="" class="pop_text store_pop">STATS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="st_choises_common st_choises_comunity">
+                        COMMUNITY
+                        <div class="st_pop st_community_pop">
+                            <div class="st_community_pop_contain">
+                                <a href="" class="pop_text community_pop">HOME</a>
+                                <a href="" class="pop_text community_pop">DISCUSSIONS</a>
+                                <a href="" class="pop_text community_pop">WORKSHOP</a>
+                                <a href="" class="pop_text community_pop">MARKET</a>
+                                <a href="" class="pop_text community_pop">BROADCASTS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <a href="" class="st_choises_common st_choises_about">ABOUT</a>
+                    <a href="" class="st_choises_common st_choises_support">SUPPORT</a>
+                    <!-- <button class="st_choises_common st_choises_about">ABOUT</button>
+                    <button class="st_choises_common st_choises_support">SUPPORT</button> -->
+                </div>
+            </div>
+
+            <div class="sTop_login">
+                <div class="st_login_install">
+                    <img src="Images/s_install_image.png" alt="" class="stlogin_install_image">
+                    <h class="stlogin_install_text">Install Steam</h>
+                </div>
+                <a href="Steam_login.html" class="st_login_button">login</a>
+                <!-- <button class="st_login_button">login</button> -->
+                <div class="st_seperate"></div>
+                <button class="st_languge_button">language</button>
+            </div>
+        </div>
+
+
+        <div class="steaBAse">
+            <a href="" class="steaBAse_title">Steam Support</a>
+            <div class="steaBAse_help">
+                <div class="steaBAse_help_common">
+                    <a href="" class="steaBAse_help_link">i forgot my Steam Account name or password</a>
+                    <img src="Images/s_support_arrow.png" alt="" class="steaBAse_help_img">
+                </div>
+                <div class="steaBAse_help_common">
+                    <a href="" class="steaBAse_help_link">My Steam Account was stolen and i need help recovering it</a>
+                    <img src="Images/s_support_arrow.png" alt="" class="steaBAse_help_img">
+                </div>
+                <div class="steaBAse_help_common">
+                    <a href="" class="steaBAse_help_link">I'm not receiving a Steam Guard code</a>
+                    <img src="Images/s_support_arrow.png" alt="" class="steaBAse_help_img">
+                </div>
+                <div class="steaBAse_help_common">
+                    <a href="" class="steaBAse_help_link">I deleted or lost my Steam Guard Mobile Authenticator</a>
+                    <img src="Images/s_support_arrow.png" alt="" class="steaBAse_help_img">
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>

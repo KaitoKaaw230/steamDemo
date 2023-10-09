@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Deck</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="NewsImage/Steam_deck_iconAvatar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <style>
+        body{overflow-x: hidden; height: 4970px; width: auto; position: relative;}
+        body{font-family: "Motiva Sans", Sans-serif, -apple-system, system, sans-serif;}
+        .SteamContainer{ display: flex; flex-direction: column; align-items: center;}
+        .NewestDeck_Mid{transform: translateX(-10px); overflow-x: hidden;}
+        .NewestDeck_Mid{display: flex; flex-direction: column; width: 1540px; height: auto; margin-top: 70px;}
+    </style>
+
+<!-- top -->
+<style>
+    .NewestDeck_Top{position: fixed; top: 0; z-index: 100;}
+    .NewestDeck_Top{transform: translateY(0); padding-left: 20px; display: flex; justify-content: start;}
+    .NewestDeck_Top{width: 1500px; height: 80px; background-color: #1B1B1B;}
+
+    .NewestDeck_Top_left{width: 200px; height: 70px; margin: 5px 0 0 80px;}
+    .NewestDeck_Top_left_link{}
+    .NewestDeck_Top_left_link_img{width: 215px; height: 70px; z-index: 1;}
+    .NewestDeck_Top_left_link_img_decorate{position: absolute; z-index: 2; top: 25px; left: 100px;}
+    .NewestDeck_Top_left_link_img_decorate{width: 32px; height: 32px; border-radius: 50px;}
+    .NewestDeck_Top_left_link_img_decorate{animation: colorBackground 15s infinite reverse;}
+
+
+    .NewestDeck_Top_right{width: 875px; height: 35px; margin: 22px 0 0 235px; display: flex; justify-content: start;}
+    .NewestDeck_Top_right_choiseBase{width: 715px; height: 35px; }
+    .NewestDeck_Top_right_butNow{width: 96px; height: 35px; margin: 0 10px 0 10px;}
+    .NewestDeck_Top_right_language_base{width: 56px; height: 35px; border-radius: 1.4em; cursor: pointer;}
+    .NewestDeck_Top_right_language_base{display: flex; justify-content: center; align-items: center; background: #1B1B1B;}
+    .NewestDeck_Top_right_language_base_img{width: 36px; height: 20px; border-radius: 1.4em;}
+    .NewestDeck_Top_right_language_base:hover{background: #fff; color: #1B1B1B;}
+
+
+    .choiseBase_item{width: fit-content; height: 35px; text-decoration: none; padding: 9px 17px; line-height: 36px;}
+    .choiseBase_item{border-radius: 1.4em; font-size: 0.9em; color: #fff; background: #1B1B1B; font-weight: bold;}
+    .choiseBase_item{margin-right: 5px; transition-property: color; transition-duration: 0.8s;}
+    .choiseBase_item:hover{background: #fff; color: #1B1B1B;}
+    .choisen{background: #5b5463 !important;}
+    .choisen:hover{color: #1B1B1B !important; background: #5b5463 !important;}
+
+
+
+    .buyNow_btn{width: fit-content; height: 35px; text-decoration: none; padding: 9px 17px; line-height: 36px;}
+    .buyNow_btn{border-radius: 1.4em; font-size: 0.9em; color: #fff; font-weight: bold;}
+    .buyNow_btn{animation: colorBackground 15s infinite;}
+    @keyframes colorBackground {
+         0% {background-color: cyan;}
+         30%{background-color: purple;}
+         50%{background-color: lightgreen;}
+         70% {background-color: rgb(255, 71, 71);}
+         90%{background-color: cyan;}
+    }
+    .buyNow_btn:hover{background: #fff; color: #1B1B1B; transition: color 0.8s;}
+
+    
+</style>
+
+
+<!-- Item_1 -->
+<style>
+    .Item_1{width: 100%; height: 900px;}
+    .Item_1_bg_img{position: absolute; top: -200px; left: 0; z-index: 0;}
+    .Item_1_bg_img{width: 1650px; height: 1100px;}
+
+    .Item_1_control{position: absolute; top: 100px; left: 160px; z-index: 2;}
+    .Item_1_control{width: 1240px; height: 480px;}
+
+    .Item_1_video{position: absolute; top: 140px; left: 370px; z-index: 3;}
+    .Item_1_video{background: transparent; width: 830px; height: 390px;}
+
+
+    .Item_1_text_base{position: absolute; top: 650px; left: 130px;}
+    .Item_1_text_base{width: 1300px; height: 200px; display: flex; justify-content: space-between;}
+
+    .Item_1_text_base_part_left{width: 900px; height: 200px;}
+    .Item_1_text_base_part_right{width: 300px; height: 200px;}
+
+    .Item_1_text_base_part_left_title{font-size: 3.8vw;}
+    .Item_1_text_base_part_left_text{font-size: 3.4vw; font-weight: 1000;}
+
+    .NewestDeck_Mid_item_7_base_right_link{margin-left: 100px; width: fit-content; height: 50px; text-decoration: none; color: #fff;}
+    .NewestDeck_Mid_item_7_base_right_link{background: #1B1B1B; line-height: 170px; padding: 10px 30px; border-radius: 50px; font-weight: 600;}
+    .NewestDeck_Mid_item_7_base_right_link:hover{color: #1B1B1B; background-color: #fff; box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.22);}
+</style>
+
+<!-- item_2 -->
+<style>
+    .item_2{width: 100%; height: 813px; position: relative;}
+
+    .item_2_video{width: 100%; height: 899px;}
+    .item_2_video{position: absolute; top: -43px; left: 0; z-index: 0;}
+    .item_2_base{width: 1300px; height: 140px; z-index: 3; position: absolute; left: 130px; bottom: 0;}
+    .item_2_base{display: flex; justify-content: space-between;}
+
+    .item_2_base_left{width: 147px; height: 83px;}
+    .item_2_base_right{font-style: italic; color: #fff; opacity: 0.6; font-size: 0.9em; margin-top: 50px;}
+</style>
+
+<!-- item_3 -->
+<style>
+    .item_3{width: 100%; height: 700px; background: #3D3F43;}
+    .item_3_base{width: 1270px; height: 530px; margin-top: 80px; margin-left: 140px; display: flex; justify-content: space-between;}
+
+    .item_3_base_item{width: 600px; height: 530px; display: flex; flex-direction: column; align-items: center;}
+    .item_3_base_item_video{width: 300px; height: 380px; margin-top: 10px; user-select: none;}
+
+    .item_3_base_item_img{width: 515px; height: 320px; margin: 40px 0 30px 0;}
+
+    .item_3_base_item_title{width: fit-content; height: 40px; font-size: 1.35em;}
+
+    .item_3_base_link_base{width: 255px; height: 40px; margin-top: 20px; display: flex; justify-content: space-between; align-items: center;}
+
+    .item_3_base_link_base_arrow{animation: colorBackground 15s infinite reverse; border-radius: 50px; user-select: none;}
+    .item_3_base_link_base_arrow{margin: 0 0 0 10px; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;}
+</style>
+
+<!-- item_4 -->
+<style>
+    .item_4{width: 100%; height: 1000px; position: relative;}
+    .item_4_bg{position: absolute; top: 0; height: 0; z-index: 0;}
+    .item_4_bg{width: 1540px; height: 1000px;}
+
+   
+    .item_4_base{position: absolute; top: 100px; left: 370px;}
+    .item_4_base{width: 850px; height: 840px; display: flex; align-items: center; flex-direction: column; z-index: 3;}
+
+    .item_4_base_title{width: 500px; height: auto; color: #fff; font-size: 3.294em; line-height: 1.2em; font-weight: bolder;}
+    .item_4_laptop{position: absolute; top: -120px; left: -600px; z-index: 1;} 
+    .item_4_laptop{width: 2800px; height: 1200px;}
+</style>
+
+<!-- item_5 -->
+<style>
+    .item_5{width: 100%; height: 950px; animation: colorBackground 15s infinite reverse;}
+    .item_5_base{width: 1300px; height: 790px; margin: 90px 0 0 140px;}
+    .item_5_base{display: flex; align-items: center; flex-direction: column;}
+
+    .item_5_base_1{width: 1300px; height: 360px; display: flex; justify-content: space-between;}
+    .item_5_base_2{width: 1300px; height: 290px; display: flex; justify-content: start;}
+    .item_5_base_3{width: 1300px; height: 30px;}
+    .item_5_base_4{width: 1300px; height: 100px; display: flex; justify-content: space-between; align-items: center;}
+
+    .item_5_base_1_left{width: 600px; height: 360px;}
+    .item_5_base_1_left_title{color: #fff; user-select: none; font-weight: 900; font-size: 3.294em;}
+    .item_5_base_1_left_text{color: #fff; user-select: none; font-size: 1.294em; font-weight: 600; margin-top: 20px; line-height: 1.5;}
+    .item_5_base_1_img{width: 750px; height: 360px;}
+
+    .item_5_base_2_item{width: 400px; height: 290px; margin-right: 35px;}
+    .item_5_base_3{font-size: 12px; border-bottom: 1px solid #fff; color: #fff; opacity: 0.8;}
+    .item_5_base_2_item_title{color: #fff; font-size: 2.8em; font-weight: 600; line-height: 1.2em;}
+    .item_5_base_2_item_text{color: #000; font-size: 2.4em; font-weight: lighter;}
+
+    .item_5_base_2_item_decrep{color: #fff; line-height: 23px;}
+
+    .item_5_base_4_left{}
+</style>
+
+<!-- bottom -->
+<style>
+    .Bottom{background-color: #1F2E35;}
+    .Bottom{width: 100%; height: 550px;}
+
+    .NewestDeck_Mid_item_8_top{width: 1250px; height: 260px; margin-top: 80px; margin-left: 140px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_8_bottom{width: 1250px; height: 100px; margin-top: 30px; margin-left: 140px;}
+
+    .NewestDeck_Mid_item_8_top_left{}
+    .NewestDeck_Mid_item_8_top_left_img{width: 193px; height: 193px;}
+    .NewestDeck_Mid_item_8_top_right{width: 300px; height: 260px; display: flex; align-items: start; flex-direction: column;}
+    .NewestDeck_Mid_item_8_top_right_img{width: 120px; height: 40px; filter: brightness(3); margin-bottom: 20px;}
+
+    .NewestDeck_Mid_item_8_top_right_text_base{width: 250px; height: 200px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_8_top_right_text_base_column{width: 100px; height: 200px;}
+    .NewestDeck_Mid_item_8_link{text-decoration: none; color: #fff;font-size: 0.8em; line-height: 2em;}
+    .NewestDeck_Mid_item_8_link:hover{opacity: 0.7; }
+</style>
+</head>
+<body>
+    <div class="SteamContainer">
+        <div class="NewestDeck_Top">
+            <div class="NewestDeck_Top_left">
+                <a href="" class="NewestDeck_Top_left_link">
+                    <a href="Newest_index.html"><img src="NewsImage/NewLogo.png" alt="" class="NewestDeck_Top_left_link_img"></a>
+                    <a href="Steam_index.html" class="NewestDeck_Top_left_link_img_decorate"></a>
+                    <!-- <div class="NewestDeck_Top_left_link_img_decorate"></div> -->
+                </a>
+            </div>
+            <div class="NewestDeck_Top_right">
+                <div class="NewestDeck_Top_right_choiseBase">
+                    <a href="Newest_hardware.html" class="choiseBase_item">Hardware</a>
+                    <a href="Newest_Softwrae.html" class="choiseBase_item">Software</a>
+                    <a href="Newest_SteamDeck.html" class="choiseBase_item">Deck Vertified</a>
+                    <a href="Newest_dock.html" class="choiseBase_item">Dock</a>
+                    <a href="Newest_FAQ.html" class="choiseBase_item">FAQ</a>
+                    <a href="" class="choiseBase_item">Tech Specs</a>
+                    <a href="Newest_News.html" class="choiseBase_item">News</a>
+                </div>
+                <div class="NewestDeck_Top_right_butNow">
+                    <a href="Steam_steamdeck.html" class="buyNow_btn">Buy now</a>
+                </div>
+                <div class="NewestDeck_Top_right_language_base">
+                    <img src="NewsImage/Laguage_setting_img.png" alt="" class="NewestDeck_Top_right_language_base_img">
+                </div>
+            </div>
+        </div>
+
+        <div class="NewestDeck_Mid">
+            <div class="Item_1">
+                <img src="NewsImage/newest_index_item_1_bg.jpg" alt="" class="Item_1_bg_img">
+                <img src="NewsImage/newest_index_item_1_control.png" alt="" class="Item_1_control">
+
+                <video src="NewsImage/newest_index_item_1_video.mp4" autoplay loop muted class="Item_1_video"></video>
+
+                <div class="Item_1_text_base">
+                    <div class="Item_1_text_base_part_left">
+                        <div class="Item_1_text_base_part_left_title">All-in-one portable PC gaming.</div>
+                        <div class="Item_1_text_base_part_left_text">Available now, from $399.00</div>
+                    </div>
+                    <div class="Item_1_text_base_part_right">
+                        <a href="Steam_steamdeck.html" class="NewestDeck_Mid_item_7_base_right_link">Get your!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_2">
+                <video src="NewsImage/newest_index_item_2_bg.mp4" autoplay loop muted class="item_2_video"></video>
+                <div class="item_2_base">
+                    <img src="NewsImage/newest_index_item_2_logo.png" alt="" class="item_2_base_left">
+                    <div class="item_2_base_right">© MARVEL 2022</div>
+                </div>
+            </div>
+
+            <div class="item_3">
+                <div class="item_3_base">
+                    <div style="background: #fff;" class="item_3_base_item">
+                        <video src="Images/steamdeck_library_item_3.mp4" autoplay loop muted class="item_3_base_item_video"></video>
+                        <div style="color: #3D3F43;" class="item_3_base_item_title">Designed to put real games in real hands</div>
+                        <div class="item_3_base_link_base">
+                            <a href="Newest_hardware.html" style="text-decoration: none; display: flex; justify-content: start;">
+                                <div style="color: #3D3F43;" class="item_3_base_link_base_text">Learn more about Hardware</div>
+                                <div class="item_3_base_link_base_arrow">></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="background: rgb(27, 27, 27);;" class="item_3_base_item">
+                        <img src="NewsImage/newest_index_item_3_gif.png" alt="" class="item_3_base_item_img">
+                        <div style="color: #fff;" class="item_3_base_item_title">Bring Steam with you, wherever you go!</div>
+                        <div class="item_3_base_link_base">
+                            <a href="" style="text-decoration: none; display: flex; justify-content: start;">
+                                <div style="color: #fff;" class="item_3_base_link_base_text">Learn more about Software</div>
+                                <div class="item_3_base_link_base_arrow">></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_4">
+                <img src="NewsImage/newest_index_item_4_bg.jpg" alt="" class="item_4_bg">
+                <img src="NewsImage/newest_index_item_4_laptop.png" alt="" class="item_4_laptop">
+                <div class="item_4_base">
+                    <div class="item_4_base_title">Your Steam library is already on Deck.</div>
+                    <a href="Newest_SteamDeck.html" style="text-decoration: none; display: flex; justify-content: start; margin-top: 650px;">
+                        <div style="color: #fff;" class="item_3_base_link_base_text">Learn about Deck Verified games</div>
+                        <div class="item_3_base_link_base_arrow">></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="item_5">
+                <div class="item_5_base">
+                    <div class="item_5_base_1">
+                        <div class="item_5_base_1_left">
+                            <div class="item_5_base_1_left_title">Three storage options</div>
+                            <div class="item_5_base_1_left_text">There is no in-game difference in frame rates or graphics quality between the three models.</div>
+                        </div>
+                        <img src="NewsImage/newest_index_item_5_bg.png" alt="" class="item_5_base_1_img">
+                    </div>
+                    <div class="item_5_base_2">
+                        <div class="item_5_base_2_item">
+                            <div class="item_5_base_2_item_title">$399.00</div>
+                            <div class="item_5_base_2_item_text">64GB</div>
+                            <ul>
+                                <li class="item_5_base_2_item_decrep">64GB eMMC internal storage</li>
+                                <li class="item_5_base_2_item_decrep">Carrying case</li>
+                            </ul>
+                        </div>
+
+                        <div class="item_5_base_2_item">
+                            <div class="item_5_base_2_item_title">$529.00</div>
+                            <div class="item_5_base_2_item_text">256GB</div>
+                            <ul>
+                                <li class="item_5_base_2_item_decrep">256GB NVMe SSD internal storage</li>
+                                <li class="item_5_base_2_item_decrep">Faster storage</li>
+                                <li class="item_5_base_2_item_decrep">Carrying case</li>
+                                <li class="item_5_base_2_item_decrep">Exclusive Steam Comunity profile bundle</li>
+                            </ul>
+                        </div>
+
+                        <div class="item_5_base_2_item">
+                            <div class="item_5_base_2_item_title">$649.00</div>
+                            <div class="item_5_base_2_item_text">512GB</div>
+                            <ul>
+                                <li class="item_5_base_2_item_decrep">512GB NVMe SSD internal storage</li>
+                                <li class="item_5_base_2_item_decrep">Faster storage</li>
+                                <li class="item_5_base_2_item_decrep">Premium anti-glare etched glass</li>
+                                <li class="item_5_base_2_item_decrep">Exclusive carrying case</li>
+                                <li class="item_5_base_2_item_decrep">Exclusive Steam Comunity profile bundle</li>
+                                <li class="item_5_base_2_item_decrep">Exclusive virtual keyboard theme</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item_5_base_3">
+                        <i>Effective storage capacity subject to change based on size of operating system and formatting technology. All models include a microSD slot for additional storage capacity.</i>
+                    </div>
+                    <div class="item_5_base_4">
+                        <div class="item_5_base_4_left">
+                            <span style="color: #fff; font-weight: 700; font-size: 30px;">Steam Deck is shipping now.</span>
+                        </div>
+                        <div class="item_5_base_4_right">
+                            <a href="Steam_steamdeck.html" class="NewestDeck_Mid_item_7_base_right_link">Get your!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Bottom">
+                <div class="NewestDeck_Mid_item_8_top">
+                    <div class="NewestDeck_Mid_item_8_top_left">
+                        <img src="NewsImage/newest_deck_credit_img_1.jpg" alt="" class="NewestDeck_Mid_item_8_top_left_img">
+                    </div>
+                    <div class="NewestDeck_Mid_item_8_top_right">
+                        <img src="Images/s_bottom_logo_1.png" alt="" class="NewestDeck_Mid_item_8_top_right_img">
+                        <div class="NewestDeck_Mid_item_8_top_right_text_base">
+                            <div class="NewestDeck_Mid_item_8_top_right_text_base_column">
+                                <a href="" class="NewestDeck_Mid_item_8_link">About Us</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Jobs</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Steam Partners</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Publication</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Steam</a>
+                            </div>
+                            <div class="NewestDeck_Mid_item_8_top_right_text_base_column">
+                                <a href="" class="NewestDeck_Mid_item_8_link">Term of Use</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Privacy Policy</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Sercurity</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Legal</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Press Kit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="NewestDeck_Mid_item_8_bottom">
+                    <span style="color: #fff; opacity: 0.5; font-size: 0.7em;"><i>Product specifications are subject to change.</i></span><br><br>
+                    <span style="color: #fff; opacity: 0.5; font-size: 0.7em;"><i>© 2022 Valve Corporation. All rights reserved. All trademarks property of their respective owners in the U.S. and other countries. Steam, the Steam logo, Steam Deck, and the Steam Deck logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.</i></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

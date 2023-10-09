@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Deck:: Hardware</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="NewsImage/Steam_deck_iconAvatar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <style>
+        body{overflow-x: hidden; height: 4970px; width: auto; position: relative;}
+        body{font-family: "Motiva Sans", Sans-serif, -apple-system, system, sans-serif;}
+        .SteamContainer{ display: flex; flex-direction: column; align-items: center;}
+        .NewestDeck_Mid{transform: translateX(-10px); overflow-x: hidden;}
+        .NewestDeck_Mid{display: flex; flex-direction: column; width: 1540px; height: auto; margin-top: 70px;}
+        
+    </style>
+
+<!-- top -->
+<style>
+    .NewestDeck_Top{position: fixed; top: 0; z-index: 100;}
+    .NewestDeck_Top{transform: translateY(0); padding-left: 20px; display: flex; justify-content: start;}
+    .NewestDeck_Top{width: 1500px; height: 80px; background-color: #1B1B1B;}
+
+    .NewestDeck_Top_left{width: 200px; height: 70px; margin: 5px 0 0 80px;}
+    .NewestDeck_Top_left_link{}
+    .NewestDeck_Top_left_link_img{width: 215px; height: 70px; z-index: 1;}
+    .NewestDeck_Top_left_link_img_decorate{position: absolute; z-index: 2; top: 25px; left: 100px;}
+    .NewestDeck_Top_left_link_img_decorate{width: 32px; height: 32px; border-radius: 50px;}
+    .NewestDeck_Top_left_link_img_decorate{animation: colorBackground 15s infinite reverse;}
+
+
+    .NewestDeck_Top_right{width: 875px; height: 35px; margin: 22px 0 0 235px; display: flex; justify-content: start;}
+    .NewestDeck_Top_right_choiseBase{width: 715px; height: 35px; }
+    .NewestDeck_Top_right_butNow{width: 96px; height: 35px; margin: 0 10px 0 10px;}
+    .NewestDeck_Top_right_language_base{width: 56px; height: 35px; border-radius: 1.4em; cursor: pointer;}
+    .NewestDeck_Top_right_language_base{display: flex; justify-content: center; align-items: center; background: #1B1B1B;}
+    .NewestDeck_Top_right_language_base_img{width: 36px; height: 20px; border-radius: 1.4em;}
+    .NewestDeck_Top_right_language_base:hover{background: #fff; color: #1B1B1B;}
+
+
+    .choiseBase_item{width: fit-content; height: 35px; text-decoration: none; padding: 9px 17px; line-height: 36px;}
+    .choiseBase_item{border-radius: 1.4em; font-size: 0.9em; color: #fff; background: #1B1B1B; font-weight: bold;}
+    .choiseBase_item{margin-right: 5px; transition-property: color; transition-duration: 0.8s;}
+    .choiseBase_item:hover{background: #fff; color: #1B1B1B;}
+    .choisen{background: #5b5463 !important;}
+    .choisen:hover{color: #1B1B1B !important; background: #5b5463 !important;}
+
+
+
+    .buyNow_btn{width: fit-content; height: 35px; text-decoration: none; padding: 9px 17px; line-height: 36px;}
+    .buyNow_btn{border-radius: 1.4em; font-size: 0.9em; color: #fff; font-weight: bold;}
+    .buyNow_btn{animation: colorBackground 15s infinite;}
+    @keyframes colorBackground {
+         0% {background-color: cyan;}
+         30%{background-color: purple;}
+         50%{background-color: lightgreen;}
+         70% {background-color: rgb(255, 71, 71);}
+         90%{background-color: cyan;}
+    }
+    .buyNow_btn:hover{background: #fff; color: #1B1B1B; transition: color 0.8s;}
+
+    
+</style>
+
+<!-- item_1 -->
+<style>
+    .item_1{width: 100%; height: 867px;}
+    .item_1_video{width: 100%; height: auto;}
+</style>
+
+<!-- item_2 -->
+<style>
+    .item_2{width: 100%; height: 550px;}
+    .item_2_base{width: 1300px; height: 400px; margin: 90px 0 0 120px; display: flex; justify-content: space-between;}
+    .item_2_base_left{width: 700px; height: 400px; color: #1B1B1B;}
+    .item_2_base_left_tile{font-size: 3.294em; line-height: 1.2em; font-weight: 900;}
+    .item_2_base_left_text{line-height: 1.5; font-size: 1em; margin-top: 20px;}
+    .item_2_base_right{width: 400px; height: 400px;}
+    .tm{animation: colorbg 15s infinite;}
+    @keyframes colorbg {
+         0% {color: cyan;}
+         30%{color: purple;}
+         50%{color: lightgreen;}
+         70% {color: rgb(255, 71, 71);}
+         90%{color: cyan;}
+    }
+</style>
+
+<!-- item_3 -->
+<style>
+    .item_3{width: 100%; height: 850px; background: #1B1B1B;}
+    .item_3_base{width: 1300px; height: 690px; margin: 100px 0 0 120px;}
+
+    .item_3_base_container{width: 1300px; height: 520px; margin-top: 50px;}
+    .item_3_base_link_base{width: 1300px; height: 50px; margin-top: 10px; display: flex; justify-content: end;}
+
+    .item_3_base_container_row{width: 1300px; height: 220px; display: flex; justify-content: start;}
+    .item_3_base_container_row:last-child{margin-top: 50px;}
+
+    .item_3_items{width: 400px; height: 220px; margin-right: 50px; display: flex; flex-direction: column;}
+
+    .item_3_items_title_base{width: 400px; height: 40px; display: flex; justify-content: start;}
+    .item_3_items_title_base_img{width: 24px; height: 24px; margin: 7px 15px 0 0;}
+    .item_3_items_title{color: #fff; font-weight: 900; font-size: 1.35em; line-height: 38px;}
+    .item_3_items_text_base{color: #fff; width: 400px; height: 175px; margin-top: 5px; font-size: 1em; font-weight: 500; line-height: 1.5;}
+
+    .item_3_base_link_base_link{text-decoration: none; font-size: 13px; color: #fff;}
+    .item_3_base_link_base_arrow{border-radius: 50px; animation: colorBackground 15s infinite reverse; color: #fff; font-weight: bold;}
+    .item_3_base_link_base_arrow{font-size: 12px; margin: 0 10px 0 6px; width: 18px; height: 18px; display: flex; justify-content: center; text-align: center;}
+</style>
+
+<!-- item_4 -->
+<style>
+    .item_4{width: 100%; height: 1440px; color: #fff;}
+    .item_4_base{width: 1300px; height: 1280px; margin: 90px 0 0 120px;}
+    
+    .item_4_base_title{font-size: 3.294em; line-height: 1.2em; font-weight: 900; color: #1B1B1B;}
+    .item_4_base_title_base{display: flex; flex-direction: column; width: 1300px; height: 153px;}
+    .item_4_base_title_base_btn{width: 1300px; height: 90px; display: flex; justify-content: center; align-items: center;}
+    .item_4_base_btn{width: fit-content; height: auto; padding: 10px 20px; margin: 0 10px; font-size: 1em;}
+    .item_4_base_btn{font-weight: 700; user-select: none; cursor: pointer; border-radius: 50px;}
+    .item_4_base_btn{color: #1B1B1B; font-size: 16px;}
+    .item_4_base_btn{transition-property: all; transition-duration: 0.5s;}
+    .item_4_base_btn:hover{background: #5B5463}
+
+
+    .item_4_base_container{width: 1300px; height: 750px; cursor: url(Images/steamLogo.png), auto;;}
+    .item_4_base_container{}
+    .item_4_item_base{width: 1300px; height: 570px;}
+    .item_4_item_base_text{width: 770px; height: 120px; margin: 40px 0 0 0;}
+    .container_1_title{margin-bottom: 5px; color: #1B1B1B; font-weight: 900; font-size: 1.35em;}
+    .container_1_text{font-size: 1em; font-weight: 500; color: #1B1B1B; line-height: 1.5;}
+    .item_4_video{width: 1300px; height: 570px;}
+
+    .container_1{}
+    .container_2{display: none;}
+    .container_3{display: none;}
+    .container_4{display: none;}
+
+    .item_4_base_decreption_base{width: 1300px; height: 360px; display: flex; flex-direction: column;}
+    .item_4_base_decreption_base_top{width: 1300px; height: 170px; display: flex; justify-content: space-between;}
+    .item_4_base_decreption_base_top_imgs{width: 400px; height: 200px;}
+    .item_4_base_decreption_base_bottom{width: 1300px; height: 200px; margin-top: 50px; display: flex; justify-content: space-between;}
+    .item_4_base_decreption_base_bottom_item{width: 400px; height: 200px;}
+</style>
+
+<!-- item_5 -->
+<style>
+    .item_5{width: 100%; height: 721px; position: relative;}
+    .item_5_vieo{width: 100%; height: auto; position: absolute; z-index: 0; top: 0; left: 0;}
+    .item_5_base{width: 1400px; height: 400px; margin: 60px 0 0 100px; z-index: 3; position: absolute;}
+    .item_5_base{display: flex; justify-content: space-between;}
+    .item_5_base_item{width: 600px; height: 400px;}
+    .item_5_base_link{color: #1A9FFF; font-size: 1em; font-weight: 500; text-decoration: none;}
+
+
+    .NewestDeck_Mid_item_2_link{color: #fff; text-decoration: none; font-size: 1em; line-height: 20px; border-radius: 50px; background-color: cyan;}
+    .NewestDeck_Mid_item_2_link{width: fit-content; height: 20px; padding: 10px 40px; animation: colorBackground 15s infinite reverse;}
+    .NewestDeck_Mid_item_2_link{outline: none; border: none; user-select: none; margin-right: 20px;}
+    .NewestDeck_Mid_item_2_link:hover{box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.22);}
+</style>
+
+<!-- bottom -->
+<style>
+    .Bottom{background-color: #1F2E35;}
+    .Bottom{width: 100%; height: 550px;}
+
+    .NewestDeck_Mid_item_8_top{width: 1250px; height: 260px; margin-top: 80px; margin-left: 140px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_8_bottom{width: 1250px; height: 100px; margin-top: 30px; margin-left: 140px;}
+
+    .NewestDeck_Mid_item_8_top_left{}
+    .NewestDeck_Mid_item_8_top_left_img{width: 193px; height: 193px;}
+    .NewestDeck_Mid_item_8_top_right{width: 300px; height: 260px; display: flex; align-items: start; flex-direction: column;}
+    .NewestDeck_Mid_item_8_top_right_img{width: 120px; height: 40px; filter: brightness(3); margin-bottom: 20px;}
+
+    .NewestDeck_Mid_item_8_top_right_text_base{width: 250px; height: 200px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_8_top_right_text_base_column{width: 100px; height: 200px;}
+    .NewestDeck_Mid_item_8_link{text-decoration: none; color: #fff;font-size: 0.8em; line-height: 2em;}
+    .NewestDeck_Mid_item_8_link:hover{opacity: 0.7; }
+
+    .pressed{animation: colorBackground 15s infinite; box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.22);}
+</style>
+
+
+<script>
+    function ComfortPress(){
+        //box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.22)
+        let combtn = document.getElementById("comfort_btn");
+        let thumbbtn = document.getElementById('thumbst_btn');
+        let triggbbtn = document.getElementById('trigger_btn');
+        let gripbtn = document.getElementById('grip_btn');
+
+        let con1 = document.getElementById('container_1');
+        let con2 = document.getElementById('container_2');
+        let con3 = document.getElementById('container_3');
+        let con4 = document.getElementById('container_4');
+        // animation: colorbg 15s infinite;
+        combtn.style.animation = ('colorBackground 15s infinite');
+        combtn.style.boxShadow = ('0px 20px 40px 0px rgba(0, 0, 0, 0.22)');
+
+        thumbbtn.style.animation = 'none';
+        triggbbtn.style.animation = 'none';
+        gripbtn.style.animation = 'none';
+
+        thumbbtn.style.boxShadow = 'none';
+        triggbbtn.style.boxShadow = 'none';
+        gripbtn.style.boxShadow = 'none';
+
+
+        con1.style.display = "block";
+        con2.style.display = "none";
+        con3.style.display = "none";
+        con4.style.display = "none";
+    }
+
+    function ThumbPress(){
+        let combtn = document.getElementById("comfort_btn");
+        let thumbbtn = document.getElementById('thumbst_btn');
+        let triggbbtn = document.getElementById('trigger_btn');
+        let gripbtn = document.getElementById('grip_btn');
+
+        let con1 = document.getElementById('container_1');
+        let con2 = document.getElementById('container_2');
+        let con3 = document.getElementById('container_3');
+        let con4 = document.getElementById('container_4');
+        // animation: colorbg 15s infinite;
+        thumbbtn.style.animation = ('colorBackground 15s infinite');
+        thumbbtn.style.boxShadow = ('0px 20px 40px 0px rgba(0, 0, 0, 0.22)');
+
+        combtn.style.animation = ('none');
+        triggbbtn.style.animation = ('none');
+        gripbtn.style.animation = ('none');
+
+        combtn.style.boxShadow = ('none');
+        triggbbtn.style.boxShadow = ('none');
+        gripbtn.style.boxShadow = ('none');
+
+        con2.style.display = "block";
+        con1.style.display = "none";
+        con3.style.display = "none";
+        con4.style.display = "none";
+    }
+
+    function TriggPress(){
+        let combtn = document.getElementById("comfort_btn");
+        let thumbbtn = document.getElementById('thumbst_btn');
+        let triggbbtn = document.getElementById('trigger_btn');
+        let gripbtn = document.getElementById('grip_btn');
+
+        let con1 = document.getElementById('container_1');
+        let con2 = document.getElementById('container_2');
+        let con3 = document.getElementById('container_3');
+        let con4 = document.getElementById('container_4');
+        // animation: colorbg 15s infinite;
+        triggbbtn.style.animation = ('colorBackground 15s infinite');
+        triggbbtn.style.boxShadow = ('0px 20px 40px 0px rgba(0, 0, 0, 0.22)');
+
+        combtn.style.animation = ('none');
+        thumbbtn.style.animation = ('none');
+        gripbtn.style.animation = ('none');
+
+        combtn.style.boxShadow = ('none');
+        thumbbtn.style.boxShadow = ('none');
+        gripbtn.style.boxShadow = ('none');
+
+        con3.style.display = "block";
+        con1.style.display = "none";
+        con2.style.display = "none";
+        con4.style.display = "none";
+    }
+
+    function GripPress(){
+        let combtn = document.getElementById("comfort_btn");
+        let thumbbtn = document.getElementById('thumbst_btn');
+        let triggbbtn = document.getElementById('trigger_btn');
+        let gripbtn = document.getElementById('grip_btn');
+
+        let con1 = document.getElementById('container_1');
+        let con2 = document.getElementById('container_2');
+        let con3 = document.getElementById('container_3');
+        let con4 = document.getElementById('container_4');
+        // animation: colorbg 15s infinite;
+        gripbtn.style.animation = ('colorBackground 15s infinite');
+        gripbtn.style.boxShadow = ('0px 20px 40px 0px rgba(0, 0, 0, 0.22)');
+
+        combtn.style.animation = ('none')
+        thumbbtn.style.animation = ('none');
+        triggbbtn.style.animation = ('none');
+
+        combtn.style.boxShadow = ('none');
+        thumbbtn.style.boxShadow = ('none');
+        triggbbtn.style.boxShadow = ('none');
+
+        con4.style.display = "block";
+        con1.style.display = "none";
+        con3.style.display = "none";
+        con2.style.display = "none";
+    }
+</script>
+
+<style>
+    .grabbable {
+        cursor: move; /* fallback if grab cursor is unsupported */
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+    }
+
+    /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+    .grabbable:active {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+    }
+    </style>
+</head>
+<body>
+    <div class="SteamContainer">
+        <div class="NewestDeck_Top">
+            <div class="NewestDeck_Top_left">
+                <a href="" class="NewestDeck_Top_left_link">
+                    <a href="Newest_index.html"><img src="NewsImage/NewLogo.png" alt="" class="NewestDeck_Top_left_link_img"></a>
+                    <a href="Steam_index.html" class="NewestDeck_Top_left_link_img_decorate"></a>
+                    <!-- <div class="NewestDeck_Top_left_link_img_decorate"></div> -->
+                </a>
+            </div>
+            <div class="NewestDeck_Top_right">
+                <div class="NewestDeck_Top_right_choiseBase">
+                    <a href="Newest_hardware.html" class="choiseBase_item choisen">Hardware</a>
+                    <a href="Newest_Softwrae.html" class="choiseBase_item">Software</a>
+                    <a href="Newest_SteamDeck.html" class="choiseBase_item">Deck Vertified</a>
+                    <a href="Newest_dock.html" class="choiseBase_item">Dock</a>
+                    <a href="Newest_FAQ.html" class="choiseBase_item">FAQ</a>
+                    <a href="" class="choiseBase_item">Tech Specs</a>
+                    <a href="Newest_News.html" class="choiseBase_item">News</a>
+                </div>
+                <div class="NewestDeck_Top_right_butNow">
+                    <a href="Steam_steamdeck.html" class="buyNow_btn">Buy now</a>
+                </div>
+                <div class="NewestDeck_Top_right_language_base">
+                    <img src="NewsImage/Laguage_setting_img.png" alt="" class="NewestDeck_Top_right_language_base_img">
+                </div>
+            </div>
+        </div>
+
+        <div class="NewestDeck_Mid">
+            <div class="item_1">
+                <video src="NewsImage/newest_hardware_item_1_video.mp4" loop muted autoplay class="item_1_video"></video>
+            </div>
+
+            <div class="item_2">
+                <div class="item_2_base">
+                    <div class="item_2_base_left">
+                        <div class="item_2_base_left_tile">Steam Deck<span class="tm">™</span> is the most powerful, full-featured gaming handheld in the world.</div>
+                        <div class="item_2_base_left_text">We partnered with AMD to create Steam Deck's custom APU, optimized for handheld gaming. It is a Zen 2 + RDNA 2 powerhouse, delivering more than enough performance to run the latest AAA games in a very efficient power envelope.</div>
+                    </div>
+                    <video src="Images/steamdeck_library_item_1.mp4" autoplay muted loop class="item_2_base_right"></video>
+                </div>
+            </div>
+
+            <div class="item_3">
+                <div class="item_3_base">
+                    <div style="color: #fff; font-size: 3.294em; font-weight: 900;">Everything you need</div>
+                    <div class="item_3_base_container">
+                        <div class="item_3_base_container_row">
+                            <div class="item_3_items">
+                                <div class="item_3_items_title_base">
+                                    <img src="NewsImage/newest_hardware_3_1.png" alt="" class="item_3_items_title_base_img">
+                                    <div class="item_3_items_title">Fast storage</div>
+                                </div>
+                                <div class="item_3_items_text_base">Get the built-in storage you need: 64GB eMMC, 256GB NVMe SSD (faster), or 512GB NVMe SSD (fastest). If you're looking for more space, augment your built-in storage with a microSD card and fill it up with even more games.</div>
+                            </div>
+
+
+                            <div class="item_3_items">
+                                <div class="item_3_items_title_base">
+                                    <img src="NewsImage/newest_hardware_3_4.png" alt="" class="item_3_items_title_base_img">
+                                    <div class="item_3_items_title">Expandable I/O</div>
+                                </div>
+                                <div class="item_3_items_text_base">The single USB-C jack is multi-purpose: used for charging, peripherals, or even throwing the game onto a big screen at the same time. Any USB-C hub can be used to expand your options, or get our Steam Deck™ Docking Station when it is released. More info on the dock below.</div>
+                            </div>
+
+                            <div class="item_3_items">
+                                <div class="item_3_items_title_base">
+                                    <img src="NewsImage/newest_hardware_3_5.png" alt="" class="item_3_items_title_base_img">
+                                    <div class="item_3_items_title">Wireless</div>
+                                </div>
+                                <div class="item_3_items_text_base">WiFi keeps you connected to the world, and Bluetooth allows for a wide variety of wireless peripherals - from controllers to headsets, keyboards, and mice.</div>
+                            </div>
+                        </div>
+                        <div class="item_3_base_container_row">
+                            <div class="item_3_items">
+                                <div class="item_3_items_title_base">
+                                    <img src="NewsImage/newest_hardware_3_6.png" alt="" class="item_3_items_title_base_img">
+                                    <div class="item_3_items_title">Fast Suspend / Resume</div>
+                                </div>
+                                <div class="item_3_items_text_base">We’ve built a quick suspend / resume feature into SteamOS. Press the power button, and Steam Deck will suspend your game and go into sleep mode. Push the power button again and it will wake up right where you left off.</div>
+                            </div>
+
+
+                            <div class="item_3_items">
+                                <div class="item_3_items_title_base">
+                                    <img src="NewsImage/newest_hardware_3_2.png" alt="" class="item_3_items_title_base_img">
+                                    <div class="item_3_items_title">Hi-Fi audio</div>
+                                </div>
+                                <div class="item_3_items_text_base">Steam Deck's stereo speakers pack a punch. An embedded DSP provides clarity and a wide soundstage for an immersive listening experience. Connect your favorite headset, or use the onboard dual microphones to chat with your friends.</div>
+                            </div>
+
+                            <div class="item_3_items">
+                                <div class="item_3_items_title_base">
+                                    <img src="NewsImage/newest_hardware_3_3.png" alt="" class="item_3_items_title_base_img">
+                                    <div class="item_3_items_title">40Wh battery</div>
+                                </div>
+                                <div class="item_3_items_text_base">Steam Deck's onboard 40 watt-hour battery provides several hours of play time for most games. For lighter use cases like game streaming, smaller 2D games, or web browsing, you can expect to get the maximum battery life of approximately 7-8 hours.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_3_base_link_base">
+                        <a href="" class="item_3_base_link_base_link">Tech Specs </a>
+                        <div class="item_3_base_link_base_arrow">></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_4">
+                <div class="item_4_base">
+                    <div class="item_4_base_title_base">
+                        <div class="item_4_base_title">Real gamepad controls</div>
+                        <div class="item_4_base_title_base_btn">
+                            <div id="comfort_btn" class="item_4_base_btn pressed" onclick="ComfortPress()">Comfort</div>
+                            <div id="thumbst_btn" class="item_4_base_btn" onclick="ThumbPress()">Thumbsticks</div>
+                            <div id="trigger_btn" class="item_4_base_btn" onclick="TriggPress()">Triggers</div>
+                            <div id="grip_btn" class="item_4_base_btn" onclick="GripPress()">Grip buttons</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;" class="item_4_Bigbase">
+                        <div id="container_1" class="item_4_base_container container_1">
+                            <div class="item_4_item_base">
+                                <video src="NewsImage/newest_hardware_4_video_1.mp4" autoplay muted loop class="item_4_video"></video>
+                            </div>
+                            <div class="item_4_item_base_text">
+                                <div class="container_1_title">Comfort</div>
+                                <div class="container_1_text">The Steam Deck was built for extended play sessions—whether you're using thumbsticks or trackpads—with full-size controls positioned perfectly within your reach. The rear of the device is sculpted to comfortably fit a wide range of hand sizes.</div>
+                            </div>
+                        </div>
+    
+    
+                        <div id="container_2" class="item_4_base_container container_2">
+                            <div class="item_4_item_base">
+                                <video src="NewsImage/newest_hardware_4_video_2.mp4" autoplay muted loop class="item_4_video"></video>
+                            </div>
+                            <div class="item_4_item_base_text">
+                                <div class="container_1_title">Thumbsticks</div>
+                                <div class="container_1_text">Best-in-class thumbsticks—with capacitive touch sensors built-in—provide a level of precision and comfort not found in other portable gaming devices.</div>
+                            </div>
+                        </div>
+    
+    
+                        <div id="container_3" class="item_4_base_container container_3">
+                            <div class="item_4_item_base">
+                                <video src="NewsImage/newest_hardware_4_video_3.mp4" autoplay muted loop class="item_4_video"></video>
+                            </div>
+                            <div class="item_4_item_base_text">
+                                <div class="container_1_title">Triggers</div>
+                                <div class="container_1_text">Analog triggers provide a full range of input for the best experience—especially in driving games.</div>
+                            </div>
+                        </div>
+    
+    
+                        <div id="container_4" class="item_4_base_container container_4">
+                            <div class="item_4_item_base">
+                                <video src="NewsImage/newest_hardware_4_video_4.mp4" autoplay muted loop class="item_4_video"></video>
+                            </div>
+                            <div class="item_4_item_base_text">
+                                <div class="container_1_title">Grip button</div>
+                                <div class="container_1_text">Four user-assignable buttons on the back of the Deck put the next level of control right at your fingertips while keeping your thumb firmly planted on the trackpad or stick.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_4_base_decreption_base">
+                        <div class="item_4_base_decreption_base_top">
+                            <img src="NewsImage/newest_hardware_4_decrep_1.jpg" alt="" class="item_4_base_decreption_base_top_imgs">
+                            <img src="NewsImage/newest_hardware_4_decrep_2.jpg" alt="" class="item_4_base_decreption_base_top_imgs">
+                            <video src="NewsImage/newest_hardware_4_decrep_3.mp4" autoplay loop muted class="item_4_base_decreption_base_top_imgs"></video>
+                        </div>
+                        <div class="item_4_base_decreption_base_bottom">
+                            <div class="item_4_base_decreption_base_bottom_item">
+                                <div class="container_1_title">7" touchscreen</div>
+                                <div class="container_1_text">Type and swipe through the Steam UI with Deck's capacitive multi-touch display.</div>
+                            </div>
+
+                            <div class="item_4_base_decreption_base_bottom_item">
+                                <div class="container_1_title">Trackpads</div>
+                                <div class="container_1_text">Play PC games that were never designed to be handheld. With increased precision and customizability, trackpads also give you a competitive edge when playing fast paced FPS games.</div>
+                            </div>
+
+                            <div class="item_4_base_decreption_base_bottom_item">
+                                <div class="container_1_title">Gyro</div>
+                                <div class="container_1_text">With an IMU and capacitive touch thumbsticks on-board, Deck helps you aim better. By physically positioning the device you can achieve more precision than using a thumbstick or trackpad alone.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_5">
+                <video src="Images/steamdeck_control_video.mp4" autoplay loop muted class="item_5_vieo"></video>
+                <div class="item_5_base">
+                    <div class="item_5_base_item">
+                        <div class="item_4_base_title">There’s a dock, too.</div>
+                        <div style="width: 600px; margin-top: 20px; line-height: 1.5; height: 85px; color: #1B1B1B;" class="item_3_items_text_base">The Steam Deck™ Docking Station props up your Steam Deck while connecting to external displays, wired networking, USB peripherals, and power. Perfect for extending your Steam Deck and offering more ways to play.</div>
+                        <a href="" class="item_5_base_link">Learn more</a>
+                    </div>
+                    <div style="display: flex; justify-content: end;" class="item_5_base_item">
+                        <a href="" class="NewestDeck_Mid_item_2_link">See all verifiled games on Steam</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Bottom">
+                <div class="NewestDeck_Mid_item_8_top">
+                    <div class="NewestDeck_Mid_item_8_top_left">
+                        <img src="NewsImage/newest_deck_credit_img_1.jpg" alt="" class="NewestDeck_Mid_item_8_top_left_img">
+                    </div>
+                    <div class="NewestDeck_Mid_item_8_top_right">
+                        <img src="Images/s_bottom_logo_1.png" alt="" class="NewestDeck_Mid_item_8_top_right_img">
+                        <div class="NewestDeck_Mid_item_8_top_right_text_base">
+                            <div class="NewestDeck_Mid_item_8_top_right_text_base_column">
+                                <a href="" class="NewestDeck_Mid_item_8_link">About Us</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Jobs</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Steam Partners</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Publication</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Steam</a>
+                            </div>
+                            <div class="NewestDeck_Mid_item_8_top_right_text_base_column">
+                                <a href="" class="NewestDeck_Mid_item_8_link">Term of Use</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Privacy Policy</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Sercurity</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Legal</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Press Kit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="NewestDeck_Mid_item_8_bottom">
+                    <span style="color: #fff; opacity: 0.5; font-size: 0.7em;"><i>Product specifications are subject to change.</i></span><br><br>
+                    <span style="color: #fff; opacity: 0.5; font-size: 0.7em;"><i>© 2022 Valve Corporation. All rights reserved. All trademarks property of their respective owners in the U.S. and other countries. Steam, the Steam logo, Steam Deck, and the Steam Deck logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.</i></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

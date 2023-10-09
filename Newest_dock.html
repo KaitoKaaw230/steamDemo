@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Deck:: Dock</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="NewsImage/Steam_deck_iconAvatar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <style>
+        body{overflow-x: hidden; height: 100%; width: auto; position: relative;}
+        body{font-family: "Motiva Sans", Sans-serif, -apple-system, system, sans-serif;}
+        .SteamContainer{ display: flex; flex-direction: column; align-items: center;}
+        .NewestDeck_Mid{transform: translateX(-10px); overflow-x: hidden;}
+        .NewestDeck_Mid{display: flex; flex-direction: column; width: 1540px; height: auto; margin-top: 70px;}
+    </style>
+
+<!-- top -->
+    <style>
+    .NewestDeck_Top{position: fixed; top: 0; z-index: 100;}
+    .NewestDeck_Top{transform: translateY(0); padding-left: 20px; display: flex; justify-content: start;}
+    .NewestDeck_Top{width: 1500px; height: 80px; background-color: #1B1B1B;}
+
+    .NewestDeck_Top_left{width: 200px; height: 70px; margin: 5px 0 0 80px;}
+    .NewestDeck_Top_left_link{}
+    .NewestDeck_Top_left_link_img{width: 215px; height: 70px; z-index: 1;}
+    .NewestDeck_Top_left_link_img_decorate{position: absolute; z-index: 2; top: 25px; left: 100px;}
+    .NewestDeck_Top_left_link_img_decorate{width: 32px; height: 32px; border-radius: 50px;}
+    .NewestDeck_Top_left_link_img_decorate{animation: colorBackground 15s infinite reverse;}
+
+
+    .NewestDeck_Top_right{width: 875px; height: 35px; margin: 22px 0 0 235px; display: flex; justify-content: start;}
+    .NewestDeck_Top_right_choiseBase{width: 715px; height: 35px; }
+    .NewestDeck_Top_right_butNow{width: 96px; height: 35px; margin: 0 10px 0 10px;}
+    .NewestDeck_Top_right_language_base{width: 56px; height: 35px; border-radius: 1.4em; cursor: pointer;}
+    .NewestDeck_Top_right_language_base{display: flex; justify-content: center; align-items: center; background: #1B1B1B;}
+    .NewestDeck_Top_right_language_base_img{width: 36px; height: 20px; border-radius: 1.4em;}
+    .NewestDeck_Top_right_language_base:hover{background: #fff; color: #1B1B1B;}
+
+
+    .choiseBase_item{width: fit-content; height: 35px; text-decoration: none; padding: 9px 17px; line-height: 36px;}
+    .choiseBase_item{border-radius: 1.4em; font-size: 0.9em; color: #fff; background: #1B1B1B; font-weight: bold;}
+    .choiseBase_item{margin-right: 5px; transition-property: color; transition-duration: 0.8s;}
+    .choiseBase_item:hover{background: #fff; color: #1B1B1B;}
+    .choisen{background: #5b5463 !important;}
+    .choisen:hover{color: #1B1B1B !important; background: #5b5463 !important;}
+
+
+
+    .buyNow_btn{width: fit-content; height: 35px; text-decoration: none; padding: 9px 17px; line-height: 36px;}
+    .buyNow_btn{border-radius: 1.4em; font-size: 0.9em; color: #fff; font-weight: bold;}
+    .buyNow_btn{animation: colorBackground 15s infinite;}
+    @keyframes colorBackground {
+         0% {background-color: cyan;}
+         30%{background-color: purple;}
+         50%{background-color: lightgreen;}
+         70% {background-color: rgb(255, 71, 71);}
+         90%{background-color: cyan;}
+    }
+    .buyNow_btn:hover{background: #fff; color: #1B1B1B; transition: color 0.8s;}
+
+    
+</style>
+
+<!-- item_1 -->
+<style>
+    .dock_title{font-size: 3.294em; font-weight: 900}
+    .dock_title_margin{margin-bottom: 20px;}
+    .dock_text{font-size: 1em; font-weight: 550; line-height: 1.5;}
+
+    .item_1{width: 100%; height: 899px; margin-top: 2px; position: relative;}
+    .item_1_bg{width: 100%; height: 900px; position: absolute; top: 0; left: 0; z-index: 0;}
+
+    .item_1_bg_text_base{position: absolute; bottom: 50px; left: 170px; z-index: 2;}
+    .item_1_bg_text_base{width: 1300px; height: 150px; color: #1B1B1B;}
+</style>
+
+<!-- item_2 -->
+<style>
+    /* .item_img_base{background: red;} */
+    
+    .item_2{width: 100%; height: 1400px; margin-top: 2px;}
+    .item_2_top_base{width: 100%; height: 450px; display: flex; justify-content: center; align-items: center;}
+    .item_2_top_base_container{width: 80%; height: 300px; display: flex; justify-content: space-between;}
+    .item_img_base{width: 100%; height: 900px; position: relative;}
+
+    .item_2_img{width: 100%; height: 850px; z-index: 0; position: absolute;}
+    .item_2_img_2{width: 234px; height: 88px; position: absolute; z-index: 2; top: 334px; left: 530px;}
+    .item_2_img_2{cursor: pointer;}
+    .item_2_img_2:hover{filter: brightness(1.4);}
+
+    .item_2_img_3{width: 64px; height: 100px; position: absolute; z-index: 2; top: 550px; left: 390px;}
+    .item_2_img_3{cursor: pointer; rotate: 53deg;}
+    .item_2_img_3:hover{filter: brightness(1.4);}
+    /* .item_2_img{width: 100%; height: 850px;} */
+
+    .item_2_top_base_container_left{width: 810px; height: 300px;}
+    .item_2_top_base_container_right{width: 350px; height: 300px;}
+
+    .dock_link{text-decoration: none; color: #1A9FFF;}
+    .dock_link:hover{color: #7ec9ff;;}
+</style>
+
+<!-- item_3 -->
+<style>
+    .item_3_base{border: 5px solid #fff; border-radius: 30px;}
+
+    .item_3{background: black; width: 100%; height: 1000px; display: flex; justify-content: center;}
+    .item_3{transition-property: all; transition-duration: 0.3s;}
+    .item_3_base{width: 90%; height: 90%; margin-top: 50px; display: flex; flex-direction: column;}
+
+    .item_3ChangeColor_base{width: 100%; height: 40px; display: flex; flex-direction: rows; justify-content: space-between;}
+    .item_3ChangeColor_base{margin-top: 15px; border-bottom: 5px solid #fff;}
+
+    .item_3ChangeColor_container{height: 40%; width: 35px; margin-right: 20px; border-radius: 50px; background: black;}
+    .item_3ChangeColor_container{border: 4px solid #fff; position: relative; cursor: pointer;}
+    .item_3ChangeColor_container{margin: 0 10px; transition-property: all; transition-duration: 0.3s;}
+    .item_3ChangeColor_container_item{height: 120%; width: 56%; position: absolute; left: -1px; background: #fff;}
+    .item_3ChangeColor_container_item{border-radius: 50px; margin-top: -1.5px;}
+    .item_3ChangeColor_container_item{transition-property: all; transition-duration: 0.3s;}
+    .item_3ChangeColor_container:hover .item_3ChangeColor_container_item{filter: brightness(1.5);}
+
+
+    .item_3ChangeColor_setting_base{height: 100%; width: auto; margin-left: 5px; display: flex; justify-content: space-around;}
+
+    .item_3ChangeColor_setting_items{height: 70%; width: auto; text-align: center; padding: 0 30px 0 20px; border-radius: 50px;}
+    .item_3ChangeColor_setting_items{cursor: pointer; margin: 0 10px; font-weight: 800; display: flex; align-items: center;}
+    .item_3ChangeColor_setting_items{background: #fff; color: rgb(255, 0, 0); position: relative; overflow: hidden;}
+    .item_3ChangeColor_setting_items{user-select: none;}
+    .item_3ChangeColor_setting_items:hover{background: rgb(255, 0, 0) !important; color: #fff;}
+
+    .ChangeColoritemscover{width: 10px; height: 70px; rotate: 30deg;}
+    .ChangeColoritemscover{position: absolute; left: -10px; transition: left 0.5s;}
+    .ChangeColoritemscover{background: transparent;}
+    .ChangeColoritems1_cover{}
+
+    .ChangeColoritems1:hover .ChangeColoritems1_cover{left: 200px; background: #fff;}
+    .ChangeColoritems2:hover .ChangeColoritems2_cover{left: 200px; background: #fff;}
+    .ChangeColoritems3:hover .ChangeColoritems3_cover{left: 200px; background: #fff;}
+    .ChangeColoritems4:hover .ChangeColoritems4_cover{left: 200px; background: #fff;}
+
+    .item3Container{width: 100%; height: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;}
+    .item3Container{position: relative;}
+
+    .item3Container_Basecommon{width: 100%; height: 100%; position: absolute; left: 0; top: 0; user-select: none;}
+    .item3Container_Basecommon{border-bottom-left-radius: 26px; border-bottom-right-radius: 26px;}
+    .item3Container_Basecommon{display: none;}
+
+    .item3Trailer{display: flex;}
+
+
+    .item3Trailer_videoBase{background: blue;}
+
+    .item3Trailer{display: flex; justify-content: center; align-items: center; overflow: hidden;}
+  
+    .item3Points{display: flex; align-items: center;}
+    .item3High{}   
+
+    .item3Trailer_container{width: 57%; height: 60%; position: absolute; z-index: 10;}
+    .item3Trailer_container{background: transparent;}
+    /* .item3Trailer_container{animation: movingcolor 3s infinite;} */
+    .item3Trailer_container_part1{width: 100%; height: 45px; box-shadow: 10px 0 40px black}
+    .item3Trailer_container_part2{width: 100%; height: 430px; display: flex; justify-content: space-between;}
+    .item3Trailer_container_part3{width: 100%; height: 30px; box-shadow: 10px 0 40px black}
+    .item3Trailer_container_part2_left{height: 100%; width: 50px; box-shadow: 10px 0 40px black}
+    .item3Trailer_container_part2_right{height: 100%; width: 45px; box-shadow: 10px 0 40px black}
+
+    .item3Trailer_container_part1{animation: movingcolor 3s infinite;}
+    .item3Trailer_container_part3{animation: movingcolor 3s infinite;}
+    .item3Trailer_container_part2_left{animation: movingcolor 3s infinite;}
+    .item3Trailer_container_part2_right{animation: movingcolor 3s infinite;}
+
+    .item3Trailer_container1{width: 63.3%; height: 70%; position: absolute; z-index: 8;}
+    .item3Trailer_container1{animation: movingcolor 1.2s infinite;}
+
+    .item3Trailer_container2{width: 70%; height: 80%; position: absolute;z-index: 7;}
+    .item3Trailer_container2{animation: movingcolor 1.4s infinite;}
+
+    .item3Trailer_container3{width: 77%; height: 90%; position: absolute; z-index: 6;}
+    .item3Trailer_container3{animation: movingcolor 1.6s infinite;}
+
+    .item3Trailer_container4{width: 85%; height: 100%; position: absolute;z-index: 5;}
+    .item3Trailer_container4{animation: movingcolor 1.8s infinite;}
+
+    .item3Trailer_container5{width: 93%; height: 100%; position: absolute; z-index: 4;}
+    .item3Trailer_container5{animation: movingcolor 2s infinite;}
+
+    .item3Trailer_container6{width: 100%; height: 100%; position: absolute; z-index: 3;}
+    .item3Trailer_container6{animation: movingcolor 2.2s infinite;}
+    /* box-shadow: 0 0 40px gray */
+    /* .buyNow_btn{animation: colorBackground 15s infinite;} */
+    @keyframes movingcolor {
+         0% {background-color: rgb(189, 255, 255);}
+         20%{background-color: rgb(83, 255, 255);}
+         40%{background-color: rgba(0, 255, 255, 0.855);}
+         60% {background-color: rgba(0, 212, 212, 0.76);}
+         80%{background-color: rgb(1, 172, 172);}
+         100%{background-color: rgb(2, 122, 122);}
+    }
+
+    /* .item3Trailer_container:hover{filter: brightness(1.5);}
+    .item3Trailer_container1:hover{filter: brightness(1.5);}
+    .item3Trailer_container2:hover{filter: brightness(1.5);}
+    .item3Trailer_container3:hover{filter: brightness(1.5);}
+    .item3Trailer_container4:hover{filter: brightness(1.5);} */
+    
+    .item3Trailer_container7{border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;}
+
+    .item3Trailer_videoBase{width: 50%; height: 50%; z-index: 9; position: relative;}
+    .item3Trailer_video{width: 101%; height: auto; position: absolute;}
+
+</style>
+
+<!-- item_3_Part 2 -->
+<style>
+
+    /* .item3Items{background: yellow;}   */
+    .item3High{background: cyan;}   
+
+    /* .item3Trailer_container{width: 57%; height: 60%; position: absolute; z-index: 9;}
+    .item3Trailer_container{animation: movingcolor 3s infinite;} */
+    /* .buyNow_btn{animation: colorBackground 15s infinite;} */
+    @keyframes movingcolorCircle {
+         0% {background-color: rgb(176, 255, 176)}
+         20%{background-color: rgba(99, 255, 99, 0.956)}
+         40%{background-color: rgba(0, 255, 0, 0.877)}
+         60%{background-color: rgba(2, 236, 2, 0.727)}
+         80%{background-color: rgba(0, 180, 0, 0.83)}
+         100%{background-color: green}
+    }
+    @keyframes item3ItemsChangePosition{
+         0% {justify-content: start; align-items: center;}
+         /* 25%{justify-content: center; align-items: start;} */
+         25%{justify-content: center; align-items: start;}
+
+         50%{justify-content: end; align-items: center;}
+         75%{justify-content: center; align-items: end;}
+         100%{justify-content: start; align-items: center;}
+    }
+    .item3Items{display: flex; overflow: hidden; animation: item3ItemsChangePosition 20s infinite;}
+    .item3Items{transition-property: all; transition-duration: 1.4s;}
+    /* .item3Items{justify-content: start; align-items: center;} */
+    /* .item3Items{display: flex; justify-content: start; align-items: center; overflow: hidden;} */
+
+    .item3Items_base1{width: 300px; height: 300px; position: absolute; z-index: 12; border-radius: 150px;}
+    .item3Items_base1{display: flex; justify-content: center; align-items: center;}
+    .item3Items_base1{animation: movingcolorCircle 1s infinite;}
+    .item3Items_base1_img{width: 290px; height: 290px; border-radius: 150px; box-shadow: 10px 0 40px black}
+
+    .item3Items_base2{width: 400px; height: 400px; position: absolute; z-index: 11; border-radius: 1000px;}
+    .item3Items_base2{animation: movingcolorCircle 1.1s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base3{width: 500px; height: 500px; position: absolute; z-index: 10; border-radius: 3000px;}
+    .item3Items_base3{animation: movingcolorCircle 1.2s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base6{width: 600px; height: 600px; position: absolute; z-index: 9; border-radius: 3000px;}
+    .item3Items_base6{animation: movingcolorCircle 1.3s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base7{width: 700px; height: 700px; position: absolute; z-index: 8; border-radius: 3000px;}
+    .item3Items_base7{animation: movingcolorCircle 1.4s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base8{width: 800px; height: 800px; position: absolute; z-index: 7; border-radius: 3000px;}
+    .item3Items_base8{animation: movingcolorCircle 1.5s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base9{width: 900px; height: 900px; position: absolute; z-index: 6; border-radius: 3000px;}
+    .item3Items_base9{animation: movingcolorCircle 1.6s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base10{width: 1000px; height: 1000px; position: absolute; z-index: 5; border-radius: 3000px;}
+    .item3Items_base10{animation: movingcolorCircle 1.7s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base11{width: 1100px; height: 1100px; position: absolute; z-index: 4; border-radius: 5000px;}
+    .item3Items_base11{animation: movingcolorCircle 1.8s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base12{width: 1200px; height: 1200px; position: absolute; z-index: 3; border-radius: 5000px;}
+    .item3Items_base12{animation: movingcolorCircle 1.9s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base13{width: 1300px; height: 1300px; position: absolute; z-index: 2; border-radius: 5000px;}
+    .item3Items_base13{animation: movingcolorCircle 2s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base14{width: 1400px; height: 1400px; position: absolute; z-index: 1; border-radius: 5000px;}
+    .item3Items_base14{animation: movingcolorCircle 2.1s infinite; box-shadow: 10px 0 40px black}
+
+    .item3Items_base15{width: 1550px; height: 1550px; position: absolute; z-index: 0; border-radius: 5000px;}
+    .item3Items_base15{animation: movingcolorCircle 2.2s infinite;}
+</style>
+
+<!-- item3Points -->
+<style>
+    .item3Points{transition: background 0.3s;}
+    /* .item3Points_fontBAse{border: 5px solid red;} */
+    /* .item3Points_background{border: 5px solid blue;}
+    .item3Pointsbackground_left{background: yellow;}
+    .item3Pointsbackground_right{background: pink;} */
+
+    .item3PointsPositionRE{position: relative;}
+    .item3Points_fontBAse{width: 100%; height: 100%;}
+    .item3Points_fontBAse{border-top-left-radius: 100px; border-bottom-right-radius: 100px;}
+
+    .item3Points_background{width: 100%; height: 100%;}
+    .item3Points_fontBAse{position: absolute; z-index: 10; top: 0; left: 0;}
+    .item3Points_background{position: absolute; z-index: 5;  top: 0; left: 0;}
+
+    .item3Pointsbackground_centerBase{width: 500px; height: 400px; position: absolute; z-index: 0;}
+    .item3Pointsbackground_centerBase{border: 10px solid darkgreen; top: 200px; left: 500px;}
+
+    .item3Pointsbackground_left{width: 500px; height: 420px; position: absolute;}
+    .item3Pointsbackground_left{ top: 200px; left: 0; z-index: 0;}
+    .item3Pointsbackground_right{width: 360px; height: 420px; position: absolute;}
+    .item3Pointsbackground_right{ top: 200px; left: 1020px; z-index: 0;}
+
+    /* .item3PointsbackgroundDisplay{display: flex; justify-content: space-between; flex-direction: column;} */
+    .item3Pointsbackground_left_top{width: 570px; height: 10px; rotate: 22deg;}
+    .item3Pointsbackground_left_top{position: absolute; top: -106px; left: -48px;}
+    /* .item3Pointsbackground_left_top{background: green;} */
+    .item3Pointsbackground_left_top{background-image: linear-gradient(to right, lightgreen, green, darkgreen);}
+    
+
+    .item3Pointsbackground_left_bottom{width: 600px; height: 10px; rotate: 158deg;}
+    .item3Pointsbackground_left_bottom{position: absolute; top: 520px; left: -70px;}
+    .item3Pointsbackground_left_bottom{background-image: linear-gradient(to left, lightgreen, green, darkgreen);}
+
+    .item3Pointsbackground_right_top{width: 700px; height: 10px; rotate: -22deg;}
+    .item3Pointsbackground_right_top{position: absolute; top: -130px; left: -30px;}
+    .item3Pointsbackground_right_top{background-image: linear-gradient(to left, lightgreen, darkgreen);}
+
+    .item3Pointsbackground_right_bottom{width: 700px; height: 10px; rotate: -158deg;}
+    .item3Pointsbackground_right_bottom{position: absolute; top: 540px; left: -30px;}
+    .item3Pointsbackground_right_bottom{background-image: linear-gradient(to right, lightgreen, darkgreen);}
+
+
+
+    .item3Points{}
+    .item3PointsPosition{position: absolute;}
+    .item3Points_column1{height: 90%; width: 130px; left: 30px; top: 30px;}
+    .item3Points_column2{height: 300px; width: 130px; left: 180px; top: 190px;}
+    .item3Points_column3{height: 500px; width: 130px; left: 300px; top: 60px;}
+
+    .item3Points_column4{height: 400px; width: 130px; left: 1030px; top: 100px;}
+    .item3Points_column5{height: 800px; width: 130px; left: 1100px; top: 15px;}
+
+
+    .item3Points_img{ transition: top 2s;}
+    .item3Points_img{border-top-left-radius: 50px; border-bottom-right-radius: 50px;}
+    .item3Points_column1_img{width: 200px; height: 200px;}
+    .item3Points_column2_img{width: 110px; height: 110px;}
+    .item3Points_column3_img{width: 130px; height: 130px;}
+    .item3Points_column4_img{width: 90px; height: 90px;}
+    .item3Points_column5_img{width: 260px; height: 260px;}
+
+    .item3Points_column1_img{position: absolute; top: 0; z-index: 10;}
+    .item3Points_column2_img{position: absolute; top: 0; z-index: 9; filter: brightness(70%);}
+    .item3Points_column3_img{position: absolute; top: 0; z-index: 10;}
+    
+    .item3Points_column4_img{position: absolute; top: 0; z-index: 10; filter: brightness(71%);}
+    .item3Points_column5_img{position: absolute; top: 0; z-index: 10;}
+
+    
+    .item3Points:hover .item3Points_column1_img{top: 590px;}
+    .item3Points:hover .item3Points_column2_img{top: 200px;}
+    .item3Points:hover .item3Points_column3_img{top: 400px;}
+    .item3Points:hover .item3Points_column4_img{top: 400px;}
+    .item3Points:hover .item3Points_column5_img{top: 560px;}
+
+    .item3Points{overflow: hidden;}
+    .item3Points_LightSwitch{width: 20px; height: 35px; cursor: pointer;}
+    .item3Points_LightSwitch{position: absolute; top: 450px; left: 80px;}
+    .item3Points_LightSwitch{transform: rotate3d(0, 1, 0, 25deg); z-index: 2;}
+    .item3Points_lightbub{width: 230px; height: 190px; z-index: 2;}
+    .item3Points_lightbub{position: absolute; top: -10px; left: 630px;}
+
+
+
+    /* .item3Points_doorBackground{background: red} */
+    .item3Points_doorBackground{width: 250px; height: 300px; position: absolute;}
+    .item3Points_doorBackground{top: 200px; left: 190px;}
+
+    .item3Points_windowTop{background: green; top: 29px; left: 0;}
+    .item3Points_windowTop{width: 250px; height: 10px; rotate: 18deg; position: absolute;}
+    .item3Points_windowBot{background: green; top: 266px; left: 2px;}
+    .item3Points_windowBot{width: 245px; height: 10px; rotate: -14deg; position: absolute;}
+    .item3Points_windowLef{background: green; top: -8px; left: 5px; z-index: 6;}
+    .item3Points_windowLef{width: 10px; height: 313px; position: absolute;}
+    .item3Points_windowRig{background: green; top: 69px; left: 234px; z-index: 6;}
+    .item3Points_windowRig{width: 10px; height: 176px; position: absolute;}
+
+    .item3Points_windowimage{width: 230px; height: 300px;}
+    .item3Points_windowimage{position: absolute; top: 0; left: 5px;}
+
+    /* .item3Points_windowcoveer_top{background: red;} */
+    /* .item3Points_windowcoveer_bot{background: red;} */
+
+    .item3Points_windowcoveer_top{position: absolute; rotate: 18deg;}
+    .item3Points_windowcoveer_top{top: -33px; left: 5px; z-index: 10; transition: background 0.3s;}
+    .item3Points_windowcoveer_top{ width: 300px; height: 70px; background: black;}
+
+    .item3Points_windowcoveer_bot{position: absolute; rotate: -14deg;}
+    .item3Points_windowcoveer_bot{top: 270px; left: 5px; z-index: 10; transition: background 0.3s;}
+    .item3Points_windowcoveer_bot{ width: 300px; height: 64px; background: black;}
+
+    .item3Points_windowcoveer_left{position: absolute;}
+    .item3Points_windowcoveer_left{top: 50px; left: -45px; z-index: 10; transition: background 0.3s;}
+    .item3Points_windowcoveer_left{ width: 50px; height: 100px; background: black;}
+
+    .item3Points_windowcoveer_right{position: absolute;}
+    .item3Points_windowcoveer_right{top: 90px; left: 244px; z-index: 10; transition: background 0.3s;}
+    .item3Points_windowcoveer_right{ width: 65px; height: 50px; background: black;}
+
+    /* .item3Points_doorBird{background: red;} */
+    .item3Points_doorBird{width: 50px; height: 30px; position: absolute; top: 100px; left: -45px;}
+    .item3Points_doorBird{animation: birdflies 25s infinite; z-index: 5;}
+
+    @keyframes birdflies {
+        100% {left: 250px;}
+    }
+
+
+
+    .item3Points_clockBase{width: 80px; height: 80px; position: absolute; left: 52%; top: 220px;}
+    .item3Points_clockBase{border-radius: 50px;}
+    /* .item3Points_clockBase{background: blue;} */
+
+    .item3Points_clock_imgae{width: 80px; height: 80px; position: absolute; border-radius: 50px;}
+    .item3Points_clock_imgae{z-index: 2; cursor: pointer;}
+
+    .item3Points_clock_hurHand{width: 20px; height: 2px; background: #1B1B1B; rotate: -90deg; z-index: 3;}
+    .item3Points_clock_minrHand{width: 30px; height: 2px; background: #1B1B1B; rotate: -90deg; z-index: 4;}
+    .item3Points_clock_secrHand{width: 30px; height: 1px; background: red; rotate: -90deg; z-index: 5;}
+    .item3Points_clock_hurHand{animation: hourchange 1000s infinite;}
+    .item3Points_clock_minrHand{animation: hourchange 500s infinite;}
+    .item3Points_clock_secrHand{animation: hourchange 60s infinite;  animation-direction: normal;}
+    @keyframes hourchange {
+        100% {transform: rotate(360deg);}
+    }
+
+    .clockhandCommon{position: absolute; box-shadow: 1px 2px 2px #4e4e4e;}
+    .clockhandCommon{top: 50%; left: 50%; transform-origin: top left; transition: 1.5;}
+
+
+    
+    .firaplaceBase{width: 250px; height: 230px; position: absolute; top: 400px; left: 635px;z-index: 50;z-index: 3;}
+    .firaplaceBaseCover{width: 243px; height: 43px; position: absolute; top: 567px; left: 637px; z-index: 5;}
+    .firaplaceBase_Fire{width: 132px; height: auto; position: absolute; top: 490px; left: 695px; z-index: 4;}
+    .trophies{width: 50px; height: 60px; position: absolute; top: 346px; left: 678px; z-index: 4;}
+    .trophies1{width: 80px; height: 80px; position: absolute; top: 325px; left: 740px; z-index: 4;}
+
+    .trophiesHover{cursor: pointer;}
+    .trophiesHover:hover{scale: 1.05;}
+    /* .fireplaceTopBase{background: red;} */
+    .fireplaceTopBase{width: 263px; height: 40px; position: absolute; top: 362px; left: 632px; position: relative;}
+    .fireplaceTopBase_candlestand{width: 54px; height: 100px; position: absolute;}
+    .candlestand1{left: 0; bottom: -5px;}
+    .candlestand2{right: 0; bottom: -5px;}
+
+    /* .item3Points_LightSwitch_optionBase{background: red} */
+    .item3Points_LightSwitch_optionBase{width: fit-content; height: 50px; position: absolute; top: 430px; left: 110px;}
+    .item3Points_LightSwitch_optionBase{display: none; justify-content: space-between; flex-direction: column; z-index: 2;}
+
+    .item3PointLightSwitch_option{width: auto; height: 16px; font-size: 12px; font-weight: bold; padding: 1px 10px;}
+    .item3PointLightSwitch_option{border: 2px solid black; border-radius: 50px; background: white; cursor: pointer;}
+    .item3PointLightSwitch_option{line-height: 16px;}
+    .item3PointLightSwitch_option:hover{background: gray; color: white;}
+
+
+
+
+    /* .Clockbatterry_base{background: red;} */
+    .Clockbatterry_base{display: none;}
+    .Clockbatterry_base{width: 1386px; height: 844px; top: -40px; position: relative; z-index: 100;}
+    .Clockbatterry_background{width: 100%; height: 100%; position: absolute; background: black; opacity: 0.8;}
+    .Clockbatterry_img{width: 1200px; height: 500px; position: absolute; top: 150px; right: 0;}
+    .Clockbatterry_img{border-top-left-radius: 500px; border-bottom-left-radius: 500px;}
+
+    .trophy1_img{width: 650px; height: 950px; position: absolute; top: -100px; left: 300px; rotate: -90deg;}
+
+    .telescopeImage{width: 280px; height: 280px; position: absolute; top: 390px; left: 400px;}
+    .telescopeImage{z-index: 20; cursor: pointer;}
+
+    .telescopeLookBase{width: 1386px; height: 844px; top: -40px; position: relative; z-index: 100;}
+    .telescopeLookBase{display: none;}
+    .telescopeLookBase_backgr{width: 100%; height: 100%; position: absolute; background: black;z-index: 1;}
+    .telescopeLookBase_img{width: 1200px; height: 500px; position: absolute; top: 130px; left: 400px; z-index: 2;}
+    .telescopeLookBase_img{width: 600px; height: 600px; border-radius: 500px;}
+
+    .telescopeCode{width: fit-content; height: 50px; color: rgb(40, 40, 40); position: absolute; top: 250px; left: 510px;}
+    .telescopeCode{font-size: 25px; z-index: 3; rotate: -20deg; font-family: 'Lobster', cursive;}
+
+    .wardrobe1{width: 150px; height: 400px; position: absolute; top: 260px; right: 300px; z-index: 10;}
+    .wardrobe1Box{width: 56px; height: 32px; position: absolute; top: 540px; right: 393px; z-index: 11; cursor: pointer;}
+    .wardrobe1Box:hover{filter: brightness(1.1);}
+
+    .Boxclose{display: none;}
+    .Boxclose{width: 1386px; height: 844px; top: -40px; position: relative; z-index: 100;}
+    .Boxclose_background{width: 100%; height: 100%; position: absolute; background: black;z-index: 1; opacity: 0.8;} 
+
+    .Boxclose_img{width: 600px; height: 300px; position: absolute; top: 300px; left: 400px; z-index: 2;}
+    .chain_img{width: 550px; height: 170px; position: absolute; top: 315px; left: 425px; z-index: 3; rotate: 0.5deg;}
+    .Lock_img{width: 80px; height: 90px; position: absolute; top: 406px; left: 659px; z-index: 4; cursor: pointer; rotate: 20deg;}
+    .Boxopen_img{width: 800px; height: 400px; position: absolute; top: 200px; left: 300px; z-index: 2; cursor: pointer;}
+    .Boxopen_img{display: none;}
+
+    
+    .Lockpassword{display: none; color: black; background: white; outline: none; border-radius: 20px; font-size: 26px;  font-family: 'Lobster', cursive;}
+    .Lockpassword{width: 150px; height: 50px; position: absolute; bottom: 100px; left: 600px; z-index: 4; padding-left: 30px;}
+
+    .LockpassConfirm{display: none;}
+    .LockpassConfirm{width: fit-content; height: 30px; position: absolute; bottom: 80px; left: 640px; background: white; color: black; padding: 2px 20px;}
+    .LockpassConfirm{border-radius: 50px; cursor: pointer; z-index: 4; line-height: 25px; font-weight: bold;}
+    .LockpassConfirm:hover{color: black; background: gray;}
+</style> 
+
+<!-- bottom -->
+<style>
+
+    .Bottom{background-color: #1F2E35;}
+    .Bottom{width: 100%; height: 550px;}
+
+    .NewestDeck_Mid_item_8_top{width: 1250px; height: 260px; margin-top: 80px; margin-left: 140px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_8_bottom{width: 1250px; height: 100px; margin-top: 30px; margin-left: 140px;}
+
+    .NewestDeck_Mid_item_8_top_left{}
+    .NewestDeck_Mid_item_8_top_left_img{width: 193px; height: 193px;}
+    .NewestDeck_Mid_item_8_top_right{width: 300px; height: 260px; display: flex; align-items: start; flex-direction: column;}
+    .NewestDeck_Mid_item_8_top_right_img{width: 120px; height: 40px; filter: brightness(3); margin-bottom: 20px;}
+
+    .NewestDeck_Mid_item_8_top_right_text_base{width: 250px; height: 200px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_8_top_right_text_base_column{width: 100px; height: 200px;}
+    .NewestDeck_Mid_item_8_link{text-decoration: none; color: #fff;font-size: 0.8em; line-height: 2em;}
+    .NewestDeck_Mid_item_8_link:hover{opacity: 0.7; }
+</style>
+
+<!-- item3_change color -->
+<script>
+    function changeColorBtn(){
+        let item3items1 = document.getElementById('item3items1');
+        let item3items2 = document.getElementById('item3items2');
+        let item3items3 = document.getElementById('item3items3');
+        let item3items4 = document.getElementById('item3items4');
+
+        let item3ChangeColorBorderbottom = document.getElementById('item3ChangeColorBorderbottom');
+        let item3 = document.getElementById('item_3'); 
+        let item3_base = document.getElementById('item3_base');
+        let chgCBorder = document.getElementById('chgCBorder');
+        let chgCitemss = document.getElementById('chgCitemss');
+
+        if(chgCitemss.style.left == '-1px'){
+            chgCitemss.style.left = '16px';
+            chgCitemss.style.background = 'black';
+            chgCBorder.style.background = 'white';
+            chgCBorder.style.border = ' 4px solid black';
+
+            item3.style.background = 'white';
+            item3items1.style.background = 'black';
+            item3items2.style.background = 'black';
+            item3items3.style.background = 'black';
+            item3items4.style.background = 'black';
+            
+            item3_base.style.border = '5px solid black';
+            item3ChangeColorBorderbottom.style.borderBottom = '5px solid black';
+
+        }
+        else{
+            chgCitemss.style.left = '-1px';
+            chgCitemss.style.background = 'white';
+            chgCBorder.style.background = 'black';
+            chgCBorder.style.border = ' 4px solid white';
+
+            item3.style.background = 'black';
+            item3items1.style.background = 'white';
+            item3items2.style.background = 'white';
+            item3items3.style.background = 'white';
+            item3items4.style.background = 'white';
+
+            item3_base.style.border = '5px solid white';
+            item3ChangeColorBorderbottom.style.borderBottom = '5px solid white';
+        }
+    }
+
+    function trailerpop(){
+        let item3Trailer = document.getElementById('item3Trailer');
+        let item3Items = document.getElementById('item3Items');
+        let item3Points = document.getElementById('item3Points');
+        let item3High = document.getElementById('item3High');
+
+        let item3items1 = document.getElementById('item3items1');
+        let item3items2 = document.getElementById('item3items2');
+        let item3items3 = document.getElementById('item3items3');
+        let item3items4 = document.getElementById('item3items4');
+
+        item3Trailer.style.display = 'flex';
+        item3Items.style.display = 'none';
+        item3Points.style.display = 'none';
+        item3High.style.display = 'none';
+        
+    }
+    function itemspop(){
+        let item3Trailer = document.getElementById('item3Trailer');
+        let item3Items = document.getElementById('item3Items');
+        let item3Points = document.getElementById('item3Points');
+        let item3High = document.getElementById('item3High');
+
+        item3Trailer.style.display = 'none';
+        item3Items.style.display = 'flex';
+        item3Points.style.display = 'none';
+        item3High.style.display = 'none';
+    }
+    function pointspop(){
+        let item3Trailer = document.getElementById('item3Trailer');
+        let item3Items = document.getElementById('item3Items');
+        let item3Points = document.getElementById('item3Points');
+        let item3High = document.getElementById('item3High');
+
+        item3Trailer.style.display = 'none';
+        item3Items.style.display = 'none';
+        item3Points.style.display = 'flex';
+        item3High.style.display = 'none';
+    }
+    function highpop(){
+        let item3Trailer = document.getElementById('item3Trailer');
+        let item3Items = document.getElementById('item3Items');
+        let item3Points = document.getElementById('item3Points');
+        let item3High = document.getElementById('item3High');
+
+        item3Trailer.style.display = 'none';
+        item3Items.style.display = 'none';
+        item3Points.style.display = 'none';
+        item3High.style.display = 'flex';
+        }
+</script>
+<!-- lghitbub-->
+<script>
+    function TurnTheLightOn(){
+        let item3Points = document.getElementById('item3Points');
+        let lightbup =document.getElementById('lightbup');
+        LightSwitch_option = document.getElementById('LightSwitch_option');
+
+        let item3Pointswindowcoveertop = document.getElementById('item3Pointswindowcoveertop');
+        let item3Pointswindowcoveerbot = document.getElementById('item3Pointswindowcoveerbot');
+        let item3Pointswindowcoveerlef = document.getElementById('item3Pointswindowcoveerlef');
+        let item3Pointswindowcoveerrig = document.getElementById('item3Pointswindowcoveerrig');
+
+            item3Points.style.background = 'white';
+            lightbup.style.filter = 'brightness(1.05)';
+            item3Pointswindowcoveertop.style.background = 'white';
+            item3Pointswindowcoveerbot.style.background = 'white';
+
+            item3Pointswindowcoveerlef.style.background = 'white';
+            item3Pointswindowcoveerrig.style.background = 'white';
+            LightSwitch_option.style.display = 'none';
+    }
+
+    function TurnTheLightOff(){
+        let item3Points = document.getElementById('item3Points');
+        let lightbup =document.getElementById('lightbup');
+        LightSwitch_option = document.getElementById('LightSwitch_option');
+
+        let item3Pointswindowcoveertop = document.getElementById('item3Pointswindowcoveertop');
+        let item3Pointswindowcoveerbot = document.getElementById('item3Pointswindowcoveerbot');
+
+        let item3Pointswindowcoveerlef = document.getElementById('item3Pointswindowcoveerlef');
+        let item3Pointswindowcoveerrig = document.getElementById('item3Pointswindowcoveerrig');
+
+            item3Points.style.background = 'black';
+            lightbup.style.filter = 'brightness(1)';
+            item3Pointswindowcoveertop.style.background = 'black';
+            item3Pointswindowcoveerbot.style.background = 'black';
+
+            item3Pointswindowcoveerlef.style.background = 'black';
+            item3Pointswindowcoveerrig.style.background = 'black';
+
+            LightSwitch_option.style.display = 'none';
+    }
+    function lightoption(){
+        LightSwitch_option = document.getElementById('LightSwitch_option');
+        if(LightSwitch_option.style.display == 'none'){
+            LightSwitch_option.style.display = 'flex';
+        }
+        else{
+            LightSwitch_option.style.display = 'none';
+        }
+    }
+    function hourhandchange(){
+        let ClockhurHand  = document.getAnimations("ClockhurHand")
+        let ClockminrHand = document.getAnimations("ClockminrHand")
+        let ClocksecrHand = document.getAnimations("ClocksecrHand")
+        // alert("Hello! I am an alert box!!");
+
+        ClockhurHand.style.rotate = "180deg";
+    }
+
+    function batterryHoleOpen(){
+        let batterryImg = document.getElementById('batterryImg');
+        batterryImg.style.display = 'flex';
+    }
+    function batterryHoleClose(){
+        let batterryImg = document.getElementById('batterryImg');
+        batterryImg.style.display = 'none';
+    }
+
+    function trophy1Open(){
+        let trophy1Img = document.getElementById('trophy1Img');
+        trophy1Img.style.display = 'flex';
+    }
+    function trophy1Close(){
+        let trophy1Img = document.getElementById('trophy1Img');
+        trophy1Img.style.display = 'none';
+    }
+
+    function Trophy2(){
+        let Trophy2 = document.getElementById('Trophy2');
+        alert("There's no use looking in thoes trophies")
+    }
+    
+    function telescopeOpen(){
+        let telescopeLookBase = document.getElementById('telescopeLookBase')
+        telescopeLookBase.style.display = 'flex';
+    }
+    function telescopeClose(){
+        let telescopeLookBase = document.getElementById('telescopeLookBase')
+        telescopeLookBase.style.display = 'none';
+    }
+
+
+    function BoxesOpen(){
+        let Boxclose = document.getElementById('Boxclose');
+        let Boxclosimg = document.getElementById('Boxclos_img');
+        let chainimg = document.getElementById('chainimg');
+
+        Boxclose.style.display = 'flex';
+
+        //Boxclosimg.style.display = 'flex';
+        //Boxopenimg.style.display = 'none';
+    }
+    function BoxesClose(){
+        let Boxclose = document.getElementById('Boxclose');
+        let chainimg = document.getElementById('chainimg');
+
+        Boxclose.style.display = 'none';
+    }
+
+    function password(){
+        let Lockpassword = document.getElementById('Lockpassword');
+        let LockpassConfirm = document.getElementById('LockpassConfirm');
+        Lockpassword.style.display = 'flex';
+        LockpassConfirm.style.display = 'flex';
+    }
+    function OpenedBox(){
+        var Lockpassword = document.getElementById('Lockpassword').value;
+        let LockpasswordBase = document.getElementById('Lockpassword');
+        let LockpassConfirm = document.getElementById('LockpassConfirm');
+
+        let Boxclosimg = document.getElementById('Boxclos_img');
+        let Boxopenimg = document.getElementById('Boxopen_img');
+        let chainimg = document.getElementById('chainimg');
+        let numLock = document.getElementById('numLock');
+        if(Lockpassword == ''){
+            alert('The lock has 4 nums max!');
+        }
+        else if(Lockpassword == '2856'){
+            Boxclosimg.style.display = 'none';
+            chainimg.style.display = 'none';
+            numLock.style.display = 'none';
+            LockpasswordBase.style.display = 'none';
+            LockpassConfirm.style.display = 'none';
+
+            Boxopenimg.style.display = 'flex';
+        }
+        else{
+            alert('Wrong Password!');
+        }
+
+        
+    }
+    function closeimten(){
+        let Boxclose = document.getElementById('Boxclose');
+        let chainimg = document.getElementById('chainimg');
+
+        Boxclose.style.display = 'none';
+    }
+
+</script>
+</head>
+<body>
+    <div class="SteamContainer">
+        <div class="NewestDeck_Top">
+            <div class="NewestDeck_Top_left">
+                <a href="" class="NewestDeck_Top_left_link">
+                    <a href="Newest_index.html"><img src="NewsImage/NewLogo.png" alt="" class="NewestDeck_Top_left_link_img"></a>
+                    <a href="Steam_index.html" class="NewestDeck_Top_left_link_img_decorate"></a>
+                    <!-- <div class="NewestDeck_Top_left_link_img_decorate"></div> -->
+                </a>
+            </div>
+            <div class="NewestDeck_Top_right">
+                <div class="NewestDeck_Top_right_choiseBase">
+                    <a href="Newest_hardware.html" class="choiseBase_item">Hardware</a>
+                    <a href="Newest_Softwrae.html" class="choiseBase_item">Software</a>
+                    <a href="Newest_SteamDeck.html" class="choiseBase_item">Deck Vertified</a>
+                    <a href="Newest_dock.html" class="choiseBase_item choisen">Dock</a>
+                    <a href="Newest_FAQ.html" class="choiseBase_item">FAQ</a>
+                    <a href="" class="choiseBase_item">Tech Specs</a>
+                    <a href="Newest_News.html" class="choiseBase_item">News</a>
+                </div>
+                <div class="NewestDeck_Top_right_butNow">
+                    <a href="Steam_steamdeck.html" class="buyNow_btn">Buy now</a>
+                </div>
+                <div class="NewestDeck_Top_right_language_base">
+                    <img src="NewsImage/Laguage_setting_img.png" alt="" class="NewestDeck_Top_right_language_base_img">
+                </div>
+            </div>
+        </div>
+
+        <div class="NewestDeck_Mid">
+            <div class="item_1">
+                <img src="NewsImage/newest_dock_item_1_bg.jpg" alt="" class="item_1_bg">
+                <div class="item_1_bg_text_base">
+                    <div class="dock_title dock_title_margin">Made for each other ♡ ♥💕❤ </div>
+                    <div class="dock_text">Not too big or too small, the Dock is exactly the right size and shape to hold Steam Deck securely. From the flexible right angle USB-C connector at exactly the right length, to the molded rubber seat to ensure there’s no scratching, the Dock was made for Steam Deck.</div>
+                </div>
+            </div>
+
+            <div class="item_2">
+                <div class="item_2_top_base">
+                    <div class="item_2_top_base_container">
+                        <dov class="item_2_top_base_container_left">
+                            <div class="dock_title">Plays well with others</div>
+                            <div style="margin-top: 25px;" class="dock_text">Docking Station is our solution for adding flexibility to your gaming setup and allows Steam Deck to connect to an enormous variety of displays, controllers, and peripherals. Not only that, but the work we've done to make Steam Deck and Docking Station compatible extends to other third party hubs and docks; if having the official Docking Station isn't your preference, you're welcome to use whatever you like. We're continuing to improve the software and interoperability based on feedback from our customers. If Docking Station doesn’t work with your specific setup, please let us know in the <a href="" class="dock_link">forums</a>.</div>
+                        </dov>
+                        <dov class="item_2_top_base_container_right">
+                            <div style="font-weight: 900; font-size: 1.35em; line-height: 1.1em; margin-top: 90px;" class="dock_text">Docking Station's mission in life is to ensure a good experience connecting your Steam Deck to whatever device you'd like to throw into the mix.</div>
+                        </dov>
+                    </div>
+                </div>
+                <div class="item_img_base">
+                    <img src="NewsImage/newest_dock_item_2_bg.jpg" alt="" class="item_2_img">
+                    <a href="">
+                        <img src="NewsImage/newest_dock_item_2_Link_1.jpg" alt="" class="item_2_img_2" title="Steam control">
+                    </a>
+
+                    <a href="">
+                        <img src="NewsImage/newest_dock_item_2_Link_2.jpg" alt="" class="item_2_img_3" title="Mouse">
+                    </a>
+                </div>
+            </div>
+
+            <div id="item_3" class="item_3">
+                <div id="item3_base" class="item_3_base">
+                    <div id="item3ChangeColorBorderbottom" class="item_3ChangeColor_base">
+                        <div class="item_3ChangeColor_setting_base">
+                            <div id="item3items1" class="item_3ChangeColor_setting_items ChangeColoritems1"  onclick="trailerpop()">🎬 Trailer
+                                <div class="ChangeColoritems1_cover ChangeColoritemscover"></div>
+                            </div>
+                            <div id="item3items2" class="item_3ChangeColor_setting_items ChangeColoritems2"  onclick="itemspop()">🛒 Items
+                                <div class="ChangeColoritems2_cover ChangeColoritemscover"></div>
+                            </div>
+                            <div id="item3items3" class="item_3ChangeColor_setting_items ChangeColoritems3" onclick="pointspop()">💁 Points
+                                <div class="ChangeColoritems3_cover ChangeColoritemscover"></div>
+                            </div>
+                            <div id="item3items4" class="item_3ChangeColor_setting_items ChangeColoritems4" onclick="highpop()">🎷 High
+                                <div class="ChangeColoritems4_cover ChangeColoritemscover"></div>
+                            </div>
+                        </div>
+                        <div id="chgCBorder" class="item_3ChangeColor_container" onclick="changeColorBtn()">
+                            <div id="chgCitemss" class="item_3ChangeColor_container_item"></div>
+                        </div>
+                    </div>
+
+                    <div id="item3Container" class="item3Container">
+                        <div style="display: none;" id="item3Trailer" class="item3Container_Basecommon item3Trailer">
+                            <div class="item3Trailer_container">
+                                <div class="item3Trailer_container_part1"></div>
+                                <div class="item3Trailer_container_part2">
+                                    <div class="item3Trailer_container_part2_left"></div>
+                                    <div class="item3Trailer_container_part2_right"></div>
+                                </div>
+                                <div class="item3Trailer_container_part3"></div>
+                            </div>
+                            <div class="item3Trailer_container1"></div>
+                            <div class="item3Trailer_container2"></div>
+                            <div class="item3Trailer_container3"></div>
+                            <div class="item3Trailer_container4"></div>
+                            <div class="item3Trailer_container5"></div>
+                            <div class="item3Trailer_container6"></div>
+                            <div class="item3Trailer_videoBase">
+                                <video src="NewsImage/newest_hardware_4_decrep_3.mp4" autoplay loop muted class="item3Trailer_video"></video>
+                            </div>
+                        </div>
+                        <div style="display: none;" id="item3Items" class="item3Container_Basecommon item3Items">
+                            <div class="item3Items_base1">
+                                <img src="Images/steamLogo.png" alt="" class="item3Items_base1_img">
+                            </div>
+                            <div class="item3Items_base2"></div>
+                            <div class="item3Items_base3"></div>
+                            <div class="item3Items_base4"></div>
+                            <div class="item3Items_base5"></div>
+
+                            <div class="item3Items_base6"></div>
+                            <div class="item3Items_base7"></div>
+                            <div class="item3Items_base8"></div>
+                            <div class="item3Items_base9"></div>
+                            <div class="item3Items_base10"></div>
+
+                            <div class="item3Items_base11"></div>
+                            <div class="item3Items_base12"></div>
+                            <div class="item3Items_base13"></div>
+                            <div class="item3Items_base14"></div>
+                            <div class="item3Items_base15"></div>
+                        </div>
+                        <div id="item3Points" class="item3Container_Basecommon item3Points">
+
+                            <div style="overflow: hidden;" class="item3Points_background item3PointsPositionRE">
+                                <img src="furniture/lightswitch.jpg" alt="" class="item3Points_LightSwitch" title="Light switch" onclick="lightoption()">
+                                <div id="LightSwitch_option" class="item3Points_LightSwitch_optionBase">
+                                    <div class="item3PointLightSwitch_option" onclick="TurnTheLightOn()">Turn on</div>
+                                    <div class="item3PointLightSwitch_option" onclick="TurnTheLightOff()">Turn off</div>
+                                </div>
+                                <img id="lightbup" src="furniture/chanderlier2.png" alt="" title="What a nice chandelier!!" class="item3Points_lightbub">
+
+                                
+                                <div class="fireplaceTopBase">
+                                    <img src="furniture/candle.png" class="fireplaceTopBase_candlestand candlestand1" alt="">
+                                    <img src="furniture/candle.png" class="fireplaceTopBase_candlestand candlestand2" alt="">
+                                </div>
+
+                                <img src="furniture/trophy.png" onclick="trophy1Open()" alt="" title="On the etrophy it carved ('#1 in running 200 miles')" class="trophies trophiesHover">
+                                <img id="Trophy2" src="furniture/trophy1.png" onclick="Trophy2()" alt="" title="On the etrophy it carved ('#3 in swimming without breathing in 30mins')" class="trophies1 trophiesHover">
+
+                                <img src="furniture/wardrobe1.png" alt="" class="wardrobe1">
+                                <img src="furniture/wardrobe1_box.png" onclick="BoxesOpen()" alt="" class="wardrobe1Box">
+                                <img src="furniture/telescopeImg.png" title="It's a telescope. It's pointing in the sky..." onclick="telescopeOpen()" alt="" class="telescopeImage">
+                                <img src="furniture/fireplace.png" alt="" class="firaplaceBase">
+                                <img src="furniture/fireplaceCover.png" alt="" class="firaplaceBaseCover">
+                                <img src="furniture/fireBurningGif.gif" title="Its too hot! I can't touch it!!!" alt="" class="firaplaceBase_Fire">
+
+
+
+                                <div id="Boxclose" class="Boxclose">
+                                    <div class="Boxclose_background" onclick="closeimten()"></div>
+                                    <img id="Boxclos_img" src="furniture/closeBox.png" alt="" title="It's a box, it's locked too!!" class="Boxclose_img">
+                                    <img id="chainimg" src="furniture/chain.png" alt="" title="It's a box, it's locked too!!" class="chain_img">
+                                    <img id="numLock" src="furniture/NumLock.png" alt="" title="It's a box, it's locked too!!" onclick="password()" class="Lock_img">
+
+                                    <input id="Lockpassword" type="text" class="Lockpassword">
+                                    <div id="LockpassConfirm" class="LockpassConfirm" onclick="OpenedBox()">Confirm</div>
+                                    <img id="Boxopen_img" src="furniture/OpenedBox.png" alt="" onclick="BoxesClose()" class="Boxopen_img">
+                                </div>
+
+                                <div id="batterryImg" class="Clockbatterry_base">
+                                    <div class="Clockbatterry_background"></div>
+                                    <img src="furniture/batterryHole.jpg" alt="" onclick="batterryHoleClose()" class="Clockbatterry_img" title="It's empty, so how tf the clock still going???? It doesn't make any sense!!">
+                                </div>
+
+                                <div id="trophy1Img" class="Clockbatterry_base">
+                                    <div class="Clockbatterry_background"></div>
+                                    <img src="furniture/trophy.png" alt="" onclick="trophy1Close()" class="trophy1_img" title="There's seem to be something inside...">
+                                </div>
+
+                                <div id="telescopeLookBase" class="telescopeLookBase">
+                                    <div class="telescopeLookBase_backgr"></div>
+                                    <div class="telescopeCode">2856</div>
+                                    <img src="furniture/nighthouse.jpg" alt="" onclick="telescopeClose()" class="telescopeLookBase_img">
+                                </div>
+                                <div class="item3Points_clockBase" onclick="batterryHoleOpen()" title="The clock still seem to be working">
+                                    <img src="furniture/clock1.jpg" alt="" class="item3Points_clock_imgae">
+                                    <div id="ClockhurHand" class="clockhandCommon item3Points_clock_hurHand"></div>
+                                    <div id="ClockminrHand" class="clockhandCommon item3Points_clock_minrHand"></div>
+                                    <div id="ClocksecrHand" class="clockhandCommon item3Points_clock_secrHand"></div>
+                                </div>
+                                
+                                <div class="item3Points_doorBackground">
+                                    <img src="furniture/birds.png" alt="" title="Some birds are flying in the sky" class="item3Points_doorBird">
+                                    <div id="item3Pointswindowcoveertop" class="item3Points_windowcoveer_top"></div>
+                                    <div id="item3Pointswindowcoveerbot" class="item3Points_windowcoveer_bot"></div>
+                                    <div id="item3Pointswindowcoveerlef" class="item3Points_windowcoveer_left"></div>
+                                    <div id="item3Pointswindowcoveerrig" class="item3Points_windowcoveer_right"></div>
+
+                                    <img src="furniture/nighthouse.jpg" title="Its so dark outside, i rather staying here!" alt="" class="item3Points_windowimage">
+                                    <div class="item3Points_windowTop"></div>
+                                    <div class="item3Points_windowBot"></div>
+                                    <div class="item3Points_windowLef"></div>
+                                    <div class="item3Points_windowRig"></div>
+                                </div>
+                                <div class="item3Pointsbackground_left item3PointsbackgroundDisplay">
+                                    <div class="item3Pointsbackground_left_top"></div>
+                                    <div class="item3Pointsbackground_left_bottom"></div>
+                                </div>
+                                <div class="item3Pointsbackground_centerBase"></div>
+                                <div class="item3Pointsbackground_right item3PointsbackgroundDisplay">
+                                    <div class="item3Pointsbackground_right_top"></div>
+                                    <div class="item3Pointsbackground_right_bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: none;" id="item3High" class="item3Container_Basecommon item3High"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="Bottom">
+                <div class="NewestDeck_Mid_item_8_top">
+                    <div class="NewestDeck_Mid_item_8_top_left">
+                        <img src="NewsImage/newest_deck_credit_img_1.jpg" alt="" class="NewestDeck_Mid_item_8_top_left_img">
+                    </div>
+                    <div class="NewestDeck_Mid_item_8_top_right">
+                        <img src="Images/s_bottom_logo_1.png" alt="" class="NewestDeck_Mid_item_8_top_right_img">
+                        <div class="NewestDeck_Mid_item_8_top_right_text_base">
+                            <div class="NewestDeck_Mid_item_8_top_right_text_base_column">
+                                <a href="" class="NewestDeck_Mid_item_8_link">About Us</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Jobs</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Steam Partners</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Publication</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Steam</a>
+                            </div>
+                            <div class="NewestDeck_Mid_item_8_top_right_text_base_column">
+                                <a href="" class="NewestDeck_Mid_item_8_link">Term of Use</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Privacy Policy</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Sercurity</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Legal</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Press Kit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="NewestDeck_Mid_item_8_bottom">
+                    <span style="color: #fff; opacity: 0.5; font-size: 0.7em;"><i>Product specifications are subject to change.</i></span><br><br>
+                    <span style="color: #fff; opacity: 0.5; font-size: 0.7em;"><i>© 2022 Valve Corporation. All rights reserved. All trademarks property of their respective owners in the U.S. and other countries. Steam, the Steam logo, Steam Deck, and the Steam Deck logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.</i></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Featured News - Steam News Hub</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="C:\Users\PC\OneDrive\Desktop\Thực tập_jobs\SteamHtml\Images\steamLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- body -->
+    <style>
+        body{
+            overflow-x: hidden;
+            height: 5200px;
+            width: 1500px;
+            position: relative;
+            /* cursor: url("trỏ\ chuột\ ori.jpg"),auto; */
+            background-color: #24282e;
+        }
+        .steamMid{
+        width: 1500px;
+        height: 5000px;
+        font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        display: flex;
+
+    }
+    </style>
+
+     <!-- toplogo -->
+    <style>
+        .steamTop{
+            transform: translateY(-8px);
+            margin-left: -8px;
+            position: fixed;
+            width: 1550px;
+            height: 109px;
+            background-color: #171a21;
+            display: flex;
+            justify-content: space-around;
+            z-index: 50;
+        }
+        .sTop_choise{
+            width: 800px;
+
+            margin-left: 50px;
+            display: flex;
+            justify-content: start;
+        }
+        .sTop_avatar_link{}
+        .sTop_avatar_image{
+            margin-top: 25px;
+            width: 160px;
+            height: 50px;
+            margin-left: 80px;
+            margin-right: -10px;
+        }
+        .sTop_choise_choises{
+
+            margin-top: 25px;
+            /* background-color: red; */
+            margin-left: 70px;
+            width: 450px;
+            height: 50px;
+
+        }
+        .st_choises_common{
+            text-decoration: none;
+            height: 30px;
+            width: auto;
+            font-size: 15px;
+            margin: 18px 0 0 0;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: relative;
+        }
+        .st_choises_common:hover{color: #fff;}
+        .st_choises_store{}
+        .st_choises_comunity{}
+        .st_choises_about{margin-left: 6px;}
+        .st_choises_support{margin-left: 6px;}
+
+        .st_pop{
+            /* box-shadow: 1px 1px 0.5px 1px; */
+            position: absolute;
+            z-index: 50;
+            background-color: #171a21;
+            display: none;
+            /* flex-direction: column; */
+            justify-content: start;
+            box-shadow: 3px 3px 5px -3px #000;
+	        text-align: left;
+            columns: 1;
+        }
+        .st_store_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .st_community_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+
+        .st_choises_store:hover .st_store_pop{display: block;}
+        .st_choises_comunity:hover .st_community_pop{display: block;}
+        .st_pop:last-child{margin-bottom: 10px;}
+        .st_store_pop{width: 127px; height: 165px;}
+        .st_community_pop{width: 100px; height: 145px;}
+        .pop_text{
+            color: #b8b6b4;
+            font-size: 11px;
+            padding: 7px 10px 7px 10px;
+
+            text-decoration: none;
+        }
+        .pop_text:first-child{padding-top: 12px;}
+        .pop_text:hover{color: #fff;}
+        .store_pop{}
+        .community_pop{}
+    </style>
+
+    <!-- topinstall -->
+    <style>
+        .sTop_login{
+            width: 200px;
+            margin-left: -100px;
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        .st_login_install{
+            margin-top: 5px;
+            width: 100px;
+            height: 24px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #5c7e10;
+        }
+        .stlogin_install_image{
+            margin: 2px 2px 2px 0;
+            width: 20px;
+            height: 20px;
+        }
+        .stlogin_install_text{
+            margin-top: 6px;
+            color: #e5e4dc;
+            font-size: 10px;
+        }
+        .st_login_install:hover .stlogin_install_text{color: #fff;}
+
+        .st_login_button{
+            font-size: 15px;
+            margin: 8px 5px 0 5px;
+            height: 24px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .st_seperate{
+            margin-top: 10px;
+            height: 14px;
+            width: 0.5px;
+            background-color: #b8b6b4;
+        }
+        .st_languge_button{
+            /* border-left: thick solid #b8b6b4; */
+            margin-top: 8px;
+            height: 18px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        .st_login_button:hover{color: #fff;}
+        .st_languge_button:hover{color: #fff;}
+    </style>
+
+    <!-- bottom 2-->
+    <style>
+        .steamBottom_part2{
+            transform: translateY(20px);
+            position: absolute;
+            width: 100%;
+            height: 165px;
+            background-color: #171a21;
+            bottom: 0;
+        }
+        .sbot_part2_common{
+            position: absolute;
+            margin: 0 0 0 250px;
+            height: 60px;
+            width: 1000px;
+        }
+        .sbot_part2_1{
+            top: 20px;
+            /* background-color: red; */
+            display: flex;
+            justify-content: space-around;
+            border-top: #363c44 solid 1px;
+            border-bottom: #363c44 solid 1px;
+        }
+
+
+
+        .sb2_1_valve_link{}
+        .sb2_1_valve_img{
+            margin: 10px 0 10px 0;
+            width: 100px;
+            height: 40px;
+        }
+        .sb2_1_dereption{
+            margin: 10px 0 10px 0;
+            height: 40px;
+            width: 800px;
+            /* background-color: yellow; */
+        }
+        .sb2_1_steamImg{
+            margin: 15px 0 15px 0;
+            width: 100px;
+            height: 30px;
+        }
+        .sb2_1decreption_text{
+            position: absolute;
+            font-family: sans-serif;
+            color: #8f98a0;
+            font-size: 12px;
+            width: 780px;
+            margin: 14px 10px 0 10px;
+            top: 0;
+
+            /* visibility: hidden; */
+        }
+        .sb2_1decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 263px;
+            width: 600px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_1_link{
+            margin-top: 10px;
+            justify-content: end;
+            text-decoration: none;
+            color: #c6d4df;
+            padding: 0 5px 0 5px;
+            font-size: 14px;
+            border-right: #c6d4df solid 1px;
+        }
+        .sb2_1_link:last-child{border: none;}
+        .sb2_1_link:hover{color: #fff;}
+
+
+        .sbot_part2_2{
+            position: relative;
+            top: 80px;
+            /* background-color: blue; */
+        }
+        .sb2_2decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 800px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_2_link{
+            text-decoration: none;
+            color: #c6d4df;
+            font-size: 14px;
+            padding: 0 7px 0 5px;
+            margin-top: 20px;
+            border-right: #c6d4df solid 1px;
+            /* visibility: hidden; */
+        }
+        .sb2_2_link:last-child{margin-left: -4px; border: none;}
+        .sb2_2_link:hover{color: #fff;}
+        .sb2_2_facelink{margin-left: -4px;}
+        .sb2_2_image{
+            /* position: absolute; */
+            width: 15px;
+            height: 15px;
+        }
+        .sb2_2_faceImg{}
+        .sb2_2_twitterImg{
+            margin-left: 5px;
+        }
+    </style>
+
+<!-- scrollbar -->
+<style>
+    ::-webkit-scrollbar {
+        height: 12px;
+        width: 14px;
+        background: rgba(0,0,0,0);
+        z-index: 12;
+        overflow: visible;
+    }
+    ::-webkit-scrollbar-corner {
+    background: #202020;
+}
+    ::-webkit-scrollbar-thumb {
+        width: 10px;
+        background-color: #434953;
+        border-radius: 10px;
+        z-index: 12;
+        border: 4px solid rgba(0,0,0,0);
+        background-clip: padding-box;
+        transition: background-color .32s ease-in-out;
+        margin: 4px;
+        min-height: 32px;
+        min-width: 32px;
+    }
+    ::selection {
+        background: #54a5d4;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.6666666667);
+        color: #fff;
+    }
+</style>
+
+<!-- steammid_side -->
+<style>
+    .first_base{}
+    .second_base{display: none;}
+    .steammid_side{transform: translateX(-264px); overflow-x: scroll;}
+
+    /* .steammid_side{display: flex; flex-direction: column;} */
+    .steammid_side{ position: fixed; width: 300px; box-shadow: 0px 0px 10px rgba(0,0,0,.5);}
+    .steammid_side{top: 108px; bottom: 0; box-sizing: border-box; display: flex; flex-direction: row-reverse;}
+    .steammid_side{z-index: 11; background-color: #30343b; overflow: auto; transition: transform .15s ease-in-out; will-change: transform;}
+
+    .steammid_side_outButton_img{width: 40px; height: 40px; position: absolute; top: 0; right: 0; cursor: pointer;}
+    .steammid_side_outButton_img:hover{filter: brightness(1.5);}
+
+    .steammid_side_base{position: absolute; top: 50px; left: 20px;}
+    .steammid_side_base{width: 270px; height: 100%;}
+
+    .steammid_side_text{font-size: 32px; line-height: 30px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;}
+    .steammid_side_text{word-wrap: break-word; word-break: break-word; color: #c6d4df;}
+
+    .different_title{margin-top: 50px !important;}
+    .steammid_side_base_title{color: #a7aeb4; font-size: 12px; margin-bottom: 7px; margin-top: 17px; text-transform: uppercase; letter-spacing: 0.1em;}
+
+    .steammid_side_link_boxes{width: 100%; height: 110px; display: flex; flex-direction: column;}
+    .steammid_side_link{width: 100%; height: 50px; margin-top: 5px;background: linear-gradient(30deg, rgba(87, 94, 105, 0.3) 0%, rgba(87, 94, 105, 0) 100%);}
+    .steammid_side_link{display: flex; flex-direction: column;}
+    .steammid_side_link{width: 260px; height: 50px; margin-top: 5px;background: linear-gradient(30deg, rgba(87, 94, 105, 0.3) 0%, rgba(87, 94, 105, 0) 100%);}
+    .steammid_side_link:active{border-right: 4px solid #07bfff; background: linear-gradient(30deg, rgba(7, 191, 255, 0.2) 0%, rgba(7, 191, 255, 0.1) 100%);}
+    .steammid_side_link:active .steammid_side_link_title{color: #07bfff; text-decoration: none;}
+    .steammid_side_link:active .steammid_side_link_text{color: #07bfff; text-decoration: none;}
+    .steammid_side_link:hover{background-image: linear-gradient(to right, rgba(87, 94, 105, 0.3) 20%, #777e89 100%);}
+
+    .steammid_side_link_title{color: #fff; text-transform: uppercase; letter-spacing:  0.1em; font-size: 12px; margin: 10px 0 4px 20px;}
+    .steammid_side_link_text{text-decoration: none; color: #7e8187; font-size: 11px; margin: 0 0 0 20px;}
+
+    .steammid_side_type{width: 200px; height: 30px; font-family: "Motiva Sans",Arial,Helvetica,sans-serif; border-radius: 3px; font-weight: 300;}
+    .steammid_side_type{background: rgba(59,63,72,.5); box-shadow: inset 0px 0px 0px rgba(0,0,0,0); color: #fff;}
+    .steammid_side_type:hover{background: rgba(67,73,83,.6);}
+
+    .link_different{height: 35px !important;}
+    .steammid_side_option{width: 200px; height: 40px; background-color: #575e69; color: #aaa; cursor: pointer;}
+    .steammid_side_option{border: none; outline: none; border-radius: 4px; align-items: center;}
+    .steammid_side_option{display: flex; flex-direction: row; margin-top: 20px;}
+    .steammid_side_option:hover{color: #fff; background: #666e7a; box-shadow: 2px 2px 10px rgba(0,0,0,.4);}
+
+    .steammid_side_option_img{width: 30px; height: 30px; margin-right: 10px;}
+    .steammid_side_option_text{text-transform: uppercase; font-size: 10px; letter-spacing: 0.1em;}
+    .steammid_side_saparate{width: 300px; height: 1px; background-color: #41444d; margin: 15px 0 15px 0;}
+
+    .steammid_side_valv{width: 100px; height: 30px; margin-bottom: 15px; opacity: 0.8;}
+
+
+    .option_close_img{width: 20px; height: 20px; margin: 5px 5px 0 0;  position: absolute; top: 0; right: 0; cursor: pointer;}
+    .option_close_img:hover{filter: brightness(1.5);}
+    .option_close_img{}
+
+    .second_title_base{position: absolute; top: 30px; left: 0; width: 85%; height: 90px; margin-left: 20px;}
+    .second_title_base{display: flex; flex-direction: column;}
+    .second_choise_base{position: absolute; top: 120px; left: 0; width: 85%; height: 450px; margin-left: 20px;}
+
+    .second_title{font-size: 18px; letter-spacing: 0.1em; text-transform: uppercase; color: #fff;}
+    .second_text{color: #999; margin-top: 5px; font-size: 12px;}
+
+
+    .first_choise{width: 100%; height: 160px;}
+    .second_choise_base_title{padding-bottom: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: 1.em; color: #a7aeb4;}
+
+    .checlbox_base{}
+    .checlbox_text{width: 13px; height: 13px; margin: 5px 0 5px 0;}
+</style>
+
+<!-- top_signin -->
+<style>
+    .steamMid_base{}
+    .top_signin{z-index: 9; position: fixed; top: 109px;}
+    .top_signin{transition: transform .15s ease-in-out; will-change: transform; box-sizing: border-box; display: flex; flex-direction: column;}
+    .top_signin{width: 1510px; height: 230px; background: linear-gradient(90deg, #10a2d7, #2b74fe); color: #fff; padding: 60px 0px;}
+
+    .top_signin_base{width: 100%; box-sizing: border-box;}
+    .top_signin_base{margin: 0 auto 0 250px; padding: 0 16px; box-sizing: border-box;}
+
+
+    .top_sigin_button{text-transform: uppercase; font-weight: bold; font-size: 14px; cursor: pointer; width: max-content;}
+    .top_sigin_button{color: #e1e1e1; padding: 10px 35px; border-radius: 2px; background: none;}
+    .top_sigin_button{border: 0; transition: box-shadow 0.4s ease-out;}
+    .top_sigin_button:hover{filter: brightness(1.2); box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.2);}
+    .top_sigin_button:hover{background: linear-gradient(90deg, #10a2d7, #2b74fe);}
+
+    .top_signin_text{margin-top: 20px; font-size: 16px;}
+
+
+    element.style {transform: translateY(102px);}
+</style>
+
+
+
+<!-- Not_Sgin_in -->
+<style>
+    .Not_Sgin_in{width: 15210px; height: 100%; display: none;}
+    .Not_Sgin_in{position: absolute; top: 0; left: 0; z-index: 100;}
+
+    .Not_Sgin_in_background{width: 100%; height: 100%; background-color: black;}
+    .Not_Sgin_in_background{opacity: 0.8;}
+
+
+    .Not_Sgin_in_close{width: 100%; display: flex; justify-content: end; background-color: red;}
+    .Not_Sgin_in_close_img{width: 15px; height: 15px; cursor: pointer; margin-top: -23px; margin-right: 5px;}
+    .Not_Sgin_in_close_img:hover{filter: brightness(1.5);}
+    .top_signin_title{font-weight: bold; font-size: 20px; margin-bottom: 10px;}
+
+
+    .Not_Sgin_in_base{display: flex; flex-direction: column;}
+    .Not_Sgin_in_base{position: fixed; top: 270px; left: 540px; border-top: 1px solid #2a78ff; box-shadow: 0px 8px 38px 5px rgba(0,0,0,.75);}
+    .Not_Sgin_in_base{width: 440px; height: 200px; font-family: "Motiva Sans", Arial, Helvetica, sans-serif;}
+    .Not_Sgin_in_base{background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%),#25282e;}
+
+    .Not_Sgin_in_title{color: #fff; margin-right: 26px; margin-bottom: 12px; text-transform: uppercase;}
+    .Not_Sgin_in_title{font-weight: 300; font-size: 32px; line-height: 20px; letter-spacing: 2px; user-select: none;}
+    .Not_Sgin_in_text{color: #969696; font-size: 16px; line-height: 19px; font-weight: 300; margin-bottom: 55px; user-select: none;}
+    .Not_Sgin_in_button_container{width: 400px; height: 30px;}
+    .Not_Sgin_in_button_container{display: flex; justify-content: space-between;}
+    .signin_button{width: 190px; color: #dfe3e6; text-align: center; user-select: none;line-height: 30px; transition-timing-function: ease-out;}
+    .signin_button{text-decoration: none; background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%); background-position: 25%; background-size: 330% 100%;}
+    .signin_button:hover{background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%); background-position: 0%; background-size: 330% 100%; color: #fff;}
+    .cancel_button{width: 190px; border: none; outline: none; user-select: none; cursor: pointer;}
+    .cancel_button{color: #dfe3e6; background: #3d4450; transition-timing-function: ease-out;}
+    .cancel_button:hover{background: #464d58; color: #fff;}
+</style>
+</head>
+
+<!-- event_container -->
+<style>
+    .event_container{width: 100%; height: 200px; display: flex; flex-direction: column;}
+    /* .event_container{position: absolute; top: 340px; left: 0;} */
+
+
+
+    .feature_title_base_common{width: 100%; height: 30px; margin: 20px auto 0 250px;}
+    .feature_title_base_common{display: flex; flex-direction: row;}
+    .event_base{margin: 0 auto 0 250px; width: 69%; height: 140px; }
+    .event_base{display: flex; justify-content: space-between;}
+
+    .feature_title{user-select: none; color: #e5e5e5; font-size: 18px; font-weight: 300; letter-spacing: 2px;}
+    .feature_title{margin-right: 15px; text-transform: uppercase;}
+    .feature_title_line{width: 58%; height: 10px; border-bottom: 1px solid #373c44;}
+
+    .event_left{}
+    .event_right{}
+    .even_common{width: 500px; height: 140px; display: flex; flex-direction: column;}
+    .even_common{transition: box-shadow .24s ease-in-out; border-radius: 5px;}
+    .even_common:hover{background: radial-gradient(circle at top left, #4f5764 0%, #454854 140%); box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5);}
+
+
+    .even_part_1{width: 200px; height: 20px; font-size: 13px; text-align: center; color: #c6d4df;}
+    .even_part_1{margin: 10px 0 5px 10px; padding: 8px 4px; line-height: 20px;}
+    .even_part_1:hover{background: #1c95ff; border-radius: 3px; color: #fff;}
+    .even_part_2{margin: 0 0 5px 10px; color: #fff; font-weight: 500; width: 80%; user-select: none;}
+    .even_part_3{margin-top: 10px; width: 100%; height: 36px;}
+
+    .even_part_3{display: flex; flex-direction: row;}
+    .even_part_3_date{margin-left: 10px; width: 150px;}
+    .even_part_3_date{color: #07bfff; font-size: 11px; line-height: 35px;}
+    .even_part_3_bell{margin-left: 100px; width: 300px; height: 36px; display: flex; justify-content: end;}
+    .even_part_3_bell{overflow: hidden;}
+    .even_part_3_bell_img{}
+    .even_part_3_bell_img{width: 31px; height: 31px; border-radius: 50px;}
+    .even_part_3_bell_img:hover{box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5);}
+
+    .even_part_3_bell_setRimider{transform: translateX(200px);}
+    .even_part_3_bell_setRimider{cursor: pointer; margin-left: 10px;}
+    .even_part_3_bell_setRimider{line-height: 30px; text-align: center; border-radius: 5px; color: #fff;box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5);}
+    .even_part_3_bell_setRimider{width: 200px; height: 30px; background-color: #399aec;}
+
+    .even_part_3_bell_img{transform: translateX(205px); transition: 0.4s ease-out;}
+    .even_part_3_bell_setRimider{transition: 0.4s ease-out;}
+    .even_part_3_bell:hover .even_part_3_bell_setRimider{transform: translateX(0);}
+    .even_part_3_bell:hover .even_part_3_bell_img{box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5); transform: translateX(0); transform: rotate(310deg);}
+</style>
+
+
+<!-- liveStream_container -->
+<style>
+    .liveStream_container{width: 100%; height: 900px; display: flex; flex-direction: column; margin-top: 10px;}
+    /* .liveStream_container{position: absolute; top: 550px; left: 0;} */
+    .live_base{display: flex; justify-content: start;}
+    .live_base{width: 69%; height: 250px; background: radial-gradient(circle at top left, #3a404a 10%, #32353e 90%); cursor: pointer;}
+    .live_base{box-shadow: 2px 2px 12px 2px rgba(0,0,0,0); transition: box-shadow .24s ease-in-out;  margin: 20px auto 0 250px;}
+    .live_base:hover{background: radial-gradient(circle at top left, #4f5764 0%, #454854 140%); box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5);}
+
+    .live_left_base{width: 625px; display: flex; flex-direction: column;}
+    .live_img{width: 400px; height: 225px; margin-top: 13px;}
+
+
+    .live_left_title{width: fit-content; height: 20px; font-size: 13px; text-align: center; color: #c6d4df;}
+    .live_left_title{margin: 10px 0 5px 10px; padding: 8px 10px; line-height: 20px;}
+    .live_left_title:hover{background: #1c95ff; border-radius: 3px; color: #fff;}
+    .live_left_text{margin: 10px 0 9px 10px; color: #fff; font-weight: 500; user-select: none; font-size: 20px;}
+    .live_left_text{}
+
+    .broadcast{margin-left: 10px;}
+    .broadcast{color: #d3dfa9; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; font-size: 11px;}
+    .broadcast_time{color: #909da7; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px;}
+    .live_left_end_text{color: #e4e8ec; font-size: 14px; font-weight: 300; margin-left: 10px; margin-top: 10px;}
+</style>
+
+<!-- cotent_container -->
+<style>
+    .cotent_container{width: 100%; height: 1150px; display: flex; flex-direction: column; margin-top: 10px;}
+    .cotent_base{display: flex; justify-content: start; border-radius: 30px;}
+    .cotent_base{width: 69%; height: 280px; background: radial-gradient(circle at top left, #3a404a 10%, #32353e 90%);}
+    .cotent_base{transition: box-shadow .24s ease-in-out;  margin: 20px auto 0 250px;}
+    .cotent_base:hover{background: radial-gradient(circle at top left, #4f5764 0%, #454854 140%); box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5);}
+    .cotent_base{display: flex; justify-content: center;}
+    .cotent_gif{}
+    .cotent_gif{width: 400px; height: 280px; border-radius: 30px; box-shadow: 3px 3px 1px 1px rgb(0, 100, 0);}
+    .cotent_text_container{display: flex; flex-direction: column;}
+    .cotent_text_container{width: 69%; height: 300px;border-radius: 30px; font-family: "Motiva Sans",Arial,Helvetica,sans-serif;}
+    .cotent_gif{position: absolute; transform: translateX(-300px); transition: 0.4s ease-in;}
+    .cotent_text_container{position: absolute;}
+    .cotent_base_text{color: #fff; opacity: 0;  transition: 0.7s ease-in;}
+    .cotent_base:hover .cotent_gif{transform: translateX(320px); box-shadow: 8px 8px 30px 5px rgb(181, 235, 181);}
+    .cotent_base:hover .cotent_base_text{opacity: 1;}
+
+
+    .cotent_like_base{display: flex; justify-content: end;}
+    .cotent_like_base{width: 69%; height: 30px; margin: 30px auto 0 250px;}
+    .cotent_like{width: 75px; height: 30px; display: flex; justify-content: end;}
+
+    .cotent_like:hover{background-color: black; color: #fff;}
+    .like_img{width: 24px; height: 24px; margin: 3px 0 3px 5px; cursor: pointer; user-select: none; border-radius: 50px;}
+    .like_img:active{filter: brightness(2);}
+    .like_text{margin-right: 5px; width: 66px; height: 30px; text-align: end; line-height: 30px; font-size: 15px; color: #8c8c8c;}
+</style>
+
+<!-- release_container -->
+<style>
+    .release_container{width: 100%; height: 400px; display: flex; flex-direction: column; margin-top: 10px;}
+
+    /* .release_base{background: radial-gradient(circle at top left, #3a404a 10%, #32353e 90%);} */
+    .release_base{width: 69%; height: 300px;}
+    .release_base{transition: box-shadow .24s ease-in-out;  margin: 10px auto 0 250px;}
+    /* .release_base:hover{background: radial-gradient(circle at top left, #4f5764 0%, #454854 140%); box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5);} */
+    .release_base{display: flex; flex-direction: row;}
+
+
+    .release_count{width: 69%; height: 40px; margin: 0 auto 0 250px;}
+    .release_count{display: flex; flex-direction: row; align-items: center; justify-content: center;}
+    .release_item{width: 18px; height: 15px; border-radius: 50px; border: 2px solid #fff;}
+    .release_item{ margin: 0 5px 0 5px; cursor: pointer; user-select: none;}
+    .release_item:hover{background-color: #fff;}
+
+    .release_gif_base{width: 80%; height: 300px; display: flex; flex-direction: row;}
+
+    .release_gif_button{width: 10%; height: 300px; cursor: pointer; user-select: none;}
+    .release_gif_button{background: radial-gradient(circle at top left, #3a404a 10%, #32353e 90%);}
+    .release_gif_button{text-align: center; font-size: 80px; line-height: 280px; color: #fff;}
+    .release_gif_button:hover{background: radial-gradient(circle at top left, #4f5764 0%, #454854 140%); box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5);}
+    .left_button{border-top-left-radius: 30px; border-bottom-left-radius: 30px;}
+    .right_button{border-top-right-radius: 30px; border-bottom-right-radius: 30px;}
+
+
+    .release_gif_base_3{}
+    .gif_base{width: 100%; height: 300px;}
+    .release_gif_base_1{}
+    .release_gif_1{width: 100%; height: 300px;}
+    .release_gif_base_2{display: flex; flex-direction: row;}
+    .release_gif_2{height: 100%; width: 830px;}
+    .release_gif_4{height: 100%; width: 830px;}
+    .release_gif_5{height: 100%; width: 830px;}
+    .release_gif_6{height: 100%; width: 830px;}
+    .release_gif_0{height: 100%; width: 830px;}
+    .release_gif_base_0{}
+    .release_gif_base_1{display: none;}
+    .release_gif_base_2{display: none;}
+    .release_gif_base_3{display: none;}
+    .release_gif_base_4{display: none;}
+    .release_gif_base_5{display: none;}
+    .badge-white{background-color: #fff!important}
+</style>
+
+<!-- sales_container -->
+<style>
+    .sales_container{width: 100%; height: 1000px; display: flex; flex-direction: column; margin-top: 25px;}
+    .sales_base{width: 69%; height: 900px; background: radial-gradient(circle at top left, #3a404a 10%, #32353e 90%);}
+    .sales_base{transition: box-shadow .24s ease-in-out;  margin: 20px auto 0 250px;}
+    /* .sales_base:hover{background: radial-gradient(circle at top left, #4f5764 0%, #454854 140%); box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5);} */
+    .sales_base{display: flex; flex-direction: column;}
+    .sales_base{font-family: "Motiva Sans", sans-serif;}
+
+
+    .sales_item{width: 360px; height: 50px; background: radial-gradient(circle at top left, #4f5764 0%, #454854 140%); cursor: pointer;}
+    .sales_item:hover{background: radial-gradient(circle at top left, #5f6978 0%, #5e6272 140%); box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5);}
+    .sales_item{color: #fff; letter-spacing: 0.1em; font-size: 20px; text-shadow: 2px 2px #464646; transition: text-shadow 0.3s ease-in;}
+    .sales_item{padding-left: 10px; line-height: 45px;}
+    .sales_item:hover{text-shadow: 4px 4px #000;}
+
+
+    .sales_item_showcase{position: absolute; right: 215px; top: 2773px; cursor: default;}
+    .sales_item_showcase{height: 912px; width: 650px; z-index: 4; margin: 10px 10px 10px 10px;}
+    .sales_item_showcase{display: flex; flex-direction: column;}
+
+    .sales_item_showcase_img_base{width: 670px; height: 250px; margin: -10px -10px 5px -10px;}
+    .sales_item_showcase_decreption{width: 500px; height: 650px; margin: 0 0 0 90px; display: flex; flex-direction: column;}
+    .sales_item_showcase_img{width: 670px; height: 250px;}
+    .showcase_decreption_base{line-height: 20px; padding-left: 20px;}
+    .showcase_decreption_base{margin-top: 40px; width: 480px; height: 200px; font-family: Arial, Helvetica, sans-serif; text-shadow: none;}
+    .showcase_decreption_base_title{color: #bcc6cd; font-size: 10px; text-transform: uppercase; font-weight: bold;}
+    .showcase_decreption_base_topic{color: #61686D; font-size: 12px; font-weight: normal;}
+    .showcase_decreption_text{color: #bcc6cd; font-size: 12px;}
+
+    .item_1{}
+    .item_showcase_1{display: none;}
+    .item_showcase_2{display: none;}
+    .item_showcase_3{display: none;}
+    .item_showcase_4{display: none;}
+    .item_showcase_5{display: none;}
+    .item_1:hover .item_showcase_1{display: block;}
+    .item_2:hover .item_showcase_2{display: block;}
+    .item_3:hover .item_showcase_3{display: block;}
+    .item_4:hover .item_showcase_4{display: block;}
+    .item_5:hover .item_showcase_5{display: block;}
+</style>
+
+<!-- story_container -->
+<style>
+    .story_container{width: 100%; height: 1000px; display: flex; flex-direction: column; margin-top: 25px;}
+    .story_container{}
+
+    .story_guide_base{width: 1035px; height: 200px; margin: 10px auto 0 250px; border-radius: 50px; border: 4px solid #fff;}
+    .story_guide_base{display: flex; justify-content: center;}
+    .story_guide_base{}
+    .story_guide_base_top{width: 1037px; height: 50px; border: 4px solid #fff; margin: -3px -4px 0 -4px;}
+    .story_guide_base_top{border-top-left-radius: 50px; border-top-right-radius: 50px;}
+    .story_guide_base_top{display: flex; flex-direction: row;}
+    .story_guide_base_top{overflow: visible;}
+
+    .story_guide_base_backgound_text{position: absolute; top: 3900px; left: 500px; z-index: 0;}
+    .story_guide_base_backgound_text{transition: 0.4s ease-in; user-select: none;}
+    .story_guide_base_backgound_text{color: grey; font-size: 30px; letter-spacing: 1em; opacity: 0.5;}
+    .story_guide_base:hover .story_guide_base_backgound_text{filter: brightness(5); opacity: 1;}
+
+    .story_guide_items{margin: -3px -4px 0 -4px; transition: 0.5s ease-in;}
+    .story_guide_items{text-align: center; color: #fff; z-index: 1;}
+    .story_guide_items{width: 180px; height: 49px; border: 4px solid #fff;}
+
+    .guide_HowToPlay{border-top-left-radius: 50px; background: linear-gradient(90deg, #10a2d7, #2b74fe)}
+    .guide_HowToPlay:hover{height: 197px; border-bottom-left-radius: 50px}
+    .guide_HowToPlay:hover .story_guide_title{text-shadow: 5px 5px #181818;}
+
+    .guide_ToClick{background: linear-gradient(90deg, #d7a210, #fee92b); margin-left: 4px}
+    .guide_ToClick:hover{height: 197px;}
+    .guide_ToClick:hover .story_guide_title{text-shadow: 5px 5px #181818;}
+
+    .guide_Note{width: 659px !important;}
+    .guide_Note{background: linear-gradient(90deg, #38d710, #2bfe2b); margin-left: 4px;border-top-right-radius: 50px;}
+    .guide_Note:hover{height: 197px; border-bottom-right-radius: 50px;}
+    .guide_Note:hover .story_guide_title{text-shadow: 5px 5px #181818;}
+    .story_guide_title{line-height: 47px; letter-spacing: 0.4em; transition: text-shadow 0.5s ease-out;}
+
+    .story_guide_text{line-height: 20px; text-align: start; opacity: 0; transition: opacity 0.6s ease-in;}
+    .guide_HowToPlay:hover .howtoPlay_text{opacity: 1;}
+
+    .anwser_text{font-size: 10px; margin-left: -550px !important; color: rgb(161, 1, 1) !important;}
+    .guide_Note:hover .anwser_text{opacity: 1;}
+    .hint_text{font-size: 9px; line-height: 10px !important; margin-left: -8px; color: purple !important;}
+    .guide_ToClick:hover .hint_text{opacity: 1;}
+
+</style>
+
+<!-- Story_puzzle_base -->
+<style>
+    .Story_puzzle_base{display: flex; justify-content: start;}
+    .Story_puzzle_base{width: 69%; height: 550px; cursor: pointer; border: 3px solid black;}
+    .Story_puzzle_base{box-shadow: 2px 2px 12px 2px rgba(0,0,0,0); transition: box-shadow .24s ease-in-out;  margin: 0 auto 0 250px;}
+    .Story_puzzle_base:hover{background: radial-gradient(circle at top left, #4f5764 0%, #454854 140%); box-shadow: 2px 2px 12px 2px rgba(0,0,0,.5);}
+    .Story_puzzle_base{border-top-left-radius: 50px; border-bottom-left-radius: 50px;}
+    /* .Story_puzzle_base{background: radial-gradient(circle at top left, #3a404a 10%, #32353e 90%);} */
+
+    .story_page_1_base{position: absolute; top: 4000px; left: 253px;}
+    .story_page_1_base{background: radial-gradient(circle at top left, #3a404a 10%, #32353e 90%);}
+    .story_page_1_base{width: 69%; height: 550px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;}
+    .story_page_1_base{display: flex; flex-direction: column; align-items: center; justify-content: center;}
+    .story_page_title{font-size: 25px; color: #fff; letter-spacing: 0.5em;}
+
+    .story_button{width: 150px; height: 30px; text-align: center; line-height: 30px;margin-top: 50px; border-radius: 10px;}
+    .story_button{background: radial-gradient(circle at top left, #616a7a 10%, #334987 90%); cursor: pointer; color: #fff;}
+    .story_button:hover{background: radial-gradient(circle at top left, #99a7bf 10%, #5174d3 90%)}
+
+
+    /* .story_page_1_base{display: none;} */
+    .story_page_2_base{display: none;}
+    .story_page_2_base{position: absolute; top: 4000px; left: 253px;}
+    .story_page_2_contain{display: flex; flex-direction: column; justify-content: start;}
+    .story_page_2_contain{width: 800px; height: 400px; margin: 50px 0 0 50px;}
+    .story_page_2_base{background: radial-gradient(circle at top left, #3a404a 10%, #32353e 90%);}
+    .story_page_2_base{width: 69%; height: 550px; border-top-left-radius: 50px; border-bottom-left-radius: 50px;}
+</style>
+
+<!-- PassWord_1 -->
+<style>
+    .PassWord_1{width: 100%; height: 50px; display: flex; flex-direction: column; margin-top: 25px;}
+</style>
+<script>
+    function Error_open(){
+        let a = document.getElementById("Not_Sgin_in");
+        if( a.style.display == "none"){
+            a.style.display = "flex"
+        }
+        else{
+            a.style.display = "none"
+        }
+    }
+
+    function Error_close(){
+        let a = document.getElementById("Not_Sgin_in");
+        a.style.display = "none"
+    }
+</script>
+
+<!-- side_close_in -->
+<script>
+    function side_close(){
+        let m = document.getElementById("steammid_side");
+        let n = document.getElementById("steammid_side_outButton_img");
+        let o = document.getElementById("steamMid_base");
+        let l = document.getElementById("event_container");
+        let p = document.getElementById("liveStream_container");
+        let q = document.getElementById("cotent_container");
+        let r = document.getElementById("release_container");
+        let s = document.getElementById("sales_container");
+        let t = document.getElementById("story_container");
+        if(m.style.transform == "translateX(-264px)"){
+            m.style.transform = "translateX(0)";
+            n.style.transform = "rotate(180deg)";
+            o.style.marginLeft = "150px";
+            l.style.marginLeft = "150px";
+            p.style.marginLeft = "150px";
+            q.style.marginLeft = "150px";
+            r.style.marginLeft = "150px";
+            s.style.marginLeft = "150px";
+            t.style.marginLeft = "150px";
+        }
+        else{
+            m.style.transform = "translateX(-264px)";
+            n.style.transform = "rotate(0)";
+            o.style.marginLeft = "0";
+            l.style.marginLeft = "0";
+            p.style.marginLeft = "0";
+            q.style.marginLeft = "0";
+            r.style.marginLeft = "0";
+            s.style.marginLeft = "0";
+            t.style.marginLeft = "0";
+        }
+    }
+
+    function close_all(){
+        let l = document.getElementById("event_container");
+        let p = document.getElementById("liveStream_container");
+        let q = document.getElementById("cotent_container");
+        let r = document.getElementById("release_container");
+        let s = document.getElementById("sales_container");
+        let t = document.getElementById("story_container");
+        let checkOut = document.getElementById("feature_check");
+        if(checkOut.checked){
+            l.style.display = "none";
+            p.style.display = "none";
+            q.style.display = "none";
+            r.style.display = "none";
+            s.style.display = "none";
+            t.style.display = "none";
+        }
+        else{
+            l.style.display = "flex";
+            p.style.display = "flex";
+            q.style.display = "flex";
+            r.style.display = "flex";
+            s.style.display = "flex";
+            t.style.display = "flex";
+        }
+    }
+</script>
+
+<script>
+    function open_option(){
+        let old_be = document.getElementById("first_base");
+        let new_be = document.getElementById("second_base");
+            old_be.style.display = "none"
+            new_be.style.display = "flex"
+    }
+
+    function close_option(){
+        let old_be = document.getElementById("first_base");
+        let new_be = document.getElementById("second_base");
+            old_be.style.display = "flex"
+            new_be.style.display = "none"
+    }
+</script>
+
+<!-- item_checked_open -->
+<script>
+    // function event_open(){
+    //     let eventCheck = document.getElementById("event_check");
+    //     if(eventCheck.checked){
+    //         alert("checked");
+    //     }
+    //     else{
+    //         alert("unchecked");
+    //     }
+    // }
+
+    // function event_open(){
+    //     let eventCheck = document.getElementById("event_check");
+    //     let example_base = document.getElementById("steamMid_base");
+    //     if(eventCheck.checked){
+    //         example_base.style.display = "none";
+    //     }
+    //     else{
+    //         example_base.style.display = "flex";
+    //     }
+    // }
+
+
+    function event_open(){
+        let eventCheck = document.getElementById("event_check");
+        let event_base = document.getElementById("event_container");
+        if(eventCheck.checked){
+            event_base.style.display = "flex";
+        }
+        else{
+            event_base.style.display = "none";
+        }
+    }
+
+    function liveStream_open(){
+        let liveCheck = document.getElementById("live_check");
+        let live_base = document.getElementById("liveStream_container");
+        if(liveCheck.checked){
+            live_base.style.display = "flex";
+        }
+        else{
+            live_base.style.display = "none";
+        }
+    }
+
+    function content_open(){
+        let contentCheck = document.getElementById("content_check")
+        let content_base = document.getElementById("cotent_container")
+        if(contentCheck.checked){
+            content_base.style.display = "flex";
+        }
+        else{
+            content_base.style.display = "none";
+        }
+    }
+
+    function release_open(){
+        let releaseCheck = document.getElementById("release_check")
+        let release_base = document.getElementById("release_container")
+        if(releaseCheck.checked){
+            release_base.style.display = "flex";
+        }
+        else{
+            release_base.style.display = "none";
+        }
+    }
+
+    function sales_open(){
+        let releaseCheck = document.getElementById("sale_check")
+        let release_base = document.getElementById("sales_container")
+        if(releaseCheck.checked){
+            release_base.style.display = "flex";
+        }
+        else{
+            release_base.style.display = "none";
+        }
+    }
+
+    function story_open(){
+        let storyCheck = document.getElementById("story_check")
+        let story_base = document.getElementById("story_container")
+        if(storyCheck.checked){
+            story_base.style.display = "flex";
+        }
+        else{
+            story_base.style.display = "none";
+        }
+    }
+</script>
+
+<!-- release_gif_base_button_custom -->
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("gif_base");
+      var dots = document.getElementsByClassName("release_item");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" badge-white", "");
+      }
+      x[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " badge-white";
+    }
+</script>
+
+
+<!-- scroll_custom -->
+<script>
+    function shrink(){
+        let bodyOfAll = document.getElementById("BigBody");
+        let baseOfAll = document.getElementById("SteamContainer");
+        let signInTop = document.getElementById("steamMid_base");
+        // if(bodyOfAll.scrollBy){
+        //     signInTop.style.display = "none";
+        // }
+        // else{
+        //     signInTop.style.display = "flex";
+        // }
+
+        // bodyOfAll.scrollBy({top: 100,left: 100,behavior: "smooth",});
+        // var scroll_x = bodyOfAll.scrollX;
+        // if(scroll_x > 300){signInTop.style.display = "none";}
+        // else{signInTop.style.display = "flex";}
+        // if (bodyOfAll.scrollY > 400) {bodyOfAll.scroll(0, 0);}
+        var scroll_y = bodyOfAll.scrollY;
+        if(scroll_y == 10){signInTop.style.display = "none";}
+        else{signInTop.style.display = "flex";}
+
+    }
+
+</script>
+
+
+<!-- srcoll_position -->
+<script>
+    // var position = document.getElementById("position");
+    //     position.innerHTML = ""
+
+    //     window.addEventListener("scroll", function(event) {
+
+    //         var scroll_y = this.scrollY;
+    //         var scroll_x = this.scrollX;
+    //         console.log(scroll_x, scroll_y);
+    //         position.innerHTML = " X-axis : "
+    //         + scroll_x + " và Y-axis : " + scroll_y
+    // });
+</script>
+
+<!-- story_puzzle -->
+<script>
+    function PassWord1(){
+        var The1Pass = document.getElementById("story_pass_1").value;
+        let Page1 = document.getElementById("story_page_1_base");
+        let Page2 = document.getElementById("story_page_2_base");
+        // switch(The1Pass){
+        //     case '':
+        //     alert('Please type a password!');
+        //     alert('Wrong password!!');
+        //     case 'HeLLoMe':
+        //     alert('Correct');
+        // }
+
+        if(The1Pass == ''){alert('Please type a password!')}
+        else{
+            if(The1Pass == 'HeLLoMe'){
+                alert('YAYYYY!!! U found it!!!');
+                Page1.style.display = "none";
+                Page2.style.display = "flex";
+            }
+            else{alert('Wrong password!!');}
+        }
+    }
+
+    function PassWord2(){
+        var Num1 = document.getElementById("story_pass_2").value;
+        var Num2 = document.getElementById("story_pass_3").value;
+        // answer: num1 = 6; num = black
+
+        //if(Num1 == 6){alert('YAYYYY!!! U found it!!!')}
+        //else{alert('Please choise a number!!!')}
+
+        //if(Num2 == 'black'){alert('Yay u found it !!!')}
+        //else{alert('U did not answer this quez!!!')}
+
+
+
+        // if(Num1 == '6'){
+        //     if(Num2 == 'black'){alert('YAYYYY!!! U found it!!!')}
+        //     else{alert('Your second answer is incorrect!!')}
+        // }
+        // else{alert('Please answer the first question first!!!')}
+
+            if(Num1 == ''){alert('Please answer the first question first!!!')}
+            else{
+                if(Num1 != '6'){alert('Your first answer is incorrect!!')}
+                else{
+                    if(Num2 == 'black'){alert('YAYYYY!!! U found it!!!')}
+                    else{alert('Your second answer is incorrect!!')}
+                }
+            }
+    }
+</script>
+
+<body id="BigBody">
+    <div id="SteamContainer" class="SteamContainer">
+
+
+        <div class="steamPart steamTop">
+
+            <div class="sTop_choise">
+                <a href="Steam_index.html" class="sTop_avatar_link">
+                    <img src="Images/s_avatar.png" alt="" class="sTop_avatar_image">
+                </a>
+
+                <div class="sTop_choise_choises">
+                    <button class="st_choises_common st_choises_store">
+                        STORE
+                        <div class="st_pop st_store_pop">
+                            <div class="st_store_pop_contain">
+                                <a href="" class="pop_text store_pop">HOME</a>
+                                <a href="" class="pop_text store_pop">DISCOVERY QUEUE</a>
+                                <a href="" class="pop_text store_pop">WISHLIST</a>
+                                <a href="" class="pop_text store_pop">POINTS SHOP</a>
+                                <a href="Steam_newAndFeature.html" class="pop_text store_pop">NEWS</a>
+                                <a href="" class="pop_text store_pop">STATS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="st_choises_common st_choises_comunity">
+                        COMMUNITY
+                        <div class="st_pop st_community_pop">
+                            <div class="st_community_pop_contain">
+                                <a href="" class="pop_text community_pop">HOME</a>
+                                <a href="" class="pop_text community_pop">DISCUSSIONS</a>
+                                <a href="" class="pop_text community_pop">WORKSHOP</a>
+                                <a href="" class="pop_text community_pop">MARKET</a>
+                                <a href="" class="pop_text community_pop">BROADCASTS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <a href="" class="st_choises_common st_choises_about">ABOUT</a>
+                    <a href="" class="st_choises_common st_choises_support">SUPPORT</a>
+                    <!-- <button class="st_choises_common st_choises_about">ABOUT</button>
+                    <button class="st_choises_common st_choises_support">SUPPORT</button> -->
+                </div>
+            </div>
+
+            <div class="sTop_login">
+                <div class="st_login_install">
+                    <img src="Images/s_install_image.png" alt="" class="stlogin_install_image">
+                    <h class="stlogin_install_text">Install Steam</h>
+                </div>
+                <a href="Steam_login.html" class="st_login_button">login</a>
+                <!-- <button class="st_login_button">login</button> -->
+                <div class="st_seperate"></div>
+                <button class="st_languge_button">language</button>
+            </div>
+        </div>
+
+        <div class="steamMid">
+            <div id="steammid_side" class="steammid_side">
+                <div id="first_base" class="first_base">
+                    <img id="steammid_side_outButton_img" src="Images/stea_featurenew_side_pop_button.png" alt="" class="steammid_side_outButton_img"  onclick="side_close()">
+                    <div class="steammid_side_base">
+                        <div class="steammid_side_text">Steam<br>
+                            news hub
+                        </div>
+
+                        <div class="steammid_side_base_title different_title">your news & events</div>
+                        <div class="steammid_side_link_boxes">
+                            <a href="" class="steammid_side_link">
+                                <span class="steammid_side_link_title">your news</span>
+                                <span class="steammid_side_link_text">Personalized</span>
+                            </a>
+                            <a href="" class="steammid_side_link">
+                                <span class="steammid_side_link_title">your upcoming events</span>
+                                <span class="steammid_side_link_text">Personalized</span>
+                            </a>
+                        </div>
+
+                        <div class="steammid_side_base_title">global news & events</div>
+                        <div class="steammid_side_link_boxes">
+                            <a href="" class="steammid_side_link">
+                                <span class="steammid_side_link_title">featured</span>
+                                <span class="steammid_side_link_text">From Top sources</span>
+                            </a>
+                            <a href="" class="steammid_side_link">
+                                <span class="steammid_side_link_title">steam official</span>
+                                <span class="steammid_side_link_text">Steam Blog and News</span>
+                            </a>
+                        </div>
+
+                        <div class="steammid_side_base_title">search</div>
+                        <input type="text" name="" id="" class="steammid_side_type">
+
+                        <div class="steammid_side_base_title">discover</div>
+                        <a href="" class="steammid_side_link link_different">
+                            <span class="steammid_side_link_title">NEWS CUATORS</span>
+                        </a>
+
+                        <button class="steammid_side_option" onclick="open_option()">
+                            <img src="Images/s_steamNewFeature_option.png" alt="" class="steammid_side_option_img">
+                            <span class="steammid_side_option_text">options and filters</span>
+                        </button>
+
+
+                        <div class="steammid_side_saparate"></div>
+                        <img src="Images/s_bottom_logo_1.png" alt="" class="steammid_side_valv">
+                        <span style="color: #8f8e93; font-size: 12px; margin-left: -105px; line-height: 10px;">© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</span>
+                    </div>
+                </div>
+
+
+                <div id="second_base" class="second_base">
+                    <img src="Images/s_closeButton.png" alt="" class="option_close_img" onclick="close_option()">
+                    <div class="second_title_base">
+                        <div class="second_title">Filers</div>
+                        <div class="second_text">Manage the types and sources of news that you see in your News Hub</div>
+                    </div>
+                    <div class="second_choise_base">
+                        <div class="first_choise">
+                            <div class="second_choise_base_title">Show these types of posts</div>
+                            <div class="checlbox_base">
+                                <input type="checkbox" name="" id="event_check" class="checlbox_text" onclick="event_open()" checked>
+                                    <span style="color: #fff; font-size: 12px;">EVENTS</span> <br>
+                                <input type="checkbox" name="" id="live_check" class="checlbox_text" onclick="liveStream_open()" checked>
+                                    <span style="color: #fff; font-size: 12px;">LIVE-STREAM</span> <br>
+                                <input type="checkbox" name="" id="content_check" class="checlbox_text" onclick="content_open()" checked>
+                                    <span style="color: #fff; font-size: 12px;">CONTENT UPDATES</span> <br>
+                                <input type="checkbox" name="" id="release_check" class="checlbox_text" onclick="release_open()" checked>
+                                    <span style="color: #fff; font-size: 12px;">RELEASE</span> <br>
+                                <input type="checkbox" name="" id="sale_check" class="checlbox_text" onclick="sales_open()" checked>
+                                    <span style="color: #fff; font-size: 12px;">SALES</span> <br>
+                                <input type="checkbox" name="" id="story_check" class="checlbox_text" onclick="story_open()" checked>
+                                    <span style="color: #fff; font-size: 12px;">STORY - INTERACT</span>
+                            </div>
+
+                            <div class="second_choise_base_title" style="margin-top: 50px;">Show posts from these sources</div>
+                            <input type="checkbox" name="" id="feature_check" class="checlbox_text" onclick="close_all()">
+                                    <span style="color: #fff; font-size: 12px;">FEATURES</span> <br>
+
+
+                            <!-- <input type="checkbox" id="action" value="1"/> <label>Bạn có thích blog freetuts.net không?</label> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="steamMid_base" class="steamMid_base">
+                <div class="top_signin">
+                    <div class="top_signin_base">
+                        <div class="top_signin_title">Sign In To Get Personalized News</div>
+                        <button class="top_sigin_button" onclick="Error_open()">Sign In</button>
+                        <div class="top_signin_text">Sign in with your Steam account to access your personalized news hub or explore featured news and updates below.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; position: absolute; top: 340px; left: 0; width: 100%;">
+
+                <div id="event_container" class="event_container">
+                    <div class="feature_title_base_common">
+                        <div class="feature_title">Coming soon</div>
+                        <div class="feature_title_line"></div>
+                    </div>
+                    <div class="event_base">
+                        <div class="even_common event_left">
+                            <div class="even_part_1">The Elder Scrolls® Online</div>
+                            <div class="even_part_2">Register Now for the 2023 ESO Tavern European Community Event!</div>
+                            <div class="even_part_3">
+                                <div class="even_part_3_date">Jul 28 at 6:00 AM</div>
+                                <div class="even_part_3_bell">
+                                    <img src="Images/bell_icon.png" alt="" class="even_part_3_bell_img">
+                                        <div class="even_part_3_bell_setRimider" onclick="Error_open()">Set a reminder</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="even_common event_right">
+                            <div class="even_part_1">FINAL FANTASY XIV Online</div>
+                            <div class="even_part_2">Announcing the FINAL FANTASY XIV Fan Festival 2023-2024</div>
+                            <div class="even_part_3">
+                                <div class="even_part_3_date">Jul 15 at 8:00 PM</div>
+                                <div class="even_part_3_bell">
+                                    <img src="Images/bell_icon.png" alt="" class="even_part_3_bell_img">
+                                    <div class="even_part_3_bell_setRimider" onclick="Error_open()">Set a reminder</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="liveStream_container" class="liveStream_container">
+                    <div class="feature_title_base_common">
+                        <div class="feature_title">today</div>
+                        <div class="feature_title_line"></div>
+                    </div>
+                    <div class="live_base">
+                        <div class="live_left_base">
+                            <div class="live_left_title" title="Click to buy" onclick="Error_open()">Team Fortress 2</div>
+                            <div class="live_left_text">ETF2L Highlander Spring 2023 Premiership Grand Final</div>
+                            <span class="broadcast">Live-Stream / Broadcast
+                                <span class="broadcast_time">13 hours ago</span>
+                            </span>
+                            <div class="live_left_end_text">Watch the ETF2L Highlander Spring 2023 Premiership Grand Final on KritzKast's Twitch channel!</div>
+
+                        </div>
+                        <img src="Images/feature_news_live_img.jpg" alt="" class="live_img">
+                    </div>
+
+                    <div class="live_base">
+                        <div class="live_left_base">
+                            <div class="live_left_title" title="Click to buy" onclick="Error_open()">Mini Ninjas</div>
+                            <div class="live_left_text">Winter Castle</div>
+                            <span class="broadcast">Live-Stream / Broadcast
+                                <span class="broadcast_time">1 day ago</span>
+                            </span>
+                            <div class="live_left_end_text">Watch people dress up in different suit</div>
+
+                        </div>
+                        <img src="Images/MiniNinJa.jpg" alt="" class="live_img">
+                    </div>
+
+                    <div class="live_base">
+                        <div class="live_left_base">
+                            <div class="live_left_title" title="Click to buy" onclick="Error_open()">Fi 2023</div>
+                            <div class="live_left_text">Goaaaaaal!!!</div>
+                            <span class="broadcast">Live-Stream / Broadcast
+                                <span class="broadcast_time">20 minutes ago</span>
+                            </span>
+                            <div class="live_left_end_text">(Too lazy to add more, do it for yourself!!!)</div>
+
+                        </div>
+                        <img src="Images/s_realse_slideimg_1.jpg" alt="" class="live_img">
+                    </div>
+                </div>
+
+
+                <div id="cotent_container" class="cotent_container">
+                    <div class="feature_title_base_common">
+                        <div class="feature_title">Content - Friday</div>
+                        <div class="feature_title_line"></div>
+                    </div>
+                    <div>
+                        <div class="cotent_base">
+                            <div class="cotent_text_container">
+                                <span style="color: #fff; font-size: 30px; margin: 20px 0 10px 20px; letter-spacing: 0.1em;">Mini Ninjas</span>
+                                <span style="color: orange; font-size: 13px; margin: 10px 0 5px 20px;">Decreption:</span>
+                                <p style="width: 55%; margin: 0 0 0 20px; line-height: 1.5em;" class="cotent_base_text">Mini Ninjas is a game that combines furious action with stealth and exploration for an experience that appeals to a wide audience across age groups and preferences. It’s an action-adventure with a strong focus on allowing the player freedom to explore the world and has the depth to allow for very varied gameplay and approaches to getting through the game.</p>
+                            </div>
+                            <img src="Images/minininjaGif.gif" alt="" class="cotent_gif">
+
+                        </div>
+                        <div class="cotent_like_base">
+                            <div class="cotent_like">
+                                <!-- <img src="Images/like_button.png" alt="" id="like_img" class="like_img" onclick="alert('Thank you for ur like')"> -->
+                                <img src="Images/like_button.png" alt="" id="like_img" class="like_img" onmouseenter="close" onclick="like_dislike()">
+
+                                <div id="like_text" name class="like_text">0</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="cotent_base">
+                            <div class="cotent_text_container">
+                                <span style="color: #fff; font-size: 30px; margin: 20px 0 10px 20px; letter-spacing: 0.1em;">Age of Empires II: Definitive Edition</span>
+                                <span style="color: orange; font-size: 13px; margin: 0 0 5px 20px;">Decreption:</span>
+                                <p style="font-size: 12px; width: 59%; margin: 0 0 0 20px; line-height: 1.2em;" class="cotent_base_text">Age of Empires II: Definitive Edition celebrates the 20th anniversary of one of the most popular strategy games ever, now with stunning 4K Ultra HD graphics, and a fully remastered soundtrack. Age of Empires II: DE features <i style="font-weight: bold;">“The Last Khans”</i> with 3 new campaigns and 4 new Civilizations. Frequent updates include events, additional content, new game modes, and enhanced features with the recent addition of Co-Op mode! <br><br>
+
+                                    Explore all the original Campaigns and the best-selling expansions like never before. With over 200 hours of gameplay and 1,000 years of human history, improved experiences await. Head online to challenge other players in your quest for world domination with 35 different Civilizations. You can also experience new Civilizations and Campaigns with the Lords of the West DLC! Recent updates include a Battle Royale game mode, ongoing support for the Scenario Editor, Quick Play for easy social games, enhancements to the game UI, and more! <br><br>
+
+                                    Choose your path to greatness with an eye-catching and engaging remaster to one of the most beloved strategy games of all time.</p>
+                            </div>
+                            <img src="Images/ageOfEmpire_img.png" alt="" class="cotent_gif">
+
+                        </div>
+                        <div class="cotent_like_base">
+                            <div class="cotent_like">
+                                <!-- <img src="Images/like_button.png" alt="" id="like_img" class="like_img" onclick="alert('Thank you for ur like')"> -->
+                                <img src="Images/like_button.png" alt="" id="like_img" class="like_img" onmouseenter="close" onclick="like_dislike()">
+
+                                <div id="like_text" name class="like_text">0</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="cotent_base">
+                            <div class="cotent_text_container">
+                                <span style="color: #fff; font-size: 30px; margin: 20px 0 10px 20px; letter-spacing: 0.1em;">Five Nights at Freddy's</span>
+                                <span style="color: orange; font-size: 13px; margin: 0 0 5px 20px;">Decreption:</span>
+                                <p style="font-size: 12px; width: 55%; margin: 0 0 0 20px; line-height: 1.2em;" class="cotent_base_text">Welcome to your new summer job at <span style="font-weight: bold;">Freddy Fazbear's Pizza</span>, where kids and parents alike come for entertainment and food as far as the eye can see! The main attraction is <span style="color: #fbb4b4;">Freddy Fazbear</span>, of course; and his two friends. They are animatronic robots, programmed to please the crowds! The robots' behavior has become somewhat unpredictable at night however, and it was much cheaper to hire you as a security guard than to find a repairman. From your small office you must watch the security cameras carefully. You have a very limited amount of electricity that you're allowed to use per night (corporate budget cuts, you know). That means when you run out of power for the night- no more security doors and no more lights! If something isn't right- namely if Freddybear or his friends aren't in their proper places, you must find them on the monitors and protect yourself if needed!</p>
+                                <span style="color: rgb(249, 175, 175); margin: 5px 0 0 20px;">Can you survive five nights at Freddy's?</span>
+                            </div>
+                            <img src="Images/fnaf_origin.jpg" alt="" class="cotent_gif">
+
+                        </div>
+                        <div class="cotent_like_base">
+                            <div class="cotent_like">
+                                <!-- <img src="Images/like_button.png" alt="" id="like_img" class="like_img" onclick="alert('Thank you for ur like')"> -->
+                                <img src="Images/like_button.png" alt="" id="like_img" class="like_img" onmouseenter="close" onclick="like_dislike()">
+
+                                <div id="like_text" name class="like_text">0</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="release_container" class="release_container">
+                    <div class="feature_title_base_common">
+                        <div class="feature_title">Release Date</div>
+                        <div class="feature_title_line"></div>
+                    </div>
+                    <div class="release_base">
+                        <div class="release_gif_button left_button" onclick="plusDivs(-1)">&#10094;</div>
+
+                        <dvi class="release_gif_base">
+                            <div class="gif_base release_gif_base_0">
+                                <img src="Images/MiniNinJa.jpg" alt="" class="release_gif_0">
+                            </div>
+
+                            <div class="gif_base release_gif_base_1">
+                                <img src="Images/minininja_gif_1.gif" alt="" class="release_gif_1">
+                            </div>
+
+                            <div class="gif_base release_gif_base_2">
+                                <img src="Images/minininja_gif_2.gif" alt="" class="release_gif_2">
+                            </div>
+
+                            <div class="gif_base release_gif_base_3">
+                                <img src="Images/minininja_gif_3.gif" alt="" class="release_gif_4">
+                            </div>
+
+                            <div class="gif_base release_gif_base_4">
+                                <img src="Images/minininja_gif_4.gif" alt="" class="release_gif_5">
+                            </div>
+
+                            <div class="gif_base release_gif_base_5">
+                                <img src="Images/minininja_gif_5.gif" alt="" class="release_gif_6">
+                            </div>
+                        </dvi>
+
+                        <div class="release_gif_button right_button" onclick="plusDivs(1)">&#10095;</div>
+                    </div>
+                    <div class="release_count">
+                        <div class="release_item" onclick="showDivs(1)"></div>
+                        <div class="release_item" onclick="showDivs(1)"></div>
+                        <div class="release_item" onclick="showDivs(1)"></div>
+                        <div class="release_item" onclick="showDivs(1)"></div>
+                        <div class="release_item" onclick="showDivs(1)"></div>
+                        <div class="release_item" onclick="showDivs(1)"></div>
+                    </div>
+                </div>
+
+
+                <div id="sales_container" class="sales_container">
+                    <div class="feature_title_base_common">
+                        <div class="feature_title">Sales - check out</div>
+                        <div class="feature_title_line"></div>
+                    </div>
+                    <div class="sales_base">
+                        <div class="sales_item item_1">Mini Ninjas
+                            <div class="sales_item_showcase item_showcase_1">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/MiniNinJa.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> PIV/Athlon 3.2ghz or higher processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 512MB system RAM (1GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> ATI Radeon X1300 or higher / Nvidia Geforce 6600 or higher (shader model 3 required) graphics card</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel/Athlon Dual Core Processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1024MB system RAM (2GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> ATI Radeon X1300 or higher / Nvidia Geforce 6600 or higher (shader model 3 required)</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_2">Five Nights at Freddy's
+                            <div class="sales_item_showcase item_showcase_2">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/fnaf_origin.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> XP,Vista,Windows7</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2 GHz Intel Pentium 4 or AMD Athlon or equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> 1 GB</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text">  Version 9.0</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> 250 MB available space</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_3">Age of Empires II: <span style="font-size: 15px;">Definitive Edition</span>
+                            <div class="sales_item_showcase item_showcase_3">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/ageOfEmpire_img.png" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel Core 2 Duo or AMD Athlon 64x2 5600+</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 4 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> NVIDIA® GeForce® GT 420 or ATI™ Radeon™ HD 6850 or Intel® HD Graphics 4000 or better with 2 GB VRAM</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span><br>
+                                        <span class="showcase_decreption_base_topic">Additional Notes:</span><span class="showcase_decreption_text"> 2GB of video memory + 4GB of system memory required</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <br><br>
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2.4 Ghz i5 or greater or AMD equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 8 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> Nvidia® GTX 650 or AMD HD 5850 or better</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_4">Street Fighter™ 6
+                            <div class="sales_item_showcase item_showcase_4">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/s_index_slideimge_1.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> PIV/Athlon 3.2ghz or higher processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 512MB system RAM (1GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> GTX1060 (VRAM 6GB) / Radeon RX 580 (VRAM 4GB)</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel/Athlon Dual Core Processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1024MB system RAM (2GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> ATI Radeon X1300 or higher / Nvidia Geforce 6600 or higher (shader model 3 required)</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_5">Call of Duty SEASON 04
+                            <div class="sales_item_showcase item_showcase_5">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/s_index_slideimge_2.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> XP,Vista,Windows7</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2 GHz Intel Pentium 4 or AMD Athlon or equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> 1 GB</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text">  Version 9.0</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> 250 MB available space</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_3">Counter Strike
+                            <div class="sales_item_showcase item_showcase_3">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/s_index_slideimge_5.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel Core 2 Duo or AMD Athlon 64x2 5600+</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 4 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> NVIDIA® GeForce® GT 420 or ATI™ Radeon™ HD 6850 or Intel® HD Graphics 4000 or better with 2 GB VRAM</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span><br>
+                                        <span class="showcase_decreption_base_topic">Additional Notes:</span><span class="showcase_decreption_text"> 2GB of video memory + 4GB of system memory required</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <br><br>
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2.4 Ghz i5 or greater or AMD equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 8 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> Nvidia® GTX 650 or AMD HD 5850 or better</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_1">Mini Ninjas
+                            <div class="sales_item_showcase item_showcase_1">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/MiniNinJa.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> PIV/Athlon 3.2ghz or higher processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 512MB system RAM (1GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> ATI Radeon X1300 or higher / Nvidia Geforce 6600 or higher (shader model 3 required) graphics card</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel/Athlon Dual Core Processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1024MB system RAM (2GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> ATI Radeon X1300 or higher / Nvidia Geforce 6600 or higher (shader model 3 required)</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_2">Five Nights at Freddy's
+                            <div class="sales_item_showcase item_showcase_2">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/fnaf_origin.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> XP,Vista,Windows7</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2 GHz Intel Pentium 4 or AMD Athlon or equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> 1 GB</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text">  Version 9.0</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> 250 MB available space</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_3">Age of Empires II: <span style="font-size: 15px;">Definitive Edition</span>
+                            <div class="sales_item_showcase item_showcase_3">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/ageOfEmpire_img.png" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel Core 2 Duo or AMD Athlon 64x2 5600+</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 4 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> NVIDIA® GeForce® GT 420 or ATI™ Radeon™ HD 6850 or Intel® HD Graphics 4000 or better with 2 GB VRAM</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span><br>
+                                        <span class="showcase_decreption_base_topic">Additional Notes:</span><span class="showcase_decreption_text"> 2GB of video memory + 4GB of system memory required</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <br><br>
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2.4 Ghz i5 or greater or AMD equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 8 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> Nvidia® GTX 650 or AMD HD 5850 or better</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_4">Street Fighter™ 6
+                            <div class="sales_item_showcase item_showcase_4">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/s_index_slideimge_1.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> PIV/Athlon 3.2ghz or higher processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 512MB system RAM (1GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> GTX1060 (VRAM 6GB) / Radeon RX 580 (VRAM 4GB)</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel/Athlon Dual Core Processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1024MB system RAM (2GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> ATI Radeon X1300 or higher / Nvidia Geforce 6600 or higher (shader model 3 required)</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_5">Call of Duty SEASON 04
+                            <div class="sales_item_showcase item_showcase_5">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/s_index_slideimge_2.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> XP,Vista,Windows7</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2 GHz Intel Pentium 4 or AMD Athlon or equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> 1 GB</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text">  Version 9.0</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> 250 MB available space</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_3">Counter Strike
+                            <div class="sales_item_showcase item_showcase_3">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/s_index_slideimge_5.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel Core 2 Duo or AMD Athlon 64x2 5600+</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 4 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> NVIDIA® GeForce® GT 420 or ATI™ Radeon™ HD 6850 or Intel® HD Graphics 4000 or better with 2 GB VRAM</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span><br>
+                                        <span class="showcase_decreption_base_topic">Additional Notes:</span><span class="showcase_decreption_text"> 2GB of video memory + 4GB of system memory required</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <br><br>
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2.4 Ghz i5 or greater or AMD equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 8 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> Nvidia® GTX 650 or AMD HD 5850 or better</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_1">Mini Ninjas
+                            <div class="sales_item_showcase item_showcase_1">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/MiniNinJa.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> PIV/Athlon 3.2ghz or higher processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 512MB system RAM (1GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> ATI Radeon X1300 or higher / Nvidia Geforce 6600 or higher (shader model 3 required) graphics card</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel/Athlon Dual Core Processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1024MB system RAM (2GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> ATI Radeon X1300 or higher / Nvidia Geforce 6600 or higher (shader model 3 required)</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_2">Five Nights at Freddy's
+                            <div class="sales_item_showcase item_showcase_2">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/fnaf_origin.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> XP,Vista,Windows7</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2 GHz Intel Pentium 4 or AMD Athlon or equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> 1 GB</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text">  Version 9.0</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> 250 MB available space</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_3">Age of Empires II: <span style="font-size: 15px;">Definitive Edition</span>
+                            <div class="sales_item_showcase item_showcase_3">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/ageOfEmpire_img.png" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel Core 2 Duo or AMD Athlon 64x2 5600+</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 4 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> NVIDIA® GeForce® GT 420 or ATI™ Radeon™ HD 6850 or Intel® HD Graphics 4000 or better with 2 GB VRAM</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span><br>
+                                        <span class="showcase_decreption_base_topic">Additional Notes:</span><span class="showcase_decreption_text"> 2GB of video memory + 4GB of system memory required</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <br><br>
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2.4 Ghz i5 or greater or AMD equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 8 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> Nvidia® GTX 650 or AMD HD 5850 or better</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_4">Street Fighter™ 6
+                            <div class="sales_item_showcase item_showcase_4">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/s_index_slideimge_1.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> PIV/Athlon 3.2ghz or higher processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 512MB system RAM (1GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> GTX1060 (VRAM 6GB) / Radeon RX 580 (VRAM 4GB)</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows XP and Vista</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel/Athlon Dual Core Processor</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1024MB system RAM (2GB Vista)</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> ATI Radeon X1300 or higher / Nvidia Geforce 6600 or higher (shader model 3 required)</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text"> 5.85GB free space</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> DirectX 9 compatible sound card</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_5">Call of Duty SEASON 04
+                            <div class="sales_item_showcase item_showcase_5">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/s_index_slideimge_2.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> XP,Vista,Windows7</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2 GHz Intel Pentium 4 or AMD Athlon or equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 1 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> 1 GB</span><br>
+                                        <span class="showcase_decreption_base_topic">Hard Drive:</span><span class="showcase_decreption_text">  Version 9.0</span><br>
+                                        <span class="showcase_decreption_base_topic">Sound:</span><span class="showcase_decreption_text"> 250 MB available space</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales_item item_3">Counter Strike
+                            <div class="sales_item_showcase item_showcase_3">
+                                <div class="sales_item_showcase_img_base">
+                                    <img src="Images/s_index_slideimge_5.jpg" alt="" class="sales_item_showcase_img">
+                                </div>
+                                <div class="sales_item_showcase_decreption">
+                                    <div class="showcase_decreption_base">
+                                        <span class="showcase_decreption_base_title">MINIMUM:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> Intel Core 2 Duo or AMD Athlon 64x2 5600+</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 4 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> NVIDIA® GeForce® GT 420 or ATI™ Radeon™ HD 6850 or Intel® HD Graphics 4000 or better with 2 GB VRAM</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span><br>
+                                        <span class="showcase_decreption_base_topic">Additional Notes:</span><span class="showcase_decreption_text"> 2GB of video memory + 4GB of system memory required</span>
+                                    </div>
+                                    <div class="showcase_decreption_base">
+                                        <br><br>
+                                        <span class="showcase_decreption_base_title">RECOMMENDED:</span><br>
+                                        <span class="showcase_decreption_base_topic">OS:</span><span class="showcase_decreption_text"> Windows 10 64bit</span><br>
+                                        <span class="showcase_decreption_base_topic">Processor:</span><span class="showcase_decreption_text"> 2.4 Ghz i5 or greater or AMD equivalent</span><br>
+                                        <span class="showcase_decreption_base_topic">Memory:</span><span class="showcase_decreption_text"> 8 GB RAM</span><br>
+                                        <span class="showcase_decreption_base_topic">Graphics:</span><span class="showcase_decreption_text"> Nvidia® GTX 650 or AMD HD 5850 or better</span><br>
+                                        <span class="showcase_decreption_base_topic">DirectX:</span><span class="showcase_decreption_text"> Version 11</span><br>
+                                        <span class="showcase_decreption_base_topic">Network:</span><span class="showcase_decreption_text"> Broadband Internet connection</span><br>
+                                        <span class="showcase_decreption_base_topic">Storage:</span><span class="showcase_decreption_text"> 15 GB available space</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="story_container" class="story_container">
+                    <div class="feature_title_base_common">
+                        <div class="feature_title">Story time!</div>
+                        <div class="feature_title_line"></div>
+                    </div>
+
+                    <div class="story_guide_base">
+                        <span class="story_guide_base_backgound_text">Tips & Tricks</span>
+                        <div class="story_guide_base_top">
+                            <div class="story_guide_items guide_HowToPlay">
+                                <span class="story_guide_title">HowToPlay</span><br>
+                                <span class="story_guide_text howtoPlay_text">Find clue anywhere in the page u r currently in! Then answer what that page need</span>
+                            </div>
+
+                            <div class="story_guide_items guide_ToClick">
+                                <span class="story_guide_title">Hint</span><br>
+                                <span class="story_guide_text hint_text">Pass1: Its cool to "close all of it" sometime</span>
+                            </div>
+
+                            <div class="story_guide_items guide_Note">
+                                <span class="story_guide_title">Answer</span><br>
+                                <span class="story_guide_text anwser_text">Pass_num_1: HeLLoMe</span><br>
+                                <span class="story_guide_text anwser_text">Pass_num_2: 6 words "Ninjjas"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Story_puzzle_base">
+                        <div id="story_page_1_base" class="story_page_1_base">
+                            <span class="story_page_title">Password?</span>
+                            <div class="steammid_side_base_title">Pass is...</div>
+                            <input type="text" name="story_pass_1" id="story_pass_1" class="steammid_side_type">
+
+                            <div class="story_button page_1_bttn" onclick="PassWord1()">Check</div>
+                        </div>
+
+                        <div id="story_page_2_base" class="story_page_2_base">
+                            <div class="story_page_2_contain">
+                                <div class="steammid_side_base_title">How many "Ninjjas" do u see?</div>
+                                <input type="number" name="story_pass_2" id="story_pass_2" class="steammid_side_type">
+                                <br><br>
+
+                                <div class="steammid_side_base_title">What is the theme of this website??</div>
+                                <input type="text" name="story_pass_3" id="story_pass_3" class="steammid_side_type">
+
+                                <div class="story_button page_1_bttn" onclick="PassWord2()">Check</div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="PassWord_1">
+                    <span style="font-size: 20px; color: #fff; text-align: center;">HeLLoMe</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="steamPart steamBottom">
+            <div class="SBottom_common steamBottom_part2">
+                <div class="sbot_part2_common sbot_part2_1">
+                    <!-- <a href="https://tigobiz.com" target="_blank">
+                    <img src="https://tigobiz.com/wp-content/uploads/2020/11/TRUNG-01-logo-ngang-keo-sat-280-87-150x47.png" alt="logo Tigobiz" /></a> -->
+                    <!-- <a href="https://tigobiz.com" target="_blank" title="Click để vào Webstie tigobiz.com">Dịch vụ Marketing Online Tigobiz</a> -->
+                        <a href="https://www.valvesoftware.com/fr/" title="VALV" class="sb2_1_valve_link">
+                            <img src="Images/s_bottom_logo_1.png" alt="" class="sb2_1_valve_img">
+                        </a>
+                        <div class="sb2_1_dereption">
+                            <p class="sb2_1decreption_text">© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+                                VAT included in all prices where applicable.</p>
+                            <div class="sb2_1decreption_link">
+                                <a href="" title="Privacy Policy" class="sb2_1_link">Privacy Policy</a>
+                                <a href="" title="Legal" class="sb2_1_link">Legal</a>
+                                <a href="" title="Steam Subsctiber Agreement" class="sb2_1_link">Steam Subsctiber Agreement</a>
+                                <a href="" title="Refunds" class="sb2_1_link">Refunds</a>
+                                <a href="" title="Cookies" class="sb2_1_link">Cookies</a>
+                            </div>
+                        </div>
+                        <img src="Images/s_bottom_logo_2.png" alt="" class="sb2_1_steamImg">
+                </div>
+                <div class="sbot_part2_common sbot_part2_2">
+                    <div class="sb2_2decreption_link">
+                        <a href="" class="sb2_2_link">About Valve</a>
+                        <a href="" class="sb2_2_link">Jobs</a>
+                        <a href="" class="sb2_2_link">Steamworks</a>
+                        <a href="" class="sb2_2_link">Steam Distribution</a>
+                        <a href="" class="sb2_2_link">Support</a>
+                        <a href="" class="sb2_2_link">Recycling</a>
+                        <a href="" class="sb2_2_link">Gift Cards</a>
+                        <img src="Images/s_faceLogo.png" alt="" class="sb2_2_image sb2_2_faceImg">
+                        <a href="https://www.facebook.com/Steam" class="sb2_2_link sb2_2_facelink">Steam</a>
+                        <img src="Images/s_twitterLogo.png" alt="" class="sb2_2_image sb2_2_twitterImg">
+                        <a href="https://twitter.com/steam" class="sb2_2_link">@steam</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Not_Sgin_in" class="Not_Sgin_in">
+        <div class="Not_Sgin_in_background"></div>
+        <div class="Not_Sgin_in_base">
+            <div style="display: flex; flex-direction: column; margin-top: 30px; margin-left: 20px;">
+                <div class="Not_Sgin_in_close">
+                    <img src="Images/s_closeButton.png" alt="" class="Not_Sgin_in_close_img" onclick="Error_close()">
+                </div>
+
+                <div class="Not_Sgin_in_title">Not signed in</div>
+                <div class="Not_Sgin_in_text">To use this feature, you first need to sign into Steam</div>
+                <div class="Not_Sgin_in_button_container">
+                    <a href="Steam_login.html" class="signin_button">Sign In</a>
+                    <button class="cancel_button" onclick="Error_close()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cách viết script trong phần body -->
+    <!-- <script language="javascript">
+        document.getElementById('action').onclick = function(e){
+            if (this.checked){
+                alert("Bạn vừa thích freetuts.net");
+            }
+            else{
+                alert("Bạn vừa bỏ thích freetuts.net");
+            }
+        };
+    </script> -->
+
+    </body>
+</html>
+

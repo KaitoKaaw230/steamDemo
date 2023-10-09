@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam, The Ultimate Online Game Platform</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="C:\Users\PC\OneDrive\Desktop\Thực tập_jobs\SteamHtml\Images\steamLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <!-- body -->
+    <style>
+        body{   
+            /* height: 2500px; */
+            height: 3700px;
+            width: auto;
+            position: relative;
+            /* cursor: url("trỏ\ chuột\ ori.jpg"),auto; */
+        }
+    </style>
+    
+
+    <!-- toplogo -->
+    <style>
+        .steamTop{
+            width: 100%;
+            height: 100px;
+            background-color: #171a21;
+            display: flex;
+            justify-content: space-around;
+        }
+        .sTop_choise{
+            width: 800px;
+            
+            margin-left: 50px;
+            display: flex;
+            justify-content: start;
+        }
+        .sTop_avatar_link{}
+        .sTop_avatar_image{
+            margin-top: 25px;
+            width: 160px;
+            height: 50px;
+            margin-left: 80px;
+            margin-right: -10px;
+        }
+        .sTop_choise_choises{
+            
+            margin-top: 25px;
+            /* background-color: red; */
+            margin-left: 70px;
+            width: 450px;
+            height: 50px;
+            
+        }
+        .st_choises_common{
+            text-decoration: none;
+            height: 30px;
+            width: auto;
+            font-size: 15px;
+            margin: 18px 0 0 0;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: relative;
+        }
+        .st_choises_common:hover{color: #fff;}
+        .st_choises_store{}
+        .st_choises_comunity{}
+        .st_choises_about{margin-left: 6px;}
+        .st_choises_support{margin-left: 6px;}
+
+        .st_pop{
+            /* box-shadow: 1px 1px 0.5px 1px; */
+            position: absolute;
+            background-color: #171a21;
+            display: none;
+            /* flex-direction: column; */
+            justify-content: start;
+            box-shadow: 3px 3px 5px -3px #000;
+	        text-align: left;
+            columns: 1;
+        }
+        .st_store_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px; 
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .st_community_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px; 
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        
+
+        .st_choises_store:hover .st_store_pop{display: block;}
+        .st_choises_comunity:hover .st_community_pop{display: block;}
+        .st_pop:last-child{margin-bottom: 10px;}
+        .st_store_pop{width: 127px; height: 165px;}
+        .st_community_pop{width: 100px; height: 145px;}
+        .pop_text{
+            color: #b8b6b4;
+            font-size: 11px;
+            padding: 7px 10px 7px 10px;
+            
+            text-decoration: none;
+        }
+        .pop_text:first-child{padding-top: 12px;}
+        .pop_text:hover{color: #fff;}
+        .store_pop{}
+        .community_pop{}
+    </style>
+    <!-- topinstall -->
+    <style>
+        .sTop_login{
+            width: 200px;
+            margin-left: -100px;
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        .st_login_install{
+            margin-top: 5px;
+            width: 100px;
+            height: 24px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #5c7e10;
+        }
+        .stlogin_install_image{
+            margin: 2px 2px 2px 0;
+            width: 20px;
+            height: 20px;
+        }
+        .stlogin_install_text{
+            margin-top: 6px;
+            color: #e5e4dc;
+            font-size: 10px;
+        }
+        .st_login_install:hover .stlogin_install_text{color: #fff;}
+        
+        .st_login_button{
+            font-size: 15px;
+            margin: 8px 5px 0 5px;
+            height: 24px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .st_seperate{
+            margin-top: 10px;
+            height: 14px;
+            width: 0.5px;
+            background-color: #b8b6b4;
+        }
+        .st_languge_button{
+            /* border-left: thick solid #b8b6b4; */
+            margin-top: 8px;
+            height: 18px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        .st_login_button:hover{color: #fff;}
+        .st_languge_button:hover{color: #fff;}
+    </style>
+
+
+    <!-- bottom 1-->
+    <style>
+        .steamBottom{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 400px;
+            /* background-color: blue; */
+        }
+        .SBottom_common{}
+        .steamBottom_part1{
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: #262a30;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* flex-direction: column; */
+            /* align-items: center;
+            text-align: center; */
+        }
+        .sBotPart1_text{
+            margin: 10px 0 10px 0;
+            font-family: 'Motiva Sans';
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            user-select: none;
+        }
+        .sBotPart1_text_Link{
+            margin: 10px 0 10px 0;
+            font-family: 'Motiva Sans';
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+        }
+        .sBotPart1_Link:hover{color: #66c0f4;}
+        .sBotPart1_Link{
+            margin: 10px 0 10px 0;
+            font-family: 'Motiva Sans';
+            text-decoration: none;
+            font-size: 18px;
+            color: #1A97FF;
+        }
+        .sBotPart1_options{
+            margin: 10px 0 10px 0;
+            height: 100px;
+            width: 800px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .sBotPart1_options_common{
+            user-select: none;
+            cursor: pointer;
+            margin: 10px 0 0 0;
+            text-align: center;
+            width: 250px;
+            height: 50px;
+            background-color: #1a98ff;
+            color: #fff;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 50px;
+            font-family: 'Motiva Sans';
+        }
+        .sBotPart1_options_common:hover{background-color: #50affd;}
+    </style>
+    <!-- bottom 2-->
+    <style>
+        .steamBottom_part2{
+            position: relative;
+            width: 100%;
+            height: 165px;
+            background-color: #171a21;
+            bottom: 0;
+        }
+        .sbot_part2_common{
+            position: absolute;
+            margin: 0 0 0 250px;
+            height: 60px;
+            width: 1000px;
+        }
+        .sbot_part2_1{
+            top: 20px;
+            /* background-color: red; */
+            display: flex;
+            justify-content: space-around;
+            border-top: #363c44 solid 1px;
+            border-bottom: #363c44 solid 1px;
+        }
+        
+        
+
+        .sb2_1_valve_link{}
+        .sb2_1_valve_img{
+            margin: 10px 0 10px 0;
+            width: 100px;
+            height: 40px;
+        }
+        .sb2_1_dereption{
+            margin: 10px 0 10px 0;
+            height: 40px;
+            width: 800px;
+            /* background-color: yellow; */
+        }
+        .sb2_1_steamImg{
+            margin: 15px 0 15px 0;
+            width: 100px;
+            height: 30px;
+        }
+        .sb2_1decreption_text{
+            position: absolute;
+            font-family: sans-serif;
+            color: #8f98a0;
+            font-size: 12px;
+            width: 780px;
+            margin: 14px 10px 0 10px;
+            top: 0;
+
+            /* visibility: hidden; */
+        }
+        .sb2_1decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 263px;
+            width: 600px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_1_link{
+            margin-top: 10px;
+            justify-content: end;
+            text-decoration: none;
+            color: #c6d4df;
+            padding: 0 5px 0 5px;
+            font-size: 14px;
+            border-right: #c6d4df solid 1px;
+        }
+        .sb2_1_link:last-child{border: none;}
+        .sb2_1_link:hover{color: #fff;}
+
+
+        .sbot_part2_2{
+            position: relative;
+            top: 80px;
+            /* background-color: blue; */
+        }
+        .sb2_2decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 800px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_2_link{
+            text-decoration: none;
+            color: #c6d4df;
+            font-size: 14px;
+            padding: 0 7px 0 5px;
+            margin-top: 20px;
+            border-right: #c6d4df solid 1px;
+            /* visibility: hidden; */
+        }
+        .sb2_2_link:last-child{margin-left: -4px; border: none;}
+        .sb2_2_link:hover{color: #fff;}
+        .sb2_2_facelink{margin-left: -4px;}
+        .sb2_2_image{
+            /* position: absolute; */
+            width: 15px;
+            height: 15px;
+        }
+        .sb2_2_faceImg{}
+        .sb2_2_twitterImg{
+            margin-left: 5px;
+        }
+    </style>
+
+    <!-- bottom 3-->
+    <style>
+        .steamBottom_part3{
+            width: 100%;
+            height: 35px;
+            background-color: #1f2f50;
+        }
+    </style>
+
+<!-- steamBaseTop -->
+<style>
+    .steamBaseTop{
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(130.49deg, #25282E 15.41%, #303641 59.02%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .steamBaseTop_title{
+        margin: 0 0 15px 0;
+        font-weight: 800;
+        font-size: 40px;
+        color: #fff;
+        font-style: normal;
+        
+        user-select: none;
+    }
+    .steamBaseTop_text{
+        margin: 0 0 15px 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 700;
+        font-size: 20px;
+        font-family: 'Motiva Sans';
+    }
+    .steamBaseTop_button{
+        margin: 0 0 10px 0;
+        height: 100px;
+        width: 600px;
+        display: flex;
+        justify-content: space-around;
+        /* background-color: red; */
+    }
+    .steamBaseTop_butt_commom{
+        margin-left: -9px;
+        margin-top: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+    .steamBaseTop_butt_link{
+        margin-top: 10px;
+        text-decoration: none;
+        height: 40px;
+        width: 150px;
+        background-color: #384252;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 50px;
+    }
+    .steamBaseTop_butt_commom_img{
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 24px;
+        height: 24px;
+    }
+</style>
+
+<!-- steamMobile_Base -->
+<style>
+    .steamMobile_Base{
+        height: 800px;
+        width: 100%;
+        background-color: gray;
+    }
+    .steamMobile_Base_part1{
+        /* background-color: red; */
+        height: 170px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+    }
+    .steamMobile_Base_part2{
+        background-color: #fff;
+        height: 630px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .steamMobile_Base_part2_img{
+        width: 940px;
+        height: 615px;
+
+    }
+    .steamMobile_Base_part1_title{
+        margin: 50px 0 0 350px;
+        font-weight: bold;
+        font-size: 52px;
+
+        color: #282C34;
+        user-select: none;
+    }
+    .steamMobile_Base_part1_derecption{
+        margin-left: 350px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        color: rgba(40, 44, 52, 0.7);
+    }
+    .steamMobile_Base_part1_img{
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        top: 400px;
+        left: 1180px;
+    }
+    
+</style>
+<!-- steammobile_decreption_Base -->
+<style>
+    .steammobile_decreption_Base{
+        width: 100%;
+        height: 440px;
+        display: flex;
+        justify-content: center;
+    }
+    .steammobile_decreption_Base_1{
+        margin: 20px 0 20px 0;
+        width: 550px;
+        height: 400px; 
+    }
+    .steammobile_decreption_Base_2{
+        margin: 20px 0 20px 0;
+        width: 550px;
+        height: 400px;
+    }
+    .steammobile_decreption_Base_1_title{
+        font-weight: bold;
+        line-height: 26px;
+        font-size: 20px;
+        /* margin: 24px 0 10px 0; */
+        color: #1E2024;
+        font-family: 'Motiva Sans';
+    }
+    .steammobile_decreption_Base_1_text{
+        line-height: 23px;
+        font-size: 16px;
+        color: rgba(40, 44, 52, 0.7);
+    }
+    .steammobile_decreption_Base_1_multitext_container{
+        list-style-position: outside;
+    }
+    .steammobile_decreption_Base_1_multitext{
+        font-size: 16px;
+        color: rgba(40, 44, 52, 0.7);
+    }
+</style>
+
+<!-- steamMobile_QR_Base -->
+<style>
+    .steamMobile_QR_Base{
+        height: 200px;
+        width: 1060px;
+        background-color: #f5f6f6;
+        margin-left: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .steamMobile_QR_Base_1stdecreption{
+        margin-top: 100px;
+        color: rgba(30, 32, 36, 0.5);
+        font-size: 12px;
+        text-align: center;
+        width: 150px;
+        height: 140px;
+        line-height: 17px;
+    }
+    .steamMobile_QR_Base_QR{
+        width: 140px;
+        height: 140px;
+    }
+    
+    .steamMobile_QR_Base_app_container{
+        width: 200px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .steamMobile_appStore{
+        width: 152px;
+        height: 51px;
+    }
+    .steamMobile_CHPlay{
+        margin-top: 15px;
+        width: 202px;
+        height: 78px;
+    }
+    .steamMobile_QR_Base_2decreption_container{
+        /* background-color: blue; */
+        width: 230px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .steamMobile_2decreption_text{
+        color: rgba(30, 32, 36, 0.5);
+        font-size: 12px;
+        text-align: center;
+        line-height: 17px;
+    }
+    .steamMobile_2decreption_link:hover{color: #66c0f4;}
+    .steamMobile_2decreption_link{
+        text-decoration: none;
+        color: #1A97FF;
+    }
+    .steamMobile_2decreption_text:first-child{margin-top: 20px;}
+    .steamMobile_2decreption_text:last-child{margin-top: 50px;}
+</style>
+
+<!-- steamMobile_Link -->
+<style>
+    .steamMobile_Link{
+        margin-top: 100px;
+        width: 1503px;
+        /* width: 1180px; */
+        height: 645px;
+        background-image: url(Images/s_steamLink_background.png);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .steamMobile_Link_part_1{
+        
+        /* background-color: red; */
+        height: 600px;
+        width: 554px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .steamMobile_p1_img1{
+        width: 277px;
+        height: 127px;
+    }
+    .steamMobile_p1_img2{margin-top: 30px;}
+    .steamMobile_Link_part_2{
+        /* background-color: yellow; */
+        height: 600px;
+        width: 554px;
+        margin-left: 20px;
+    }
+    .steamMobile_Link_part_2_linktitle{
+        margin-top: 50px;
+        width: 350px;
+        display: flex;
+        justify-content: start;
+        margin-bottom: 10px;
+    }
+    .Linktitle_img{
+        width: 66px;
+        height: 66px;
+    }
+    .Linktitle_text{
+        font-weight: 900;
+        font-size: 40px;
+        color: #fff;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        user-select: none;
+    }
+    .steamMobile_Link_part_2_text{
+        color: #fff;
+        font-weight: 400;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .steamMobile_Link_part_2_steps{
+        margin-top: 30px;
+        line-height: 20px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .steamMobile_Link_part_2_apps_container{
+        margin-top: 80px;
+        width: 350px;
+        height: 100px;
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        align-items: center;
+    }
+    .steamLink_appStore{
+        width: 152px;
+        height: 51px;
+    }
+    .steamLink_CHPlay{
+        width: 202px;
+        height: 78px;
+    }
+    .steamMobile_onclick_Base{
+        width: 262px;
+        height: 400px;
+    }
+    .steamMobile_onclick_Base_part1{
+        user-select: none;
+        width: 262px;
+        height: 50px;
+        background-color: #1A98FF;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .steamMobile_onclick_Base_part2{
+        width: 262px;
+        height: 176px;
+        background-color: #1A98FF;
+        top: 2435px;
+        display: none;
+        position: absolute;
+    }
+    .steamMobile_onclick_Base_part2_containter{
+        width: 262px;
+        height: 176px;
+        background-color: #1A98FF;
+        display: flex;
+        flex-direction: column;
+    }
+    /* .steamMobile_onclick_Base_part1:hover .steamMobile_onclick_Base_part2{display: block;} */
+    .steamMobile_onclick_part2_items:hover{background-color: rgb(110, 187, 253);}
+    .steamMobile_onclick_part2_items{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 15px;
+        width: 250px;
+        padding: 7px 6px 7px 6px;
+        text-align: start;
+        cursor: pointer;
+    }
+    .steamMobile_onclick_part1_text{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 18px;
+        margin-left: 20px;
+        font-weight: bold;
+        
+    }
+
+    .steamMobile_onclick_part1_img{
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+    }
+    .endlink:hover{color: #66c0f4;}
+    .endlink{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #1A97FF; 
+        text-decoration: none;
+        position: absolute;
+        top: 2470px;
+        cursor: pointer;
+    }
+    
+</style>
+
+<!-- steamMobile_steamchat -->
+<style>
+    .steamMobile_steamchat{
+        /* background-color: red; */
+        width: 100%;
+        margin-top: 30px;
+        height: 700px;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .steamMobile_steamchat_1{
+        height: 400px;
+        width: 500px;
+        margin-left: 240px;
+    }
+    .steamMobile_steamchat_1_title{
+        width: 350px;
+        display: flex;
+        justify-content: start;
+        margin-bottom: 10px;
+    }
+    .steamchat_title_img{
+        width: 66px;
+        height: 66px;
+    }
+    .steamchat_title_text{
+        font-weight: 900;
+        font-size: 40px;
+        color: #000;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        user-select: none;
+    }
+    .steamMobile_steamchat_1_decrep{
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .steamMobile_steamchat_1_name{
+        font-weight: 700;
+        font-size: 20px;
+        margin: 24px 0 12px 0;
+        color: #1E2024;
+    }
+    .steamMobile_steamchat_1_qrBase{
+        width: 350px;
+        height: 100px;
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        align-items: center;
+    }
+    .steamMobile_steamchat_1_dowload{
+        color: #1e2024;
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .steamMobile_steamchat_1_dowLink:hover{color: #66c0f4;}
+    .steamMobile_steamchat_1_dowLink{
+        text-decoration: none;
+        color: #1A97FF;
+    }
+    .steamMobile_steamchat_2{
+        width: 300px;
+        height: 608px;
+        margin-right: 400px;
+    }
+</style>
+<!-- scrollbar -->
+<style>
+    ::-webkit-scrollbar {
+        height: 12px;
+        width: 14px;
+        background: rgba(0,0,0,0);
+        z-index: 12;
+        overflow: visible;
+    }
+    ::-webkit-scrollbar-corner {
+    background: #202020;
+}
+    ::-webkit-scrollbar-thumb {
+        width: 10px;
+        background-color: #434953;
+        border-radius: 10px;
+        z-index: 12;
+        border: 4px solid rgba(0,0,0,0);
+        background-clip: padding-box;
+        transition: background-color .32s ease-in-out;
+        margin: 4px;
+        min-height: 32px;
+        min-width: 32px;
+    }
+    ::selection {
+        background: #54a5d4;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.6666666667);
+        color: #fff;
+    }
+</style>
+<script type="text/javascript">
+
+	function ToggleDropdown()
+	{
+		let dropdownFlyout = document.getElementById("steamMobile_onclick_Base_part2");
+		if( dropdownFlyout.style.display == "flex" )
+		{
+			dropdownFlyout.style.display = "none";
+		}
+		else
+		{
+			dropdownFlyout.style.display = "flex";
+		}
+	}
+
+</script>
+
+
+</head>
+<body>
+    <div class="steamPart steamTop">
+            
+        <div class="sTop_choise">
+            <a href="Steam_index.html" class="sTop_avatar_link">
+                <img src="Images/s_avatar.png" alt="" class="sTop_avatar_image">
+            </a>
+
+            <div class="sTop_choise_choises">
+                <button class="st_choises_common st_choises_store">
+                    STORE
+                    <div class="st_pop st_store_pop">
+                        <div class="st_store_pop_contain">
+                            <a href="" class="pop_text store_pop">HOME</a>
+                            <a href="" class="pop_text store_pop">DISCOVERY QUEUE</a>
+                            <a href="" class="pop_text store_pop">WISHLIST</a>
+                            <a href="" class="pop_text store_pop">POINTS SHOP</a>
+                            <a href="Steam_newAndFeature.html" class="pop_text store_pop">NEWS</a>
+                            <a href="" class="pop_text store_pop">STATS</a>
+                        </div>
+                    </div>
+                </button>
+                <button class="st_choises_common st_choises_comunity">
+                    COMMUNITY
+                    <div class="st_pop st_community_pop">
+                        <div class="st_community_pop_contain">
+                            <a href="" class="pop_text community_pop">HOME</a>
+                            <a href="" class="pop_text community_pop">DISCUSSIONS</a>
+                            <a href="" class="pop_text community_pop">WORKSHOP</a>
+                            <a href="" class="pop_text community_pop">MARKET</a>
+                            <a href="" class="pop_text community_pop">BROADCASTS</a>
+                        </div>
+                    </div>
+                </button>
+                <a href="" class="st_choises_common st_choises_about">ABOUT</a>
+                <a href="" class="st_choises_common st_choises_support">SUPPORT</a>
+                <!-- <button class="st_choises_common st_choises_about">ABOUT</button>
+                <button class="st_choises_common st_choises_support">SUPPORT</button> -->
+            </div>
+        </div>
+
+        <div class="sTop_login">
+            <div class="st_login_install">
+                <img src="Images/s_install_image.png" alt="" class="stlogin_install_image">
+                <h class="stlogin_install_text">Install Steam</h>
+            </div>
+            <a href="Steam_login.html" class="st_login_button">login</a>
+            <!-- <button class="st_login_button">login</button> -->
+            <div class="st_seperate"></div>
+            <button class="st_languge_button">language</button>
+        </div>
+    </div>
+
+    <div class="SteamContainer">
+        <div class="steamBaseTop">
+            <h class="steamBaseTop_title">We've Got Apps</h>
+            <h class="steamBaseTop_text">Stay connected from anywhere. Check out the 3 mobile apps from Steam below.</h>
+            <div class="steamBaseTop_button">
+                <a href="" class="steamBaseTop_butt_link">
+                    <img src="Images/s_mobileSteam_Logo_1.png" alt="" class="steamBaseTop_butt_commom_img">
+                    <span class="steamBaseTop_butt_commom">Steam mobile</span>
+                </a>
+                <a href="" class="steamBaseTop_butt_link">
+                    <img src="Images/s_mobileSteam_Logo_2.png" alt="" class="steamBaseTop_butt_commom_img">
+                    <span class="steamBaseTop_butt_commom">Steam Link</span>
+                </a>
+                <a href="" class="steamBaseTop_butt_link">
+                    <img src="Images/s_mobileSteam_Logo_3.png" alt="" class="steamBaseTop_butt_commom_img">
+                    <span class="steamBaseTop_butt_commom">Steam Chat</span>
+                </a>
+                
+            </div>
+        </div>
+        <div class="steamMobile_Base">
+            <div class="steamMobile_Base_part1">
+                <p class="steamMobile_Base_part1_title">Steam Mobile</p>
+                <h class="steamMobile_Base_part1_derecption">Buy games, protect your Steam account, and get the latest news from your games and the community.</h>
+                <img src="Images/s_steamMobile_img.png" alt="" class="steamMobile_Base_part1_img">
+            </div>
+            <div class="steamMobile_Base_part2">
+                <img src="Images/s_steamMobile_Phone_img.png" alt="" class="steamMobile_Base_part2_img">
+            </div>
+        </div>
+
+        <div class="steammobile_decreption_Base">
+            <div class="steammobile_decreption_Base_1">
+                <h class="steammobile_decreption_Base_1_title">Steam Guard</h>
+                <p class="steammobile_decreption_Base_1_text">Protect your Steam account and make login faster.</p>
+                <ul class="steammobile_decreption_Base_1_multitext_container">
+                    <li class="steammobile_decreption_Base_1_multitext">Sign in to Steam by scanning a QR code</li>
+                    <li class="steammobile_decreption_Base_1_multitext">Confirm your sign ins with one touch</li>
+                    <li class="steammobile_decreption_Base_1_multitext">Use your phone as your password</li>
+                </ul>
+                    
+                <h class="steammobile_decreption_Base_1_title">Trade and Market Confirmations</h>
+                <p class="steammobile_decreption_Base_1_text">Speed up item trades and sales by using your phone to confirm them.</p>
+                <h class="steammobile_decreption_Base_1_title">Notifications</h>
+                <p class="steammobile_decreption_Base_1_text">Customize your Steam notifications: wishlist, comments, trades, discussions, friend requests, and more.</p>
+            </div>
+            <div class="steammobile_decreption_Base_2">
+                <h class="steammobile_decreption_Base_1_title">Shop Steam</h>
+                <p class="steammobile_decreption_Base_1_text">Browse the Steam catalog of Windows, Mac, and Linux titles from your phone. Never miss a sale again.</p>
+                <h class="steammobile_decreption_Base_1_title">Plus</h>
+                <ul class="steammobile_decreption_Base_1_multitext_container">
+                    <li class="steammobile_decreption_Base_1_multitext">A personalized News feed based on your Library</li>
+                    <li class="steammobile_decreption_Base_1_multitext">Support for multiple accounts in the app</li>
+                    <li class="steammobile_decreption_Base_1_multitext">Support for multiple accounts on the authenticator</li>
+                    <li class="steammobile_decreption_Base_1_multitext">A new Library view</li>
+                    <li class="steammobile_decreption_Base_1_multitext">Community, Discussions, Market, and more</li>
+                </ul>
+                
+            </div>
+        </div>
+
+        <div class="steamMobile_QR_Base">
+            <p class="steamMobile_QR_Base_1stdecreption">Open this page on your phone by scanning this QR code</p>
+            <img src="Images/s_steammobile_QR.png" alt="" class="steamMobile_QR_Base_QR">
+            <div class="steamMobile_QR_Base_app_container">
+                <a href="https://apps.apple.com/us/app/steam-mobile/id495369748" class="steamMobile_appStore_link">
+                    <img src="Images/s_steamMobile_applestore.png" alt="" class="steamMobile_appStore">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community" class="steamMobile_CHPlay_link">
+                    <img src="Images/s_steamMobile_CHStore.png" alt="" class="steamMobile_CHPlay">
+                </a>
+                
+            </div>
+            <div class="steamMobile_QR_Base_2decreption_container">
+                <h class="steamMobile_2decreption_text">Minimum OS required: iOS 10 or Android 5.0</h>
+                <h class="steamMobile_2decreption_text">Android users without access to Google Play can 
+                    <a href="" class="steamMobile_2decreption_link">download version 3.5 here.</a>
+                </h>
+            </div>
+        </div>
+
+        <div class="steamMobile_Link">
+            <div class="steamMobile_Link_part_1">
+                <img src="Images/s_steamLink_img1.png" alt="" class="steamMobile_p1_img1">
+                <img src="Images/s_steamLink_img2.png" alt="" class="steamMobile_p1_img2">
+            </div>
+            <div class="steamMobile_Link_part_2">
+                <div class="steamMobile_Link_part_2_linktitle">
+                    <img src="Images/s_mobileSteam_Logo_2.png" alt="" class="Linktitle_img">
+                    <h class="Linktitle_text">Steam Link</h>
+                </div>
+                <h class="steamMobile_Link_part_2_text">Stream games from your computer.</h>
+                <p class="steamMobile_Link_part_2_steps">1 - Get the app</p>
+                <p class="steamMobile_Link_part_2_steps">2 - Connect to your computer</p>
+                <p class="steamMobile_Link_part_2_steps">3- Play!</p>
+                <div class="steamMobile_Link_part_2_apps_container">
+                    <a href="https://apps.apple.com/us/app/steam-mobile/id495369748" class="steamMobile_appStore_link">
+                        <img src="Images/s_steamMobile_applestore.png" alt="" class="steamLink_appStore">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community" class="steamMobile_CHPlay_link">
+                        <img src="Images/s_steamMobile_CHStore.png" alt="" class="steamLink_CHPlay">
+                    </a>
+                </div>
+                <div class="steamMobile_onclick_Base">
+                    <div class="steamMobile_onclick_Base_part1" onclick="ToggleDropdown()">
+                        <h class="steamMobile_onclick_part1_text">Or get the app for...</h>
+                        <img src="Images/s_onclick_button.png" alt="" class="steamMobile_onclick_part1_img">
+                        <div class="endlink">Learn more about Steam Link and Remote Play</div>
+
+                        <div id="steamMobile_onclick_Base_part2" class="steamMobile_onclick_Base_part2">
+                            <div class="steamMobile_onclick_Base_part2_containter">
+                                <div class="steamMobile_onclick_part2_items">For Android users without access to Google Play</div>
+                                <div class="steamMobile_onclick_part2_items">For Raspbarry Pi 3, 3+, & 4</div>
+                                <div class="steamMobile_onclick_part2_items">For Windows</div>
+                                <div class="steamMobile_onclick_part2_items">For Linux</div>
+                                <div class="steamMobile_onclick_part2_items">For MacOS</div>
+                            </div>
+                            
+                        </div>
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="steamPart steamBottom">
+            <div class="SBottom_common steamBottom_part1">
+               <h class="sBotPart1_text">Don't have a smart phone?</h>
+               <h class="sBotPart1_text_Link">You can still 
+                    <a href="" class="sBotPart1_Link">add a phone number to your Steam account</a>
+                    for additional security. This will help you recover your account or reset your password in the future.
+               </h>
+               <h class="sBotPart1_text">Need help?</h>
+               <div class="sBotPart1_options">
+                    <div class="sBotPart1_options_common">Steam Guard Setup Guide</div>
+                    <div class="sBotPart1_options_common">Steam Guard Mobile FAQ</div>
+                    <div class="sBotPart1_options_common">Help, I lost my authenticator!</div>
+               </div>
+            </div>
+
+            <div class="SBottom_common steamBottom_part2">
+                <div class="sbot_part2_common sbot_part2_1">
+                    <!-- <a href="https://tigobiz.com" target="_blank">
+                    <img src="https://tigobiz.com/wp-content/uploads/2020/11/TRUNG-01-logo-ngang-keo-sat-280-87-150x47.png" alt="logo Tigobiz" /></a> -->
+                    <!-- <a href="https://tigobiz.com" target="_blank" title="Click để vào Webstie tigobiz.com">Dịch vụ Marketing Online Tigobiz</a> -->
+                        <a href="https://www.valvesoftware.com/fr/" title="VALV" class="sb2_1_valve_link">
+                            <img src="Images/s_bottom_logo_1.png" alt="" class="sb2_1_valve_img">
+                        </a>
+                        <div class="sb2_1_dereption">
+                            <p class="sb2_1decreption_text">© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+                                VAT included in all prices where applicable.</p>
+                            <div class="sb2_1decreption_link">
+                                <a href="" title="Privacy Policy" class="sb2_1_link">Privacy Policy</a>
+                                <a href="" title="Legal" class="sb2_1_link">Legal</a>
+                                <a href="" title="Steam Subsctiber Agreement" class="sb2_1_link">Steam Subsctiber Agreement</a>
+                                <a href="" title="Refunds" class="sb2_1_link">Refunds</a>
+                                <a href="" title="Cookies" class="sb2_1_link">Cookies</a>
+                            </div>
+                        </div>
+                        <img src="Images/s_bottom_logo_2.png" alt="" class="sb2_1_steamImg">
+                </div>
+                <div class="sbot_part2_common sbot_part2_2">
+                    <div class="sb2_2decreption_link">
+                        <a href="" class="sb2_2_link">About Valve</a>
+                        <a href="" class="sb2_2_link">Jobs</a>
+                        <a href="" class="sb2_2_link">Steamworks</a>
+                        <a href="" class="sb2_2_link">Steam Distribution</a>
+                        <a href="" class="sb2_2_link">Support</a>
+                        <a href="" class="sb2_2_link">Recycling</a>
+                        <a href="" class="sb2_2_link">Gift Cards</a>
+                        <img src="Images/s_faceLogo.png" alt="" class="sb2_2_image sb2_2_faceImg">
+                        <a href="https://www.facebook.com/Steam" class="sb2_2_link sb2_2_facelink">Steam</a>
+                        <img src="Images/s_twitterLogo.png" alt="" class="sb2_2_image sb2_2_twitterImg">
+                        <a href="https://twitter.com/steam" class="sb2_2_link">@steam</a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="SBottom_common steamBottom_part3">
+                
+            </div>
+        </div>
+
+        <div class="steamMobile_steamchat">
+            <div class="steamMobile_steamchat_1">
+                <div class="steamMobile_steamchat_1_title">
+                    <img src="Images/s_mobileSteam_Logo_3.png" alt="" class="steamchat_title_img">
+                    <h class="steamchat_title_text">Steam Chat</h>
+                </div>
+                <h class="steamMobile_steamchat_1_decrep">A lightweight app focused on chatting with friends and groups.</h>
+                <p class="steamMobile_steamchat_1_name">Rich Chat</p>
+                
+                <h class="steamMobile_steamchat_1_decrep">Pick up the conversation right where you left off with videos, Tweets, Gifs and more.</h>
+                <p class="steamMobile_steamchat_1_name">Friends List</p>
+                <h class="steamMobile_steamchat_1_decrep">Quickly see who's playing right now so you never miss an opportunity to play.</h>
+                <div class="steamMobile_steamchat_1_qrBase">
+                    <a href="https://apps.apple.com/us/app/steam-mobile/id495369748" class="steamMobile_appStore_link">
+                        <img src="Images/s_steamMobile_applestore.png" alt="" class="steamLink_appStore">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community" class="steamMobile_CHPlay_link">
+                        <img src="Images/s_steamMobile_CHStore.png" alt="" class="steamLink_CHPlay">
+                    </a>
+                </div>
+                <h class="steamMobile_steamchat_1_dowload">Android users without access to Google Play can 
+                    <a href="" class="steamMobile_steamchat_1_dowLink">download the latest version here.</a>
+                </h>
+            </div>
+            <img src="Images/s_steamMobile_endImg.png" alt="" class="steamMobile_steamchat_2">
+            
+        </div>
+    </div>
+    
+</body>
+</html>

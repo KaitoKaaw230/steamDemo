@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steam Point Shop</title>
+<link rel="stylesheet" href="./assest/css/base.css">
+<link rel="stylesheet" href="./assest/css/main.css">
+<link rel="shortcut icon" href="C:\Users\PC\OneDrive\Desktop\Thực tập_jobs\SteamHtml\Images\steamLogo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- toplogo -->
+<style>
+    .steamTop {
+        position: fixed;
+        top: 0;
+        font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        margin-left: -8px;
+        width: 1550px;
+        height: 109px;
+        background-color: #171a21;
+        display: flex;
+        justify-content: space-around;
+        z-index: 50;
+    }
+
+    .sTop_choise {
+        width: 800px;
+
+        margin-left: 50px;
+        display: flex;
+        justify-content: start;
+    }
+
+    .sTop_avatar_link {}
+
+    .sTop_avatar_image {
+        margin-top: 25px;
+        width: 160px;
+        height: 50px;
+        margin-left: 80px;
+        margin-right: -10px;
+    }
+
+    .sTop_choise_choises {
+
+        margin-top: 25px;
+        /* background-color: red; */
+        margin-left: 70px;
+        width: 450px;
+        height: 50px;
+
+    }
+
+    .st_choises_common {
+        text-decoration: none;
+        height: 30px;
+        width: auto;
+        font-size: 15px;
+        margin: 18px 0 0 0;
+        border: none;
+        outline: none;
+        background-color: #171a21;
+        color: #b8b6b4;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .st_choises_common:hover {
+        color: #fff;
+    }
+
+    .st_choises_store {}
+
+    .st_choises_comunity {}
+
+    .st_choises_about {
+        margin-left: 6px;
+    }
+
+    .st_choises_support {
+        margin-left: 6px;
+    }
+
+    .st_pop {
+        /* box-shadow: 1px 1px 0.5px 1px; */
+        position: absolute;
+        background-color: #171a21;
+        display: none;
+        /* flex-direction: column; */
+        justify-content: start;
+        box-shadow: 3px 3px 5px -3px #000;
+        text-align: left;
+        columns: 1;
+        z-index: 10;
+    }
+
+    .st_store_pop_contain {
+        position: absolute;
+        top: 0;
+        width: 127px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .st_community_pop_contain {
+        position: absolute;
+        top: 0;
+        width: 127px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+
+    .st_choises_store:hover .st_store_pop {
+        display: block;
+    }
+
+    .st_choises_comunity:hover .st_community_pop {
+        display: block;
+    }
+
+    .st_pop:last-child {
+        margin-bottom: 10px;
+    }
+
+    .st_store_pop {
+        width: 127px;
+        height: 165px;
+    }
+
+    .st_community_pop {
+        width: 100px;
+        height: 145px;
+    }
+
+    .pop_text {
+        color: #b8b6b4;
+        font-size: 11px;
+        padding: 7px 10px 7px 10px;
+
+        text-decoration: none;
+    }
+
+    .pop_text:first-child {
+        padding-top: 12px;
+    }
+
+    .pop_text:hover {
+        color: #fff;
+    }
+
+    .store_pop {}
+
+    .community_pop {}
+</style>
+<!-- topinstall -->
+<style>
+    .sTop_login {
+        width: 200px;
+        margin-left: -100px;
+        display: flex;
+        justify-content: space-evenly;
+        cursor: pointer;
+    }
+
+    .st_login_install {
+        margin-top: 5px;
+        width: 100px;
+        height: 24px;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #5c7e10;
+    }
+
+    .stlogin_install_image {
+        margin: 2px 2px 2px 0;
+        width: 20px;
+        height: 20px;
+    }
+
+    .stlogin_install_text {
+        margin-top: 6px;
+        color: #e5e4dc;
+        font-size: 10px;
+    }
+
+    .st_login_install:hover .stlogin_install_text {
+        color: #fff;
+    }
+
+    .st_login_button {
+        font-size: 15px;
+        margin: 8px 5px 0 5px;
+        height: 24px;
+        border: none;
+        outline: none;
+        background-color: #171a21;
+        color: #b8b6b4;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .st_seperate {
+        margin-top: 10px;
+        height: 14px;
+        width: 0.5px;
+        background-color: #b8b6b4;
+    }
+
+    .st_languge_button {
+        /* border-left: thick solid #b8b6b4; */
+        margin-top: 8px;
+        height: 18px;
+        border: none;
+        outline: none;
+        background-color: #171a21;
+        color: #b8b6b4;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+
+    .st_login_button:hover {
+        color: #fff;
+    }
+
+    .st_languge_button:hover {
+        color: #fff;
+    }
+</style>
+
+
+<!-- bottom 2-->
+<style>
+    .steamBottom_part2 {
+        position: absolute;
+        width: 100%;
+        height: 165px;
+        background-color: #171a21;
+        bottom: 0;
+    }
+
+    .sbot_part2_common {
+        position: absolute;
+        margin: 0 0 0 250px;
+        height: 60px;
+        width: 1000px;
+    }
+
+    .sbot_part2_1 {
+        top: 20px;
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-around;
+        border-top: #363c44 solid 1px;
+        border-bottom: #363c44 solid 1px;
+    }
+
+
+
+    .sb2_1_valve_link {}
+
+    .sb2_1_valve_img {
+        margin: 10px 0 10px 0;
+        width: 100px;
+        height: 40px;
+    }
+
+    .sb2_1_dereption {
+        margin: 10px 0 10px 0;
+        height: 40px;
+        width: 800px;
+        /* background-color: yellow; */
+    }
+
+    .sb2_1_steamImg {
+        margin: 15px 0 15px 0;
+        width: 100px;
+        height: 30px;
+    }
+
+    .sb2_1decreption_text {
+        position: absolute;
+        font-family: sans-serif;
+        color: #8f98a0;
+        font-size: 12px;
+        width: 780px;
+        margin: 14px 10px 0 10px;
+        top: 0;
+
+        /* visibility: hidden; */
+    }
+
+    .sb2_1decreption_link {
+        position: absolute;
+        top: 30px;
+        left: 263px;
+        width: 600px;
+        height: 20px;
+        /* background-color: red; */
+    }
+
+    .sb2_1_link {
+        margin-top: 10px;
+        justify-content: end;
+        text-decoration: none;
+        color: #c6d4df;
+        padding: 0 5px 0 5px;
+        font-size: 14px;
+        border-right: #c6d4df solid 1px;
+    }
+
+    .sb2_1_link:last-child {
+        border: none;
+    }
+
+    .sb2_1_link:hover {
+        color: #fff;
+    }
+
+
+    .sbot_part2_2 {
+        position: relative;
+        top: 80px;
+        /* background-color: blue; */
+    }
+
+    .sb2_2decreption_link {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 800px;
+        height: 20px;
+        /* background-color: red; */
+    }
+
+    .sb2_2_link {
+        text-decoration: none;
+        color: #c6d4df;
+        font-size: 14px;
+        padding: 0 7px 0 5px;
+        margin-top: 20px;
+        border-right: #c6d4df solid 1px;
+        /* visibility: hidden; */
+    }
+
+    .sb2_2_link:last-child {
+        margin-left: -4px;
+        border: none;
+    }
+
+    .sb2_2_link:hover {
+        color: #fff;
+    }
+
+    .sb2_2_facelink {
+        margin-left: -4px;
+    }
+
+    .sb2_2_image {
+        /* position: absolute; */
+        width: 15px;
+        height: 15px;
+    }
+
+    .sb2_2_faceImg {}
+
+    .sb2_2_twitterImg {
+        margin-left: 5px;
+    }
+</style>
+
+<style>
+    body {
+        overflow-x: hidden;
+        height: 2000px;
+        width: auto;
+        position: relative;
+        background: #06090e;
+        /* cursor: url("trỏ\ chuột\ ori.jpg"),auto; */
+    }
+
+    .SteamContainer {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
+
+
+<!-- steamMid_title_base -->
+<style>
+    
+
+
+    .steamMid_btn {
+        background-color: #fff;
+    }
+
+    .steamMid {
+        margin-top: 100px;
+    }
+
+    .steamMid {
+        width: auto;
+        height: 1500px;
+    }
+
+    .steamMid_top_base {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .steamMid_top_base_videobg {
+        width: 100%;
+        height: auto;
+        user-select: none;
+    }
+
+    .steamMid_top_container {
+        width: 80%;
+        height: 1000px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .steamMid_top_Btn_base {
+        width: 100%;
+        height: 35px;
+        display: flex;
+        justify-content: start;
+    }
+
+    .steamMid_btn {
+        width: fit-content;
+        height: 30px;
+        margin: 5px 10px 0 10px;
+        line-height: 30px;
+        padding: 0 10px;
+        border-radius: 5px;
+    }
+
+    .steamMid_btn {
+        font-weight: 600;
+        font-size: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .steamMid_btn {
+        transition-property: all;
+        transition-duration: 0.4s;
+        display: flex;
+        justify-content: end;
+    }
+
+    .steamMid_btn:hover {
+        box-shadow: -1px -2px 20px 10px rgba(255, 255, 255, 0.16);
+        background: #898989 !important;
+        color: #fff;
+    }
+
+    /* .steamMid_btn:hover{box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);} */
+
+
+    .steamMid_top_main_base {
+        width: 100%;
+        border-top: 8px solid cyan;
+    }
+
+    .baseCommon {
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .geneBtn {
+        background: cyan;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .g_base {}
+
+    .poi_base {
+        display: none;
+    }
+
+    .m_base {
+        display: none;
+    }
+
+    .pa_base {
+        display: none;
+    }
+
+
+    .g_base {
+        height: 800px;
+    }
+
+    .poi_base {
+        height: 500px;
+    }
+
+    .m_base {
+        height: 500px;
+    }
+
+    .pa_base {
+        height: 500px;
+    }
+</style>
+
+<!-- general -->
+<style>
+    .g_base {
+        border-bottom: 10px solid yellow;
+    }
+
+    .g_base_container {
+        border: 1px solid #fff;
+    }
+
+
+    .g_base {
+        position: relative;
+    }
+
+    .g_base_bg {
+        width: 550px;
+        height: 270px;
+        position: absolute;
+        top: 260px;
+        left: 190px;
+        opacity: 0.2;
+        transition: opacity 0.9s;
+        z-index: 0;
+    }
+
+    .g_base:hover .g_base_bg {
+        opacity: 0.6;
+    }
+
+    .g_base_container {
+        width: 1150px;
+        height: 750px;
+        margin: 25px 25px;
+        z-index: 2;
+        position: absolute;
+    }
+
+    .g_base_container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .g_base_container_left {
+        width: 870px;
+        height: 750px;
+    }
+
+    .g_base_container_right {
+        width: 270px;
+        height: 750px;
+        border-left: 3px solid #fff;
+    }
+
+
+    .search_base {
+        width: 270px;
+        height: 30px;
+        margin: 20px 0;
+        display: flex;
+        justify-content: start;
+    }
+
+    /* .search_base{display: flex; justify-content: start;} */
+    .g_base_container_right_search {
+        width: 200px;
+        height: 25px;
+        padding-left: 10px;
+    }
+
+    .g_base_container_right_search {
+        background: transparent;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .search_btn {
+        width: 70px;
+        height: 30px;
+        font-size: 0.75rem;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .search_btn {
+        background-color: #474e58;
+        color: #c5cbd8;
+        cursor: pointer;
+        user-select: none;
+        transition: color .2s ease-in-out;
+    }
+
+    .search_btn:hover {
+        color: #fff;
+    }
+
+    .g_base_container_right_search {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .search_btn {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .g_base_container_right_item {
+        width: 270px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    .g_base_container_right_item {
+        overflow-y: hidden;
+        transition: height 0.5s;
+    }
+
+    .g_base_container_right_title {
+        padding-left: 10px;
+        width: 260px;
+        height: 40px;
+        border-top: 1px solid #1999ff;
+        border-bottom: 1px solid #1999ff;
+    }
+
+    .g_base_container_right_title {
+        color: #1999ff;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 40px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .g_base_container_right_text {
+        width: 260px;
+        height: fit-content;
+        padding: 6px 0 6px 10px;
+        user-select: none;
+    }
+
+    .g_base_container_right_text {
+        text-decoration: none;
+        color: #c5cbd8;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .g_base_container_right_text:hover {
+        background: linear-gradient(90deg, #536F86 0%, rgba(83, 111, 134, 0.29) 48.38%, rgba(83, 111, 134, 0.19) 82.74%);
+        background-position: 0 0;
+        color: #fff;
+    }
+
+    /* .g_base_container_right_title:hover{color: red;} */
+    /* .g_base_container_right:hover .g_base_container_right_item{height: 93px;} */
+    .g_base_container_left_common {
+        width: 870px;
+        height: 750px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .g_base_container_left_common {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .g_base_title_base {
+        width: 870px;
+        height: 50px;
+        font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: start;
+    }
+
+    .g_base_title {
+        color: #c5cbd8;
+        font-size: 2.2em;
+        letter-spacing: .075em;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    .g_base_side_title {
+        font-size: 1.05rem;
+        color: #c5cbd8;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .g_base_games_cotainer {
+        width: 870px;
+        height: 700px;
+    }
+
+    .game_bewlow_10 {}
+
+    .game_above_10 {
+        display: none;
+    }
+
+    .g_base_games_item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .g_base_games_item {
+        width: 870px;
+        height: 100px;
+        background: linear-gradient(144.37deg, rgba(130, 156, 219, 0) 68.22%, rgba(82, 125, 235, 0.32) 113.95%);
+    }
+
+    .g_base_games_item {
+        transition-property: transform;
+        transform-origin: 50% 50%;
+        background: #203468;
+        cursor: pointer;
+    }
+
+    .g_base_games_item:hover {
+        transform: scaleX(1) scaleY(1);
+        filter: brightness(1.1) contrast(0.95) saturate(1);
+        box-shadow: 3px 8px 8px 3px rgba(0, 0, 0, .596);
+    }
+
+    .g_base_games_item_img {
+        width: 300px;
+        height: 100px;
+    }
+
+    .g_base_games_item_price {
+        font-size: 15px;
+        color: #b3f304;
+        height: auto;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .g_base_games_item_text {
+        font-size: 15px;
+        width: fit-content;
+        line-height: 20px;
+        text-decoration: none;
+        color: #1999ff;
+    }
+
+    .g_base_games_item_text:hover {
+        color: #fff;
+    }
+
+    .resize_img {
+        width: 200px;
+    }
+</style>
+</head>
+
+<!-- btn_press -->
+<script>
+function GeneralPressed() {
+    let g_btn = document.getElementById('General_btn');
+    let poi_btn = document.getElementById('Point_btn');
+    let m_btn = document.getElementById('Member_btn');
+    let pac_btn = document.getElementById('Pack_btn');
+
+    let g_base = document.getElementById('g_base');
+    let poi_base = document.getElementById('poi_base');
+    let m_base = document.getElementById('m_base');
+    let pac_base = document.getElementById('pa_base');
+
+    g_btn.style.background = 'cyan';
+    g_btn.style.borderBottomLeftRadius = '0';
+    g_btn.style.borderBottomRightRadius = '0';
+
+    g_base.style.display = 'flex';
+
+    // g_btn.onmouseenter = function(){g_btn.style.background = 'cyan';}
+
+
+
+    poi_btn.style.background = '#fff';
+    poi_btn.style.borderBottomLeftRadius = '5px';
+    poi_btn.style.borderBottomRightRadius = '5px';
+
+    m_btn.style.background = '#fff';
+    m_btn.style.borderBottomLeftRadius = '5px';
+    m_btn.style.borderBottomRightRadius = '5px';
+
+    pac_btn.style.background = '#fff';
+    pac_btn.style.borderBottomLeftRadius = '5px';
+    pac_btn.style.borderBottomRightRadius = '5px';
+
+    poi_base.style.display = 'none';
+    m_base.style.display = 'none';
+    pac_base.style.display = 'none';
+
+}
+
+function PointPressed() {
+    let g_btn = document.getElementById('General_btn');
+    let poi_btn = document.getElementById('Point_btn');
+    let m_btn = document.getElementById('Member_btn');
+    let pac_btn = document.getElementById('Pack_btn');
+
+    let g_base = document.getElementById('g_base');
+    let poi_base = document.getElementById('poi_base');
+    let m_base = document.getElementById('m_base');
+    let pac_base = document.getElementById('pa_base');
+
+    poi_btn.style.background = 'cyan';
+    poi_btn.style.borderBottomLeftRadius = '0';
+    poi_btn.style.borderBottomRightRadius = '0';
+    poi_base.style.display = 'flex';
+
+
+    g_btn.style.background = '#fff';
+    g_btn.style.borderBottomLeftRadius = '5px';
+    g_btn.style.borderBottomRightRadius = '5px';
+
+    m_btn.style.background = '#fff';
+    m_btn.style.borderBottomLeftRadius = '5px';
+    m_btn.style.borderBottomRightRadius = '5px';
+
+    pac_btn.style.background = '#fff';
+    pac_btn.style.borderBottomLeftRadius = '5px';
+    pac_btn.style.borderBottomRightRadius = '5px';
+
+    g_base.style.display = 'none';
+    m_base.style.display = 'none';
+    pac_base.style.display = 'none';
+}
+
+function MemeberPressed() {
+    let g_btn = document.getElementById('General_btn');
+    let poi_btn = document.getElementById('Point_btn');
+    let m_btn = document.getElementById('Member_btn');
+    let pac_btn = document.getElementById('Pack_btn');
+
+    let g_base = document.getElementById('g_base');
+    let poi_base = document.getElementById('poi_base');
+    let m_base = document.getElementById('m_base');
+    let pac_base = document.getElementById('pa_base');
+
+    m_btn.style.background = 'cyan';
+    m_btn.style.borderBottomLeftRadius = '0';
+    m_btn.style.borderBottomRightRadius = '0';
+    m_base.style.display = 'flex';
+
+
+    g_btn.style.background = '#fff';
+    g_btn.style.borderBottomLeftRadius = '5px';
+    g_btn.style.borderBottomRightRadius = '5px';
+
+    poi_btn.style.background = '#fff';
+    poi_btn.style.borderBottomLeftRadius = '5px';
+    poi_btn.style.borderBottomRightRadius = '5px';
+
+    pac_btn.style.background = '#fff';
+    pac_btn.style.borderBottomLeftRadius = '5px';
+    pac_btn.style.borderBottomRightRadius = '5px';
+
+    g_base.style.display = 'none';
+    poi_base.style.display = 'none';
+    pac_base.style.display = 'none';
+}
+
+function PackPressed() {
+    let g_btn = document.getElementById('General_btn');
+    let poi_btn = document.getElementById('Point_btn');
+    let m_btn = document.getElementById('Member_btn');
+    let pac_btn = document.getElementById('Pack_btn');
+
+    let g_base = document.getElementById('g_base');
+    let poi_base = document.getElementById('poi_base');
+    let m_base = document.getElementById('m_base');
+    let pac_base = document.getElementById('pa_base');
+
+    pac_btn.style.background = 'cyan';
+    pac_btn.style.borderBottomLeftRadius = '0';
+    pac_btn.style.borderBottomRightRadius = '0';
+    pac_base.style.display = 'flex';
+
+
+    poi_btn.style.background = '#fff';
+    poi_btn.style.borderBottomLeftRadius = '5px';
+    poi_btn.style.borderBottomRightRadius = '5px';
+
+    m_btn.style.background = '#fff';
+    m_btn.style.borderBottomLeftRadius = '5px';
+    m_btn.style.borderBottomRightRadius = '5px';
+
+    g_btn.style.background = '#fff';
+    g_btn.style.borderBottomLeftRadius = '5px';
+    g_btn.style.borderBottomRightRadius = '5px';
+
+    g_base.style.display = 'none';
+    poi_base.style.display = 'none';
+    m_base.style.display = 'none';
+}
+</script>
+
+<!-- search -->
+<script>
+    function searchBtnPress() {
+    var searchValue = document.getElementById('g_base_container_right_search').value;
+    let GameB = document.getElementById('game_base');
+    let DlcB = document.getElementById('dlc_base');
+    let RefundB = document.getElementById('refund_base');
+    let BonusB = document.getElementById('bonus_base');
+    if (searchValue == "Point" ^ searchValue == "point") { alert('All of title here have the world "points" in them, try smt more specific pls!!') }
+    else if (searchValue == "games" ^ searchValue == "game") {
+        GameB.style.height = "93px";
+
+        DlcB.style.height = "40px";
+        RefundB.style.height = "40px";
+        BonusB.style.height = "40px";
+    }
+    else if (searchValue == "dlc" ^ searchValue == "DLC") {
+        DlcB.style.height = "93px";
+
+        GameB.style.height = "40px";
+        RefundB.style.height = "40px";
+        BonusB.style.height = "40px";
+    }
+    else if (searchValue == "refund" ^ searchValue == "Refund") {
+        RefundB.style.height = "200px";
+
+        GameB.style.height = "40px";
+        DlcB.style.height = "40px";
+        BonusB.style.height = "40px";
+    }
+    else if (searchValue == "bonus") {
+        BonusB.style.height = "150px";
+
+        GameB.style.height = "40px";
+        DlcB.style.height = "40px";
+        RefundB.style.height = "40px";
+    }
+    else { alert('u have not chosen anything yet!') }
+}
+</script>
+
+<!-- g_base_container_left_common -->
+<script>
+function gamebewlow10() {
+    let GBelow10 = document.getElementById('game_bewlow_10');
+    let GAbove10 = document.getElementById('game_above_10');
+
+    GBelow10.style.display = 'flex';
+
+    GAbove10.style.display = 'none';
+}
+function gameabove10() {
+    let GBelow10 = document.getElementById('game_bewlow_10');
+    let GAbove10 = document.getElementById('game_above_10');
+
+    GAbove10.style.display = 'flex';
+
+    GBelow10.style.display = 'none';
+}
+</script>
+
+<body>
+<div class="SteamContainer">
+    <div class="steamTop">
+        <div class="sTop_choise">
+            <a href="Steam_index.html" class="sTop_avatar_link">
+                <img src="Images/s_avatar.png" alt="" class="sTop_avatar_image">
+            </a>
+
+            <div class="sTop_choise_choises">
+                <button class="st_choises_common st_choises_store">
+                    STORE
+                    <div class="st_pop st_store_pop">
+                        <div class="st_store_pop_contain">
+                            <a href="" class="pop_text store_pop">HOME</a>
+                            <a href="" class="pop_text store_pop">DISCOVERY QUEUE</a>
+                            <a href="" class="pop_text store_pop">WISHLIST</a>
+                            <a href="Steam_pointShop.html" class="pop_text store_pop">POINTS SHOP</a>
+                            <a href="Steam_newAndFeature.html" class="pop_text store_pop">NEWS</a>
+                            <a href="" class="pop_text store_pop">STATS</a>
+                        </div>
+                    </div>
+                </button>
+                <button class="st_choises_common st_choises_comunity">
+                    COMMUNITY
+                    <div class="st_pop st_community_pop">
+                        <div class="st_community_pop_contain">
+                            <a href="" class="pop_text community_pop">HOME</a>
+                            <a href="" class="pop_text community_pop">DISCUSSIONS</a>
+                            <a href="" class="pop_text community_pop">WORKSHOP</a>
+                            <a href="" class="pop_text community_pop">MARKET</a>
+                            <a href="" class="pop_text community_pop">BROADCASTS</a>
+                        </div>
+                    </div>
+                </button>
+                <a href="" class="st_choises_common st_choises_about">ABOUT</a>
+                <a href="" class="st_choises_common st_choises_support">SUPPORT</a>
+                <!-- <button class="st_choises_common st_choises_about">ABOUT</button>
+                <button class="st_choises_common st_choises_support">SUPPORT</button> -->
+            </div>
+        </div>
+
+        <div class="sTop_login">
+            <div class="st_login_install">
+                <img src="Images/s_install_image.png" alt="" class="stlogin_install_image">
+                <h class="stlogin_install_text">Install Steam</h>
+            </div>
+            <a href="Steam_login.html" class="st_login_button">login</a>
+            <!-- <button class="st_login_button">login</button> -->
+            <div class="st_seperate"></div>
+            <button class="st_languge_button">language</button>
+        </div>
+    </div>
+
+    <div class="steamMid">
+        <div class="steamMid_top_base">
+            <img src="Images/steam_big_background_Gif.gif" alt="" class="steamMid_top_base_videobg">
+            <div class="steamMid_top_container">
+                <div class="steamMid_top_Btn_base">
+                    <div id="General_btn" class="steamMid_btn geneBtn" onclick="GeneralPressed()">General Points
+                    </div>
+                    <div id="Point_btn" class="steamMid_btn" onclick="PointPressed()">New Point</div>
+                    <div id="Member_btn" class="steamMid_btn" onclick="MemeberPressed()">New member</div>
+                    <div id="Pack_btn" class="steamMid_btn" onclick="PackPressed()">Buy with pack</div>
+                </div>
+                <div class="steamMid_top_main_base">
+                    <div id="g_base" class="baseCommon g_base">
+                        <img src="Images/s_steamLink_img2.png" alt="" class="g_base_bg">
+                        <div class="g_base_container">
+                            <div class="g_base_container_left">
+                                <div id="game_bewlow_10" class="g_base_container_left_common game_bewlow_10">
+                                    <div class="g_base_title_base">
+                                        <div class="g_base_title">Buying games</div>
+                                        <div class="g_base_side_title">- Below 10$</div>
+                                    </div>
+                                    <div class="g_base_games_cotainer">
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_1.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$9</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_2.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$1</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_3.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">Free</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_4.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_5.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_6.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_1.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_2.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_3.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_4.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_5.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_6.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_7.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="game_above_10" class="g_base_container_left_common game_above_10">
+                                    <div class="g_base_title_base">
+                                        <div class="g_base_title">Buying games</div>
+                                        <div class="g_base_side_title">- Above 10$</div>
+                                    </div>
+                                    <div class="g_base_games_cotainer"> 
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_6.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$900</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_4.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$1.000.000</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_2.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div style="color: rgb(212, 138, 0);"
+                                                    class="g_base_games_item_price">Sold out!</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_1.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$500</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_5.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$300</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_6.jpg" alt=""
+                                                class="g_base_games_item_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$440</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_1.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$50.5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_2.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5342</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_3.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$54</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_4.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$54</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_5.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_6.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="g_base_games_item">
+                                            <img src="Images/s_index_slideimge_items_7.jpg" alt=""
+                                                class="g_base_games_item_img resize_img">
+                                            <div style="margin-right: 20px;">
+                                                <div class="g_base_games_item_price">$5</div>
+                                                <a href="" class="g_base_games_item_text">Buy now!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="g_base_container_right">
+                                <div class="search_base">
+                                    <input type="text" name="" id="g_base_container_right_search"
+                                        class="g_base_container_right_search" placeholder="Please type smt here...">
+                                    <div class="search_btn" onclick="searchBtnPress()">Search</div>
+                                </div>
+
+                                <div id="game_base" style="height: 93px;" class="g_base_container_right_item">
+                                    <div class="g_base_container_right_title"
+                                        onclick="game_base.style.height = '93px'">Buying games</div>
+                                    <div class="g_base_container_right_text" onclick="gamebewlow10()">Below 10$
+                                    </div>
+                                    <div class="g_base_container_right_text" onclick="gameabove10()">Above 10$</div>
+                                </div>
+
+                                <div id="dlc_base" class="g_base_container_right_item">
+                                    <div class="g_base_container_right_title"
+                                        onclick="dlc_base.style.height = '93px'">Buying DLC</div>
+                                    <div class="g_base_container_right_text">Below 10$</div>
+                                    <div class="g_base_container_right_text">Above 10$</div>
+                                </div>
+
+                                <div id="refund_base" class="g_base_container_right_item">
+                                    <div class="g_base_container_right_title"
+                                        onclick="refund_base.style.height = '200px'">Refund Point</div>
+                                    <div class="g_base_container_right_text">Bought for 1 day</div>
+                                    <div class="g_base_container_right_text">Bought for 7 days</div>
+                                    <div class="g_base_container_right_text">Bought for 3 weeks</div>
+                                    <div class="g_base_container_right_text">Bought for 1 month</div>
+                                    <div class="g_base_container_right_text">Bought for half of a year</div>
+                                    <div class="g_base_container_right_text">Bought for a fully year</div>
+                                </div>
+
+                                <div id="bonus_base" class="g_base_container_right_item">
+                                    <div class="g_base_container_right_title"
+                                        onclick="bonus_base.style.height = '150px'">Bonus</div>
+                                    <div class="g_base_container_right_text">From Developer</div>
+                                    <div class="g_base_container_right_text">From Comunity</div>
+                                    <div class="g_base_container_right_text">From Winning a Prize</div>
+                                    <div class="g_base_container_right_text">From New member</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="poi_base" class="baseCommon poi_base"></div>
+                    <div id="m_base" class="baseCommon m_base"></div>
+                    <div id="pa_base" class="baseCommon pa_base"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="SBottom_common steamBottom_part2">
+        <div class="sbot_part2_common sbot_part2_1">
+            <!-- <a href="https://tigobiz.com" target="_blank">
+            <img src="https://tigobiz.com/wp-content/uploads/2020/11/TRUNG-01-logo-ngang-keo-sat-280-87-150x47.png" alt="logo Tigobiz" /></a> -->
+            <!-- <a href="https://tigobiz.com" target="_blank" title="Click để vào Webstie tigobiz.com">Dịch vụ Marketing Online Tigobiz</a> -->
+            <a href="https://www.valvesoftware.com/fr/" title="VALV" class="sb2_1_valve_link">
+                <img src="Images/s_bottom_logo_1.png" alt="" class="sb2_1_valve_img">
+            </a>
+            <div class="sb2_1_dereption">
+                <p class="sb2_1decreption_text">© 2023 Valve Corporation. All rights reserved. All trademarks are
+                    property of their respective owners in the US and other countries.
+                    VAT included in all prices where applicable.</p>
+                <div class="sb2_1decreption_link">
+                    <a href="" title="Privacy Policy" class="sb2_1_link">Privacy Policy</a>
+                    <a href="" title="Legal" class="sb2_1_link">Legal</a>
+                    <a href="" title="Steam Subsctiber Agreement" class="sb2_1_link">Steam Subsctiber Agreement</a>
+                    <a href="" title="Refunds" class="sb2_1_link">Refunds</a>
+                    <a href="" title="Cookies" class="sb2_1_link">Cookies</a>
+                </div>
+            </div>
+            <img src="Images/s_bottom_logo_2.png" alt="" class="sb2_1_steamImg">
+        </div>
+        <div class="sbot_part2_common sbot_part2_2">
+            <div class="sb2_2decreption_link">
+                <a href="" class="sb2_2_link">About Valve</a>
+                <a href="" class="sb2_2_link">Jobs</a>
+                <a href="" class="sb2_2_link">Steamworks</a>
+                <a href="" class="sb2_2_link">Steam Distribution</a>
+                <a href="" class="sb2_2_link">Support</a>
+                <a href="" class="sb2_2_link">Recycling</a>
+                <a href="" class="sb2_2_link">Gift Cards</a>
+                <img src="Images/s_faceLogo.png" alt="" class="sb2_2_image sb2_2_faceImg">
+                <a href="https://www.facebook.com/Steam" class="sb2_2_link sb2_2_facelink">Steam</a>
+                <img src="Images/s_twitterLogo.png" alt="" class="sb2_2_image sb2_2_twitterImg">
+                <a href="https://twitter.com/steam" class="sb2_2_link">@steam</a>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>

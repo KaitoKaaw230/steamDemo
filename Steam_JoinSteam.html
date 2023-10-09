@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="C:\Users\PC\OneDrive\Desktop\Thực tập_jobs\SteamHtml\Images\steamLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <!-- body -->
+    <style>
+        body{   
+            height: 1500px;
+            width: auto;
+            position: relative;
+            /* cursor: url("trỏ\ chuột\ ori.jpg"),auto; */
+        }
+    </style>
+    
+     <!-- toplogo -->
+    <style>
+        .steamTop{
+            width: 100%;
+            height: 100px;
+            background-color: #171a21;
+            display: flex;
+            justify-content: space-around;
+        }
+        .sTop_choise{
+            width: 800px;
+            
+            margin-left: 50px;
+            display: flex;
+            justify-content: start;
+        }
+        .sTop_avatar_link{}
+        .sTop_avatar_image{
+            margin-top: 25px;
+            width: 160px;
+            height: 50px;
+            margin-left: 80px;
+            margin-right: -10px;
+        }
+        .sTop_choise_choises{
+            
+            margin-top: 25px;
+            /* background-color: red; */
+            margin-left: 70px;
+            width: 450px;
+            height: 50px;
+            
+        }
+        .st_choises_common{
+            text-decoration: none;
+            height: 30px;
+            width: auto;
+            font-size: 15px;
+            margin: 18px 0 0 0;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: relative;
+        }
+        .st_choises_common:hover{color: #fff;}
+        .st_choises_store{}
+        .st_choises_comunity{}
+        .st_choises_about{margin-left: 6px;}
+        .st_choises_support{margin-left: 6px;}
+
+        .st_pop{
+            /* box-shadow: 1px 1px 0.5px 1px; */
+            position: absolute;
+            background-color: #171a21;
+            display: none;
+            /* flex-direction: column; */
+            justify-content: start;
+            box-shadow: 3px 3px 5px -3px #000;
+	        text-align: left;
+            columns: 1;
+        }
+        .st_store_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px; 
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .st_community_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px; 
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        
+
+        .st_choises_store:hover .st_store_pop{display: block;}
+        .st_choises_comunity:hover .st_community_pop{display: block;}
+        .st_pop:last-child{margin-bottom: 10px;}
+        .st_store_pop{width: 127px; height: 165px;}
+        .st_community_pop{width: 100px; height: 145px;}
+        .pop_text{
+            color: #b8b6b4;
+            font-size: 11px;
+            padding: 7px 10px 7px 10px;
+            
+            text-decoration: none;
+        }
+        .pop_text:first-child{padding-top: 12px;}
+        .pop_text:hover{color: #fff;}
+        .store_pop{}
+        .community_pop{}
+    </style>
+
+    <!-- topinstall -->
+    <style>
+        .sTop_login{
+            width: 200px;
+            margin-left: -100px;
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        .st_login_install{
+            margin-top: 5px;
+            width: 100px;
+            height: 24px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #5c7e10;
+        }
+        .stlogin_install_image{
+            margin: 2px 2px 2px 0;
+            width: 20px;
+            height: 20px;
+        }
+        .stlogin_install_text{
+            margin-top: 6px;
+            color: #e5e4dc;
+            font-size: 10px;
+        }
+        .st_login_install:hover .stlogin_install_text{color: #fff;}
+        
+        .st_login_button{
+            font-size: 15px;
+            margin: 8px 5px 0 5px;
+            height: 24px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .st_seperate{
+            margin-top: 10px;
+            height: 14px;
+            width: 0.5px;
+            background-color: #b8b6b4;
+        }
+        .st_languge_button{
+            /* border-left: thick solid #b8b6b4; */
+            margin-top: 8px;
+            height: 18px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        .st_login_button:hover{color: #fff;}
+        .st_languge_button:hover{color: #fff;}
+    </style>
+
+
+    <!-- bottom 1-->
+    <style>
+        .steamBottom{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 400px;
+            /* background-color: blue; */
+        }
+        .SBottom_common{}
+        .steamBottom_part1{
+            position: relative;
+            width: 100%;
+            height: 300px;
+            /* background: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%); */
+            background: #212429;
+            top: 0;
+            display: flex;
+            flex-direction: row;
+            /* flex-direction: column; */
+            /* align-items: center;
+            text-align: center; */
+            
+        }
+    </style>
+    <!-- bottom 2-->
+    <style>
+        .steamBottom_part2{
+            position: relative;
+            width: 100%;
+            height: 165px;
+            background-color: #171a21;
+            bottom: 0;
+        }
+        .sbot_part2_common{
+            position: absolute;
+            margin: 0 0 0 250px;
+            height: 60px;
+            width: 1000px;
+        }
+        .sbot_part2_1{
+            top: 20px;
+            /* background-color: red; */
+            display: flex;
+            justify-content: space-around;
+            border-top: #363c44 solid 1px;
+            border-bottom: #363c44 solid 1px;
+        }
+        
+        
+
+        .sb2_1_valve_link{}
+        .sb2_1_valve_img{
+            margin: 10px 0 10px 0;
+            width: 100px;
+            height: 40px;
+        }
+        .sb2_1_dereption{
+            margin: 10px 0 10px 0;
+            height: 40px;
+            width: 800px;
+            /* background-color: yellow; */
+        }
+        .sb2_1_steamImg{
+            margin: 15px 0 15px 0;
+            width: 100px;
+            height: 30px;
+        }
+        .sb2_1decreption_text{
+            position: absolute;
+            font-family: sans-serif;
+            color: #8f98a0;
+            font-size: 12px;
+            width: 780px;
+            margin: 14px 10px 0 10px;
+            top: 0;
+
+            /* visibility: hidden; */
+        }
+        .sb2_1decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 263px;
+            width: 600px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_1_link{
+            margin-top: 10px;
+            justify-content: end;
+            text-decoration: none;
+            color: #c6d4df;
+            padding: 0 5px 0 5px;
+            font-size: 14px;
+            border-right: #c6d4df solid 1px;
+        }
+        .sb2_1_link:last-child{border: none;}
+        .sb2_1_link:hover{color: #fff;}
+
+
+        .sbot_part2_2{
+            position: relative;
+            top: 80px;
+            /* background-color: blue; */
+        }
+        .sb2_2decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 800px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_2_link{
+            text-decoration: none;
+            color: #c6d4df;
+            font-size: 14px;
+            padding: 0 7px 0 5px;
+            margin-top: 20px;
+            border-right: #c6d4df solid 1px;
+            /* visibility: hidden; */
+        }
+        .sb2_2_link:last-child{margin-left: -4px; border: none;}
+        .sb2_2_link:hover{color: #fff;}
+        .sb2_2_facelink{margin-left: -4px;}
+        .sb2_2_image{
+            /* position: absolute; */
+            width: 15px;
+            height: 15px;
+        }
+        .sb2_2_faceImg{}
+        .sb2_2_twitterImg{
+            margin-left: 5px;
+        }
+    </style>
+
+    <!-- bottom 3-->
+    <style>
+        .steamBottom_part3{
+            width: 100%;
+            height: 35px;
+            background-color: #1f2f50;
+        }
+    </style>
+
+<!-- steamMid -->
+<style>
+    .steamMid{
+        width: 1500px;
+        height: 1000px;
+        background-color: black;
+        background-image: url(Images/s_LoginBackground.jpg);
+    }
+    .steamMid_base{
+        /* position: absolute; */
+        top: 100px;
+        right: 0;
+        width: 1200px;
+        height: 1000px;
+        /* background: #212429; */
+        margin-left: 300px;
+        background-color: #212429;
+        display: flex;
+        flex-direction: column;
+    }
+    .steamMid_base_title{
+        margin: 60px 0 10px 30px;
+        text-transform: uppercase;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 34px;
+        color: #ffffff;
+        margin-bottom: 30px;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        font-family: "Motiva Sans", Sans-serif;
+
+    }
+    .steamMid_base_label{
+        margin: 0 0 0 30px;
+        font-size: 14px;
+        color: #b8b6b4;
+        vertical-align: top;
+    }
+    .steamMid_base_typein{
+        margin: 0 0 30px 30px;
+        width: 255px;
+
+        background: #32353C;
+        border-radius: 3px;
+        color: #E9E9E9;
+        padding: 8px 6px;
+        display: block;
+        box-shadow: none;
+        border: none;
+        transition: border ease-in-out .5s;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: normal;
+    }
+    .steamMid_base_country{
+        margin: 2px 0 30px 30px;
+        width: 266px;
+        height: 40px;
+
+        background: #32353C;
+        border-radius: 3px;
+        color: #E9E9E9;
+        padding: 8px 6px;
+        display: block;
+        box-shadow: none;
+        border: none;
+        transition: border ease-in-out .5s;
+        font-family: "Motiva Sans", Sans-serif;
+        font-weight: normal;
+        display: flex;
+        justify-content: center;
+    }
+    .steamMid_base_country_text{
+        width: 235px;
+        height: 20px;
+    }
+    .steamMid_base_country_img{
+        margin-top: 5px;
+        width: 12px;
+        height: 10px;
+    }
+    .steamMid_base_country_clickpop{
+        width: 266px;
+        height: 400px;
+        position: absolute;
+        top: 339px;
+        background: #32353C;
+        border-radius: 3px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .country_clickpop:hover{background: linear-gradient( to right, #47bfff 5%, #4470f5 60%);}
+    .country_clickpop{
+        padding: 3px 0 0 10px;
+        text-align: start;
+        font-size: 12px;
+        width: 254px;
+        height: 19px;
+        background-color: #32353C;
+        font-family: sans-serif;
+    }
+    .steamMid_base_Robot{
+        margin-left: 30px;
+        width: 266px;
+        height: 80px;
+        border: 1px solid #525252;
+        display: flex;
+        justify-content: space-between;
+    }
+    .steamMid_base_Robot_1{
+        margin-top: -10px;
+        width: 266px;
+        height: 100px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .steamMid_base_Robot_check{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .steamMid_base_Robot_text{
+        font-size: 13px;
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    .steamMid_base_Robot_2{
+        margin-top: -10px;
+        width: 70px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: 10px;
+    }
+    .steamMid_base_Robot_2_img{
+        width: 60px;
+        height: 60px;
+    }
+    .steamMid_base_policy{
+        width: 590px;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    .steamMid_base_policy_check{
+        width: 20px;
+        height: 20px;
+    }
+    .steamMid_base_policy_check_tet{
+        font-size: 14px;
+        color: #b8b6b4;
+    }
+    .steamMid_base_policy_link:hover{color: #66c0f4;}
+    .steamMid_base_policy_link{
+        font-size: 14px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .steamMid_base_continue:hover{background: linear-gradient( to right, #72c7f6 5%, #5abdf3 60%);}
+    .steamMid_base_continue{
+        margin: 40px 0 0 30px;
+        border-radius: 3px;
+        user-select: none;
+        text-align: center;
+        padding-top: 8px;
+        width: 150px;
+        height: 28px;
+        color: #c3e1f8;
+        cursor: pointer;
+        font-size: 15px;
+        background: linear-gradient( to right, #47bfff 5%, #1a44c2 60%);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        background-position: 25%;
+        background-size: 330% 100%;
+    }
+</style>
+<!-- scrollbar -->
+<style>
+    ::-webkit-scrollbar {
+        height: 12px;
+        width: 14px;
+        background: rgba(0,0,0,0);
+        z-index: 12;
+        overflow: visible;
+    }
+    ::-webkit-scrollbar-corner {
+    background: #202020;
+}
+    ::-webkit-scrollbar-thumb {
+        width: 10px;
+        background-color: #434953;
+        border-radius: 10px;
+        z-index: 12;
+        border: 4px solid rgba(0,0,0,0);
+        background-clip: padding-box;
+        transition: background-color .32s ease-in-out;
+        margin: 4px;
+        min-height: 32px;
+        min-width: 32px;
+    }
+    ::selection {
+        background: #54a5d4;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.6666666667);
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+    <div class="SteamContainer">
+
+        <div class="steamPart steamTop">
+            
+            <div class="sTop_choise">
+                <a href="Steam_index.html" class="sTop_avatar_link">
+                    <img src="Images/s_avatar.png" alt="" class="sTop_avatar_image">
+                </a>
+
+                <div class="sTop_choise_choises">
+                    <button class="st_choises_common st_choises_store">
+                        STORE
+                        <div class="st_pop st_store_pop">
+                            <div class="st_store_pop_contain">
+                                <a href="" class="pop_text store_pop">HOME</a>
+                                <a href="" class="pop_text store_pop">DISCOVERY QUEUE</a>
+                                <a href="" class="pop_text store_pop">WISHLIST</a>
+                                <a href="" class="pop_text store_pop">POINTS SHOP</a>
+                                <a href="Steam_newAndFeature.html" class="pop_text store_pop">NEWS</a>
+                                <a href="" class="pop_text store_pop">STATS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="st_choises_common st_choises_comunity">
+                        COMMUNITY
+                        <div class="st_pop st_community_pop">
+                            <div class="st_community_pop_contain">
+                                <a href="" class="pop_text community_pop">HOME</a>
+                                <a href="" class="pop_text community_pop">DISCUSSIONS</a>
+                                <a href="" class="pop_text community_pop">WORKSHOP</a>
+                                <a href="" class="pop_text community_pop">MARKET</a>
+                                <a href="" class="pop_text community_pop">BROADCASTS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <a href="" class="st_choises_common st_choises_about">ABOUT</a>
+                    <a href="" class="st_choises_common st_choises_support">SUPPORT</a>
+                    <!-- <button class="st_choises_common st_choises_about">ABOUT</button>
+                    <button class="st_choises_common st_choises_support">SUPPORT</button> -->
+                </div>
+            </div>
+
+            <div class="sTop_login">
+                <div class="st_login_install">
+                    <img src="Images/s_install_image.png" alt="" class="stlogin_install_image">
+                    <h class="stlogin_install_text">Install Steam</h>
+                </div>
+                <a href="Steam_login.html" class="st_login_button">login</a>
+                <!-- <button class="st_login_button">login</button> -->
+                <div class="st_seperate"></div>
+                <button class="st_languge_button">language</button>
+            </div>
+        </div>
+
+
+        <div class="steamMid">
+            <div class="steamMid_base">
+                <h class="steamMid_base_title">CREATE YOUR ACCOUNT</h>
+                <p class="steamMid_base_label">Email Address</p>
+                <input type="email" name="" id="" class="steamMid_base_typein">
+                <p class="steamMid_base_label">Confirm your Address</p>
+                <input type="email" name="" id="" class="steamMid_base_typein">
+                <p class="steamMid_base_label">Country of Residence</p>
+                <select name="" id="" class="steamMid_base_country">
+                    <h class="steamMid_base_country_text"></h>
+                    <img src="Images/s_jointeam_onclick.png" alt="" class="steamMid_base_country_img">
+
+                    <option value="AF" class="country_clickpop">Afghanistan</option>
+					<option value="AX" class="country_clickpop">Aland Islands</option>
+																					<option value="AL" class="country_clickpop">Albania</option>
+																					<option value="DZ" class="country_clickpop">Algeria</option>
+																					<option value="AS" class="country_clickpop">American Samoa</option>
+																					<option value="AD" class="country_clickpop">Andorra</option>
+																					<option value="AO" class="country_clickpop">Angola</option>
+																					<option value="AI" class="country_clickpop">Anguilla</option>
+																					<option value="AQ" class="country_clickpop">Antarctica</option>
+																					<option value="AG" class="country_clickpop">Antigua and Barbuda</option>
+																					<option value="AR" class="country_clickpop">Argentina</option>
+																					<option value="AM" class="country_clickpop">Armenia</option>
+																					<option value="AW" class="country_clickpop">Aruba</option>
+																					<option value="AU" class="country_clickpop">Australia</option>
+																					<option value="AT" class="country_clickpop">Austria</option>
+																					<option value="AZ" class="country_clickpop">Azerbaijan</option>
+																					<option value="BL" class="country_clickpop">BL</option>
+																					<option value="BQ" class="country_clickpop">BQ</option>
+																					<option value="BS" class="country_clickpop">Bahamas</option>
+																					<option value="BH" class="country_clickpop">Bahrain</option>
+																					<option value="BD" class="country_clickpop">Bangladesh</option>
+																					<option value="BB" class="country_clickpop">Barbados</option>
+																					<option value="BY" class="country_clickpop">Belarus</option>
+																					<option value="BE" class="country_clickpop">Belgium</option>
+																					<option value="BZ" class="country_clickpop">Belize</option>
+																					<option value="BJ" class="country_clickpop">Benin</option>
+																					<option value="BM" class="country_clickpop">Bermuda</option>
+																					<option value="BT" class="country_clickpop">Bhutan</option>
+																					<option value="BO" class="country_clickpop">Bolivia</option>
+																					<option value="BA" class="country_clickpop">Bosnia and Herzegovina</option>
+																					<option value="BW" class="country_clickpop">Botswana</option>
+																					<option value="BV" class="country_clickpop">Bouvet Island</option>
+																					<option value="BR" class="country_clickpop">Brazil</option>
+																					<option value="IO" class="country_clickpop">British Indian Ocean Territory</option>
+																					<option value="BN" class="country_clickpop">Brunei Darussalam</option>
+																					<option value="BG" class="country_clickpop">Bulgaria</option>
+																					<option value="BF" class="country_clickpop">Burkina Faso</option>
+																					<option value="BI" class="country_clickpop">Burundi</option>
+																					<option value="CU" class="country_clickpop">CU</option>
+																					<option value="CW" class="country_clickpop">CW</option>
+																					<option value="KH" class="country_clickpop">Cambodia</option>
+																					<option value="CM" class="country_clickpop">Cameroon</option>
+																					<option value="CA" class="country_clickpop">Canada</option>
+																					<option value="CV" class="country_clickpop">Cape Verde</option>
+																					<option value="KY" class="country_clickpop">Cayman Islands</option>
+																					<option value="CF" class="country_clickpop">Central African Republic</option>
+																					<option value="TD" class="country_clickpop">Chad</option>
+																					<option value="CL" class="country_clickpop">Chile</option>
+																					<option value="CN" class="country_clickpop">China</option>
+																					<option value="CX" class="country_clickpop">Christmas Island</option>
+																					<option value="CC" class="country_clickpop">Cocos (Keeling) Islands</option>
+																					<option value="CO" class="country_clickpop">Colombia</option>
+																					<option value="KM" class="country_clickpop">Comoros</option>
+																					<option value="CG" class="country_clickpop">Congo</option>
+																					<option value="CD" class="country_clickpop">Congo, the Democratic Republic of the</option>
+																					<option value="CK" class="country_clickpop">Cook Islands</option>
+																					<option value="CR" class="country_clickpop">Costa Rica</option>
+																					<option value="CI" class="country_clickpop">Cote d'Ivoire</option>
+																					<option value="HR" class="country_clickpop">Croatia</option>
+																					<option value="CY" class="country_clickpop">Cyprus</option>
+																					<option value="CZ" class="country_clickpop">Czech Republic</option>
+																					<option value="DK" class="country_clickpop">Denmark</option>
+																					<option value="DJ" class="country_clickpop">Djibouti</option>
+																					<option value="DM" class="country_clickpop">Dominica</option>
+																					<option value="DO" class="country_clickpop">Dominican Republic</option>
+																					<option value="EC" class="country_clickpop">Ecuador</option>
+																					<option value="EG" class="country_clickpop">Egypt</option>
+																					<option value="SV" class="country_clickpop">El Salvador</option>
+																					<option value="GQ" class="country_clickpop">Equatorial Guinea</option>
+																					<option value="ER" class="country_clickpop">Eritrea</option>
+																					<option value="EE" class="country_clickpop">Estonia</option>
+																					<option value="SZ" class="country_clickpop">Eswatini</option>
+																					<option value="ET" class="country_clickpop">Ethiopia</option>
+																					<option value="FK" class="country_clickpop">Falkland Islands (Malvinas)</option>
+																					<option value="FO" class="country_clickpop">Faroe Islands</option>
+																					<option value="FJ" class="country_clickpop">Fiji</option>
+																					<option value="FI" class="country_clickpop">Finland</option>
+																					<option value="FR" class="country_clickpop">France</option>
+																					<option value="GF" class="country_clickpop">French Guiana</option>
+																					<option value="PF" class="country_clickpop">French Polynesia</option>
+																					<option value="TF" class="country_clickpop">French Southern Territories</option>
+																					<option value="GA" class="country_clickpop">Gabon</option>
+																					<option value="GM" class="country_clickpop">Gambia</option>
+																					<option value="GE" class="country_clickpop">Georgia</option>
+																					<option value="DE" class="country_clickpop">Germany</option>
+																					<option value="GH" class="country_clickpop">Ghana</option>
+																					<option value="GI" class="country_clickpop">Gibraltar</option>
+																					<option value="GR" class="country_clickpop">Greece</option>
+																					<option value="GL" class="country_clickpop">Greenland</option>
+																					<option value="GD" class="country_clickpop">Grenada</option>
+																					<option value="GP" class="country_clickpop">Guadeloupe</option>
+																					<option value="GU" class="country_clickpop">Guam</option>
+																					<option value="GT" class="country_clickpop">Guatemala</option>
+																					<option value="GG" class="country_clickpop">Guernsey</option>
+																					<option value="GN" class="country_clickpop">Guinea</option>
+																					<option value="GW" class="country_clickpop">Guinea-Bissau</option>
+																					<option value="GY" class="country_clickpop">Guyana</option>
+																					<option value="HT" class="country_clickpop">Haiti</option>
+																					<option value="HM" class="country_clickpop">Heard and Mc Donald Islands</option>
+																					<option value="VA" class="country_clickpop">Holy See(Vatican City State)</option>
+																					<option value="HN" class="country_clickpop">Honduras</option>
+																					<option value="HK" class="country_clickpop">Hong Kong</option>
+																					<option value="HU" class="country_clickpop">Hungary</option>
+																					<option value="IS" class="country_clickpop">Iceland</option>
+																					<option value="IN" class="country_clickpop">India</option>
+																					<option value="ID" class="country_clickpop">Indonesia</option>
+																					<option value="IR" class="country_clickpop">Iran</option>
+																					<option value="IQ" class="country_clickpop">Iraq</option>
+																					<option value="IE" class="country_clickpop">Ireland</option>
+																					<option value="IM" class="country_clickpop">Isle of Man</option>
+																					<option value="IL" class="country_clickpop">Israel</option>
+																					<option value="IT" class="country_clickpop">Italy</option>
+																					<option value="JM" class="country_clickpop">Jamaica</option>
+																					<option value="JP" class="country_clickpop">Japan</option>
+																					<option value="JE" class="country_clickpop">Jersey</option>
+																					<option value="JO" class="country_clickpop">Jordan</option>
+																					<option value="KZ" class="country_clickpop">Kazakhstan</option>
+																					<option value="KE" class="country_clickpop">Kenya</option>
+																					<option value="KI" class="country_clickpop">Kiribati</option>
+																					<option value="KR" class="country_clickpop">Korea, Republic of</option>
+																					<option value="XK" class="country_clickpop">Kosovo</option>
+																					<option value="KW" class="country_clickpop">Kuwait</option>
+																					<option value="KG" class="country_clickpop">Kyrgyzstan</option>
+																					<option value="LA" class="country_clickpop">Lao People's Democratic Republic</option>
+																					<option value="LV" class="country_clickpop">Latvia</option>
+																					<option value="LB" class="country_clickpop">Lebanon</option>
+																					<option value="LS" class="country_clickpop">Lesotho</option>
+																					<option value="LR" class="country_clickpop">Liberia</option>
+																					<option value="LY" class="country_clickpop">Libya</option>
+																					<option value="LI" class="country_clickpop">Liechtenstein</option>
+																					<option value="LT" class="country_clickpop">Lithuania</option>
+																					<option value="LU" class="country_clickpop">Luxembourg</option>
+																					<option value="MF" class="country_clickpop">MF</option>
+																					<option value="MO" class="country_clickpop">Macau</option>
+																					<option value="MK" class="country_clickpop">Macedonia, the former Yugoslav Republic of</option>
+																					<option value="MG" class="country_clickpop">Madagascar</option>
+																					<option value="MW" class="country_clickpop">Malawi</option>
+																					<option value="MY" class="country_clickpop">Malaysia</option>
+																					<option value="MV" class="country_clickpop">Maldives</option>
+																					<option value="ML" class="country_clickpop">Mali</option>
+																					<option value="MT" class="country_clickpop">Malta</option>
+																					<option value="MH" class="country_clickpop">Marshall Islands</option>
+																					<option value="MQ" class="country_clickpop">Martinique</option>
+																					<option value="MR" class="country_clickpop">Mauritania</option>
+																					<option value="MU" class="country_clickpop">Mauritius</option>
+																					<option value="YT" class="country_clickpop">Mayotte</option>
+																					<option value="MX" class="country_clickpop">Mexico</option>
+																					<option value="FM" class="country_clickpop">Micronesia, Federated States of</option>
+																					<option value="MD" class="country_clickpop">Moldova, Republic of</option>
+																					<option value="MC" class="country_clickpop">Monaco</option>
+																					<option value="MN" class="country_clickpop">Mongolia</option>
+																					<option value="ME" class="country_clickpop">Montenegro</option>
+																					<option value="MS" class="country_clickpop">Montserrat</option>
+																					<option value="MA" class="country_clickpop">Morocco</option>
+																					<option value="MZ" class="country_clickpop">Mozambique</option>
+																					<option value="MM" class="country_clickpop">Myanmar</option>
+																					<option value="NA" class="country_clickpop">Namibia</option>
+																					<option value="NR" class="country_clickpop">Nauru</option>
+																					<option value="NP" class="country_clickpop">Nepal</option>
+																					<option value="NL" class="country_clickpop">Netherlands</option>
+																					<option value="NC" class="country_clickpop">New Caledonia</option>
+																					<option value="NZ" class="country_clickpop">New Zealand</option>
+																					<option value="NI" class="country_clickpop">Nicaragua</option>
+																					<option value="NE" class="country_clickpop">Niger</option>
+																					<option value="NG" class="country_clickpop">Nigeria</option>
+																					<option value="NU" class="country_clickpop">Niue</option>
+																					<option value="NF" class="country_clickpop">Norfolk Island</option>
+																					<option value="MP" class="country_clickpop">Northern Mariana Islands</option>
+																					<option value="NO" class="country_clickpop">Norway</option>
+																					<option value="OM" class="country_clickpop">Oman</option>
+																					<option value="PK" class="country_clickpop">Pakistan</option>
+																					<option value="PW" class="country_clickpop">Palau</option>
+																					<option value="PS" class="country_clickpop">Palestinian Territory, Occupied</option>
+																					<option value="PA" class="country_clickpop">Panama</option>
+																					<option value="PG" class="country_clickpop">Papua New Guinea</option>
+																					<option value="PY" class="country_clickpop">Paraguay</option>
+																					<option value="PE" class="country_clickpop">Peru</option>
+																					<option value="PH" class="country_clickpop">Philippines</option>
+																					<option value="PN" class="country_clickpop">Pitcairn</option>
+																					<option value="PL" class="country_clickpop">Poland</option>
+																					<option value="PT" class="country_clickpop">Portugal</option>
+																					<option value="PR" class="country_clickpop">Puerto Rico</option>
+																					<option value="QA" class="country_clickpop">Qatar</option>
+																					<option value="RE" class="country_clickpop">Reunion</option>
+																					<option value="RO" class="country_clickpop">Romania</option>
+																					<option value="RU" class="country_clickpop">Russian Federation</option>
+																					<option value="RW" class="country_clickpop">Rwanda</option>
+																					<option value="SS" class="country_clickpop">SS</option>
+																					<option value="SX" class="country_clickpop">SX</option>
+																					<option value="SH" class="country_clickpop">Saint Helena</option>
+																					<option value="KN" class="country_clickpop">Saint Kitts and Nevis</option>
+																					<option value="LC" class="country_clickpop">Saint Lucia</option>
+																					<option value="PM" class="country_clickpop">Saint Pierre and Miquelon</option>
+																					<option value="VC" class="country_clickpop">Saint Vincent and the Grenadines</option>
+																					<option value="WS" class="country_clickpop">Samoa</option>
+																					<option value="SM" class="country_clickpop">San Marino</option>
+																					<option value="ST" class="country_clickpop">Sao Tome and Principe</option>
+																					<option value="SA" class="country_clickpop">Saudi Arabia</option>
+																					<option value="SN" class="country_clickpop">Senegal</option>
+																					<option value="RS" class="country_clickpop">Serbia</option>
+																					<option value="SC" class="country_clickpop">Seychelles</option>
+																					<option value="SL" class="country_clickpop">Sierra Leone</option>
+																					<option value="SG" class="country_clickpop">Singapore</option>
+																					<option value="SK" class="country_clickpop">Slovakia</option>
+																					<option value="SI" class="country_clickpop">Slovenia</option>
+																					<option value="SB" class="country_clickpop">Solomon Islands</option>
+																					<option value="SO" class="country_clickpop">Somalia</option>
+																					<option value="ZA" class="country_clickpop">South Africa</option>
+																					<option value="GS" class="country_clickpop">South Georgia and the South Sandwich Islands</option>
+																					<option value="ES" class="country_clickpop">Spain</option>
+																					<option value="LK" class="country_clickpop">Sri Lanka</option>
+																					<option value="SD" class="country_clickpop">Sudan</option>
+																					<option value="SR" class="country_clickpop">Suriname</option>
+																					<option value="SJ" class="country_clickpop">Svalbard and Jan Mayen</option>
+																					<option value="SE" class="country_clickpop">Sweden</option>
+																					<option value="CH" class="country_clickpop">Switzerland</option>
+																					<option value="SY" class="country_clickpop">Syria</option>
+																					<option value="TW" class="country_clickpop">Taiwan</option>
+																					<option value="TJ" class="country_clickpop">Tajikistan</option>
+																					<option value="TZ" class="country_clickpop">Tanzania, United Republic of</option>
+																					<option value="TH" class="country_clickpop">Thailand</option>
+																					<option value="TL" class="country_clickpop">Timor-Leste</option>
+																					<option value="TG" class="country_clickpop">Togo</option>
+																					<option value="TK" class="country_clickpop">Tokelau</option>
+																					<option value="TO" class="country_clickpop">Tonga</option>
+																					<option value="TT" class="country_clickpop">Trinidad and Tobago</option>
+																					<option value="TN" class="country_clickpop">Tunisia</option>
+																					<option value="TR" class="country_clickpop">Turkey</option>
+																					<option value="TM" class="country_clickpop">Turkmenistan</option>
+																					<option value="TC" class="country_clickpop">Turks and Caicos Islands</option>
+																					<option value="TV" class="country_clickpop">Tuvalu</option>
+																					<option value="UG" class="country_clickpop">Uganda</option>
+																					<option value="UA" class="country_clickpop">Ukraine</option>
+																					<option value="AE" class="country_clickpop">United Arab Emirates</option>
+																					<option value="GB" class="country_clickpop">United Kingdom</option>
+																					<option value="US" class="country_clickpop">United States</option>
+																					<option value="UM" class="country_clickpop">United States Minor Outlying Islands</option>
+																					<option value="UY" class="country_clickpop">Uruguay</option>
+																					<option value="UZ" class="country_clickpop">Uzbekistan</option>
+																					<option value="VU" class="country_clickpop">Vanuatu</option>
+																					<option value="VE" class="country_clickpop">Venezuela</option>
+																					<option value="VN" class="country_clickpop">Viet Nam</option>
+																					<option value="VG" class="country_clickpop">Virgin Islands, British</option>
+																					<option value="VI" class="country_clickpop">Virgin Islands, U.S.</option>
+																					<option value="WF" class="country_clickpop">Wallis and Futuna</option>
+																					<option value="EH" class="country_clickpop">Western Sahara</option>
+																					<option value="YE" class="country_clickpop">Yemen</option>
+																					<option value="ZM" class="country_clickpop">Zambia</option>
+																					<option value="ZW" class="country_clickpop">Zimbabwe</option>
+                </select>
+
+                <div class="steamMid_base_Robot">
+                    <div class="steamMid_base_Robot_1">
+                        <input type="checkbox" name="" id="" class="steamMid_base_Robot_check">
+                        <h class="steamMid_base_Robot_text">I'm not a robot</h>
+                    </div>
+                    <div class="steamMid_base_Robot_2">
+                        <img src="Images/s_recapchar_bot.png" alt="" class="steamMid_base_Robot_2_img">
+                    </div>
+                    
+                </div>
+
+                <div class="steamMid_base_policy">
+                    <input type="checkbox" name="" id="" class="steamMid_base_policy_check"><h class="steamMid_base_policy_check_tet">I am 13 years of age or older and agree to the terms of the 
+                        <a href="" class="steamMid_base_policy_link">Steam Subscriber Agreement</a>
+                     and the 
+                    <a href="" class="steamMid_base_policy_link">Valve Privacy Policy</a>
+                    .
+                    </h>
+                </div>
+
+                <div class="steamMid_base_continue">Continue</div>
+            </div>
+        </div>
+
+
+        <div class="steamPart steamBottom">
+            <div class="SBottom_common steamBottom_part1">
+            </div>
+
+            <div class="SBottom_common steamBottom_part2">
+                <div class="sbot_part2_common sbot_part2_1">
+                    <!-- <a href="https://tigobiz.com" target="_blank">
+                    <img src="https://tigobiz.com/wp-content/uploads/2020/11/TRUNG-01-logo-ngang-keo-sat-280-87-150x47.png" alt="logo Tigobiz" /></a> -->
+                    <!-- <a href="https://tigobiz.com" target="_blank" title="Click để vào Webstie tigobiz.com">Dịch vụ Marketing Online Tigobiz</a> -->
+                        <a href="https://www.valvesoftware.com/fr/" title="VALV" class="sb2_1_valve_link">
+                            <img src="Images/s_bottom_logo_1.png" alt="" class="sb2_1_valve_img">
+                        </a>
+                        <div class="sb2_1_dereption">
+                            <p class="sb2_1decreption_text">© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+                                VAT included in all prices where applicable.</p>
+                            <div class="sb2_1decreption_link">
+                                <a href="" title="Privacy Policy" class="sb2_1_link">Privacy Policy</a>
+                                <a href="" title="Legal" class="sb2_1_link">Legal</a>
+                                <a href="" title="Steam Subsctiber Agreement" class="sb2_1_link">Steam Subsctiber Agreement</a>
+                                <a href="" title="Refunds" class="sb2_1_link">Refunds</a>
+                                <a href="" title="Cookies" class="sb2_1_link">Cookies</a>
+                            </div>
+                        </div>
+                        <img src="Images/s_bottom_logo_2.png" alt="" class="sb2_1_steamImg">
+                </div>
+                <div class="sbot_part2_common sbot_part2_2">
+                    <div class="sb2_2decreption_link">
+                        <a href="" class="sb2_2_link">About Valve</a>
+                        <a href="" class="sb2_2_link">Jobs</a>
+                        <a href="" class="sb2_2_link">Steamworks</a>
+                        <a href="" class="sb2_2_link">Steam Distribution</a>
+                        <a href="" class="sb2_2_link">Support</a>
+                        <a href="" class="sb2_2_link">Recycling</a>
+                        <a href="" class="sb2_2_link">Gift Cards</a>
+                        <img src="Images/s_faceLogo.png" alt="" class="sb2_2_image sb2_2_faceImg">
+                        <a href="https://www.facebook.com/Steam" class="sb2_2_link sb2_2_facelink">Steam</a>
+                        <img src="Images/s_twitterLogo.png" alt="" class="sb2_2_image sb2_2_twitterImg">
+                        <a href="https://twitter.com/steam" class="sb2_2_link">@steam</a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="SBottom_common steamBottom_part3">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

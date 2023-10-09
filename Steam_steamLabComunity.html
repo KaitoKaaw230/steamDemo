@@ -1,0 +1,1740 @@
+l<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Steam Community :: Group :: Steam Labs</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="C:\Users\PC\OneDrive\Desktop\Thực tập_jobs\SteamHtml\Images\steamLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- body -->
+    <style>
+        body{
+            overflow-x: hidden;
+            height: 1900px;
+            width: 1500px;
+            position: relative;
+            /* cursor: url("trỏ\ chuột\ ori.jpg"),auto; */
+            background-color: #1b2838;
+        }
+        .steamMid{
+        width: 1300px;
+        height: 1700px;
+        font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+    </style>
+
+     <!-- toplogo -->
+    <style>
+        .steamTop{
+            transform: translateY(-25px);
+            margin-left: -8px;
+            width: 1550px;
+            height: 109px;
+            background-color: #171a21;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            z-index: 50;
+        }
+        .sTop_choise{
+            width: 800px;
+
+            margin-left: 50px;
+            display: flex;
+            justify-content: start;
+        }
+        .sTop_avatar_link{}
+        .sTop_avatar_image{
+            margin-top: 25px;
+            width: 160px;
+            height: 50px;
+            margin-left: 80px;
+            margin-right: -10px;
+        }
+        .sTop_choise_choises{
+
+            margin-top: 25px;
+            /* background-color: red; */
+            margin-left: 70px;
+            width: 450px;
+            height: 50px;
+
+        }
+        .st_choises_common{
+            text-decoration: none;
+            height: 30px;
+            width: auto;
+            font-size: 15px;
+            margin: 18px 0 0 0;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: relative;
+        }
+        .st_choises_common:hover{color: #fff;}
+        .st_choises_store{}
+        .st_choises_comunity{}
+        .st_choises_about{margin-left: 6px;}
+        .st_choises_support{margin-left: 6px;}
+
+        .st_pop{
+            /* box-shadow: 1px 1px 0.5px 1px; */
+            position: absolute;
+            z-index: 50;
+            background-color: #171a21;
+            display: none;
+            /* flex-direction: column; */
+            justify-content: start;
+            box-shadow: 3px 3px 5px -3px #000;
+	        text-align: left;
+            columns: 1;
+        }
+        .st_store_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .st_community_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+
+        .st_choises_store:hover .st_store_pop{display: block;}
+        .st_choises_comunity:hover .st_community_pop{display: block;}
+        .st_pop:last-child{margin-bottom: 10px;}
+        .st_store_pop{width: 127px; height: 165px;}
+        .st_community_pop{width: 100px; height: 145px;}
+        .pop_text{
+            color: #b8b6b4;
+            font-size: 11px;
+            padding: 7px 10px 7px 10px;
+
+            text-decoration: none;
+        }
+        .pop_text:first-child{padding-top: 12px;}
+        .pop_text:hover{color: #fff;}
+        .store_pop{}
+        .community_pop{}
+    </style>
+
+    <!-- topinstall -->
+    <style>
+        .sTop_login{
+            width: 200px;
+            margin-left: -100px;
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        .st_login_install{
+            margin-top: 5px;
+            width: 100px;
+            height: 24px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #5c7e10;
+        }
+        .stlogin_install_image{
+            margin: 2px 2px 2px 0;
+            width: 20px;
+            height: 20px;
+        }
+        .stlogin_install_text{
+            margin-top: 6px;
+            color: #e5e4dc;
+            font-size: 10px;
+        }
+        .st_login_install:hover .stlogin_install_text{color: #fff;}
+
+        .st_login_button{
+            font-size: 15px;
+            margin: 8px 5px 0 5px;
+            height: 24px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .st_seperate{
+            margin-top: 10px;
+            height: 14px;
+            width: 0.5px;
+            background-color: #b8b6b4;
+        }
+        .st_languge_button{
+            /* border-left: thick solid #b8b6b4; */
+            margin-top: 8px;
+            height: 18px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        .st_login_button:hover{color: #fff;}
+        .st_languge_button:hover{color: #fff;}
+    </style>
+
+    <!-- bottom 2-->
+    <style>
+        .steamBottom_part2{
+            transform: translateY(20px);
+            position: absolute;
+            width: 100%;
+            height: 165px;
+            background-color: #171a21;
+            bottom: 0;
+        }
+        .sbot_part2_common{
+            position: absolute;
+            margin: 0 0 0 250px;
+            height: 60px;
+            width: 1000px;
+        }
+        .sbot_part2_1{
+            top: 20px;
+            /* background-color: red; */
+            display: flex;
+            justify-content: space-around;
+            border-top: #363c44 solid 1px;
+            border-bottom: #363c44 solid 1px;
+        }
+
+
+
+        .sb2_1_valve_link{}
+        .sb2_1_valve_img{
+            margin: 10px 0 10px 0;
+            width: 100px;
+            height: 40px;
+        }
+        .sb2_1_dereption{
+            margin: 10px 0 10px 0;
+            height: 40px;
+            width: 800px;
+            /* background-color: yellow; */
+        }
+        .sb2_1_steamImg{
+            margin: 15px 0 15px 0;
+            width: 100px;
+            height: 30px;
+        }
+        .sb2_1decreption_text{
+            position: absolute;
+            font-family: sans-serif;
+            color: #8f98a0;
+            font-size: 12px;
+            width: 780px;
+            margin: 14px 10px 0 10px;
+            top: 0;
+
+            /* visibility: hidden; */
+        }
+        .sb2_1decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 263px;
+            width: 600px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_1_link{
+            margin-top: 10px;
+            justify-content: end;
+            text-decoration: none;
+            color: #c6d4df;
+            padding: 0 5px 0 5px;
+            font-size: 14px;
+            border-right: #c6d4df solid 1px;
+        }
+        .sb2_1_link:last-child{border: none;}
+        .sb2_1_link:hover{color: #fff;}
+
+
+        .sbot_part2_2{
+            position: relative;
+            top: 80px;
+            /* background-color: blue; */
+        }
+        .sb2_2decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 800px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_2_link{
+            text-decoration: none;
+            color: #c6d4df;
+            font-size: 14px;
+            padding: 0 7px 0 5px;
+            margin-top: 20px;
+            border-right: #c6d4df solid 1px;
+            /* visibility: hidden; */
+        }
+        .sb2_2_link:last-child{margin-left: -4px; border: none;}
+        .sb2_2_link:hover{color: #fff;}
+        .sb2_2_facelink{margin-left: -4px;}
+        .sb2_2_image{
+            /* position: absolute; */
+            width: 15px;
+            height: 15px;
+        }
+        .sb2_2_faceImg{}
+        .sb2_2_twitterImg{
+            margin-left: 5px;
+        }
+    </style>
+
+
+<!-- scrollbar -->
+<style>
+    ::-webkit-scrollbar {
+        height: 12px;
+        width: 14px;
+        background: rgba(0,0,0,0);
+        z-index: 12;
+        overflow: visible;
+    }
+    ::-webkit-scrollbar-corner {
+    background: #202020;
+}
+    ::-webkit-scrollbar-thumb {
+        width: 10px;
+        background-color: #434953;
+        border-radius: 10px;
+        z-index: 12;
+        border: 4px solid rgba(0,0,0,0);
+        background-clip: padding-box;
+        transition: background-color .32s ease-in-out;
+        margin: 4px;
+        min-height: 32px;
+        min-width: 32px;
+    }
+    ::selection {
+        background: #54a5d4;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.6666666667);
+        color: #fff;
+    }
+</style>
+
+<!-- Mid_logo_base -->
+<style>
+    .Mid_logo_base{width: 100%; height: 300px; margin-top: 120px;}
+    .Mid_container{margin: 10px 0 0 340px; position: relative;}
+    .Mid_container{width: 800px; height: 300px; border-bottom: 5px solid #417B9C;}
+
+    .backgr_img{position: absolute; top: 0; left: 0; z-index: 0;}
+    .backgr_img{width: 800px; height: 300px; opacity: 0.3;}
+
+    .logo_img{position: absolute; top: 10px; left: 0; z-index: 2;border-radius: 100px;}
+    .logo_img{width: 220px; height: 220px; box-shadow: 2px 2px 80px rgba(0,0,0,.5);}
+
+    .Logo_name_base{position: absolute; top: 100px; left: 210px; z-index: 1;}
+    .Logo_name_base{width: 400px; height: 60px;}
+    .Logo_name_base_top{width: fit-content; height: 20px; background-color: black;}
+    .Logo_name_base_top{color: #949491; padding: 0 11px; font-size: 11px; line-height: 20px; padding-left: 20px;}
+    .Logo_name_base_bottom{width: fit-content; height: 40px; background-color: black;padding-left: 20px;}
+    .Logo_name_base_bottom{color: #fff; font-size: 33px;}
+
+    .joingr_base{position: absolute; top: 50px; left: 480px; z-index: 3;}
+    .joingr_base{width: 115px; height: 50px; background-color: #000;}
+    .joingr{background: linear-gradient( to bottom, #799905 5%, #536904 95%); width: 100px; height: 30px; color: #D2E885;}
+    .joingr{font-size: 15px; text-decoration: none; line-height: 49px; margin: 5px 5px 5px 5px; padding: 10px 15px; border-radius: 3px;}
+    .joingr:hover{background: linear-gradient( to bottom, #b6d908 5%, #80a006 95%); color: #fff;}
+</style>
+
+<!-- Mid_base -->
+<style>
+    /* .Mid_base_button_choise_base{background-color: blue;} */
+    /* .choise_container{background-color: yellow;} */
+
+    .Mid_base{margin: 10px 0 0 340px; position: relative;}
+    .Mid_base{width: 800px; height: 1100px; border-bottom: 5px solid #417B9C;}
+    
+    .Mid_base_button_choise_base{width: 800px; height: 100px; transform: translateY(-90.5px);}
+    .Mid_base_button_choise_base{display: flex; justify-content: end;}
+    .choise_container{width: 800px; height: 40px; margin-top: 61px; display: flex; flex-direction: row;}
+
+    .choise_bttn{width: fit-content; height: 30px; margin: 0 5px 0 0; background: black; user-select: none;}
+    .choise_bttn{color: #dadada; line-height: 30px; padding: 0px 12px; cursor: pointer; text-decoration: none;}
+    .choise_bttn{border-radius: 2px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
+    .choise_bttn:hover{background-color: rgba( 102, 192, 244, 0.8 ) !important; color: #fff;}
+
+    .active_try{background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+</style>
+
+<!-- openAndClose -->
+<style> 
+    .Comment_base{background-color: pink}
+
+
+    /* .Overview_base{display: none;} */
+    .Discuss_base{display: none;}
+    .Event_base{display: none;}
+    .Members_base{display: none;}
+    .Comment_base{display: none;}
+</style>
+
+<!-- overview_base -->
+<style>
+    .Overview_base{width: 800px; height: 1000px; transform: translateY(-60px);}
+    .Overview_base{display: flex; justify-content: start;}
+    .Overview_base_left{width: 500px; height: 1000px; border-right: 5px solid #1b2838;}
+    .Overview_base_right{width: 300px; height: 1000px;}
+
+    .Overview_base_right_base{width: 300px; height: 250px; display: flex; flex-direction: column;}
+    .Overview_base_right_base{background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);}
+
+    .Overview_right_row{width: 300px; height: 80px; display: flex; justify-content: start;}
+    .Overview_right_row_1{}
+
+    .Overview_right_row_link{text-align: center;}
+    .Overview_right_row_link{text-decoration: none; width: 80px; height: 70px; margin: 0 5px 0 5px; line-height: 30px; padding: 10px 5px 0 5px;}
+    .text_underline:hover{text-decoration: underline;}
+    .Overview_right_row_1_text_base{text-align: center; margin: 0 5px 0 5px; padding: 10px 10px 0 10px;}
+    .Overview_right_row_1_text_base{font-family: Arial, Helvetica, Verdana, sans-serif; width: 80px; height: 70px; line-height: 30px;}
+
+    .Overview_right_row_num{font-size: 1.2em;}
+    .Overview_right_row_text{}
+
+    .Overview_right_row_2_img{position: absolute; top: 95px; left: 520px; z-index: 0;}
+    .Overview_right_row_2_img{width: 265px; height: 50px;}
+
+    .Overview_right_row_2_text_1{position: absolute; top: 105px; left: 528px; z-index: 1;}
+    .Overview_right_row_2_text_2{position: absolute; top: 105px; left: 650px; z-index: 1;}
+    .Overview_right_row_2_text_1{width: 115px; height: 32px; color: #595959; text-align: center; line-height: 30px;}
+    .Overview_right_row_2_text_2{width: 120px; height: 32px; color: #fff;font-size: 14px; text-align: center;line-height: 30px;}
+    .Overview_right_row_2{cursor: pointer; user-select: none; border-bottom: 3px solid #1b2838;}
+
+
+    .Overview_base_left_item{width: 500px; height: 280px; border-top: 3px solid #304056; display: flex; flex-direction: column;}
+    .Overview_base_left_smallcap{color: #61686d; font-size: 11px; padding-top: 16px; margin-bottom: 16px;}
+    .Overview_base_left_title{color: #fff; font-size: 1.5em;}
+    .Overview_base_left_text{color: #c1cacf; font-size: 14px; margin-top: 1em;}
+    .Overview_base_left_link{color: #c1cacf; font-size: 14px; margin-top: 1em;}
+    .Overview_base_left_link:hover{color: #fff;}
+
+
+    .item_2{overflow: hidden;}
+    .top{width: 500px; height: 30px; position: absolute; top: 289px; left: 0; z-index: 10;}
+    .top{display: flex; justify-content: space-between; line-height: 1px; background: #1b2838;}
+    .ViewAllBtn{margin-top: 16px; margin-right: 5px; color: #66C0F4; cursor: pointer; font-size: 11px; user-select: none;}
+    .ViewAllBtn:hover{text-decoration: underline;}
+
+    .item_2_base{transform: translateY(-200px);}
+    .item_2_base{margin-top: 29px; transition: transform 0.4s ease-in;}
+    .item_2_base{width: 500px; height: 251px; cursor: pointer;}
+
+    .base2_items{width: 500px; height: 40px; display: flex; flex-direction: row;}
+    .base2_items:hover{background-color: rgba( 117, 204, 255, 0.3);}
+    .base2_items_mailicon{width: 20px; height: 20px; margin: 5px 5px 5px 5px; user-select: none;}
+    .base2_items_text_base{padding-left: 10px; width: 310px; height: 30px; display: flex; flex-direction: column; margin-top: 5px;  text-overflow: ellipsis;}
+    .text_base_top{color: #66C0F4; font-weight: bold; font-size: 14px; white-space: nowrap;  text-overflow: ellipsis; overflow: hidden;}
+    .text_base_bottom{color: #8ED1F9; font-size: 11px;}
+
+    .base2_items_timeline{padding-right: 20px; width: 100px; height: 30px; font-size: 11px; color: #8ED1F9; line-height: 30px; text-align: end; margin-top: 5px;}
+    .base2_items_chaticon{width: 20px; height: 20px; margin: 7px 5px 5px 5px; user-select: none;}
+
+</style>
+
+<!-- Discuss_base -->
+<style>
+    .Discuss_base{width: 800px; height: 1000px; transform: translateY(-60px); display: flex; flex-direction: row;}
+    .Discuss_base_left{width: 500px; height: 930px; display: flex; flex-direction: column; border-right: 5px solid #1b2838;}
+    .Discuss_base_right{width: 300px; height: 800px;}
+
+    .Discuss_base_right{display: flex; flex-direction: column;}
+    .Discuss_base_right_search{background-color: transparent;}
+    .Discuss_base_right_search{color: #909090; position: absolute; top: 0; left: 510px;}
+    .Discuss_base_right_search{padding-left: 5px; border: none; outline: none; width: 280px; height: 40px;}
+
+    .Discuss_base_right_search_backimg{position: absolute; top: 0; left: 500px;}
+    .Discuss_base_right_search_backimg{width: 300px; height: 40px;}
+
+    .Discuss_base_right_search_glass{position: absolute; top: 12px; left: 765px; width: 22px; height: 17px; z-index: 3; cursor: pointer;}
+    .Discuss_base_right_search_glass:hover{filter: brightness(1.5);}
+
+    /* all margin-left = 15px */
+    .starnnewdiscuss{width: 300px; height: 80px; margin-top: 65px; background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);}
+    .starnnewdiscuss_btn{text-decoration: none; background: linear-gradient( to bottom, rgba(47,137,188,1) 5%, rgba(23,67,92,1) 95%);}
+    .starnnewdiscuss_btn{width: fit-content; height: 50px; margin-left: 15px; color: #A4D7F5; border-radius: 2px; padding: 10px 15px}
+    .starnnewdiscuss_btn{line-height: 77px;}
+    .starnnewdiscuss_btn:hover{background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%); color: #fff;}
+
+    .steamlab_sub_base{display: flex; flex-direction: column;}
+    .steamlab_sub_base{width: 300px; height: 740px; margin-top: 45px; background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);}
+    .steamlab_sub_base_title{width: 300px; height: 50px; color: #61696D; font-size: 12px; line-height: 50px;} 
+    .steamlab_sub_base_items{width: 300px; height: 40px; display: flex; justify-content: space-between; line-height: 40px; font-size: 14px;}
+    .steamlab_sub_base_items_link{text-decoration: none; margin-left: 15px; color: #ebebeb;}
+    .steamlab_sub_base_items_link:hover{text-decoration: underline}
+    .steamlab_sub_base_items_nums{color: #fff; font-weight: 300;margin-right: 17px; user-select: none;}
+
+    .banned_item{text-decoration: line-through; opacity: 0.7; cursor:not-allowed; user-select: none;}
+    .banned_item:hover{text-decoration: line-through;}
+
+    /* .Discuss_left_newdiscuss_base{display: none;} */
+    .Discuss_left_newdiscuss_base{background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);}
+    .Discuss_left_newdiscuss_base{width: 500px; height: 250px;}
+    .Discuss_left_newdiscuss_base_title{font-weight: 15px; color: #fff; margin-top: 10px; margin-left: 20px;}
+    .Discuss_left_newdiscuss_smallerbase{background: black; width: 300px; height: 180px; margin: 10px 50px 0 20px; border-radius: 20px;}
+    .Discuss_left_newdiscuss_base_text{width: 270px; height: 26px; border: none; outline: none; padding-left: 10px;}
+    .Discuss_left_newdiscuss_base_text{color: #fff; border-radius: 50px; background: rgb(43, 29, 29); margin: 10px 0 5px 10px;}
+    .NewDiscus_pinned_check{width: 20px; height: 20px; margin: 12px 50px 0 15px;}
+    .NewDiscus_pinned_check_text{color: #fff; font-size: 13px; position: absolute; left: 60px; top: 183px;}
+    .newdiscuss_lastbase{width: 280px; display: flex; justify-content: space-between;}
+    .newdiscuss_saveBttn{border-radius: 10px;}
+    .newdiscuss_saveBttn{background: linear-gradient( to bottom, rgba(47,137,188,1) 5%, rgba(23,67,92,1) 95%); color: #A4D7F5;}
+    .newdiscuss_saveBttn{width: fit-content; height: 20px; padding: 4px 40px 4px 40px; cursor: pointer; user-select: none; margin-top: 10px; margin-right: -10px;}
+    .newdiscuss_saveBttn:hover{background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%); color: #fff;}
+    .discusnew_container{position: absolute; top: 40px; left: 330px; border-radius: 10px; border: 5px solid black;}
+    .discusnew_container{ width: 150px; height: 175px; background: #fff; color: #000;}
+
+    .Discuss_left_discucsion_base{width: 500px; height: 648px; margin-top: 30px;}
+
+</style>
+
+<!-- event_base -->
+<style>
+    .Event_base{width: 100%; height: 1000px; transform: translateY(-60px);}
+</style>
+
+<!-- member_base -->
+<style>
+    .Members_base{width: 100%; height: 1000px; transform: translateY(-60px);}
+    .Members_base{display: flex; flex-direction: column;}
+    /* .Members_choise_container{background-color: yellow;} */
+
+    .Members_searchbar_base{width: 100%; height: 38px; display: flex; justify-content: start;}
+    .Members_searchbar{width: 380px; height: 38px; background: transparent; padding-left: 12px;}
+    .Members_searchbar{background-color: rgba(0,0,0,0.2); border: 1px solid #000; box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );}
+    .Members_searchbar{border: none; outline: none; font-size: 13px; color: #C6D4DF;}
+    .Members_searchbar_btn{width: fit-content; height: 38px; padding: 0 20px 0 20px; cursor: pointer; color: #D2E885; border-radius: 5px;}
+    .Members_searchbar_btn{margin-left: 10px; background: linear-gradient( to bottom, #799905 5%, #536904 95%); line-height: 38px;}
+    .Members_searchbar_btn:hover{background: linear-gradient( to bottom, #b6d908 5%, #80a006 95%); color: #fff;}
+    
+
+    .Members_members_base{width: 100%; height: 900px; margin-top: 90px; display: flex; flex-direction: column;}
+    .Members_choise_container{width: 100%; height: 850px; }
+
+    .Members_choise_base{width: 800px; height: 50px; display: flex; justify-content: start;}
+    .Members_choise{background-size: 300% 300%; animation: gradient 20s ease infinite; background: rgb(65, 65, 65); color: #fff;}
+    .Members_choise{width: fit-content; padding: 0 15px 0 15px; line-height: 35px; margin-right: 10px;}
+    .Members_choise{border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; user-select: none;}
+    /* .Members_choise{transform: translateY(-50px); height: 50px;} */
+    .Members_choise{transform: translateY(-32px); height: 32px;}
+    .Members_choise{transition: 0.3s ease-out;}
+    .Members_choise:hover{color: rgb(180, 255, 255);}
+    .alr_press{transform: translateY(-50px); height: 50px; color: cyan;}
+
+    .NewMember_base{background-color: green; transform: translateY(-50px);}
+    .NemberShip_base{background-color: greenyellow; transform: translateY(-50px);}
+    .YourS_base{transform: translateY(-50px); display: flex; flex-direction: column; border-top: 5px solid #000;}
+    /* .Members_members_base{background: blue; } */
+
+    .NewMember_base{display: none;}
+    .NemberShip_base{display: none;}
+    .YourS_base{}
+    .NewMember_base{width: 100%; height: 900px; }
+    .NemberShip_base{width: 100%; height: 900px;}
+    .YourS_base{width: 100%; height: 900px;}
+
+
+    .YourS_base_account{background: transparent; width: 800px; height: 50px; cursor: pointer; display: flex; justify-content: start;}
+    .YourS_base_account{}
+
+    .YourS_base_account:hover{background-color: rgba( 117, 204, 255, 0.3);}
+
+    .YourS_base_account_avatarImg{width: 30px; height: 30px; margin: 10px 10px 0 10px; border-radius: 50px; opacity: 0.8; user-select: none;}
+
+    .YourS_base_account_text{width: 280px; height: 40px; margin-left: 10px; margin-top: 10px;}
+
+    .YourS_base_account_name{color: #66C0F4; font-weight: bold; font-size: 16px;}
+    .YourS_base_account_Online_signal{width: 5px; height: 5px; border-radius: 50px; background: rgb(0, 246, 0); margin: 3px 2px 0 0;}
+    .YourS_base_account_Offine_signal{width: 5px; height: 5px; border-radius: 50px; background: red; margin: 3px 2px 0 0;}
+    
+    .YourS_base_account_Online{color: rgb(0, 246, 0); font-size: 9px;}
+    .YourS_base_account_Offine{color: red; font-size: 9px;}
+
+    .YourS_base_account_join_date{line-height: 50px; font-size: 13px; color: #25afff; width: 200px; height: 50px;}
+    .YourS_base_account_lastactive{line-height: 50px; font-size: 13px; color: #25afff; width: 200px; height: 50px;}
+    .YourS_base_account_message{width: 21px; height: 18px; margin-top: 15px;}
+    .YourS_base_account_message:hover{filter: brightness(1.5);}
+    
+</style>
+
+<!--comment_base -->
+<style>
+    .Comment_base{width: 100%; height: 1000px; transform: translateY(-60px);}
+</style>
+
+
+
+</head>
+
+<script>
+    function OverPress(){
+        let overBtn = document.getElementById("Over_bttn");
+        let disBtn = document.getElementById("Discus_bttn");
+        let evenBtn = document.getElementById("Event_bttn");
+        let memBtn = document.getElementById("Member_bttn");
+        let commenBtn = document.getElementById("Comment_bttn");
+
+        let overBase = document.getElementById("Overview_base");
+        let disBase = document.getElementById("Discuss_base");
+        let evenBase = document.getElementById("Event_base");
+        let memBase = document.getElementById("Members_base");
+        let commenBase = document.getElementById("Comment_base");
+
+        if(overBtn.click){
+            overBtn.style.background = "linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%)";
+            overBase.style.display = "flex";
+
+            disBtn.style.background = "black";
+            evenBtn.style.background = "black";
+            memBtn.style.background = "black";
+            commenBtn.style.background = "black";
+
+            disBase.style.display = "none";
+            evenBase.style.display = "none";
+            memBase.style.display = "none";
+            commenBase.style.display = "none";
+        }
+        else{
+            overBtn.style.background = "black";
+            overBase.style.display = "none";
+        }
+    }
+
+    function DiscPress(){
+        let overBtn = document.getElementById("Over_bttn");
+        let disBtn = document.getElementById("Discus_bttn");
+        let evenBtn = document.getElementById("Event_bttn");
+        let memBtn = document.getElementById("Member_bttn");
+        let commenBtn = document.getElementById("Comment_bttn");
+
+        let overBase = document.getElementById("Overview_base");
+        let disBase = document.getElementById("Discuss_base");
+        let evenBase = document.getElementById("Event_base");
+        let memBase = document.getElementById("Members_base");
+        let commenBase = document.getElementById("Comment_base");
+
+        if(disBtn.click){
+            disBtn.style.background = "linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%)";
+            disBase.style.display = "flex";
+
+            overBtn.style.background = "black";
+            evenBtn.style.background = "black";
+            memBtn.style.background = "black";
+            commenBtn.style.background = "black";
+
+            overBase.style.display = "none";
+            evenBase.style.display = "none";
+            memBase.style.display = "none";
+            commenBase.style.display = "none";
+        }
+        else{
+            disBtn.style.background = "black";
+            disBtn.style.display = "none";
+        }
+    }
+
+    function EventPress(){
+        let overBtn = document.getElementById("Over_bttn");
+        let disBtn = document.getElementById("Discus_bttn");
+        let evenBtn = document.getElementById("Event_bttn");
+        let memBtn = document.getElementById("Member_bttn");
+        let commenBtn = document.getElementById("Comment_bttn");
+        
+        let overBase = document.getElementById("Overview_base");
+        let disBase = document.getElementById("Discuss_base");
+        let evenBase = document.getElementById("Event_base");
+        let memBase = document.getElementById("Members_base");
+        let commenBase = document.getElementById("Comment_base");
+        
+        if(evenBtn.click){
+            evenBtn.style.background = "linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%)";
+            evenBase.style.display = "flex";
+
+            overBtn.style.background = "black";
+            disBtn.style.background = "black";
+            memBtn.style.background = "black";
+            commenBtn.style.background = "black";
+        
+            overBase.style.display = "none";
+            disBase.style.display = "none";
+            memBase.style.display = "none";
+            commenBase.style.display = "none";
+        }
+        else{
+            evenBtn.style.background = "black";
+            evenBase.style.display = "none";
+        }
+    }
+
+    function MemPress(){
+        let overBtn = document.getElementById("Over_bttn");
+        let disBtn = document.getElementById("Discus_bttn");
+        let evenBtn = document.getElementById("Event_bttn");
+        let memBtn = document.getElementById("Member_bttn");
+        let commenBtn = document.getElementById("Comment_bttn");
+        
+        let overBase = document.getElementById("Overview_base");
+        let disBase = document.getElementById("Discuss_base");
+        let evenBase = document.getElementById("Event_base");
+        let memBase = document.getElementById("Members_base");
+        let commenBase = document.getElementById("Comment_base");
+        
+        if(memBtn.click){
+            memBtn.style.background = "linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%)";
+            memBase.style.display = "flex";
+
+            overBtn.style.background = "black";
+            evenBtn.style.background = "black";
+            disBtn.style.background = "black";
+            commenBtn.style.background = "black";
+
+            overBase.style.display = "none";
+            disBase.style.display = "none";
+            evenBase.style.display = "none";
+            commenBase.style.display = "none";
+        }
+        else{
+            memBtn.style.background = "black";
+            memBase.style.display = "none";
+        }
+    }
+
+    function ComPress(){
+        let overBtn = document.getElementById("Over_bttn");
+        let disBtn = document.getElementById("Discus_bttn");
+        let evenBtn = document.getElementById("Event_bttn");
+        let memBtn = document.getElementById("Member_bttn");
+        let commenBtn = document.getElementById("Comment_bttn");
+        
+        let overBase = document.getElementById("Overview_base");
+        let disBase = document.getElementById("Discuss_base");
+        let evenBase = document.getElementById("Event_base");
+        let memBase = document.getElementById("Members_base");
+        let commenBase = document.getElementById("Comment_base");
+        
+        if(commenBtn.click){
+            commenBtn.style.background = "linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%)";
+            commenBase.style.display = "flex";
+
+            overBtn.style.background = "black";
+            evenBtn.style.background = "black";
+            memBtn.style.background = "black";
+            disBtn.style.background = "black";
+
+            overBase.style.display = "none";
+            disBase.style.display = "none";
+            memBase.style.display = "none";
+            evenBase.style.display = "none";
+        }
+        else{
+            commenBtn.style.background = "black";
+            commenBase.style.display = "none";
+        }
+    }
+</script>
+    
+<script>
+    function openBase2(){
+        let base2 = document.getElementById("item_2_base");
+        if(base2.style.transform == "translateY(-200px)"){base2.style.transform = "translateY(0)";}
+        else{base2.style.transform = "translateY(-200px)"}
+    }
+    
+</script>
+
+
+<!-- finding -->
+<script>
+    function searCH(){
+        var searcValue = document.getElementById("Discuss_base_right_search").value;
+        // alert("Hi there");
+        //alert(searcValue);
+        alert("There's no result for: " + searcValue);
+    }
+</script>
+
+<!-- start new discuss
+<script>
+    function StarNewDis(){
+        let NewDis = document.getElementById("Discuss_left_newdiscuss_base");
+        let discusBase = document.getElementById("Discuss_left_discucsion_base");
+        if(NewDis.style.display == "flex"){
+            NewDis.style.display = "none"; 
+            discusBase.style.marginTop = "0";
+        }
+        else{
+            NewDis.style.display = "flex";
+            discusBase.style.marginTop = "30px";
+        }
+    }
+</script> -->
+
+<!-- aveNewDiscuss -->
+<script>
+    function SaveNewDis(){
+        var UserName = document.getElementById("NewDiscus_username").value;
+        var TitleD = document.getElementById("NewDiscus_title").value;
+        var Stories = document.getElementById("NewDiscus_story").value;
+        let PinCheck = document.getElementById("NewDiscus_pinned_check");
+        //if(PinCheck.checked){alert('Checked!!')}
+        //else{alert('U did not check!')}
+        //alert(UserName + '   ' + TitleD)
+        //alert(UserName);
+        //alert(TitleD);
+        //alert(Stories)
+        //alert('Hi \nYes');
+        alert('Hi ' + UserName + '  ' + TitleD + '  ' + Stories);
+    }
+</script>
+
+<!-- member_Search -->
+<script>
+    function memSearch(){
+        let nammS = document.getElementById("Name_searchbar").value;
+        let FrCodeS = document.getElementById("friendCode_searchbar").value;
+        alert('Search for Name:  ' + nammS + '  and FriendCode:  ' + FrCodeS);
+    }
+</script>
+
+
+<!-- member_choise_click -->
+<script>
+    function NewBtnPress(){
+        let NewBtn = document.getElementById("NewMemBtn");
+        let MemShpBtn = document.getElementById("NewShipBtn");
+        let NewBase = document.getElementById("NewMember_base");
+        let MemShpBase = document.getElementById("NemberShip_base");
+        let YourSBtn = document.getElementById("YourMemberS");
+        let YourSBase = document.getElementById("YourS_base");
+            NewBtn.style.transform = "translateY(-50px)";
+            NewBtn.style.height = "50px";
+            NewBtn.style.color = "cyan";
+            NewBase.style.display = "flex";
+
+            MemShpBtn.style.transform = "translateY(-32px)";
+            MemShpBtn.style.height = "32px";
+            MemShpBtn.style.color = "white";
+            MemShpBase.style.display = "none";
+
+            YourSBtn.style.transform = "translateY(-32px)";
+            YourSBtn.style.height = "32px";
+            YourSBtn.style.color = "white";
+            YourSBase.style.display = "none";
+    }
+
+    function MemShpBtnPress(){
+        let NewBtn = document.getElementById("NewMemBtn");
+        let MemShpBtn = document.getElementById("NewShipBtn");
+        let NewBase = document.getElementById("NewMember_base");
+        let MemShpBase = document.getElementById("NemberShip_base");
+        let YourSBtn = document.getElementById("YourMemberS");
+        let YourSBase = document.getElementById("YourS_base");
+            MemShpBtn.style.transform = "translateY(-50px)";
+            MemShpBtn.style.height = "50px";
+            MemShpBtn.style.color = "cyan";
+            MemShpBase.style.display = "flex";
+
+            NewBtn.style.transform = "translateY(-32px)";
+            NewBtn.style.height = "32px";
+            NewBtn.style.color = "white";
+            NewBase.style.display = "none";
+
+            YourSBtn.style.transform = "translateY(-32px)";
+            YourSBtn.style.height = "32px";
+            YourSBtn.style.color = "white";
+            YourSBase.style.display = "none";
+    }
+
+    function YourSPress(){
+        let NewBtn = document.getElementById("NewMemBtn");
+        let MemShpBtn = document.getElementById("NewShipBtn");
+        let NewBase = document.getElementById("NewMember_base");
+        let MemShpBase = document.getElementById("NemberShip_base");
+        let YourSBtn = document.getElementById("YourMemberS");
+        let YourSBase = document.getElementById("YourS_base");
+            YourSBtn.style.transform = "translateY(-50px)";
+            YourSBtn.style.height = "50px";
+            YourSBtn.style.color = "cyan";
+            YourSBase.style.display = "flex";
+
+            NewBtn.style.transform = "translateY(-32px)";
+            NewBtn.style.height = "32px";
+            NewBtn.style.color = "white";
+            NewBase.style.display = "none";
+
+            MemShpBtn.style.transform = "translateY(-32px)";
+            MemShpBtn.style.height = "32px";
+            MemShpBtn.style.color = "white";
+            MemShpBase.style.display = "none";
+    }
+</script>
+
+
+<!--member chat -->
+<script>
+    // function openBase2(){
+    //     let base2 = document.getElementById("item_2_base");
+    //     if(base2.style.transform == "translateY(-200px)"){base2.style.transform = "translateY(0)";}
+    //     else{base2.style.transform = "translateY(-200px)"}
+    // }
+    function chatToMem(){
+        let OlineCheck = document.getElementById("ToCheck");
+        if(OlineCheck.style.color == "red"){confirm("This person is curently ofline, leave a message?");}
+        else{alert("You now may chat!");}
+    }
+</script>
+<body id="BigBody">
+    <div id="SteamContainer" class="SteamContainer">
+        <div class="steamPart steamTop">
+
+            <div class="sTop_choise">
+                <a href="Steam_index.html" class="sTop_avatar_link">
+                    <img src="Images/s_avatar.png" alt="" class="sTop_avatar_image">
+                </a>
+
+                <div class="sTop_choise_choises">
+                    <button class="st_choises_common st_choises_store">
+                        STORE
+                        <div class="st_pop st_store_pop">
+                            <div class="st_store_pop_contain">
+                                <a href="" class="pop_text store_pop">HOME</a>
+                                <a href="" class="pop_text store_pop">DISCOVERY QUEUE</a>
+                                <a href="" class="pop_text store_pop">WISHLIST</a>
+                                <a href="" class="pop_text store_pop">POINTS SHOP</a>
+                                <a href="Steam_newAndFeature.html" class="pop_text store_pop">NEWS</a>
+                                <a href="" class="pop_text store_pop">STATS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="st_choises_common st_choises_comunity">
+                        COMMUNITY
+                        <div class="st_pop st_community_pop">
+                            <div class="st_community_pop_contain">
+                                <a href="" class="pop_text community_pop">HOME</a>
+                                <a href="" class="pop_text community_pop">DISCUSSIONS</a>
+                                <a href="" class="pop_text community_pop">WORKSHOP</a>
+                                <a href="" class="pop_text community_pop">MARKET</a>
+                                <a href="" class="pop_text community_pop">BROADCASTS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <a href="" class="st_choises_common st_choises_about">ABOUT</a>
+                    <a href="" class="st_choises_common st_choises_support">SUPPORT</a>
+                    <!-- <button class="st_choises_common st_choises_about">ABOUT</button>
+                    <button class="st_choises_common st_choises_support">SUPPORT</button> -->
+                </div>
+            </div>
+
+            <div class="sTop_login">
+                <div class="st_login_install">
+                    <img src="Images/s_install_image.png" alt="" class="stlogin_install_image">
+                    <h class="stlogin_install_text">Install Steam</h>
+                </div>
+                <a href="login.html" class="st_login_button">login</a>
+                <!-- <button class="st_login_button">login</button> -->
+                <div class="st_seperate"></div>
+                <button class="st_languge_button">language</button>
+            </div>
+        </div>
+
+        <div class="steamMid">
+            <div class="Mid_logo_base">
+                <div class="Mid_container">
+                    <img src="Images/steamLabComunity_bigBackGr_Logo-img.jpg" alt="" class="backgr_img">
+                    <img src="Images/steamLabComunity_Logo_img.jpg" alt="" class="logo_img">
+                    <div class="Logo_name_base">
+                        <div class="Logo_name_base_top">STEAM GROUP</div>
+                        <div class="Logo_name_base_bottom">Steam Labs <span style="color: #acacac; font-size: 24px;">SteamLabs</span></div>
+                        <div class="joingr_base">
+                            <a href="Steam_login.html" class="joingr">Join Group</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="Mid_base">
+                <div class="Mid_base_button_choise_base">
+                    <div class="choise_container">
+                        <div id="Over_bttn" class="choise_bttn active_try" onclick="OverPress()">Overview</div>
+                        <a href="" class="choise_bttn">Announcements</a>
+                        <div id="Discus_bttn" class="choise_bttn" onclick="DiscPress()">Discussions</div>
+                        <div id="Event_bttn" class="choise_bttn" onclick="EventPress()">Events</div>
+                        <div id="Member_bttn" class="choise_bttn" onclick="MemPress()">Members</div>
+                        <div id="Comment_bttn" class="choise_bttn" onclick="ComPress()">Comments</div>
+                    </div>
+                </div>
+
+                <div id="Overview_base" class="Overview_base">
+                    <div class="Overview_base_left">
+                        <div class="Overview_base_left_item">
+                            <div class="Overview_base_left_smallcap">ABOUT STEAM LABS</div>
+                            <div class="Overview_base_left_title">Experemi... Experimet... Experiments!</div>
+                            <div class="Overview_base_left_text">Every year, we create dozens of experiments around discoverability, video, machine learning, and more. You know who we thought might enjoy seeing them? Everyone.</div>
+                            <div class="Overview_base_left_text">For the first time, you can <a href="" class="Overview_base_left_link">try, share, and break our features in early development</a>, then <a href="" class="Overview_base_left_link">share your feedback with us</a> here in the discussions.</div>
+                            <a href="Steam_SteamLab.html" class="Overview_base_left_link">Steam Labs</a>
+                        </div>
+
+                        <div  style="margin-top: 5px;" class="Overview_base_left_item item_2">
+                            <div class="top">
+                                <div class="Overview_base_left_smallcap">POPULAR DISCUSSIONS</div>
+                                <div class="ViewAllBtn" onclick="openBase2()">VIEW ALL</div>
+                            </div>
+                            <div id="item_2_base" class="item_2_base">
+                                <div class="base2_items">
+                                    <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                    <div class="base2_items_text_base">
+                                        <span class="text_base_top">New Discovery Queue is wonderful</span>
+                                        <span class="text_base_bottom">Casalyz</span>
+                                    </div>
+                                    <div class="base2_items_timeline">10 hours ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                                </div>
+
+                                <div class="base2_items">
+                                    <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                    <div class="base2_items_text_base">
+                                        <span class="text_base_top">gift other countrs</span>
+                                        <span class="text_base_bottom">Tu_Invest</span>
+                                    </div>
+                                    <div class="base2_items_timeline">29 Jul @ 11:03pm</div>
+                                    <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                                </div>
+
+                                <div class="base2_items">
+                                    <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                    <div class="base2_items_text_base">
+                                        <span class="text_base_top"><span style="color: yellow;">PINNED:</span> Welcome to Experiment 13: Store Hubs</span>
+                                        <span class="text_base_bottom">Christen</span>
+                                    </div>
+                                    <div class="base2_items_timeline">12 Jun @ 1:28am</div>
+                                    <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                                </div>
+
+                                <div class="base2_items">
+                                    <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                    <div class="base2_items_text_base">
+                                        <span class="text_base_top"><span style="color: yellow;">PINNED:</span>New DLC Discovery Hub with Steam Lab Experience</span>
+                                        <span class="text_base_bottom">Alden</span>
+                                    </div>
+                                    <div class="base2_items_timeline">6 Jul @ 7:58am</div>
+                                    <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                                </div>
+
+                                <div class="base2_items">
+                                    <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                    <div class="base2_items_text_base">
+                                        <span class="text_base_top">NAll games are now free????!!!</span>
+                                        <span class="text_base_bottom">Noface</span>
+                                    </div>
+                                    <div class="base2_items_timeline">1 min ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                                </div>
+
+                                <div class="base2_items">
+                                    <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                    <div class="base2_items_text_base">
+                                        <span class="text_base_top">New Discovery Queue is wonderful</span>
+                                        <span class="text_base_bottom">Casalyz</span>
+                                    </div>
+                                    <div class="base2_items_timeline">10 hours ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="Overview_base_right">
+                        <div class="Overview_base_right_base">
+                            <div class="Overview_right_row Overview_right_row_1">
+                                <a href="#Members_base" class="Overview_right_row_link">
+                                    <span style="color: #9a9a9a;" class="Overview_right_row_num">60,626</span>
+                                    <span style="color: #9a9a9a;" class="Overview_right_row_text text_underline">MEMBERS</span>
+                                </a>
+                                <div class="Overview_right_row_1_text_base">
+                                    <span style="color: #8bc53f;" class="Overview_right_row_num">1,904</span>
+                                    <span style="color: #8bc53f;" class="Overview_right_row_text">IN-GAME</span>
+                                </div>
+                                <div class="Overview_right_row_1_text_base">
+                                    <span style="color: #62a7e3;" class="Overview_right_row_num">11,761</span>
+                                    <span style="color: #62a7e3;" class="Overview_right_row_text">ONLINE</span>
+                                </div>
+                            </div>
+                            <div class="Overview_right_row Overview_right_row_2">
+                                <img src="Images/steamLab_comuniity_chat_img.png" alt="" class="Overview_right_row_2_img">
+                                <div class="Overview_right_row_2_text_1">
+                                    <span style="font-size: 24px;">7,276</span>
+                                    <span style="font-size: 11px;">IN CHAT</span>
+                                </div>
+                                <div class="Overview_right_row_2_text_2">
+                                    <span>Enter chat room</span>
+                                </div>
+                            </div>
+                            <div class="Overview_right_row Overview_right_row_3">
+                                <span style="color: #61686d; font-size: 12px; text-align: center; line-height: 80px; margin-left: 30px;">Founded &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 30 May, 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Discuss_base" class="Discuss_base">
+                    <div class="Discuss_base_left">
+                        <div id="Discuss_left_newdiscuss_base" class="Discuss_left_newdiscuss_base">
+                            <div class="Discuss_left_newdiscuss_base_title">New Discussion</div>
+                            <div class="Discuss_left_newdiscuss_smallerbase">
+                                <input type="text" name="" id="NewDiscus_username" class="Discuss_left_newdiscuss_base_text" placeholder="Who are You? (Username)">
+                                <input type="text" name="" id="NewDiscus_title" class="Discuss_left_newdiscuss_base_text" placeholder="Create your title">
+                                <input type="text" name="" id="NewDiscus_story" class="Discuss_left_newdiscuss_base_text" placeholder="Create your story">
+                                <div class="newdiscuss_lastbase">
+                                    <input type="checkbox" name="" id="NewDiscus_pinned_check" class="NewDiscus_pinned_check">
+                                    <span class="NewDiscus_pinned_check_text">Pin my discussion!</span>
+                                    <div class="newdiscuss_saveBttn" onclick="SaveNewDis()">Save</div>
+                                </div>
+                                
+                            </div>
+                            <div class="discusnew_container"></div>
+                            
+                        </div>
+                        <div id="Discuss_left_discucsion_base" class="Discuss_left_discucsion_base">
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">New Discovery Queue is wonderful</span>
+                                    <span class="text_base_bottom">Casalyz</span>
+                                </div>
+                                <div class="base2_items_timeline">10 hours ago</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">gift other countrs</span>
+                                    <span class="text_base_bottom">Tu_Invest</span>
+                                </div>
+                                <div class="base2_items_timeline">29 Jul @ 11:03pm</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top"><span style="color: yellow;">PINNED:</span> Welcome to Experiment 13: Store Hubs</span>
+                                    <span class="text_base_bottom">Christen</span>
+                                </div>
+                                <div class="base2_items_timeline">12 Jun @ 1:28am</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top"><span style="color: yellow;">PINNED:</span>New DLC Discovery Hub with Steam Lab Experience</span>
+                                    <span class="text_base_bottom">Alden</span>
+                                </div>
+                                <div class="base2_items_timeline">6 Jul @ 7:58am</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">NAll games are now free????!!!</span>
+                                    <span class="text_base_bottom">Noface</span>
+                                </div>
+                                <div class="base2_items_timeline">1 min ago</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">New Discovery Queue is wonderful</span>
+                                    <span class="text_base_bottom">Casalyz</span>
+                                </div>
+                                <div class="base2_items_timeline">10 hours ago</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">New Discovery Queue is wonderful</span>
+                                    <span class="text_base_bottom">Casalyz</span>
+                                </div>
+                                <div class="base2_items_timeline">10 hours ago</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">gift other countrs</span>
+                                    <span class="text_base_bottom">Tu_Invest</span>
+                                </div>
+                                <div class="base2_items_timeline">29 Jul @ 11:03pm</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top"><span style="color: yellow;">PINNED:</span> Welcome to Experiment 13: Store Hubs</span>
+                                    <span class="text_base_bottom">Christen</span>
+                                </div>
+                                <div class="base2_items_timeline">12 Jun @ 1:28am</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top"><span style="color: yellow;">PINNED:</span>New DLC Discovery Hub with Steam Lab Experience</span>
+                                    <span class="text_base_bottom">Alden</span>
+                                </div>
+                                <div class="base2_items_timeline">6 Jul @ 7:58am</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">NAll games are now free????!!!</span>
+                                    <span class="text_base_bottom">Noface</span>
+                                </div>
+                                <div class="base2_items_timeline">1 min ago</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">New Discovery Queue is wonderful</span>
+                                    <span class="text_base_bottom">Casalyz</span>
+                                </div>
+                                <div class="base2_items_timeline">10 hours ago</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">New Discovery Queue is wonderful</span>
+                                    <span class="text_base_bottom">Casalyz</span>
+                                </div>
+                                <div class="base2_items_timeline">10 hours ago</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">gift other countrs</span>
+                                    <span class="text_base_bottom">Tu_Invest</span>
+                                </div>
+                                <div class="base2_items_timeline">29 Jul @ 11:03pm</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top"><span style="color: yellow;">PINNED:</span> Welcome to Experiment 13: Store Hubs</span>
+                                    <span class="text_base_bottom">Christen</span>
+                                </div>
+                                <div class="base2_items_timeline">12 Jun @ 1:28am</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top"><span style="color: yellow;">PINNED:</span>New DLC Discovery Hub with Steam Lab Experience</span>
+                                    <span class="text_base_bottom">Alden</span>
+                                </div>
+                                <div class="base2_items_timeline">6 Jul @ 7:58am</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">NAll games are now free????!!!</span>
+                                    <span class="text_base_bottom">Noface</span>
+                                </div>
+                                <div class="base2_items_timeline">1 min ago</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            <div class="base2_items">
+                                <img src="Images/steamlabMailIcon_img.png" alt="" class="base2_items_mailicon">
+                                <div class="base2_items_text_base">
+                                    <span class="text_base_top">New Discovery Queue is wonderful</span>
+                                    <span class="text_base_bottom">Casalyz</span>
+                                </div>
+                                <div class="base2_items_timeline">10 hours ago</div>
+                                <img src="Images/steamlabChatIcon_img.png" alt="" class="base2_items_chaticon">
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                    <div class="Discuss_base_right">
+                        <img src="Images/steamLab_magnifyingGlass.gif" alt="" class="Discuss_base_right_search_glass" onclick="searCH()">
+                        <img src="Images/steamLab_searchImage.png" alt="" class="Discuss_base_right_search_backimg">
+                        <input type="text" name="" id="Discuss_base_right_search" class="Discuss_base_right_search" placeholder="Search discussions">
+                        <div class="starnnewdiscuss">
+                            <a href="#Discuss_base" class="starnnewdiscuss_btn" onclick="StarNewDis()">Start a New Discussion</a>
+                            <div class="steamlab_sub_base">
+                                <div class="steamlab_sub_base_title">
+                                    <span style="margin-left: 15px;">SUB FORUMS</span><span style="margin-left: 130px;">THREADS</span>
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">General Steam Labs Discussion</a>
+                                        <span class="steamlab_sub_base_items_nums">2,074</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">015 DLC Hub</a>
+                                        <span class="steamlab_sub_base_items_nums">126</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">014 Discovery Queue Update</a>
+                                        <span class="steamlab_sub_base_items_nums">249</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">013 Store Hubs</a>
+                                        <span class="steamlab_sub_base_items_nums">603</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">012 Exploring Sales</a>
+                                        <span class="steamlab_sub_base_items_nums">92</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">011 Text Filtering</a>
+                                        <span class="steamlab_sub_base_items_nums">129</span>
+                                    </div>
+
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">010 Store Navigation</a>
+                                        <span class="steamlab_sub_base_items_nums">126</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">009 News Hub</a>
+                                        <span class="steamlab_sub_base_items_nums">442</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">008 Play Next</a>
+                                        <span class="steamlab_sub_base_items_nums">105</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link banned_item">007</a>
+                                        <span class="steamlab_sub_base_items_nums"></span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">006 Community Recommendations</a>
+                                        <span class="steamlab_sub_base_items_nums">125</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">005 Deep Dive</a>
+                                        <span class="steamlab_sub_base_items_nums">186</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">004 Search Discussion</a>
+                                        <span class="steamlab_sub_base_items_nums">948</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">003 Automatic Show Discussion</a>
+                                        <span class="steamlab_sub_base_items_nums">382</span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">002 Recommender Discussion</a>
+                                        <span class="steamlab_sub_base_items_nums">598</span>
+                                    </div>
+
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link banned_item">001</a>
+                                        <span class="steamlab_sub_base_items_nums"></span>
+                                    </div>
+
+                                    <div class="steamlab_sub_base_items">
+                                        <a href="" class="steamlab_sub_base_items_link">Event & Announcements</a>
+                                        <span class="steamlab_sub_base_items_nums">24</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+
+                <div id="Event_base" class="Event_base">
+                    <span style="font-size: 30px; color: #fff; margin-left: 170px; line-height: 100px; opacity: 0.6; user-select: none;">There're no events coming up !!!</span>
+                </div>
+                <div id="Members_base" class="Members_base">
+                    <div class="Members_searchbar_base">
+                        <input type="text" name="" id="Name_searchbar" class="Members_searchbar" placeholder="Enter a name">
+                        <input style="margin-left: 10px;" type="text" name="" id="friendCode_searchbar" class="Members_searchbar" placeholder="Enter a friend code">
+                        <div class="Members_searchbar_btn" onclick="memSearch()">search</div>
+                    </div>
+                    <div class="Members_members_base">
+                        <div class="Members_choise_base">
+                            <div id="YourMemberS" class="Members_choise alr_press" onclick="YourSPress()">Profile</div>
+                            <div id="NewMemBtn" class="Members_choise" onclick="NewBtnPress()">New members</div>
+                            <div id="NewShipBtn" class="Members_choise" onclick="MemShpBtnPress()">MemberShip</div>
+                        </div>
+                        <div class="Members_choise_container">
+                            <div id="YourS_base" class="YourS_base">
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Yoichi Yukimura</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Online_signal"></div>
+                                            <span id="ToCheck" class="YourS_base_account_Online">Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 16 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 day ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message" onclick="chatToMem()">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Natsumi Hamasaki</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Online_signal"></div>
+                                            <span class="YourS_base_account_Online">Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 27 Jan 2016</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 2 days ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Felix Clemont</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Online_signal"></div>
+                                            <span class="YourS_base_account_Online">Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 10 Feb 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 day ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Naoto Hamasaki</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Online_signal"></div>
+                                            <span class="YourS_base_account_Online">Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 10 Feb 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 day ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+                                
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Shintaro Aihara 'Seto'</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Online_signal"></div>
+                                            <span class="YourS_base_account_Online">Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 10 Feb 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 day ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Hiro Akiba</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Online_signal"></div>
+                                            <span class="YourS_base_account_Online">Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 1 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 week ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Keitaro Nagame</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Online_signal"></div>
+                                            <span class="YourS_base_account_Online">Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 16 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 day ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Hunter Springfield</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Online_signal"></div>
+                                            <span class="YourS_base_account_Online">Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 10 Feb 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 day ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Taiga Akatora</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Offine_signal"></div>
+                                            <span class="YourS_base_account_Offine">Offine</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 3 Sep 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 year ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Yuri Nomoru</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Offine_signal"></div>
+                                            <span class="YourS_base_account_Offine">Offine</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 28 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 sec ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Goro Nomoru</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Offine_signal"></div>
+                                            <span class="YourS_base_account_Offine">Offine</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 16 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 sec ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+  
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Yoshinori Nagira</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Offine_signal"></div>
+                                            <span class="YourS_base_account_Offine">Offine</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 16 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 3 days ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Aiden Flynn</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Offine_signal"></div>
+                                            <span class="YourS_base_account_Offine">Offine</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 16 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 sec ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+                                
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Wiliam Clemont</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Offine_signal"></div>
+                                            <span class="YourS_base_account_Offine">Offine</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 16 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 sec ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Darius Najjar</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Offine_signal"></div>
+                                            <span class="YourS_base_account_Offine">Offine</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 16 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 sec ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Loyd Sirious</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Offine_signal"></div>
+                                            <span class="YourS_base_account_Offine">Offine</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 16 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 sec ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Lee Kurosawa</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Offine_signal"></div>
+                                            <span class="YourS_base_account_Offine">Offine</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 16 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 sec ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message">
+                                </div>
+
+                                <div class="YourS_base_account">
+                                    <img src="Images/noAvatar_img.png" alt="" class="YourS_base_account_avatarImg">
+                                    <div class="YourS_base_account_text">
+                                        <span class="YourS_base_account_name">Eduard Fitzpatrick</span><br>
+                                        <div style="display: flex; justify-content: start;">
+                                            <div class="YourS_base_account_Offine_signal"></div>
+                                            <span id="ToCheck" class="YourS_base_account_Offine">Offine</span>
+                                        </div>
+                                    </div>
+                                    <div class="YourS_base_account_join_date">Join: 16 Jul 2017</div>
+                                    <div class="YourS_base_account_lastactive">Last active: 1 sec ago</div>
+                                    <img src="Images/steamlabChatIcon_img.png" title="Chat to this account" alt="" class="YourS_base_account_message" onclick="chatToMem()">
+                                </div>
+
+                                
+                            </div>
+                            <div id="NewMember_base" class="NewMember_base"></div>
+                            <div id="NemberShip_base" class="NemberShip_base"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="Comment_base" class="Comment_base"></div>
+            </div>
+        </div>
+
+        <div class="steamPart steamBottom">
+            <div class="SBottom_common steamBottom_part2">
+                <div class="sbot_part2_common sbot_part2_1">
+                        <a href="https://www.valvesoftware.com/fr/" title="VALV" class="sb2_1_valve_link">
+                            <img src="Images/s_bottom_logo_1.png" alt="" class="sb2_1_valve_img">
+                        </a>
+                        <div class="sb2_1_dereption">
+                            <p class="sb2_1decreption_text">© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+                                VAT included in all prices where applicable.</p>
+                            <div class="sb2_1decreption_link">
+                                <a href="" title="Privacy Policy" class="sb2_1_link">Privacy Policy</a>
+                                <a href="" title="Legal" class="sb2_1_link">Legal</a>
+                                <a href="" title="Steam Subsctiber Agreement" class="sb2_1_link">Steam Subsctiber Agreement</a>
+                                <a href="" title="Refunds" class="sb2_1_link">Refunds</a>
+                                <a href="" title="Cookies" class="sb2_1_link">Cookies</a>
+                            </div>
+                        </div>
+                        <img src="Images/s_bottom_logo_2.png" alt="" class="sb2_1_steamImg">
+                </div>
+                <div class="sbot_part2_common sbot_part2_2">
+                    <div class="sb2_2decreption_link">
+                        <a href="" class="sb2_2_link">About Valve</a>
+                        <a href="" class="sb2_2_link">Jobs</a>
+                        <a href="" class="sb2_2_link">Steamworks</a>
+                        <a href="" class="sb2_2_link">Steam Distribution</a>
+                        <a href="" class="sb2_2_link">Support</a>
+                        <a href="" class="sb2_2_link">Recycling</a>
+                        <a href="" class="sb2_2_link">Gift Cards</a>
+                        <img src="Images/s_faceLogo.png" alt="" class="sb2_2_image sb2_2_faceImg">
+                        <a href="https://www.facebook.com/Steam" class="sb2_2_link sb2_2_facelink">Steam</a>
+                        <img src="Images/s_twitterLogo.png" alt="" class="sb2_2_image sb2_2_twitterImg">
+                        <a href="https://twitter.com/steam" class="sb2_2_link">@steam</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
+

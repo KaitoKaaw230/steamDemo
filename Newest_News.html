@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Deck:: News</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="NewsImage/Steam_deck_iconAvatar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <style>
+        body{overflow-x: hidden; height: 2250px; width: auto; position: relative;}
+        body{font-family: "Motiva Sans", Sans-serif, -apple-system, system, sans-serif;}
+        .SteamContainer{ display: flex; flex-direction: column; align-items: center;}
+        .NewestDeck_Mid{transform: translateX(-10px); overflow-x: hidden;}
+        .NewestDeck_Mid{display: flex; flex-direction: column; width: 1540px; height: auto; margin-top: 70px;}
+        
+    </style>
+
+<!-- top -->
+<style>
+    .NewestDeck_Top{position: fixed; top: 0; z-index: 100;}
+    .NewestDeck_Top{transform: translateY(0); padding-left: 20px; display: flex; justify-content: start;}
+    .NewestDeck_Top{width: 1500px; height: 80px; background-color: #1B1B1B;}
+
+    .NewestDeck_Top_left{width: 200px; height: 70px; margin: 5px 0 0 80px;}
+    .NewestDeck_Top_left_link{}
+    .NewestDeck_Top_left_link_img{width: 215px; height: 70px; z-index: 1;}
+    .NewestDeck_Top_left_link_img_decorate{position: absolute; z-index: 2; top: 25px; left: 100px;}
+    .NewestDeck_Top_left_link_img_decorate{width: 32px; height: 32px; border-radius: 50px;}
+    .NewestDeck_Top_left_link_img_decorate{animation: colorBackground 15s infinite reverse;}
+
+
+    .NewestDeck_Top_right{width: 875px; height: 35px; margin: 22px 0 0 235px; display: flex; justify-content: start;}
+    .NewestDeck_Top_right_choiseBase{width: 715px; height: 35px; }
+    .NewestDeck_Top_right_butNow{width: 96px; height: 35px; margin: 0 10px 0 10px;}
+    .NewestDeck_Top_right_language_base{width: 56px; height: 35px; border-radius: 1.4em; cursor: pointer;}
+    .NewestDeck_Top_right_language_base{display: flex; justify-content: center; align-items: center; background: #1B1B1B;}
+    .NewestDeck_Top_right_language_base_img{width: 36px; height: 20px; border-radius: 1.4em;}
+    .NewestDeck_Top_right_language_base:hover{background: #fff; color: #1B1B1B;}
+
+
+    .choiseBase_item{width: fit-content; height: 35px; text-decoration: none; padding: 9px 17px; line-height: 36px;}
+    .choiseBase_item{border-radius: 1.4em; font-size: 0.9em; color: #fff; background: #1B1B1B; font-weight: bold;}
+    .choiseBase_item{margin-right: 5px; transition-property: color; transition-duration: 0.8s;}
+    .choiseBase_item:hover{background: #fff; color: #1B1B1B;}
+    .choisen{background: #5b5463 !important;}
+    .choisen:hover{color: #1B1B1B !important; background: #5b5463 !important;}
+
+
+
+    .buyNow_btn{width: fit-content; height: 35px; text-decoration: none; padding: 9px 17px; line-height: 36px;}
+    .buyNow_btn{border-radius: 1.4em; font-size: 0.9em; color: #fff; font-weight: bold;}
+    .buyNow_btn{animation: colorBackground 15s infinite;}
+    @keyframes colorBackground {
+         0% {background-color: cyan;}
+         30%{background-color: purple;}
+         50%{background-color: lightgreen;}
+         70% {background-color: rgb(255, 71, 71);}
+         90%{background-color: cyan;}
+    }
+    .buyNow_btn:hover{background: #fff; color: #1B1B1B; transition: color 0.8s;}
+
+    
+</style>
+
+<!-- item_1 -->
+<style>
+    @keyframes colorbg {
+         0% {color: cyan;}
+         30%{color: purple;}
+         50%{color: lightgreen;}
+         70%{color: rgb(255, 71, 71);}
+         90%{color: cyan;}
+    }
+    .item_1_base{background-color: red;}
+    .item_1_base_item{background-color: blue;}
+    .item_1_base_item_container{background-color: pink;}
+    .item_1_base_item_pop{background-color: green;}
+
+    .item1{height: 150px;}
+    .item2{height: 150px;}
+    .item3{height: 150px;}
+
+    .item_1{width: 100%; height: 3000px; display: flex; justify-content: center;}
+    .item_1_base{width: 1300px; height: 90%; margin-top: 60px; display: flex; justify-content: start; flex-direction: column;}
+    .item_1_base_item:first-child{margin-top: 0;}
+    .item_1_base_item{width: 100%; margin-top: 20px; transition: height 0.4s;}
+
+    .item_1_base_item_container{width: 100%; height: 90%; display: flex; flex-direction: column;}
+    .item_1_base_item_pop{width: 100%; height: 10%; display: flex; align-items: center;}
+    .popbtn{animation: colorbg 15s infinite reverse; font-weight: 600; user-select: none; cursor: pointer; margin-left: 30px;}
+
+    .item_1_base_title{font-size: 3.294em; color: #5B5463; font-weight: 900;}
+    .item_1_base_text_base{width: 100%; margin-top: 10px; font-size: 15px;}
+
+    .item_1_base_link{filter: brightness(1.5); color: #5B5463; text-decoration: none; font-size: 15px;}
+    .item_1_base_link:hover{color: #1B1B1B;} 
+
+    .item_1_base_ul{}
+    .item_1_base_li{}
+</style>
+
+
+<!-- bottom -->
+<style>
+    .Bottom{background-color: #1F2E35;}
+    .Bottom{width: 100%; height: 550px;}
+
+    .NewestDeck_Mid_item_8_top{width: 1250px; height: 260px; margin-top: 80px; margin-left: 140px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_8_bottom{width: 1250px; height: 100px; margin-top: 30px; margin-left: 140px;}
+
+    .NewestDeck_Mid_item_8_top_left{}
+    .NewestDeck_Mid_item_8_top_left_img{width: 193px; height: 193px;}
+    .NewestDeck_Mid_item_8_top_right{width: 300px; height: 260px; display: flex; align-items: start; flex-direction: column;}
+    .NewestDeck_Mid_item_8_top_right_img{width: 120px; height: 40px; filter: brightness(3); margin-bottom: 20px;}
+
+    .NewestDeck_Mid_item_8_top_right_text_base{width: 250px; height: 200px; display: flex; justify-content: space-between;}
+    .NewestDeck_Mid_item_8_top_right_text_base_column{width: 100px; height: 200px;}
+    .NewestDeck_Mid_item_8_link{text-decoration: none; color: #fff;font-size: 0.8em; line-height: 2em;}
+    .NewestDeck_Mid_item_8_link:hover{opacity: 0.7; }
+
+    .pressed{animation: colorBackground 15s infinite; box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.22);}
+</style>
+
+<!-- extend -->
+<script>
+    function popItem(){
+        let item1 = document.getElementById('item1');
+        let M = document.getElementById('more');
+        let L = document.getElementById('less');
+        if(item1.style.height == '150px'){
+            item1.style.height = '400px';
+            M.style.display = 'none';
+            L.style.display = 'flex';
+        }
+        else{
+            item1.style.height = '150px';
+            M.style.display = 'flex';
+            L.style.display = 'none';
+        }
+    }
+</script>
+
+</head>
+
+
+<body>
+    <div class="SteamContainer">
+        <div class="NewestDeck_Top">
+            <div class="NewestDeck_Top_left">
+                <a href="" class="NewestDeck_Top_left_link">
+                    <a href="Newest_index.html"><img src="NewsImage/NewLogo.png" alt="" class="NewestDeck_Top_left_link_img"></a>
+                    <a href="Steam_index.html" class="NewestDeck_Top_left_link_img_decorate"></a>
+                    <!-- <div class="NewestDeck_Top_left_link_img_decorate"></div> -->
+                </a>
+            </div>
+            <div class="NewestDeck_Top_right">
+                <div class="NewestDeck_Top_right_choiseBase">
+                    <a href="Newest_hardware.html" class="choiseBase_item">Hardware</a>
+                    <a href="Newest_Softwrae.html" class="choiseBase_item">Software</a>
+                    <a href="Newest_SteamDeck.html" class="choiseBase_item">Deck Vertified</a>
+                    <a href="Newest_dock.html" class="choiseBase_item">Dock</a>
+                    <a href="Newest_FAQ.html" class="choiseBase_item">FAQ</a>
+                    <a href="" class="choiseBase_item">Tech Specs</a>
+                    <a href="Newest_News.html" class="choiseBase_item choisen">News</a>
+                </div>
+                <div class="NewestDeck_Top_right_butNow">
+                    <a href="Steam_steamdeck.html" class="buyNow_btn">Buy now</a>
+                </div>
+                <div class="NewestDeck_Top_right_language_base">
+                    <img src="NewsImage/Laguage_setting_img.png" alt="" class="NewestDeck_Top_right_language_base_img">
+                </div>
+            </div>
+        </div>
+
+        <div class="NewestDeck_Mid">
+            <div class="item_1">
+                <div class="item_1_base">
+
+                    <div id="item1" class="item_1_base_item item1">
+                        <div id="item_1_base_item_container" class="item_1_base_item_container">
+                            <div class="item_1_base_title">Steam Deck Beta Client Update: July 26th</div>
+                            <div class="item_1_base_text_base">
+                                <div class="item_1_base_text">Note: This update is for the Steam Deck Beta and Preview channels, and includes new features that are still being tested. You can opt into this in <a href="" class="item_1_base_link">Settings</a> > <a href="" class="item_1_base_link">System</a> > <a href="" class="item_1_base_link">System Update Channel</a>.</div>
+                                <ul class="item_1_base_ul">General
+                                    <li class="item_1_base_li">Fixed notifications for achievements not firing when offline</li>
+                                </ul>
+
+                                <ul class="item_1_base_ul">General
+                                    <li class="item_1_base_li">Fixed notifications for achievements not firing when offline</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item_1_base_item_pop">
+                            <div class="popbtn" onclick="popItem()">
+                                <span id="more">More +</span>
+                                <span id="less" style="display: none;">Less -</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="item_1_base_item item2">
+                        <div class="item_1_base_item_container"></div>
+                        <div class="item_1_base_item_pop">
+                            <div class="popbtn">More +</div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="item_1_base_item item3"></div>
+                </div>
+            </div>
+
+            <div class="Bottom">
+                <div class="NewestDeck_Mid_item_8_top">
+                    <div class="NewestDeck_Mid_item_8_top_left">
+                        <img src="NewsImage/newest_deck_credit_img_1.jpg" alt="" class="NewestDeck_Mid_item_8_top_left_img">
+                    </div>
+                    <div class="NewestDeck_Mid_item_8_top_right">
+                        <img src="Images/s_bottom_logo_1.png" alt="" class="NewestDeck_Mid_item_8_top_right_img">
+                        <div class="NewestDeck_Mid_item_8_top_right_text_base">
+                            <div class="NewestDeck_Mid_item_8_top_right_text_base_column">
+                                <a href="" class="NewestDeck_Mid_item_8_link">About Us</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Jobs</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Steam Partners</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Publication</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Steam</a>
+                            </div>
+                            <div class="NewestDeck_Mid_item_8_top_right_text_base_column">
+                                <a href="" class="NewestDeck_Mid_item_8_link">Term of Use</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Privacy Policy</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Sercurity</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Legal</a><br>
+                                <a href="" class="NewestDeck_Mid_item_8_link">Press Kit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="NewestDeck_Mid_item_8_bottom">
+                    <span style="color: #fff; opacity: 0.5; font-size: 0.7em;"><i>Product specifications are subject to change.</i></span><br><br>
+                    <span style="color: #fff; opacity: 0.5; font-size: 0.7em;"><i>© 2022 Valve Corporation. All rights reserved. All trademarks property of their respective owners in the U.S. and other countries. Steam, the Steam logo, Steam Deck, and the Steam Deck logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.</i></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

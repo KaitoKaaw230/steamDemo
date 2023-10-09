@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Steam</title>
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="shortcut icon" href="C:\Users\PC\OneDrive\Desktop\Thực tập_jobs\SteamHtml\Images\steamLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- toplogo -->
+    <style>
+        .steamTop{
+            transform: translateY(-8px);
+            margin-left: -8px;
+            width: 1550px;
+            height: 109px;
+            background-color: #171a21;
+            display: flex;
+            justify-content: space-around;
+            z-index: 50;
+        }
+        .sTop_choise{
+            width: 800px;
+            
+            margin-left: 50px;
+            display: flex;
+            justify-content: start;
+        }
+        .sTop_avatar_link{}
+        .sTop_avatar_image{
+            margin-top: 25px;
+            width: 160px;
+            height: 50px;
+            margin-left: 80px;
+            margin-right: -10px;
+        }
+        .sTop_choise_choises{
+            
+            margin-top: 25px;
+            /* background-color: red; */
+            margin-left: 70px;
+            width: 450px;
+            height: 50px;
+            
+        }
+        .st_choises_common{
+            text-decoration: none;
+            height: 30px;
+            width: auto;
+            font-size: 15px;
+            margin: 18px 0 0 0;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: relative;
+        }
+        .st_choises_common:hover{color: #fff;}
+        .st_choises_store{}
+        .st_choises_comunity{}
+        .st_choises_about{margin-left: 6px;}
+        .st_choises_support{margin-left: 6px;}
+
+        .st_pop{
+            /* box-shadow: 1px 1px 0.5px 1px; */
+            position: absolute;
+            background-color: #171a21;
+            display: none;
+            /* flex-direction: column; */
+            justify-content: start;
+            box-shadow: 3px 3px 5px -3px #000;
+	        text-align: left;
+            columns: 1;
+            z-index: 10;
+        }
+        .st_store_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px; 
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .st_community_pop_contain{
+            position: absolute;
+            top: 0;
+            width: 127px; 
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        
+
+        .st_choises_store:hover .st_store_pop{display: block;}
+        .st_choises_comunity:hover .st_community_pop{display: block;}
+        .st_pop:last-child{margin-bottom: 10px;}
+        .st_store_pop{width: 127px; height: 165px;}
+        .st_community_pop{width: 100px; height: 145px;}
+        .pop_text{
+            color: #b8b6b4;
+            font-size: 11px;
+            padding: 7px 10px 7px 10px;
+            
+            text-decoration: none;
+        }
+        .pop_text:first-child{padding-top: 12px;}
+        .pop_text:hover{color: #fff;}
+        .store_pop{}
+        .community_pop{}
+    </style>
+    <!-- topinstall -->
+    <style>
+        .sTop_login{
+            width: 200px;
+            margin-left: -100px;
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        .st_login_install{
+            margin-top: 5px;
+            width: 100px;
+            height: 24px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #5c7e10;
+        }
+        .stlogin_install_image{
+            margin: 2px 2px 2px 0;
+            width: 20px;
+            height: 20px;
+        }
+        .stlogin_install_text{
+            margin-top: 6px;
+            color: #e5e4dc;
+            font-size: 10px;
+        }
+        .st_login_install:hover .stlogin_install_text{color: #fff;}
+        
+        .st_login_button{
+            font-size: 15px;
+            margin: 8px 5px 0 5px;
+            height: 24px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .st_seperate{
+            margin-top: 10px;
+            height: 14px;
+            width: 0.5px;
+            background-color: #b8b6b4;
+        }
+        .st_languge_button{
+            /* border-left: thick solid #b8b6b4; */
+            margin-top: 8px;
+            height: 18px;
+            border: none;
+            outline: none;
+            background-color: #171a21;
+            color: #b8b6b4;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        .st_login_button:hover{color: #fff;}
+        .st_languge_button:hover{color: #fff;}
+    </style>
+
+    
+
+
+    <!-- Mid -->
+    <style>
+        .steamMid{
+            width: auto;
+            height: 1500px;
+            
+            
+            display: flex;
+            justify-content: start;
+        }
+    </style>
+    <!-- steamMid_side -->
+    <style>
+        .steamMid_side{
+            margin: 0 0 0 50px;
+            height: 1500px;
+            width: 200px;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column;
+        }
+        .sside_common{text-decoration: none;}
+        .sSide_deck{
+            cursor: pointer;
+            margin: 30px 10px -30px 0;
+            height: 200px;
+            /* background-color: red; */
+        }
+        .sSide_gift{
+            cursor: pointer;
+            margin: 0 10px 0 0;
+            height: 200px;
+            /* background-color: blue; */
+        }
+        .sSide_deck_img{
+            margin-bottom: 10px;
+            width: 180px;
+            height: 70px;
+        }
+        .sSide_gift_img{
+            margin-bottom: 10px;
+            width: 140px;
+            height: 90px;
+        }
+        .sSide_deck:hover .sSide_deck_1_text{color: #fff;}
+        .sSide_deck:hover .sSide_deck_2_text{color: #c9dbee;}
+
+        .sSide_gift:hover .sSide_gift_1_text{color: #fff;}
+        .sSide_gift:hover .sSide_gift_2_text{color: #c9dbee;}
+
+        /* .sSide_1_text:hover{color: #fff;}
+        .sSide_2_text:hover{color: #c9dbee;} */
+        .sSide_1_text{
+            text-decoration: none;
+            color: #88bde9;
+            font-size: 15px;
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: bolder;
+        }
+        .sSide_deck_1_text{}
+        .sSide_gift_1_text{}
+
+        .sSide_2_text{
+            text-decoration: none;
+            color: #a4b3c4;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .sSide_deck_2_text{}
+        .sSide_gift_2_text{}
+
+        .sSide_other{
+            height: 1100px;
+            /* background-color: green; */
+        }
+        .sSide_other_commmon{
+            margin: 20px 0 40px 0;
+            font-size: 15px;
+            color: #536f86;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+
+            display: flex;
+            flex-direction: column;
+        }
+        .sSide_other_items:hover{color: #67c1f5;}
+        .sSide_other_items{
+            text-decoration: none;
+            margin: 10px 0 -5px 0;
+            cursor: pointer;
+            color: #7a8b9d;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <!-- steamMid_base -->
+    <style>
+        .steamMid_base{
+            height: 1000px;
+            width: 1000px;
+            /* background-color: yellow; */
+        }
+        .sMid_searching{
+            margin: 40px 0 0 40px;
+            width: 1000px;
+            height: 40px;
+            background: linear-gradient(to left, #205783 0%, #5175a1 80%);
+            display: flex;
+            justify-content: space-between;
+        }
+        .sMid_searching_choise{
+            width: 700px;
+            height: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .sMsearchChoise_common{
+            text-decoration: none;
+            cursor: pointer;
+            /* text-align: center; */
+            padding: 10px 24px;
+            border-right: none;
+            text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+            color: #e5e5e5;
+            /* line-height: 34px; */
+        }
+        .sMsearchChoise_common:hover{
+            /* border-left: solid 1px; */
+            background: linear-gradient(to left, #205783 0%, #638ec2 80%);
+            
+            /* border-top: solid 1px;
+            border-bottom: solid 1px; */
+        }
+        /* .yourstore_check{background-color: red;} */
+        .midPopBase_common{
+            background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(50, 50, 51, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
+            
+        }
+        .yourstore_pop{
+            user-select: none;
+            width: fit-content;
+            margin: 8px 0 8px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #c6d4df;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .noteworthy_pop{
+            user-select: none;
+            width: fit-content;
+            margin: 8px 0 8px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #c6d4df;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .yourstore_pop:hover{
+            background-color: #212d3d00;
+            color: #fff;
+            border-bottom: 2px solid #ffffffff;
+            transition-property: border, color;
+            transition-duration: 0.15s;
+            transition-timing-function: ease-in-out;
+        }
+        .noteworthy_pop:hover{
+            background-color: #212d3d00;
+            color: #fff;
+            border-bottom: 2px solid #ffffffff;
+            transition-property: border, color;
+            transition-duration: 0.15s;
+            transition-timing-function: ease-in-out;
+        }
+        .yourstore_popBase_containt{
+            display: flex;
+            flex-direction: column;
+        }
+        .noteworthy_popBase_contain{
+            display: flex;
+            flex-direction: column;
+        }
+        .yourstore_check:hover .yourstore_popBase{display: block;}
+        .noteworthy_check:hover .noteworthy_popBase{display: block;}
+        .categories_check:hover .categories_popBase{display: block;}
+        @keyframes headerNotifyGrowth{
+            from{
+        /* scale là độ phóng to thu nhỏ */
+            opacity: 0;
+            transform: scale(0);
+        }
+        to{
+            opacity: 1;
+            transform: scale(1);
+        }
+}
+        .yourstore_popBase{
+            z-index: 1000;
+            left: 290px;
+            top: 180px;
+            position: absolute;
+            height: 140px;
+            width: 210px;
+            background-color: red;
+            display: none;
+
+
+            /* transform-origin: calc(100% - 20px) top; */
+            transform-origin: center;
+            will-change: opacity, transform;
+            animation: headerNotifyGrowth ease-in 0.1s;
+        }
+        .noteworthy_popBase{
+            z-index: 1000;
+            left: 408px;
+            top: 180px;
+            position: absolute;
+            height: 220px;
+            width: 190px;
+            background-color: blue;
+            display: none;
+
+            transform-origin: center;
+            will-change: opacity, transform;
+            animation: headerNotifyGrowth ease-in 0.1s;
+        }
+        .categories_popBase{
+            z-index: 1000;
+            left: 290px;
+            top: 180px;
+            position: absolute;
+            height: 520px;
+            width: 1000px;
+            background-color: yellow;
+            
+            display: none;
+            transform-origin: center;
+            will-change: opacity, transform;
+            animation: headerNotifyGrowth ease-in 0.1s;
+        }
+        .categories_pop_part_1{
+            
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 520px;
+            width: 200px;
+        }
+        .categories_pop_part_2{
+            border-left: solid 1px rgb(61, 61, 61);
+            position: absolute;
+            left: 200px;
+            top: 0;
+            /* background-color: yellow; */
+            height: 520px;
+            width: 600px;
+        }
+        .categories_pop_part_2_1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 520px;
+            width: 200px;
+            
+        }
+        .categories_pop_part_2_2{
+            position: absolute;
+            top: 0;
+            left: 200px;
+            height: 520px;
+            width: 200px;
+        }
+        .categories_pop_part_2_3{
+            position: absolute;
+            top: 0;
+            left: 400px;
+            height: 520px;
+            width: 200px;
+        }
+        .item_saparate{margin-top: 35px !important;}
+        .item_saparate_2{margin-top: 50px !important;}
+        .categories_pop_title{
+            position: absolute;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            margin: 20px 0 0 15px;
+            font-family: "Motiva Sans", Sans-serif;
+            font-size: 11px;
+            color: #2EBFFF;
+            text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+        }
+        .categoriesPop_part1_items{
+            font-variant: none;
+            text-transform: none;
+            font-weight: normal;
+            text-decoration: none;
+            width: fit-content;
+            margin: 15px 0 15px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #c6d4df;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .categoriesPop_part1_items:hover{
+            background-color: #212d3d00;
+            color: #fff;
+            border-bottom: 2px solid #ffffffff;
+            transition-property: border, color;
+            transition-duration: 0.15s;
+            transition-timing-function: ease-in-out;
+        }
+        .categories_pop_part_3{
+            border-left: solid 1px rgb(61, 61, 61);
+            position: absolute;
+            left: 800px;
+            top: 0;
+            height: 520px;
+            width: 200px;
+        }
+        .categories_pop_part_3_1{
+            height: 250px;
+            width: 200px;
+        }
+        .categories_pop_part_3_2{
+            height: 250px;
+            width: 200px;
+        }
+        .categoriesPop_part1_sparated{
+            /* position: absolute; */
+            /* background-color: #c6d4df; */
+            height: 0.5px;
+            width: 65px;
+            background: linear-gradient(to right, #c6d4df 0%, #425666 80%);
+            
+        }
+    </style>
+    <!-- searchbar_search button -->
+    <style>
+        .sMid_searching_search{
+            width: 178px;
+            height: 26px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: red;
+            margin: 7px 7px 5px 0;
+            border-radius: 3px;
+            
+        }
+        .sMSearch_bar{
+            background-color: #316282;
+            
+            border: 1px solid rgba( 0, 0, 0, 0.3);
+            /* box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2); */
+            height: 23px;
+            width: 150px;
+            padding-left: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            margin: 0 0 0 0;
+            font-style: italic;
+            border-right: none;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            
+        }
+        .sMSearch_button{
+            border: 1px solid rgba( 0, 0, 0, 0.3);
+            border-left: none;
+            margin: 0 0 0 0;
+            width: 30px;
+            height: 26px;
+            outline: none;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            cursor: pointer;
+           
+            background-image: url(Images/s_searcbarIcon.png);
+        }
+        .sMid_searching_search:hover .sMSearch_bar{
+            border-top: solid 1px #67c1f5;
+            border-bottom: solid 1px #67c1f5;
+            border-left: solid 1px #67c1f5;
+        }
+        .sMid_searching_search:hover .sMSearch_button{
+            border-top: solid 1px #67c1f5;
+            border-bottom: solid 1px #67c1f5;
+            border-right: solid 1px #67c1f5;
+        }
+    </style>
+    <!-- bottom 1-->
+    <style>
+        .steamBottom{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 400px;
+            /* background-color: blue; */
+        }
+        .SBottom_common{}
+        .steamBottom_part1{
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: #000;
+            top: 0;
+            display: flex;
+            /* flex-direction: column; */
+            /* align-items: center;
+            text-align: center; */
+            
+        }
+        .botP1_title_1{
+            position: absolute;
+            height: 30px;
+            top: 0;
+            left: 580px;
+            /* text-align: center; */
+            color: #67c1f5;
+            font-size: 26px;
+            font-family: sans-serif;
+        }
+        .botP1_title_2{
+            position: absolute;
+            top: 60px;
+            left: 595px;
+
+            text-align: center;
+            color: #8f98a0;
+            font-size: 17px;
+            
+        }
+        .botP1_button{
+            line-height: 28px;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            top: 110px;
+            left: 710px;
+
+            height: 30px;
+            width: 80px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin-bottom: -10px;
+            background-color: #6f8c05;
+            border-color: #7fa105;
+            border: solid 0.5px;
+            color: #d2e885;
+        }
+
+        .botP1_title_3{
+            /* display: flex;
+            justify-content: space-around; */
+            text-align: center;
+            
+        }
+        .botP1_title_3_text{
+            position: absolute;
+            top: 160px;
+            font-family: sans-serif;
+            color: #8f98a0;
+            font-size: 17px;
+        }
+        .botP1_title_3_link{
+            position: absolute;
+            top: 160px;
+            left: 655px;
+
+            color: #fff;
+            font-family: sans-serif;
+            font-size: 17px;
+            text-decoration: none;
+        }
+        .botP1_title_3_1{left: 630px;}
+        .botP1_title_3_2{left: 715px;}
+        .botP1_button:hover{filter: brightness(140%);}
+        .botP1_title_3_link:hover{color: #67c1f5;}
+    </style>
+    <!-- bottom 2-->
+    <style>
+        .steamBottom_part2{
+            position: relative;
+            width: 100%;
+            height: 165px;
+            background-color: #171a21;
+            bottom: 0;
+        }
+        .sbot_part2_common{
+            position: absolute;
+            margin: 0 0 0 250px;
+            height: 60px;
+            width: 1000px;
+        }
+        .sbot_part2_1{
+            top: 20px;
+            /* background-color: red; */
+            display: flex;
+            justify-content: space-around;
+            border-top: #363c44 solid 1px;
+            border-bottom: #363c44 solid 1px;
+        }
+        
+        
+
+        .sb2_1_valve_link{}
+        .sb2_1_valve_img{
+            margin: 10px 0 10px 0;
+            width: 100px;
+            height: 40px;
+        }
+        .sb2_1_dereption{
+            margin: 10px 0 10px 0;
+            height: 40px;
+            width: 800px;
+            /* background-color: yellow; */
+        }
+        .sb2_1_steamImg{
+            margin: 15px 0 15px 0;
+            width: 100px;
+            height: 30px;
+        }
+        .sb2_1decreption_text{
+            position: absolute;
+            font-family: sans-serif;
+            color: #8f98a0;
+            font-size: 12px;
+            width: 780px;
+            margin: 14px 10px 0 10px;
+            top: 0;
+
+            /* visibility: hidden; */
+        }
+        .sb2_1decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 263px;
+            width: 600px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_1_link{
+            margin-top: 10px;
+            justify-content: end;
+            text-decoration: none;
+            color: #c6d4df;
+            padding: 0 5px 0 5px;
+            font-size: 14px;
+            border-right: #c6d4df solid 1px;
+        }
+        .sb2_1_link:last-child{border: none;}
+        .sb2_1_link:hover{color: #fff;}
+
+
+        .sbot_part2_2{
+            position: relative;
+            top: 80px;
+            /* background-color: blue; */
+        }
+        .sb2_2decreption_link{
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 800px;
+            height: 20px;
+            /* background-color: red; */
+        }
+        .sb2_2_link{
+            text-decoration: none;
+            color: #c6d4df;
+            font-size: 14px;
+            padding: 0 7px 0 5px;
+            margin-top: 20px;
+            border-right: #c6d4df solid 1px;
+            /* visibility: hidden; */
+        }
+        .sb2_2_link:last-child{margin-left: -4px; border: none;}
+        .sb2_2_link:hover{color: #fff;}
+        .sb2_2_facelink{margin-left: -4px;}
+        .sb2_2_image{
+            /* position: absolute; */
+            width: 15px;
+            height: 15px;
+        }
+        .sb2_2_faceImg{}
+        .sb2_2_twitterImg{
+            margin-left: 5px;
+        }
+    </style>
+
+    <!-- bottom 3-->
+    <style>
+        .steamBottom_part3{
+            width: 100%;
+            height: 35px;
+            background-color: #1f2f50;
+        }
+    </style>
+
+    <!-- feature and recommend -->
+    <style>
+        .steamMid_feature{
+            /* position: absolute;
+            top: 200px;
+            left: 240px; */
+            /* background-color: red; */
+            
+            margin: -1400px 0 0 250px;
+            width: 1100px;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+        }
+        .steamMid_feature_title{
+            
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0 0 10px;
+            letter-spacing: 0.03em;
+            font-weight: normal;
+            position: absolute;
+            padding: 20px 0 0 50px;
+        }
+        .steamMid_feature_midBase{
+            margin: 50px 0 0 0;
+            background-color: green;
+            width: 1000px;
+            height: 450px;
+        }
+        .steamMid_button{
+            margin-top: 220px;
+            width: 50px;
+            height: 100px;
+            
+        }
+        
+        .steamMid_feature_LeftButton{
+            background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+            background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+        }
+        .steamMid_feature_RightButton{
+            background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+            background: linear-gradient( to left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+        }
+        .steamMid_feature_LeftButton:hover{
+            background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
+            background: linear-gradient( to right, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
+        }
+        .steamMid_feature_RightButton:hover{
+            background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
+            background: linear-gradient( to left, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
+        }
+        
+    </style>
+    <style>
+        body{   
+            overflow-x: hidden;
+            height: 2000px;
+            width: auto;
+            position: relative;
+            background: linear-gradient(180deg, #2A475E 0%, #1B2838 80%);
+            /* cursor: url("trỏ\ chuột\ ori.jpg"),auto; */
+        }
+        .SteamContainer{
+            display: flex;
+            flex-direction: column;
+        }
+        .steamPart{}
+        /* .steamPart:first-child{
+            position: sticky;
+            top: 0;
+        } */
+        
+    </style>
+
+    <!-- slideImg -->
+    <style>
+        .sMid_featured{
+            margin: 15px 0 10px 5px;
+            position: absolute;
+            top: 205px;
+            left: 285px;
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #fff;
+            
+            letter-spacing: 0.03em;
+            font-weight: normal;
+            padding-top: 2px;
+            z-index: 3;
+        }
+        
+        .sMid_featured_container{
+            display: flex;
+            flex-direction: column;
+
+            position: absolute;
+            top: 250px;
+            left: 247px;
+            width: 1090px;
+            height: 380px;
+            /* background-color: red; */
+            /* box-shadow: 0 0 7px 0px #000; */
+        }
+        .sMid_featured_container_smaller{
+            width: 1090px;
+            height: 350px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .sMid_featured_base{
+            /* position: absolute;
+            top: 250px;
+            left: 290px; */
+            width: 1000px;
+            height: 350px;
+            background-color: #0a141d;
+            box-shadow: 0 0 7px 0px #000;
+        }
+        .image_button{
+            font-size: 40px;
+            width: 45px;
+            height: 108px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .button_left:hover{
+            background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
+            background: linear-gradient( to right, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
+        }
+        .button_right:hover{
+            background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);
+            background: linear-gradient( to right, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);
+        }
+        .button_left{
+            margin-top: 110px;
+            background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+            background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+        }
+        .button_right{
+            margin-top: 110px;
+            background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
+            background: linear-gradient( to right, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
+        }
+        .sMid_featured_items{
+            user-select: none;
+            width: 17px;
+            height: 11px;
+            margin: 12px 4px;
+            border-radius: 2px;
+            transition: background-color 0.2s;
+            background-color: hsla(202,60%,100%,0.2);
+            cursor: pointer;
+        }
+        .sMid_featured_items:hover{background-color: hsla(202,60%,100%,0.3);}
+        .sMid_featured_count{
+            width: 1090px;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .sMid_featured_item_base{
+            position: absolute;
+            width: 1000px;
+            height: 350px;
+            /* background-color: red; */
+            transition: opacity 400ms;
+            /* background-color: #0a141d; */
+        }
+        .sMid_featured_item_img{
+            position: absolute;
+            width: 600px;
+            height: 350px;
+        }
+        .sMid_featured_item_side_base{
+            display: flex;
+            flex-direction: column;
+            /* background-color: blue; */
+            width: 400px;
+            height: 350px;
+            position: absolute;
+            right: 0;
+        }
+        .sMid_featured_item_side_title{
+            color: #fff;
+            padding-top: 0px;
+            font-family: "Motiva Sans", Sans-serif;
+            position: absolute;
+            margin: 20px 0 20px 10px;
+            font-size: 25px;
+            font-weight: 300;
+        }
+        .sMid_featured_item_side_smaller{
+            position: absolute;
+            top: 20%;
+            width: 400px;
+            height: 180px;
+            /* background-color: blue; */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .featured_side_items_top{
+            width: 400px;
+            height: 90px;
+            display: flex;
+            flex-direction: row;
+        }
+        .featured_side_items_bottom{
+            width: 400px;
+            height: 90px;
+            display: flex;
+            flex-direction: row;
+        }
+        .sMid_featured_item_side_items:hover{filter: brightness(1.3);}
+        .sMid_featured_item_side_items{
+            filter: brightness(0.6);
+            margin: 5px 10px 5px 10px;
+            width: 180px;
+            height: 80px;
+        }
+        .sMid_featured_item_side_title2{
+            position: absolute;
+            top: 95%;
+            color: #fff;
+            padding-top: 0px;
+            font-family: "Motiva Sans", Sans-serif;
+            position: absolute;
+            margin: 10px 0 10px 10px;
+            font-size: 23px;
+            font-weight: 300;
+        }
+
+        .img_1{background-image: url(Images/s_index_slideimge_items_1.jpg);}
+        .img_pop_1{position: absolute; top: -75px; left: -610px; display: none;}
+        .img_1:hover .img_pop_1{display: block;}
+
+        .img_2{background-image: url(Images/s_index_slideimge_items_2.jpg);}
+        .img_pop_2{position: absolute; top: -75px; left: -810px; display: none;}
+        .img_2:hover .img_pop_2{display: block;}
+
+        .img_3{background-image: url(Images/s_index_slideimge_items_3.jpg);}
+        .img_pop_3{position: absolute; top: -165px; left: -610px; display: none;}
+        .img_3:hover .img_pop_3{display: block;}
+
+        .img_4{background-image: url(Images/s_index_slideimge_items_4.jpg);}
+        .img_pop_4{position: absolute; top: -165px; left: -810px; display: none;}
+        .img_4:hover .img_pop_4{display: block;}
+
+
+
+        .img_5{background-image: url(Images/s_index_slideimge_items_5.jpg);}
+        .img_pop_5{position: absolute; top: -75px; left: -610px; display: none;}
+        .img_5:hover .img_pop_5{display: block;}
+
+        .img_6{background-image: url(Images/s_index_slideimge_items_6.jpg);}
+        .img_pop_6{position: absolute; top: -75px; left: -810px; display: none;}
+        .img_6:hover .img_pop_6{display: block;}
+
+        .img_7{background-image: url(Images/s_index_slideimge_items_7.jpg);}
+        .img_pop_7{position: absolute; top: -165px; left: -610px; display: none;}
+        .img_7:hover .img_pop_7{display: block;}
+
+        .img_8{background-image: url(Images/s_index_slideimge_items_8.jpg);}
+        .img_pop_8{position: absolute; top: -165px; left: -810px; display: none;}
+        .img_8:hover .img_pop_8{display: block;}
+
+
+
+        .sMid_featured_item_base_1{}
+        .sMid_featured_item_base_2{display: none;}
+        .sMid_featured_item_base_3{display: none;}
+        .sMid_featured_item_base_4{display: none;}
+        .sMid_featured_item_base_5{display: none;}
+        .sMid_featured_item_base_6{display: none;}
+        .badge-white{background-color: #fff!important}
+    </style>
+
+<!-- steamMid_steamdeck_container -->
+<style>
+    .steamMid_steamdeck_container{position: absolute;}
+    .steamMid_steamdeck_container{top: 700px; left: 320px; width: 950px; height: 125px; display: flex; justify-content: space-between;}
+            
+    .steamMid_steamdeck_container_left{width: 616px; height: 125px; cursor: pointer;}
+    .steamMid_steamdeck_container_right{width: 314px; height: 125px; cursor: pointer;}
+    .steamMid_steamdeck_container_left:hover{box-shadow: 0 0 12px #66c0f4;}
+    .steamMid_steamdeck_container_right:hover{box-shadow: 0 0 12px #66c0f4;}
+</style>
+
+<!-- browse_base -->
+<style>
+    .browse_base{position: absolute; display: flex; flex-direction: column;}
+    .browse_base{top:900px; left: 293px; width: 1000px; height: 80px; display: flex; justify-content: space-between;}
+    .browse_base_title{font-family: "Motiva Sans", Sans-serif; font-weight: 300; font-size: 14px; text-transform: uppercase;}
+    .browse_base_title{color: #fff; letter-spacing: 0.03em;}
+
+    .browse_btn_base{display: flex; justify-content: space-between; border: none; outline: none;}
+    .browse_btn_Link{width: 200px; display: flex; justify-content: center; text-decoration: none; padding: 0 18px;}
+    .browse_btn_Link{height: 50px; align-items: center; text-align: center; font-family: "Motiva Sans", Sans-serif;}
+    .browse_btn_Link{font-size: 16px;color: #fff; text-transform: uppercase; letter-spacing: 0.03em;}
+    .browse_btn_Link{background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%); border-radius: 3px; box-shadow: 0 0 4px #000;}
+    .browse_btn_Link:hover{background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%); color: #FFFFFF;}
+</style>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("sMid_featured_item_base");
+      var dots = document.getElementsByClassName("sMid_featured_items");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" badge-white", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " badge-white";
+    }
+</script>
+
+</head>
+<body>
+    <div class="SteamContainer">
+
+        <div class="steamPart steamTop">
+            
+            <div class="sTop_choise">
+                <a href="Steam_index.html" class="sTop_avatar_link">
+                    <img src="Images/s_avatar.png" alt="" class="sTop_avatar_image">
+                </a>
+
+                <div class="sTop_choise_choises">
+                    <button class="st_choises_common st_choises_store">
+                        STORE
+                        <div class="st_pop st_store_pop">
+                            <div class="st_store_pop_contain">
+                                <a href="" class="pop_text store_pop">HOME</a>
+                                <a href="" class="pop_text store_pop">DISCOVERY QUEUE</a>
+                                <a href="" class="pop_text store_pop">WISHLIST</a>
+                                <a href="Steam_pointShop.html" class="pop_text store_pop">POINTS SHOP</a>
+                                <a href="Steam_newAndFeature.html" class="pop_text store_pop">NEWS</a>
+                                <a href="" class="pop_text store_pop">STATS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="st_choises_common st_choises_comunity">
+                        COMMUNITY
+                        <div class="st_pop st_community_pop">
+                            <div class="st_community_pop_contain">
+                                <a href="" class="pop_text community_pop">HOME</a>
+                                <a href="" class="pop_text community_pop">DISCUSSIONS</a>
+                                <a href="" class="pop_text community_pop">WORKSHOP</a>
+                                <a href="" class="pop_text community_pop">MARKET</a>
+                                <a href="" class="pop_text community_pop">BROADCASTS</a>
+                            </div>
+                        </div>
+                    </button>
+                    <a href="" class="st_choises_common st_choises_about">ABOUT</a>
+                    <a href="" class="st_choises_common st_choises_support">SUPPORT</a>
+                    <!-- <button class="st_choises_common st_choises_about">ABOUT</button>
+                    <button class="st_choises_common st_choises_support">SUPPORT</button> -->
+                </div>
+            </div>
+
+            <div class="sTop_login">
+                <div class="st_login_install">
+                    <img src="Images/s_install_image.png" alt="" class="stlogin_install_image">
+                    <h class="stlogin_install_text">Install Steam</h>
+                </div>
+                <a href="Steam_login.html" class="st_login_button">login</a>
+                <!-- <button class="st_login_button">login</button> -->
+                <div class="st_seperate"></div>
+                <button class="st_languge_button">language</button>
+            </div>
+        </div>
+
+        
+        
+        <div class="steamPart steamMid">
+
+            <div class="steamMid_side">
+                <a href="Steam_steamdeck.html" class="sside_common sSide_deck">
+                    <img src="Images/s_SideDeck.png" alt="" class="sSide_deck_img">
+                    <h class="sSide_1_text sSide_deck_1_text">STEAM DECK</h>
+                    <h2 class="sSide_2_text sSide_deck_2_text">Get Yours Now</h2>
+                </a>
+
+
+                <a href="Steam_giftcard.html" class="sside_common sSide_gift">
+                    <img src="Images/s_SideGiftcard.png" alt="" class="sSide_gift_img">
+                    <h class="sSide_1_text sSide_gift_1_text">STEAM GIFT CARDS</h>
+                    <h2 class="sSide_2_text sSide_gift_2_text">Give the Gift of Game</h2>
+                </a>
+                <!-- <div class="sside_common sSide_deck">
+                    <img src="Images/s_SideDeck.png" alt="" class="sSide_deck_img">
+                    <h class="sSide_1_text sSide_deck_1_text">STEAM DECK</h>
+                    <h2 class="sSide_2_text sSide_deck_2_text">Get Yours Now</h2>
+                </div>
+
+                <div class="sside_common sSide_gift">
+                    <img src="Images/s_SideGiftcard.png" alt="" class="sSide_gift_img">
+                    <h class="sSide_1_text sSide_gift_1_text">STEAM GIFT CARDS</h>
+                    <h2 class="sSide_2_text sSide_gift_2_text">Give the Gift of Game</h2>
+                </div> -->
+                <div class="sside_common sSide_other">
+                    <div class="sSide_other_commmon">
+                        RECENTLY VIEWED
+                        <a href="" class="sSide_other_items">Street Fighter™ 6</a>
+                    </div>
+                    <div class="sSide_other_commmon">
+                        RECOMMENDED
+                        <a href="" class="sSide_other_items">By Friends</a>
+                        <a href="Steam_Curators.html" class="sSide_other_items">By Curators</a>
+                        <a href="Steam_popular.html" class="sSide_other_items">Tags</a>
+                    </div>
+                    <div class="sSide_other_commmon">
+                        BROWSE CATEGORIES
+                        <a href="" class="sSide_other_items">Top Sellers</a>
+                        <a href="Steam_newRelease.html" class="sSide_other_items">New Releases</a>
+                        <a href="" class="sSide_other_items">Upcoming</a>
+                        <a href="Steam_SteamSpecial.html" class="sSide_other_items">Specials</a>
+                        <a href="" class="sSide_other_items">VR Titles</a>
+                        <a href="" class="sSide_other_items">Controller-Friendly</a>
+                        <a href="" class="sSide_other_items">Great on Deck</a>
+                    </div>
+                    <div class="sSide_other_commmon">
+                        HARDWARE
+                        <a href="Steam_steamdeck.html" class="sSide_other_items">Steam Deck</a>
+                        <a href="" class="sSide_other_items">Steam Deck Dock</a>
+                        <a href="" class="sSide_other_items">VR Hardware</a>
+                    </div>
+                    <div class="sSide_other_commmon">
+                        BROWSE BY GENRE
+                        <a href="" class="sSide_other_items">Free to play</a>
+                        <a href="" class="sSide_other_items">Early Access</a>
+                        <a href="" class="sSide_other_items">Action</a>
+                        <a href="" class="sSide_other_items">Adventure</a>
+                        <a href="" class="sSide_other_items">Casual</a>
+                        <a href="" class="sSide_other_items">Indie</a>
+                        <a href="" class="sSide_other_items">Massively Multiplayer</a>
+                        <a href="" class="sSide_other_items">Racing</a>
+                        <a href="" class="sSide_other_items">RPG</a>
+                        <a href="" class="sSide_other_items">Simulation</a>
+                        <a href="" class="sSide_other_items">Sports</a>
+                        <a href="Steam_Strategy.html" class="sSide_other_items">Strategy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="steamMid_base">
+                <div class="sMid_searching">
+                    <div class="sMid_searching_choise">
+                        <div class="sMsearchChoise_common yourstore_check">
+                            Your Store
+                            <div class="midPopBase_common yourstore_popBase">
+                                <div class="yourstore_popBase_containt">
+                                    <a href="Steam_index.html" class="yourstore_pop">Home</a>
+                                    <a href="Steam_comunityRecomend.html" class="yourstore_pop">Community Recommendations</a>
+                                    <a href="Steam_RecentViewed.html" class="yourstore_pop">Recently Viewed</a>
+                                    <a href="Steam_Curators.html" class="yourstore_pop">Steam Curators</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sMsearchChoise_common noteworthy_check">
+                            New & Noteworthy
+                            <div class="midPopBase_common noteworthy_popBase">
+                                <div class="noteworthy_popBase_contain">
+                                    <a href="" class="noteworthy_pop">Steam Replay 2022</a>
+                                    <a href="" class="noteworthy_pop">Top Sellers</a>
+                                    <a href="" class="noteworthy_pop">Most Played</a>
+                                    <a href="" class="noteworthy_pop">New & Trending</a>
+                                    <a href="Steam_SteamSpecial.html" class="noteworthy_pop">Special Offers</a>
+                                    <a href="" class="noteworthy_pop">Recently Updated</a>
+                                    <a href="" class="noteworthy_pop">Popular Upcoming</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="sMsearchChoise_common categories_check">
+                            Categories
+                            <div class="midPopBase_common categories_popBase">
+                                <div class="categories_pop_part_1">
+                                    <h class="categories_pop_title">SPECIAL SECTIONS
+                                        <p class="categoriesPop_part1_items">Free to play</p>
+                                        <div class="categoriesPop_part1_items">Demos</div>
+                                        <div class="categoriesPop_part1_items">Early Access</div>
+                                        <div class="categoriesPop_part1_sparated"></div>
+                                        <div class="categoriesPop_part1_items">Steam Deck</div>
+                                        <div class="categoriesPop_part1_items">Great on Deck</div>
+                                        <div class="categoriesPop_part1_sparated"></div>
+                                        <div class="categoriesPop_part1_items">Controller-Friendly</div>
+                                        <div class="categoriesPop_part1_items">Remote Play</div>
+                                        <div class="categoriesPop_part1_items">VR Titles</div>
+                                        <div class="categoriesPop_part1_items">VR Hardware</div>
+                                        <div class="categoriesPop_part1_sparated"></div>
+                                        <div class="categoriesPop_part1_items">Software</div>
+                                        <div class="categoriesPop_part1_items">Soundtracks</div>
+                                        <div class="categoriesPop_part1_sparated"></div>
+                                        <div class="categoriesPop_part1_items">macOS</div>
+                                        <div class="categoriesPop_part1_items">SteamOS + Linux</div>
+                                        <div class="categoriesPop_part1_items">For PX Cafés</div>
+                                    </h>
+                                    
+                                </div>
+                                <div class="categories_pop_part_2">
+                                    <div class="categories_pop_part_2_1">
+                                        <h class="categories_pop_title">GENERS
+                                            <div class="categoriesPop_part1_items">ACtion</div>
+                                            <div class="categoriesPop_part1_items">Arcade & Rythm</div>
+                                            <div class="categoriesPop_part1_items">Fighting & Martial Arts</div>
+                                            <div class="categoriesPop_part1_items">First-Person Shooter</div>
+                                            <div class="categoriesPop_part1_items">Hack & Slash</div>
+                                            <div class="categoriesPop_part1_items">Platformer & Runner</div>
+                                            <div class="categoriesPop_part1_items">Third-Person Shooter</div>
+                                            <div class="categoriesPop_part1_items">shmup</div>
+
+                                            <div class="categoriesPop_part1_items item_saparate">Adventure</div>
+                                            <div class="categoriesPop_part1_items">Adventure RPG</div>
+                                            <div class="categoriesPop_part1_items">Casual</div>
+                                            <div class="categoriesPop_part1_items">Hidden Object</div>
+                                            <div class="categoriesPop_part1_items">Metroidvania</div>
+                                            <div class="categoriesPop_part1_items">Puzzle</div>
+                                            <div class="categoriesPop_part1_items">Story-Rich</div>
+                                            <div class="categoriesPop_part1_items">Visual Novel</div>
+                                        </h>
+                                    </div>
+                                    <div class="categories_pop_part_2_2">
+                                        <div class="categoriesPop_part1_items  item_saparate_2">Role-Playing</div>
+                                        <div class="categoriesPop_part1_items">Acion RPG</div>
+                                        <div class="categoriesPop_part1_items">Adventure RPG</div>
+                                        <div class="categoriesPop_part1_items">JRPG</div>
+                                        <div class="categoriesPop_part1_items">Party-Base</div>
+                                        <div class="categoriesPop_part1_items">Rogue-Like</div>
+                                        <div class="categoriesPop_part1_items">Strategy RPG</div>
+                                        <div class="categoriesPop_part1_items">Turn-Based</div>
+
+                                        <div class="categoriesPop_part1_items item_saparate">Simulation</div>
+                                        <div class="categoriesPop_part1_items">Building & automation</div>
+                                        <div class="categoriesPop_part1_items">Dating</div>
+                                        <div class="categoriesPop_part1_items">Farming & Crafting</div>
+                                        <div class="categoriesPop_part1_items">Hobby & Job</div>
+                                        <div class="categoriesPop_part1_items">Life & Immersive</div>
+                                        <div class="categoriesPop_part1_items">Sandbox & Physics</div>
+                                        <div class="categoriesPop_part1_items">Space & Fight</div>
+                                    </div>
+                                    <div class="categories_pop_part_2_3">
+                                        <div class="categoriesPop_part1_items  item_saparate_2">Strategy</div>
+                                        <div class="categoriesPop_part1_items">Card & Board</div>
+                                        <div class="categoriesPop_part1_items">City & Settlement</div>
+                                        <div class="categoriesPop_part1_items">Grand & 4X</div>
+                                        <div class="categoriesPop_part1_items">Military</div>
+                                        <div class="categoriesPop_part1_items">Real-time Strategy</div>
+                                        <div class="categoriesPop_part1_items">Tower Defense</div>
+                                        <div class="categoriesPop_part1_items">Turn-Based Strategy</div>
+                                        
+                                        <div class="categoriesPop_part1_items item_saparate">Sports & Racing</div>
+                                        <div class="categoriesPop_part1_items">All Sports</div>
+                                        <div class="categoriesPop_part1_items">Fishing & Hunting</div>
+                                        <div class="categoriesPop_part1_items">Individual Sports</div>
+                                        <div class="categoriesPop_part1_items">Racing</div>
+                                        <div class="categoriesPop_part1_items">Racing Sim</div>
+                                        <div class="categoriesPop_part1_items">Sports Sim</div>
+                                        <div class="categoriesPop_part1_items">Team Sports</div>
+                                    </div>
+                                </div>
+                                <div class="categories_pop_part_3">
+                                    <div class="categories_pop_part_3_1">
+                                        <h class="categories_pop_title">THEMES
+                                            <div class="categoriesPop_part1_items">Anime</div>
+                                            <div class="categoriesPop_part1_items">Horror</div>
+                                            <div class="categoriesPop_part1_items">Myster & Detective</div>
+                                            <div class="categoriesPop_part1_items">Open World</div>
+                                            <div class="categoriesPop_part1_items">Sci-Fi & Cyberpunk</div>
+                                            <div class="categoriesPop_part1_items">Space</div>
+                                            <div class="categoriesPop_part1_items">Survival</div>
+                                        </h>
+                                        
+                                    </div>
+                                    <div class="categories_pop_part_3_2">
+                                        <h class="categories_pop_title">PLAYER SUPPORT
+                                            <div class="categoriesPop_part1_items">Co-operative</div>
+                                            <div class="categoriesPop_part1_items">LAN</div>
+                                            <div class="categoriesPop_part1_items">Local & Party</div>
+                                            <div class="categoriesPop_part1_items">MMO</div>
+                                            <div class="categoriesPop_part1_items">Multiplayer</div>
+                                            <div class="categoriesPop_part1_items">Oniline Competitive</div>
+                                            <div class="categoriesPop_part1_items">Singleplayer</div>
+                                        </h>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="Steam_pointShop.html" class="sMsearchChoise_common">Points Shop</a>
+                        <a href="Steam_newAndFeature.html" class="sMsearchChoise_common">News</a>
+                        <a href="Steam_SteamLab.html" class="sMsearchChoise_common">Labs</a>
+
+                    </div>
+                    <div class="sMid_searching_search">
+                        <input type="text" placeholder="search..." class="sMSearch_bar">
+                        <button class="sMSearch_button"></button>
+                    </div>
+                </div>
+
+                <h class="sMid_featured">FEATURED & RECOMMENDED</h>
+                <div class="sMid_featured_container">
+                    <div class="sMid_featured_container_smaller">
+                        
+                        <button class="image_button button_left" onclick="plusDivs(-1)">&#10094;</button>
+
+                        <div class="sMid_featured_base">
+                            <!-- Street Fighter™ 6 -->
+                            <a href="" class="sMid_featured_item_base sMid_featured_item_base_1">
+                                <img src="Images/s_index_slideimge_1.jpg" alt="" class="sMid_featured_item_img">
+                                <div class="sMid_featured_item_side_base">
+                                    <h class="sMid_featured_item_side_title">Street Fighter™ 6</h>
+
+                                    <div class="sMid_featured_item_side_smaller">
+                                        <div class="featured_side_items_top">
+                                            
+                                            
+                                            <div class="sMid_featured_item_side_items img_1">
+                                                <img src="Images/s_index_slideimge_items_1.jpg" alt="" class="sMid_featured_item_img img_pop_1">
+                                            </div>
+                                            <div class="sMid_featured_item_side_items img_2">
+                                                <img src="Images/s_index_slideimge_items_2.jpg" alt="" class="sMid_featured_item_img img_pop_2">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="featured_side_items_bottom">
+                                            <div class="sMid_featured_item_side_items img_3">
+                                                <img src="Images/s_index_slideimge_items_3.jpg" alt="" class="sMid_featured_item_img img_pop_3">
+                                            </div>
+                                            <div class="sMid_featured_item_side_items img_4">
+                                                <img src="Images/s_index_slideimge_items_4.jpg" alt="" class="sMid_featured_item_img img_pop_4">
+                                            </div>
+                                            
+                                        </div>
+
+                                        <h class="sMid_featured_item_side_title2">Now avalible</h>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- Call of Duty®: Modern Warfare® II -->
+                            <a href="" class="sMid_featured_item_base sMid_featured_item_base_2">
+                                <img src="Images/s_index_slideimge_2.jpg" alt="" class="sMid_featured_item_img">
+
+                                <div class="sMid_featured_item_side_base">
+                                    <h class="sMid_featured_item_side_title">Call of Duty®: Modern Warfare® II</h>
+
+                                    <div class="sMid_featured_item_side_smaller">
+                                        <div class="featured_side_items_top">
+
+                                            <div class="sMid_featured_item_side_items img_5">
+                                                <img src="Images/s_index_slideimge_items_5.jpg" alt="" class="sMid_featured_item_img img_pop_5">
+                                            </div>
+                                            <div class="sMid_featured_item_side_items img_6">
+                                                <img src="Images/s_index_slideimge_items_6.jpg" alt="" class="sMid_featured_item_img img_pop_6">
+                                            </div>
+
+                                            <!-- <img src="Images/s_index_slideimge_items_5.jpg" alt="" class="sMid_featured_item_side_items">
+                                            <img src="Images/s_index_slideimge_items_7.jpg" alt="" class="sMid_featured_item_side_items"> -->
+                                        </div>
+
+                                        <div class="featured_side_items_bottom">
+                                            <div class="sMid_featured_item_side_items img_7">
+                                                <img src="Images/s_index_slideimge_items_7.jpg" alt="" class="sMid_featured_item_img img_pop_7">
+                                            </div>
+                                            <div class="sMid_featured_item_side_items img_8">
+                                                <img src="Images/s_index_slideimge_items_8.jpg" alt="" class="sMid_featured_item_img img_pop_8">
+                                            </div>
+
+                                            <!-- <img src="Images/s_index_slideimge_items_6.jpg" alt="" class="sMid_featured_item_side_items">
+                                            <img src="Images/s_index_slideimge_items_8.jpg" alt="" class="sMid_featured_item_side_items"> -->
+                                        </div>
+
+                                        <h class="sMid_featured_item_side_title2">Now avalible</h>
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- Only up! -->
+                            <a href="" class="sMid_featured_item_base sMid_featured_item_base_3">
+                                <img src="Images/s_index_slideimge_3.jpg" alt="" class="sMid_featured_item_img">
+
+                                <div class="sMid_featured_item_side_base">
+                                    <h class="sMid_featured_item_side_title">Only up!</h>
+
+                                    <div class="sMid_featured_item_side_smaller">
+                                        <div class="featured_side_items_top">
+                                            <img src="Images/s_index_slideimge_items_10.jpg" alt="" class="sMid_featured_item_side_items">
+                                            <img src="Images/s_index_slideimge_items_11.jpg" alt="" class="sMid_featured_item_side_items">
+                                        </div>
+
+                                        <div class="featured_side_items_bottom">
+                                            <img src="Images/s_index_slideimge_items_12.jpg" alt="" class="sMid_featured_item_side_items">
+                                            <img src="Images/s_index_slideimge_items_9.jpg" alt="" class="sMid_featured_item_side_items">
+                                        </div>
+
+                                        <h class="sMid_featured_item_side_title2">Now avalible</h>
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- Distiny 2 -->
+                            <a href="" class="sMid_featured_item_base sMid_featured_item_base_4">
+                                <img src="Images/s_index_slideimge_4.jpg" alt="" class="sMid_featured_item_img">
+
+                                <div class="sMid_featured_item_side_base">
+                                    <h class="sMid_featured_item_side_title">Distiny 2</h>
+
+                                    <div class="sMid_featured_item_side_smaller">
+                                        <div class="featured_side_items_top">
+                                            <img src="Images/s_index_slideimge_items_13.jpg" alt="" class="sMid_featured_item_side_items">
+                                            <img src="Images/s_index_slideimge_items_14.jpg" alt="" class="sMid_featured_item_side_items">
+                                        </div>
+
+                                        <div class="featured_side_items_bottom">
+                                            <img src="Images/s_index_slideimge_items_15.jpg" alt="" class="sMid_featured_item_side_items">
+                                            <img src="Images/s_index_slideimge_items_16.jpg" alt="" class="sMid_featured_item_side_items">
+                                        </div>
+
+                                        <h class="sMid_featured_item_side_title2">Now avalible</h>
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- Counter-Strike: Global Offensive -->
+                            <a href="" class="sMid_featured_item_base sMid_featured_item_base_5">
+                                <img src="Images/s_index_slideimge_5.jpg" alt="" class="sMid_featured_item_img">
+
+                                <div class="sMid_featured_item_side_base">
+                                    <h class="sMid_featured_item_side_title">Counter-Strike: Global Offensive</h>
+
+                                    <div class="sMid_featured_item_side_smaller">
+                                        <div class="featured_side_items_top">
+                                            <img src="Images/s_index_slideimge_items_17.jpg" alt="" class="sMid_featured_item_side_items">
+                                            <img src="Images/s_index_slideimge_items_18.jpg" alt="" class="sMid_featured_item_side_items">
+                                        </div>
+
+                                        <div class="featured_side_items_bottom">
+                                            <img src="Images/s_index_slideimge_items_19.jpg" alt="" class="sMid_featured_item_side_items">
+                                            <img src="Images/s_index_slideimge_items_20.jpg" alt="" class="sMid_featured_item_side_items">
+                                        </div>
+
+                                        <h class="sMid_featured_item_side_title2">Now avalible</h>
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- Call of Duty®: Black Ops III -->
+                            <a href="" class="sMid_featured_item_base sMid_featured_item_base_6">
+                                <img src="Images/s_index_slideimge_6.jpg" alt="" class="sMid_featured_item_img">
+
+                                <div class="sMid_featured_item_side_base">
+                                    <h class="sMid_featured_item_side_title">Call of Duty®: Black Ops III</h>
+
+                                    <div class="sMid_featured_item_side_smaller">
+                                        <div class="featured_side_items_top">
+                                            <img src="Images/s_index_slideimge_items_21.jpg" alt="" class="sMid_featured_item_side_items">
+                                            <img src="Images/s_index_slideimge_items_22.jpg" alt="" class="sMid_featured_item_side_items">
+                                        </div>
+
+                                        <div class="featured_side_items_bottom">
+                                            <img src="Images/s_index_slideimge_items_23.jpg" alt="" class="sMid_featured_item_side_items">
+                                            <img src="Images/s_index_slideimge_items_24.jpg" alt="" class="sMid_featured_item_side_items">
+                                        </div>
+
+                                        <h class="sMid_featured_item_side_title2">Now avalible</h>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        <button class="image_button button_right" onclick="plusDivs(1)">&#10095;</button>
+
+                    </div>
+                    <div class="sMid_featured_count">
+                        <div class="sMid_featured_items" onclick="currentDiv(1)"></div>
+                        <div class="sMid_featured_items" onclick="currentDiv(2)"></div>
+                        <div class="sMid_featured_items" onclick="currentDiv(3)"></div>
+                        <div class="sMid_featured_items" onclick="currentDiv(4)"></div>
+                        <div class="sMid_featured_items" onclick="currentDiv(5)"></div>
+                        <div class="sMid_featured_items" onclick="currentDiv(6)"></div>
+                    </div>
+                </div>
+
+                <div class="steamMid_steamdeck_container">
+                    <img src="Images/index_steamdeck_leftImg.gif" alt="" class="steamMid_steamdeck_container_left">
+                    <img src="Images/index_steamdeck_rightImg.jpg" alt="" class="steamMid_steamdeck_container_right">
+                </div>
+                
+                <div class="browse_base">
+                    <div class="browse_base_title">BROWSE STEAM</div>
+                    <div class="browse_btn_base">
+                        <a href="Steam_newRelease.html" class="browse_btn_Link">new release</a>
+                        <a href="Steam_SteamSpecial.html" class="browse_btn_Link">specials</a>
+                        <a href="" class="browse_btn_Link">free games</a>
+                        <a href="Steam_popular.html" class="browse_btn_Link">by user tags</a>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+        
+        <div class="steamPart steamBottom">
+            <div class="SBottom_common steamBottom_part1">
+                <p class="botP1_title_1">Looking for recommendations?</p>
+                <p class="botP1_title_2">Sign in to view personalized recommendations</p>
+                <a href="Steam_login.html" class="botP1_button">Sign In</a>
+                <!-- <button class="botP1_button">Sign In</button> -->
+                <p class="botP1_title_3">
+                    <div class="botP1_title_3_text botP1_title_3_1">Or </div>
+                    <a href="Steam_JoinSteam.html" class="botP1_title_3_link">sign up</a>
+                    <div class="botP1_title_3_text botP1_title_3_2"> and join Steam for free</div>
+                </p>
+            </div>
+
+            <div class="SBottom_common steamBottom_part2">
+                <div class="sbot_part2_common sbot_part2_1">
+                    <!-- <a href="https://tigobiz.com" target="_blank">
+                    <img src="https://tigobiz.com/wp-content/uploads/2020/11/TRUNG-01-logo-ngang-keo-sat-280-87-150x47.png" alt="logo Tigobiz" /></a> -->
+                    <!-- <a href="https://tigobiz.com" target="_blank" title="Click để vào Webstie tigobiz.com">Dịch vụ Marketing Online Tigobiz</a> -->
+                        <a href="https://www.valvesoftware.com/fr/" title="VALV" class="sb2_1_valve_link">
+                            <img src="Images/s_bottom_logo_1.png" alt="" class="sb2_1_valve_img">
+                        </a>
+                        <div class="sb2_1_dereption">
+                            <p class="sb2_1decreption_text">© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+                                VAT included in all prices where applicable.</p>
+                            <div class="sb2_1decreption_link">
+                                <a href="" title="Privacy Policy" class="sb2_1_link">Privacy Policy</a>
+                                <a href="" title="Legal" class="sb2_1_link">Legal</a>
+                                <a href="" title="Steam Subsctiber Agreement" class="sb2_1_link">Steam Subsctiber Agreement</a>
+                                <a href="" title="Refunds" class="sb2_1_link">Refunds</a>
+                                <a href="" title="Cookies" class="sb2_1_link">Cookies</a>
+                            </div>
+                        </div>
+                        <img src="Images/s_bottom_logo_2.png" alt="" class="sb2_1_steamImg">
+                </div>
+                <div class="sbot_part2_common sbot_part2_2">
+                    <div class="sb2_2decreption_link">
+                        <a href="" class="sb2_2_link">About Valve</a>
+                        <a href="" class="sb2_2_link">Jobs</a>
+                        <a href="" class="sb2_2_link">Steamworks</a>
+                        <a href="" class="sb2_2_link">Steam Distribution</a>
+                        <a href="" class="sb2_2_link">Support</a>
+                        <a href="" class="sb2_2_link">Recycling</a>
+                        <a href="" class="sb2_2_link">Gift Cards</a>
+                        <img src="Images/s_faceLogo.png" alt="" class="sb2_2_image sb2_2_faceImg">
+                        <a href="https://www.facebook.com/Steam" class="sb2_2_link sb2_2_facelink">Steam</a>
+                        <img src="Images/s_twitterLogo.png" alt="" class="sb2_2_image sb2_2_twitterImg">
+                        <a href="https://twitter.com/steam" class="sb2_2_link">@steam</a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="SBottom_common steamBottom_part3"></div>
+        </div>
+        
+    </div>
+</body>
+</html>
+
+
+
+<!-- 
+<style>
+    .mySlides3 {display:none; width:100%}
+    .display-container{position:relative}
+
+/*---Css Nút qua lại---*/
+    .button-left{left:1%; font-size:20px}
+    .button-right{right:1%; font-size:20px }
+    .image-button{border:none;display:inline-block;padding:10px;height:50px;vertical-align:middle;overflow:hidden; color:#fff;background:#000;position:absolute;top:calc(50% - 25px); opacity:0.5;}
+    .image-button:hover{color:#000;background:#ccc;}
+
+/*---Css Chấm tròn---*/
+    .badge {text-align:center; margin-bottom:16px; font-size:20px;position:absolute;bottom:0;}
+    .badge-white{color:#000!important;background-color:#fff!important}
+    .image-badge {display:inline-block;border-radius:50%;height:14px;width:14px; border:1px solid #ccc;}
+.   image-badge:hover{background:#fff;}
+</style>
+
+
+<h2 class="">Manual Slideshow</h2>
+
+<div class="display-container">
+  <img class="mySlides3" src="https://canxem.com/img/1.jpg">
+  <img class="mySlides3" src="https://canxem.com/img/2.jpg">
+  <img class="mySlides3" src="https://canxem.com/img/3.jpg">
+
+  <button class="image-button button-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="image-button button-right" onclick="plusDivs(1)">&#10095;</button>
+
+  <div class="badge" style="width:100%">
+
+    <span class="image-badge" onclick="currentDiv(1)"></span>
+    <span class="image-badge" onclick="currentDiv(2)"></span>
+    <span class="image-badge" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides3");
+  var dots = document.getElementsByClassName("image-badge");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" badge-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " badge-white";
+}
+</script>-->
